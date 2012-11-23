@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="sqlite">
+      <UniqueIdentifier>{2ba7be48-daa8-4c99-a8c5-7d19ae8e417b}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\extlibs\sqlite\sqlite3.h">
+      <Filter>sqlite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\sqlite\sqlite3ext.h">
+      <Filter>sqlite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\sqlite\sqliteInt.h">
+      <Filter>sqlite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\sqlite\sqlite_btree.h">
+      <Filter>sqlite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\sqlite\sqlite_hash.h">
+      <Filter>sqlite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\sqlite\sqlite_keywordhash.h">
+      <Filter>sqlite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\sqlite\sqlite_opcodes.h">
+      <Filter>sqlite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\sqlite\sqlite_os.h">
+      <Filter>sqlite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\sqlite\sqlite_os_common.h">
+      <Filter>sqlite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\sqlite\sqlite_pager.h">
+      <Filter>sqlite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\sqlite\sqlite_parse.h">
+      <Filter>sqlite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\sqlite\sqlite_vdbe.h">
+      <Filter>sqlite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\sqlite\sqlite_vdbeInt.h">
+      <Filter>sqlite</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\extlibs\sqlite\sqlite_alter.c">
+      <Filter>sqlite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\sqlite\sqlite_analyze.c">
+      <Filter>sqlite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\sqlite\sqlite_attach.c">
+      <Filter>sqlite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\sqlite\sqlite_auth.c">
+      <Filter>sqlite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\sqlite\sqlite_btree.c">
+      <Filter>sqlite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\sqlite\sqlite_build.c">
+      <Filter>sqlite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\sqlite\sqlite_callback.c">
+      <Filter>sqlite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\sqlite\sqlite_complete.c">
+      <Filter>sqlite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\sqlite\sqlite_date.c">
+      <Filter>sqlite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\sqlite\sqlite_delete.c">
+      <Filter>sqlite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\sqlite\sqlite_expr.c">
+      <Filter>sqlite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\sqlite\sqlite_func.c">
+      <Filter>sqlite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\sqlite\sqlite_hash.c">
+      <Filter>sqlite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\sqlite\sqlite_insert.c">
+      <Filter>sqlite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\sqlite\sqlite_legacy.c">
+      <Filter>sqlite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\sqlite\sqlite_loadext.c">
+      <Filter>sqlite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\sqlite\sqlite_main.c">
+      <Filter>sqlite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\sqlite\sqlite_opcodes.c">
+      <Filter>sqlite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\sqlite\sqlite_os.c">
+      <Filter>sqlite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\sqlite\sqlite_os_os2.c">
+      <Filter>sqlite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\sqlite\sqlite_os_other.cc">
+      <Filter>sqlite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\sqlite\sqlite_os_unix.c">
+      <Filter>sqlite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\sqlite\sqlite_os_win.c">
+      <Filter>sqlite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\sqlite\sqlite_pager.c">
+      <Filter>sqlite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\sqlite\sqlite_parse.c">
+      <Filter>sqlite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\sqlite\sqlite_pragma.c">
+      <Filter>sqlite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\sqlite\sqlite_prepare.c">
+      <Filter>sqlite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\sqlite\sqlite_printf.c">
+      <Filter>sqlite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\sqlite\sqlite_random.c">
+      <Filter>sqlite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\sqlite\sqlite_select.c">
+      <Filter>sqlite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\sqlite\sqlite_table.c">
+      <Filter>sqlite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\sqlite\sqlite_tokenize.c">
+      <Filter>sqlite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\sqlite\sqlite_trigger.c">
+      <Filter>sqlite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\sqlite\sqlite_update.c">
+      <Filter>sqlite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\sqlite\sqlite_utf.c">
+      <Filter>sqlite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\sqlite\sqlite_util.c">
+      <Filter>sqlite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\sqlite\sqlite_vacuum.c">
+      <Filter>sqlite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\sqlite\sqlite_vdbe.c">
+      <Filter>sqlite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\sqlite\sqlite_vdbeapi.c">
+      <Filter>sqlite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\sqlite\sqlite_vdbeaux.c">
+      <Filter>sqlite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\sqlite\sqlite_vdbefifo.c">
+      <Filter>sqlite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\sqlite\sqlite_vdbemem.c">
+      <Filter>sqlite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\sqlite\sqlite_vtab.c">
+      <Filter>sqlite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\sqlite\sqlite_where.c">
+      <Filter>sqlite</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

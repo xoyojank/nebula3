@@ -1,0 +1,2039 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="animation">
+      <UniqueIdentifier>{639a549d-6435-4fa1-a2da-fb4184d8003f}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="apprender">
+      <UniqueIdentifier>{e287e7fa-7aa2-43e6-b185-5c1e38bf8856}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="characters">
+      <UniqueIdentifier>{75b7c023-8747-4555-be48-ebb28e1f77e7}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="characters\base">
+      <UniqueIdentifier>{f48d5f65-3bd4-4809-b2bd-7eb2df851e08}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="characters\win32">
+      <UniqueIdentifier>{982c7754-a7ef-4e10-ac33-63c438dccb1f}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="coreanimation">
+      <UniqueIdentifier>{cf51cf69-dfa6-4aae-a47c-eb9a1da3fb5c}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="coregraphics">
+      <UniqueIdentifier>{4311d014-75b7-425b-a473-867850c1a7b3}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="coregraphics\base">
+      <UniqueIdentifier>{8eebe123-2cc3-4d2f-911d-0b05e5c7716c}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="coregraphics\d3d9">
+      <UniqueIdentifier>{7d70a772-6353-4a4c-b578-52ceaf8bae1a}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="coregraphics\debug">
+      <UniqueIdentifier>{a82baf71-142e-4406-aee7-8a0a4a3b9e87}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="coregraphics\legacy">
+      <UniqueIdentifier>{1db77cfe-59c1-4412-bbb2-2c4c007aaf1b}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="coregraphics\win32">
+      <UniqueIdentifier>{9b94f721-264d-443f-8866-7b4e1847b3db}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="coregraphics\win360">
+      <UniqueIdentifier>{49fe67ef-b95e-44e5-916c-edcee4b69334}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="debugrender">
+      <UniqueIdentifier>{d3589ce8-1d6d-4c5b-b748-852f5041fda9}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="frame">
+      <UniqueIdentifier>{cbc8cc41-4613-4da6-a60f-6bd16f4d0012}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="graphics">
+      <UniqueIdentifier>{e63d8e62-301f-493c-8ac3-087ca5612c79}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="input">
+      <UniqueIdentifier>{62de15d8-f282-4310-ab6e-0f4f78d1c194}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="input\base">
+      <UniqueIdentifier>{e5d6d265-067f-496a-b781-beac0c356799}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="input\win32">
+      <UniqueIdentifier>{de7355e9-a678-48b3-8a28-c0b14e911a51}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="input\xinput">
+      <UniqueIdentifier>{950211bb-16f2-4f25-9057-8ca8016616ca}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="internalgraphics">
+      <UniqueIdentifier>{5f10fd0f-cf5f-4643-aff4-390ba3548c85}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="internalgraphics\debug">
+      <UniqueIdentifier>{34c1f749-00be-4fb7-9290-69fa8884a981}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="internalgraphics\handlers">
+      <UniqueIdentifier>{270db82d-4f9e-444e-8216-c4217ea8add1}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="lighting">
+      <UniqueIdentifier>{25d1482a-c96d-4b97-83d0-e5de66c49a0b}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="lighting\base">
+      <UniqueIdentifier>{497a7752-3f3a-4daf-8cd0-768baa34315b}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="lighting\handlers">
+      <UniqueIdentifier>{4e5746c3-1e6d-431a-ab1a-97f798ddc528}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="lighting\lightprepass">
+      <UniqueIdentifier>{2fc38204-da3c-4119-a210-13735bbb14dd}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="lighting\sm30">
+      <UniqueIdentifier>{a0bd6576-fe37-49c8-a07b-217a6244e113}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="models">
+      <UniqueIdentifier>{71317a68-b1b8-4ce7-b8d2-c121af19eeea}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="models\nodes">
+      <UniqueIdentifier>{073dc117-0d23-4dd7-88a1-3be2b93d70bd}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="particles">
+      <UniqueIdentifier>{9046a390-c73a-4f74-85f5-8340a2041e95}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="particles\base">
+      <UniqueIdentifier>{fd693dcf-4985-4a27-93db-c5d082273fff}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="particles\d3d9">
+      <UniqueIdentifier>{554ceb6e-3c65-4d96-a2d7-c04dee2996f4}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="rendermodules">
+      <UniqueIdentifier>{45fef193-f1bb-4978-a050-4c1078fa5489}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="rendermodules\rt">
+      <UniqueIdentifier>{3e159462-c9fc-45b7-888f-61ebd5471007}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="renderutil">
+      <UniqueIdentifier>{f30b7628-89f9-40bc-898b-f3fe7bc26c5f}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="resources">
+      <UniqueIdentifier>{b863e491-b4ee-4664-a218-822a7eb941d0}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="resources\d3d9streaming">
+      <UniqueIdentifier>{0c53a290-8c41-4329-b894-c29ab53b0f7c}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="resources\streaming">
+      <UniqueIdentifier>{ecc71418-0f8c-4e98-9851-0a75e5ee4c07}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="shared">
+      <UniqueIdentifier>{a2651d7c-2ccb-4d54-a476-21b3011ffaac}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="shared\graphics">
+      <UniqueIdentifier>{7a0b4cc6-5de9-446e-b046-815eb566b071}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="visibility">
+      <UniqueIdentifier>{530ff2f4-c450-4c26-b86e-e17b17c2e9eb}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="visibility\handler">
+      <UniqueIdentifier>{0d40869d-ac44-4ddf-868f-0f5826be6441}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="visibility\visibilitysystems">
+      <UniqueIdentifier>{fa25c6e2-919a-4ef6-873b-d0c4a1cd6561}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\render\stdneb.cc">
+      <Filter>animation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\animation\animeventhandlerbase.cc">
+      <Filter>animation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\animation\animeventserver.cc">
+      <Filter>animation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\animation\animjob.cc">
+      <Filter>animation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\animation\animsequencer.cc">
+      <Filter>animation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\animation\playclipjob.cc">
+      <Filter>animation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\apprender\renderapplication.cc">
+      <Filter>apprender</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\apprender\viewerapplication.cc">
+      <Filter>apprender</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\characters\character.cc">
+      <Filter>characters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\characters\characteranimationcontroller.cc">
+      <Filter>characters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\characters\characteranimationlibrary.cc">
+      <Filter>characters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\characters\characterinstance.cc">
+      <Filter>characters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\characters\characterjoint.cc">
+      <Filter>characters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\characters\characternode.cc">
+      <Filter>characters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\characters\characternodeinstance.cc">
+      <Filter>characters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\characters\characterserver.cc">
+      <Filter>characters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\characters\characterskeleton.cc">
+      <Filter>characters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\characters\characterskeletoninstance.cc">
+      <Filter>characters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\characters\characterskin.cc">
+      <Filter>characters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\characters\characterskinlibrary.cc">
+      <Filter>characters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\characters\characterskinlist.cc">
+      <Filter>characters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\characters\characterskinnode.cc">
+      <Filter>characters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\characters\characterskinnodeinstance.cc">
+      <Filter>characters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\characters\characterskinset.cc">
+      <Filter>characters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\characters\charactervariationlibrary.cc">
+      <Filter>characters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\characters\charactervariationset.cc">
+      <Filter>characters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\characters\skinnedmeshrenderer.cc">
+      <Filter>characters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\characters\base\skinnedmeshrendererbase.cc">
+      <Filter>characters\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\characters\win32\win32skinnedmeshrenderer.cc">
+      <Filter>characters\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coreanimation\animclip.cc">
+      <Filter>coreanimation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coreanimation\animeventemitter.cc">
+      <Filter>coreanimation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coreanimation\animkeybuffer.cc">
+      <Filter>coreanimation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coreanimation\animresource.cc">
+      <Filter>coreanimation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coreanimation\animsamplebuffer.cc">
+      <Filter>coreanimation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coreanimation\animutil.cc">
+      <Filter>coreanimation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coreanimation\curvetype.cc">
+      <Filter>coreanimation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coreanimation\infinitytype.cc">
+      <Filter>coreanimation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coreanimation\managedanimresource.cc">
+      <Filter>coreanimation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coreanimation\sampletype.cc">
+      <Filter>coreanimation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coreanimation\streamanimationloader.cc">
+      <Filter>coreanimation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\adapter.cc">
+      <Filter>coregraphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\antialiasquality.cc">
+      <Filter>coregraphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\displaydevice.cc">
+      <Filter>coregraphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\displayeventhandler.cc">
+      <Filter>coregraphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\imagefileformat.cc">
+      <Filter>coregraphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\indexbuffer.cc">
+      <Filter>coregraphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\memoryindexbufferloader.cc">
+      <Filter>coregraphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\memorymeshloader.cc">
+      <Filter>coregraphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\memoryvertexbufferloader.cc">
+      <Filter>coregraphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\mesh.cc">
+      <Filter>coregraphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\mouserenderdevice.cc">
+      <Filter>coregraphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\multiplerendertarget.cc">
+      <Filter>coregraphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\pixelformat.cc">
+      <Filter>coregraphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\primitivetopology.cc">
+      <Filter>coregraphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\renderdevice.cc">
+      <Filter>coregraphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\rendereventhandler.cc">
+      <Filter>coregraphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\rendershape.cc">
+      <Filter>coregraphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\rendertarget.cc">
+      <Filter>coregraphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\shader.cc">
+      <Filter>coregraphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\shaderfeature.cc">
+      <Filter>coregraphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\shaderinstance.cc">
+      <Filter>coregraphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\shaderserver.cc">
+      <Filter>coregraphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\shadervariable.cc">
+      <Filter>coregraphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\shadervariableinstance.cc">
+      <Filter>coregraphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\shadervariation.cc">
+      <Filter>coregraphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\shaperenderer.cc">
+      <Filter>coregraphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\streammeshloader.cc">
+      <Filter>coregraphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\streamshaderloader.cc">
+      <Filter>coregraphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\streamtextureloader.cc">
+      <Filter>coregraphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\streamtexturesaver.cc">
+      <Filter>coregraphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\textelement.cc">
+      <Filter>coregraphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\textrenderer.cc">
+      <Filter>coregraphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\texture.cc">
+      <Filter>coregraphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\threadsafedisplayeventhandler.cc">
+      <Filter>coregraphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\threadsaferendereventhandler.cc">
+      <Filter>coregraphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\transformdevice.cc">
+      <Filter>coregraphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\vertexbuffer.cc">
+      <Filter>coregraphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\vertexlayout.cc">
+      <Filter>coregraphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\vertexlayoutserver.cc">
+      <Filter>coregraphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\base\displaydevicebase.cc">
+      <Filter>coregraphics\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\base\indexbufferbase.cc">
+      <Filter>coregraphics\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\base\memoryindexbufferloaderbase.cc">
+      <Filter>coregraphics\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\base\memoryvertexbufferloaderbase.cc">
+      <Filter>coregraphics\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\base\meshbase.cc">
+      <Filter>coregraphics\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\base\mouserenderdevicebase.cc">
+      <Filter>coregraphics\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\base\multiplerendertargetbase.cc">
+      <Filter>coregraphics\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\base\renderdevicebase.cc">
+      <Filter>coregraphics\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\base\rendertargetbase.cc">
+      <Filter>coregraphics\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\base\resourcebase.cc">
+      <Filter>coregraphics\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\base\shaderbase.cc">
+      <Filter>coregraphics\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\base\shaderinstancebase.cc">
+      <Filter>coregraphics\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\base\shaderserverbase.cc">
+      <Filter>coregraphics\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\base\shadervariablebase.cc">
+      <Filter>coregraphics\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\base\shadervariableinstancebase.cc">
+      <Filter>coregraphics\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\base\shadervariationbase.cc">
+      <Filter>coregraphics\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\base\shaperendererbase.cc">
+      <Filter>coregraphics\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\base\streamtexturesaverbase.cc">
+      <Filter>coregraphics\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\base\textrendererbase.cc">
+      <Filter>coregraphics\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\base\texturebase.cc">
+      <Filter>coregraphics\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\base\transformdevicebase.cc">
+      <Filter>coregraphics\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\base\vertexbufferbase.cc">
+      <Filter>coregraphics\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\base\vertexlayoutbase.cc">
+      <Filter>coregraphics\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\base\vertexlayoutserverbase.cc">
+      <Filter>coregraphics\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\d3d9\d3d9displaydevice.cc">
+      <Filter>coregraphics\d3d9</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\d3d9\d3d9renderdevice.cc">
+      <Filter>coregraphics\d3d9</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\d3d9\d3d9rendertarget.cc">
+      <Filter>coregraphics\d3d9</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\d3d9\d3d9resource.cc">
+      <Filter>coregraphics\d3d9</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\d3d9\d3d9resourceeventhandler.cc">
+      <Filter>coregraphics\d3d9</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\d3d9\d3d9shader.cc">
+      <Filter>coregraphics\d3d9</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\d3d9\d3d9shaderinstance.cc">
+      <Filter>coregraphics\d3d9</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\d3d9\d3d9shaderserver.cc">
+      <Filter>coregraphics\d3d9</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\d3d9\d3d9shadervariable.cc">
+      <Filter>coregraphics\d3d9</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\d3d9\d3d9shadervariation.cc">
+      <Filter>coregraphics\d3d9</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\d3d9\d3d9streamshaderloader.cc">
+      <Filter>coregraphics\d3d9</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\d3d9\d3d9streamtextureloader.cc">
+      <Filter>coregraphics\d3d9</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\d3d9\d3d9textrenderer.cc">
+      <Filter>coregraphics\d3d9</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\d3d9\d3d9texture.cc">
+      <Filter>coregraphics\d3d9</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\debug\displaypagehandler.cc">
+      <Filter>coregraphics\debug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\debug\meshpagehandler.cc">
+      <Filter>coregraphics\debug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\debug\shaderpagehandler.cc">
+      <Filter>coregraphics\debug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\debug\texturepagehandler.cc">
+      <Filter>coregraphics\debug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\legacy\nvx2streamreader.cc">
+      <Filter>coregraphics\legacy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\win32\win32displaydevice.cc">
+      <Filter>coregraphics\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\win360\d3d9indexbuffer.cc">
+      <Filter>coregraphics\win360</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\win360\d3d9memoryindexbufferloader.cc">
+      <Filter>coregraphics\win360</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\win360\d3d9memoryvertexbufferloader.cc">
+      <Filter>coregraphics\win360</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\win360\d3d9shaperenderer.cc">
+      <Filter>coregraphics\win360</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\win360\d3d9streammeshloader.cc">
+      <Filter>coregraphics\win360</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\win360\d3d9streamtexturesaver.cc">
+      <Filter>coregraphics\win360</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\win360\d3d9transformdevice.cc">
+      <Filter>coregraphics\win360</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\win360\d3d9types.cc">
+      <Filter>coregraphics\win360</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\win360\d3d9vertexbuffer.cc">
+      <Filter>coregraphics\win360</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\coregraphics\win360\d3d9vertexlayout.cc">
+      <Filter>coregraphics\win360</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\debugrender\debuggraphicshandler.cc">
+      <Filter>debugrender</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\debugrender\debugrenderprotocol.cc">
+      <Filter>debugrender</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\debugrender\debugshaperenderer.cc">
+      <Filter>debugrender</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\debugrender\debugtextrenderer.cc">
+      <Filter>debugrender</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\debugrender\renderconsolehandler.cc">
+      <Filter>debugrender</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\frame\framebatch.cc">
+      <Filter>frame</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\frame\framepass.cc">
+      <Filter>frame</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\frame\framepassbase.cc">
+      <Filter>frame</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\frame\frameposteffect.cc">
+      <Filter>frame</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\frame\frameserver.cc">
+      <Filter>frame</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\frame\frameshader.cc">
+      <Filter>frame</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\frame\frameshaderloader.cc">
+      <Filter>frame</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\frame\lightingmode.cc">
+      <Filter>frame</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\frame\sortingmode.cc">
+      <Filter>frame</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\graphics\abstractlightentity.cc">
+      <Filter>graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\graphics\cameraentity.cc">
+      <Filter>graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\graphics\display.cc">
+      <Filter>graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\graphics\displaysettings.cc">
+      <Filter>graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\graphics\globallightentity.cc">
+      <Filter>graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\graphics\graphicsentity.cc">
+      <Filter>graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\graphics\graphicshandler.cc">
+      <Filter>graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\graphics\graphicsinterface.cc">
+      <Filter>graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\graphics\graphicsprotocol.cc">
+      <Filter>graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\graphics\graphicsserver.cc">
+      <Filter>graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\graphics\modelentity.cc">
+      <Filter>graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\graphics\mouserenderer.cc">
+      <Filter>graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\graphics\pointlightentity.cc">
+      <Filter>graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\graphics\spotlightentity.cc">
+      <Filter>graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\graphics\stage.cc">
+      <Filter>graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\graphics\view.cc">
+      <Filter>graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\input\gamepad.cc">
+      <Filter>input</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\input\inputhandler.cc">
+      <Filter>input</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\input\inputserver.cc">
+      <Filter>input</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\input\key.cc">
+      <Filter>input</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\input\keyboard.cc">
+      <Filter>input</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\input\mouse.cc">
+      <Filter>input</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\input\mousebutton.cc">
+      <Filter>input</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\input\base\gamepadbase.cc">
+      <Filter>input\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\input\base\inputserverbase.cc">
+      <Filter>input\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\input\base\keyboardbase.cc">
+      <Filter>input\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\input\base\mousebase.cc">
+      <Filter>input\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\input\win32\win32inputdisplayeventhandler.cc">
+      <Filter>input\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\input\win32\win32inputserver.cc">
+      <Filter>input\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\input\win32\win32mouse.cc">
+      <Filter>input\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\input\xinput\xinputgamepad.cc">
+      <Filter>input\xinput</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\internalgraphics\attachmentserver.cc">
+      <Filter>internalgraphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\internalgraphics\internalcameraentity.cc">
+      <Filter>internalgraphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\internalgraphics\internalgraphicsentity.cc">
+      <Filter>internalgraphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\internalgraphics\internalgraphicsserver.cc">
+      <Filter>internalgraphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\internalgraphics\internalmodelentity.cc">
+      <Filter>internalgraphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\internalgraphics\internalstage.cc">
+      <Filter>internalgraphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\internalgraphics\internalview.cc">
+      <Filter>internalgraphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\internalgraphics\debug\graphicspagehandler.cc">
+      <Filter>internalgraphics\debug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\internalgraphics\handlers\internalcameraentityhandler.cc">
+      <Filter>internalgraphics\handlers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\internalgraphics\handlers\internalgraphicsentityhandler.cc">
+      <Filter>internalgraphics\handlers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\internalgraphics\handlers\internalgraphicshandler.cc">
+      <Filter>internalgraphics\handlers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\internalgraphics\handlers\internalmodelentityhandler.cc">
+      <Filter>internalgraphics\handlers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\lighting\internalabstractlightentity.cc">
+      <Filter>lighting</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\lighting\internalgloballightentity.cc">
+      <Filter>lighting</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\lighting\internalpointlightentity.cc">
+      <Filter>lighting</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\lighting\internalspotlightentity.cc">
+      <Filter>lighting</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\lighting\lightserver.cc">
+      <Filter>lighting</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\lighting\lighttype.cc">
+      <Filter>lighting</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\lighting\pssmutil.cc">
+      <Filter>lighting</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\lighting\shadowserver.cc">
+      <Filter>lighting</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\lighting\base\lightserverbase.cc">
+      <Filter>lighting\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\lighting\base\shadowserverbase.cc">
+      <Filter>lighting\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\lighting\handlers\internalabstractlightentityhandler.cc">
+      <Filter>lighting\handlers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\lighting\handlers\internalgloballightentityhandler.cc">
+      <Filter>lighting\handlers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\lighting\handlers\internalpointlightentityhandler.cc">
+      <Filter>lighting\handlers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\lighting\handlers\internalspotlightentityhandler.cc">
+      <Filter>lighting\handlers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\lighting\lightprepass\lightprepassserver.cc">
+      <Filter>lighting\lightprepass</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\lighting\sm30\sm30lightserver.cc">
+      <Filter>lighting\sm30</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\lighting\sm30\sm30shadowserver.cc">
+      <Filter>lighting\sm30</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\models\managedmodel.cc">
+      <Filter>models</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\models\model.cc">
+      <Filter>models</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\models\modelinstance.cc">
+      <Filter>models</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\models\modelnode.cc">
+      <Filter>models</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\models\modelnodeinstance.cc">
+      <Filter>models</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\models\modelnodetype.cc">
+      <Filter>models</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\models\modelserver.cc">
+      <Filter>models</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\models\streammodelloader.cc">
+      <Filter>models</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\models\visresolver.cc">
+      <Filter>models</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\models\nodes\animatornode.cc">
+      <Filter>models\nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\models\nodes\animatornodeinstance.cc">
+      <Filter>models\nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\models\nodes\shapenode.cc">
+      <Filter>models\nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\models\nodes\shapenodeinstance.cc">
+      <Filter>models\nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\models\nodes\statenode.cc">
+      <Filter>models\nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\models\nodes\statenodeinstance.cc">
+      <Filter>models\nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\models\nodes\transformnode.cc">
+      <Filter>models\nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\models\nodes\transformnodeinstance.cc">
+      <Filter>models\nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\particles\emitterattrs.cc">
+      <Filter>particles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\particles\emittermesh.cc">
+      <Filter>particles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\particles\envelopecurve.cc">
+      <Filter>particles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\particles\envelopesamplebuffer.cc">
+      <Filter>particles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\particles\particlerenderer.cc">
+      <Filter>particles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\particles\particleserver.cc">
+      <Filter>particles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\particles\particlesystem.cc">
+      <Filter>particles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\particles\particlesysteminstance.cc">
+      <Filter>particles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\particles\particlesystemnode.cc">
+      <Filter>particles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\particles\particlesystemnodeinstance.cc">
+      <Filter>particles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\particles\base\particlerendererbase.cc">
+      <Filter>particles\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\particles\base\particlesysteminstancebase.cc">
+      <Filter>particles\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\particles\d3d9\d3d9particlerenderer.cc">
+      <Filter>particles\d3d9</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\particles\d3d9\d3d9particlesysteminstance.cc">
+      <Filter>particles\d3d9</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\rendermodules\rendermodule.cc">
+      <Filter>rendermodules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\rendermodules\rt\rtplugin.cc">
+      <Filter>rendermodules\rt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\rendermodules\rt\rtpluginregistry.cc">
+      <Filter>rendermodules\rt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\renderutil\drawfullscreenquad.cc">
+      <Filter>renderutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\renderutil\mayacamerautil.cc">
+      <Filter>renderutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\renderutil\mouserayutil.cc">
+      <Filter>renderutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\renderutil\nodelookuputil.cc">
+      <Filter>renderutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\resources\managedmesh.cc">
+      <Filter>resources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\resources\managedresource.cc">
+      <Filter>resources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\resources\managedtexture.cc">
+      <Filter>resources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\resources\resource.cc">
+      <Filter>resources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\resources\resourceallocator.cc">
+      <Filter>resources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\resources\resourcedictionary.cc">
+      <Filter>resources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\resources\resourceloader.cc">
+      <Filter>resources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\resources\resourcelump.cc">
+      <Filter>resources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\resources\resourcemanager.cc">
+      <Filter>resources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\resources\resourcemapper.cc">
+      <Filter>resources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\resources\resourcesaver.cc">
+      <Filter>resources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\resources\simpleresourcemapper.cc">
+      <Filter>resources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\resources\streamresourceloader.cc">
+      <Filter>resources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\resources\d3d9streaming\d3d9texturecreator.cc">
+      <Filter>resources\d3d9streaming</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\resources\d3d9streaming\d3d9textureinfo.cc">
+      <Filter>resources\d3d9streaming</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\resources\d3d9streaming\d3d9texturestreamer.cc">
+      <Filter>resources\d3d9streaming</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\resources\streaming\loadingresource.cc">
+      <Filter>resources\streaming</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\resources\streaming\poolloadingresource.cc">
+      <Filter>resources\streaming</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\resources\streaming\poolresourcemapper.cc">
+      <Filter>resources\streaming</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\resources\streaming\poolscheduler.cc">
+      <Filter>resources\streaming</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\resources\streaming\resourcecreator.cc">
+      <Filter>resources\streaming</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\resources\streaming\resourcedictionaryreader.cc">
+      <Filter>resources\streaming</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\resources\streaming\resourceinfo.cc">
+      <Filter>resources\streaming</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\resources\streaming\resourcepool.cc">
+      <Filter>resources\streaming</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\resources\streaming\resourcerequestinfo.cc">
+      <Filter>resources\streaming</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\resources\streaming\resourcescheduler.cc">
+      <Filter>resources\streaming</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\resources\streaming\resourceslot.cc">
+      <Filter>resources\streaming</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\resources\streaming\streamingresourcemapper.cc">
+      <Filter>resources\streaming</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\resources\streaming\streamingtexturepagehandler.cc">
+      <Filter>resources\streaming</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\resources\streaming\texturecreator.cc">
+      <Filter>resources\streaming</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\resources\streaming\texturepoolmapperscheduler.cc">
+      <Filter>resources\streaming</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\resources\streaming\texturestreamer.cc">
+      <Filter>resources\streaming</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\shared\graphics\camerasettings.cc">
+      <Filter>shared\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\visibility\observercontext.cc">
+      <Filter>visibility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\visibility\visibilitychecker.cc">
+      <Filter>visibility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\visibility\visibilitycontainer.cc">
+      <Filter>visibility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\visibility\visibilitycontext.cc">
+      <Filter>visibility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\visibility\visibilityprotocol.cc">
+      <Filter>visibility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\visibility\visibilityquery.cc">
+      <Filter>visibility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\visibility\handler\visibilityboxhandler.cc">
+      <Filter>visibility\handler</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\visibility\handler\visibilityclusterhandler.cc">
+      <Filter>visibility\handler</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\visibility\visibilitysystems\visibilitybox.cc">
+      <Filter>visibility\visibilitysystems</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\visibility\visibilitysystems\visibilityboxsystem.cc">
+      <Filter>visibility\visibilitysystems</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\visibility\visibilitysystems\visibilitycell.cc">
+      <Filter>visibility\visibilitysystems</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\visibility\visibilitysystems\visibilitycluster.cc">
+      <Filter>visibility\visibilitysystems</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\visibility\visibilitysystems\visibilityclustersystem.cc">
+      <Filter>visibility\visibilitysystems</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\visibility\visibilitysystems\visibilityquadtree.cc">
+      <Filter>visibility\visibilitysystems</Filter>
+    </ClCompile>
+    <ClCompile Include="..\render\visibility\visibilitysystems\visibilitysystembase.cc">
+      <Filter>visibility\visibilitysystems</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\render\animation\animeventhandlerbase.h">
+      <Filter>animation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\animation\animeventinfo.h">
+      <Filter>animation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\animation\animeventserver.h">
+      <Filter>animation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\animation\animjob.h">
+      <Filter>animation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\animation\animjobenqueuemode.h">
+      <Filter>animation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\animation\animsequencer.h">
+      <Filter>animation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\animation\playclipjob.h">
+      <Filter>animation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\apprender\renderapplication.h">
+      <Filter>apprender</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\apprender\viewerapplication.h">
+      <Filter>apprender</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\characters\character.h">
+      <Filter>characters</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\characters\characteranimationcontroller.h">
+      <Filter>characters</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\characters\characteranimationlibrary.h">
+      <Filter>characters</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\characters\characterinstance.h">
+      <Filter>characters</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\characters\characterjoint.h">
+      <Filter>characters</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\characters\characternode.h">
+      <Filter>characters</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\characters\characternodeinstance.h">
+      <Filter>characters</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\characters\characterserver.h">
+      <Filter>characters</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\characters\characterskeleton.h">
+      <Filter>characters</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\characters\characterskeletoninstance.h">
+      <Filter>characters</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\characters\characterskin.h">
+      <Filter>characters</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\characters\characterskinlibrary.h">
+      <Filter>characters</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\characters\characterskinlist.h">
+      <Filter>characters</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\characters\characterskinnode.h">
+      <Filter>characters</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\characters\characterskinnodeinstance.h">
+      <Filter>characters</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\characters\characterskinset.h">
+      <Filter>characters</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\characters\charactervariationlibrary.h">
+      <Filter>characters</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\characters\charactervariationset.h">
+      <Filter>characters</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\characters\charjointcomponents.h">
+      <Filter>characters</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\characters\skinnedmeshdrawinfo.h">
+      <Filter>characters</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\characters\skinnedmeshrenderer.h">
+      <Filter>characters</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\characters\skinningtechnique.h">
+      <Filter>characters</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\characters\base\skinnedmeshdrawinfobase.h">
+      <Filter>characters\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\characters\base\skinnedmeshrendererbase.h">
+      <Filter>characters\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\characters\win32\win32skinnedmeshrenderer.h">
+      <Filter>characters\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coreanimation\animclip.h">
+      <Filter>coreanimation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coreanimation\animcurve.h">
+      <Filter>coreanimation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coreanimation\animevent.h">
+      <Filter>coreanimation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coreanimation\animeventemitter.h">
+      <Filter>coreanimation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coreanimation\animkeybuffer.h">
+      <Filter>coreanimation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coreanimation\animresource.h">
+      <Filter>coreanimation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coreanimation\animsamplebuffer.h">
+      <Filter>coreanimation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coreanimation\animsamplemixinfo.h">
+      <Filter>coreanimation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coreanimation\animutil.h">
+      <Filter>coreanimation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coreanimation\curvetype.h">
+      <Filter>coreanimation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coreanimation\infinitytype.h">
+      <Filter>coreanimation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coreanimation\managedanimresource.h">
+      <Filter>coreanimation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coreanimation\naxfileformatstructs.h">
+      <Filter>coreanimation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coreanimation\sampletype.h">
+      <Filter>coreanimation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coreanimation\streamanimationloader.h">
+      <Filter>coreanimation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\adapter.h">
+      <Filter>coregraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\adapterinfo.h">
+      <Filter>coregraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\antialiasquality.h">
+      <Filter>coregraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\batchtype.h">
+      <Filter>coregraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\config.h">
+      <Filter>coregraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\displaydevice.h">
+      <Filter>coregraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\displayevent.h">
+      <Filter>coregraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\displayeventhandler.h">
+      <Filter>coregraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\displaymode.h">
+      <Filter>coregraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\imagefileformat.h">
+      <Filter>coregraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\indexbuffer.h">
+      <Filter>coregraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\indextype.h">
+      <Filter>coregraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\memoryindexbufferloader.h">
+      <Filter>coregraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\memorymeshloader.h">
+      <Filter>coregraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\memoryvertexbufferloader.h">
+      <Filter>coregraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\mesh.h">
+      <Filter>coregraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\mousepointer.h">
+      <Filter>coregraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\mouserenderdevice.h">
+      <Filter>coregraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\multiplerendertarget.h">
+      <Filter>coregraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\pixelformat.h">
+      <Filter>coregraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\primitivegroup.h">
+      <Filter>coregraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\primitivetopology.h">
+      <Filter>coregraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\renderdevice.h">
+      <Filter>coregraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\renderevent.h">
+      <Filter>coregraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\rendereventhandler.h">
+      <Filter>coregraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\rendershape.h">
+      <Filter>coregraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\rendertarget.h">
+      <Filter>coregraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\shader.h">
+      <Filter>coregraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\shaderfeature.h">
+      <Filter>coregraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\shaderinstance.h">
+      <Filter>coregraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\shadersemantics.h">
+      <Filter>coregraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\shaderserver.h">
+      <Filter>coregraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\shadervariable.h">
+      <Filter>coregraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\shadervariableinstance.h">
+      <Filter>coregraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\shadervariation.h">
+      <Filter>coregraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\shaperenderer.h">
+      <Filter>coregraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\streammeshloader.h">
+      <Filter>coregraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\streamshaderloader.h">
+      <Filter>coregraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\streamtextureloader.h">
+      <Filter>coregraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\streamtexturesaver.h">
+      <Filter>coregraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\textelement.h">
+      <Filter>coregraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\textrenderer.h">
+      <Filter>coregraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\texture.h">
+      <Filter>coregraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\threadsafedisplayeventhandler.h">
+      <Filter>coregraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\threadsaferendereventhandler.h">
+      <Filter>coregraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\transformdevice.h">
+      <Filter>coregraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\vertexbuffer.h">
+      <Filter>coregraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\vertexcomponent.h">
+      <Filter>coregraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\vertexlayout.h">
+      <Filter>coregraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\vertexlayoutserver.h">
+      <Filter>coregraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\base\displaydevicebase.h">
+      <Filter>coregraphics\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\base\indexbufferbase.h">
+      <Filter>coregraphics\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\base\memoryindexbufferloaderbase.h">
+      <Filter>coregraphics\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\base\memoryvertexbufferloaderbase.h">
+      <Filter>coregraphics\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\base\meshbase.h">
+      <Filter>coregraphics\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\base\mouserenderdevicebase.h">
+      <Filter>coregraphics\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\base\multiplerendertargetbase.h">
+      <Filter>coregraphics\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\base\renderdevicebase.h">
+      <Filter>coregraphics\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\base\rendertargetbase.h">
+      <Filter>coregraphics\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\base\resourcebase.h">
+      <Filter>coregraphics\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\base\shaderbase.h">
+      <Filter>coregraphics\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\base\shaderinstancebase.h">
+      <Filter>coregraphics\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\base\shaderserverbase.h">
+      <Filter>coregraphics\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\base\shadervariablebase.h">
+      <Filter>coregraphics\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\base\shadervariableinstancebase.h">
+      <Filter>coregraphics\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\base\shadervariationbase.h">
+      <Filter>coregraphics\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\base\shaperendererbase.h">
+      <Filter>coregraphics\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\base\streamtexturesaverbase.h">
+      <Filter>coregraphics\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\base\textrendererbase.h">
+      <Filter>coregraphics\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\base\texturebase.h">
+      <Filter>coregraphics\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\base\transformdevicebase.h">
+      <Filter>coregraphics\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\base\vertexbufferbase.h">
+      <Filter>coregraphics\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\base\vertexcomponentbase.h">
+      <Filter>coregraphics\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\base\vertexlayoutbase.h">
+      <Filter>coregraphics\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\base\vertexlayoutserverbase.h">
+      <Filter>coregraphics\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\d3d9\d3d9displaydevice.h">
+      <Filter>coregraphics\d3d9</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\d3d9\d3d9renderdevice.h">
+      <Filter>coregraphics\d3d9</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\d3d9\d3d9rendertarget.h">
+      <Filter>coregraphics\d3d9</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\d3d9\d3d9resource.h">
+      <Filter>coregraphics\d3d9</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\d3d9\d3d9resourceeventhandler.h">
+      <Filter>coregraphics\d3d9</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\d3d9\d3d9shader.h">
+      <Filter>coregraphics\d3d9</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\d3d9\d3d9shaderinstance.h">
+      <Filter>coregraphics\d3d9</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\d3d9\d3d9shaderserver.h">
+      <Filter>coregraphics\d3d9</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\d3d9\d3d9shadervariable.h">
+      <Filter>coregraphics\d3d9</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\d3d9\d3d9shadervariation.h">
+      <Filter>coregraphics\d3d9</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\d3d9\d3d9streamshaderloader.h">
+      <Filter>coregraphics\d3d9</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\d3d9\d3d9streamtextureloader.h">
+      <Filter>coregraphics\d3d9</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\d3d9\d3d9textrenderer.h">
+      <Filter>coregraphics\d3d9</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\d3d9\d3d9texture.h">
+      <Filter>coregraphics\d3d9</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\debug\displaypagehandler.h">
+      <Filter>coregraphics\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\debug\meshpagehandler.h">
+      <Filter>coregraphics\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\debug\shaderpagehandler.h">
+      <Filter>coregraphics\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\debug\texturepagehandler.h">
+      <Filter>coregraphics\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\legacy\nvx2streamreader.h">
+      <Filter>coregraphics\legacy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\win32\win32displaydevice.h">
+      <Filter>coregraphics\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\win360\d3d9indexbuffer.h">
+      <Filter>coregraphics\win360</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\win360\d3d9memoryindexbufferloader.h">
+      <Filter>coregraphics\win360</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\win360\d3d9memoryvertexbufferloader.h">
+      <Filter>coregraphics\win360</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\win360\d3d9shaperenderer.h">
+      <Filter>coregraphics\win360</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\win360\d3d9streammeshloader.h">
+      <Filter>coregraphics\win360</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\win360\d3d9streamtexturesaver.h">
+      <Filter>coregraphics\win360</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\win360\d3d9transformdevice.h">
+      <Filter>coregraphics\win360</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\win360\d3d9types.h">
+      <Filter>coregraphics\win360</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\win360\d3d9vertexbuffer.h">
+      <Filter>coregraphics\win360</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\coregraphics\win360\d3d9vertexlayout.h">
+      <Filter>coregraphics\win360</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\debugrender\debuggraphicshandler.h">
+      <Filter>debugrender</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\debugrender\debugrender.h">
+      <Filter>debugrender</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\debugrender\debugrenderprotocol.h">
+      <Filter>debugrender</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\debugrender\debugshaperenderer.h">
+      <Filter>debugrender</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\debugrender\debugtextrenderer.h">
+      <Filter>debugrender</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\debugrender\renderconsolehandler.h">
+      <Filter>debugrender</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\frame\framebatch.h">
+      <Filter>frame</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\frame\framepass.h">
+      <Filter>frame</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\frame\framepassbase.h">
+      <Filter>frame</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\frame\frameposteffect.h">
+      <Filter>frame</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\frame\frameserver.h">
+      <Filter>frame</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\frame\frameshader.h">
+      <Filter>frame</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\frame\frameshaderloader.h">
+      <Filter>frame</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\frame\lightingmode.h">
+      <Filter>frame</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\frame\sortingmode.h">
+      <Filter>frame</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\graphics\abstractlightentity.h">
+      <Filter>graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\graphics\cameraentity.h">
+      <Filter>graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\graphics\display.h">
+      <Filter>graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\graphics\displaysettings.h">
+      <Filter>graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\graphics\globallightentity.h">
+      <Filter>graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\graphics\graphicsentity.h">
+      <Filter>graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\graphics\graphicsentitytype.h">
+      <Filter>graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\graphics\graphicshandler.h">
+      <Filter>graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\graphics\graphicsinterface.h">
+      <Filter>graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\graphics\graphicsprotocol.h">
+      <Filter>graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\graphics\graphicsserver.h">
+      <Filter>graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\graphics\modelentity.h">
+      <Filter>graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\graphics\mouserenderer.h">
+      <Filter>graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\graphics\pointlightentity.h">
+      <Filter>graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\graphics\spotlightentity.h">
+      <Filter>graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\graphics\stage.h">
+      <Filter>graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\graphics\stagebuilders.h">
+      <Filter>graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\graphics\view.h">
+      <Filter>graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\input\char.h">
+      <Filter>input</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\input\gamepad.h">
+      <Filter>input</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\input\inputevent.h">
+      <Filter>input</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\input\inputhandler.h">
+      <Filter>input</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\input\inputpriority.h">
+      <Filter>input</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\input\inputserver.h">
+      <Filter>input</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\input\key.h">
+      <Filter>input</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\input\keyboard.h">
+      <Filter>input</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\input\mouse.h">
+      <Filter>input</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\input\mousebutton.h">
+      <Filter>input</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\input\base\gamepadbase.h">
+      <Filter>input\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\input\base\inputserverbase.h">
+      <Filter>input\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\input\base\keyboardbase.h">
+      <Filter>input\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\input\base\mousebase.h">
+      <Filter>input\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\input\win32\win32inputdisplayeventhandler.h">
+      <Filter>input\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\input\win32\win32inputserver.h">
+      <Filter>input\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\input\win32\win32mouse.h">
+      <Filter>input\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\input\xinput\xinputgamepad.h">
+      <Filter>input\xinput</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\internalgraphics\attachmentserver.h">
+      <Filter>internalgraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\internalgraphics\internalcameraentity.h">
+      <Filter>internalgraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\internalgraphics\internalgraphicsentity.h">
+      <Filter>internalgraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\internalgraphics\internalgraphicsentitytype.h">
+      <Filter>internalgraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\internalgraphics\internalgraphicsserver.h">
+      <Filter>internalgraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\internalgraphics\internalmodelentity.h">
+      <Filter>internalgraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\internalgraphics\internalstage.h">
+      <Filter>internalgraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\internalgraphics\internalview.h">
+      <Filter>internalgraphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\internalgraphics\debug\graphicspagehandler.h">
+      <Filter>internalgraphics\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\lighting\internalabstractlightentity.h">
+      <Filter>lighting</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\lighting\internalgloballightentity.h">
+      <Filter>lighting</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\lighting\internalpointlightentity.h">
+      <Filter>lighting</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\lighting\internalspotlightentity.h">
+      <Filter>lighting</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\lighting\lightserver.h">
+      <Filter>lighting</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\lighting\lighttype.h">
+      <Filter>lighting</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\lighting\pssmutil.h">
+      <Filter>lighting</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\lighting\shadowserver.h">
+      <Filter>lighting</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\lighting\base\lightserverbase.h">
+      <Filter>lighting\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\lighting\base\shadowserverbase.h">
+      <Filter>lighting\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\lighting\lightprepass\lightprepassserver.h">
+      <Filter>lighting\lightprepass</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\lighting\sm30\sm30lightserver.h">
+      <Filter>lighting\sm30</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\lighting\sm30\sm30shadowserver.h">
+      <Filter>lighting\sm30</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\models\managedmodel.h">
+      <Filter>models</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\models\model.h">
+      <Filter>models</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\models\modelinstance.h">
+      <Filter>models</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\models\modelnode.h">
+      <Filter>models</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\models\modelnodeinstance.h">
+      <Filter>models</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\models\modelnodetype.h">
+      <Filter>models</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\models\modelserver.h">
+      <Filter>models</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\models\streammodelloader.h">
+      <Filter>models</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\models\visresolvecontainer.h">
+      <Filter>models</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\models\visresolver.h">
+      <Filter>models</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\models\nodes\animatornode.h">
+      <Filter>models\nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\models\nodes\animatornodeinstance.h">
+      <Filter>models\nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\models\nodes\animkey.h">
+      <Filter>models\nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\models\nodes\animkeyarray.h">
+      <Filter>models\nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\models\nodes\animlooptype.h">
+      <Filter>models\nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\models\nodes\shapenode.h">
+      <Filter>models\nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\models\nodes\shapenodeinstance.h">
+      <Filter>models\nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\models\nodes\statenode.h">
+      <Filter>models\nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\models\nodes\statenodeinstance.h">
+      <Filter>models\nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\models\nodes\transformnode.h">
+      <Filter>models\nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\models\nodes\transformnodeinstance.h">
+      <Filter>models\nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\particles\emitterattrs.h">
+      <Filter>particles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\particles\emittermesh.h">
+      <Filter>particles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\particles\envelopecurve.h">
+      <Filter>particles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\particles\envelopesamplebuffer.h">
+      <Filter>particles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\particles\particle.h">
+      <Filter>particles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\particles\particlerenderer.h">
+      <Filter>particles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\particles\particlerenderinfo.h">
+      <Filter>particles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\particles\particleserver.h">
+      <Filter>particles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\particles\particlesystem.h">
+      <Filter>particles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\particles\particlesysteminstance.h">
+      <Filter>particles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\particles\particlesystemnode.h">
+      <Filter>particles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\particles\particlesystemnodeinstance.h">
+      <Filter>particles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\particles\particlesystemstate.h">
+      <Filter>particles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\particles\base\particlerendererbase.h">
+      <Filter>particles\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\particles\base\particlerenderinfobase.h">
+      <Filter>particles\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\particles\base\particlesysteminstancebase.h">
+      <Filter>particles\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\particles\d3d9\d3d9particlerenderer.h">
+      <Filter>particles\d3d9</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\particles\d3d9\d3d9particlesysteminstance.h">
+      <Filter>particles\d3d9</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\rendermodules\rendermodule.h">
+      <Filter>rendermodules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\rendermodules\rt\rtplugin.h">
+      <Filter>rendermodules\rt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\rendermodules\rt\rtpluginregistry.h">
+      <Filter>rendermodules\rt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\renderutil\drawfullscreenquad.h">
+      <Filter>renderutil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\renderutil\mayacamerautil.h">
+      <Filter>renderutil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\renderutil\mouserayutil.h">
+      <Filter>renderutil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\renderutil\nodelookuputil.h">
+      <Filter>renderutil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\resources\managedmesh.h">
+      <Filter>resources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\resources\managedresource.h">
+      <Filter>resources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\resources\managedtexture.h">
+      <Filter>resources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\resources\resource.h">
+      <Filter>resources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\resources\resourceallocator.h">
+      <Filter>resources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\resources\resourcedictionary.h">
+      <Filter>resources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\resources\resourceid.h">
+      <Filter>resources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\resources\resourceloader.h">
+      <Filter>resources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\resources\resourcelump.h">
+      <Filter>resources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\resources\resourcemanager.h">
+      <Filter>resources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\resources\resourcemapper.h">
+      <Filter>resources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\resources\resourcesaver.h">
+      <Filter>resources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\resources\simpleresourcemapper.h">
+      <Filter>resources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\resources\streamresourceloader.h">
+      <Filter>resources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\resources\d3d9streaming\d3d9texturecreator.h">
+      <Filter>resources\d3d9streaming</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\resources\d3d9streaming\d3d9textureinfo.h">
+      <Filter>resources\d3d9streaming</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\resources\d3d9streaming\d3d9texturestreamer.h">
+      <Filter>resources\d3d9streaming</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\resources\streaming\loadingresource.h">
+      <Filter>resources\streaming</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\resources\streaming\poolloadingresource.h">
+      <Filter>resources\streaming</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\resources\streaming\poolresourcemapper.h">
+      <Filter>resources\streaming</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\resources\streaming\poolscheduler.h">
+      <Filter>resources\streaming</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\resources\streaming\resourcecreator.h">
+      <Filter>resources\streaming</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\resources\streaming\resourcedictionaryreader.h">
+      <Filter>resources\streaming</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\resources\streaming\resourceinfo.h">
+      <Filter>resources\streaming</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\resources\streaming\resourcepool.h">
+      <Filter>resources\streaming</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\resources\streaming\resourcerequestinfo.h">
+      <Filter>resources\streaming</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\resources\streaming\resourcescheduler.h">
+      <Filter>resources\streaming</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\resources\streaming\resourceslot.h">
+      <Filter>resources\streaming</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\resources\streaming\streamingresourcemapper.h">
+      <Filter>resources\streaming</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\resources\streaming\streamingtexturepagehandler.h">
+      <Filter>resources\streaming</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\resources\streaming\texturecreator.h">
+      <Filter>resources\streaming</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\resources\streaming\textureinfo.h">
+      <Filter>resources\streaming</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\resources\streaming\texturepoolmapperscheduler.h">
+      <Filter>resources\streaming</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\resources\streaming\texturerequestinfo.h">
+      <Filter>resources\streaming</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\resources\streaming\texturestreamer.h">
+      <Filter>resources\streaming</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\shared\graphics\camerasettings.h">
+      <Filter>shared\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\shared\graphics\charjointinfo.h">
+      <Filter>shared\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\shared\graphics\graphicsentityshared.h">
+      <Filter>shared\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\shared\graphics\modelentityshared.h">
+      <Filter>shared\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\visibility\observercontext.h">
+      <Filter>visibility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\visibility\visibilitychecker.h">
+      <Filter>visibility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\visibility\visibilitycontainer.h">
+      <Filter>visibility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\visibility\visibilitycontext.h">
+      <Filter>visibility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\visibility\visibilityprotocol.h">
+      <Filter>visibility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\visibility\visibilityquery.h">
+      <Filter>visibility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\visibility\visibilitysystems\visibilitybox.h">
+      <Filter>visibility\visibilitysystems</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\visibility\visibilitysystems\visibilityboxsystem.h">
+      <Filter>visibility\visibilitysystems</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\visibility\visibilitysystems\visibilitycell.h">
+      <Filter>visibility\visibilitysystems</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\visibility\visibilitysystems\visibilitycluster.h">
+      <Filter>visibility\visibilitysystems</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\visibility\visibilitysystems\visibilityclustersystem.h">
+      <Filter>visibility\visibilitysystems</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\visibility\visibilitysystems\visibilityquadtree.h">
+      <Filter>visibility\visibilitysystems</Filter>
+    </ClInclude>
+    <ClInclude Include="..\render\visibility\visibilitysystems\visibilitysystembase.h">
+      <Filter>visibility\visibilitysystems</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

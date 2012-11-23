@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2006 sp2 U (http://www.altova.com) by Andre Weissflog (Radon Labs GmbH) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="Nebula3">
+		<xs:annotation>
+			<xs:documentation>Root element for Nebula3 project info file.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Project" type="ProjectType"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:simpleType name="platform">
+		<xs:annotation>
+			<xs:documentation>Platform types</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="xbox360"/>
+			<xs:enumeration value="win32"/>
+			<xs:enumeration value="ps3"/>
+			<xs:enumeration value="wii"/>
+			<xs:enumeration value="nds"/>
+			<xs:enumeration value="psp"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="ProjectType">
+		<xs:annotation>
+			<xs:documentation>Describes project properties</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="Platform" type="PlatformType"/>
+		</xs:sequence>
+		<xs:attribute name="name" use="required"/>
+		<xs:attribute name="defaultPlatform" type="platform" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="PlatformType">
+		<xs:annotation>
+			<xs:documentation>Describes platform properties</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Attr" type="AttrType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="name" type="platform" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="AttrType">
+		<xs:annotation>
+			<xs:documentation>Describes a platform attribute</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="name" use="required"/>
+		<xs:attribute name="value" use="required"/>
+	</xs:complexType>
+</xs:schema>

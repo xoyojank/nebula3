@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="posteffect">
+      <UniqueIdentifier>{6ee17910-66c6-45f8-b012-2f4703045952}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Nebula3_Interface_Definition Include="..\addons\posteffect\posteffectprotocol.nidl">
+      <Filter>posteffect</Filter>
+    </Nebula3_Interface_Definition>
+  </ItemGroup>
+</Project>

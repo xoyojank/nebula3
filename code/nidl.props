@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup
+    Condition="'$(Nebula3_Interface_DefinitionBeforeTargets)' == '' and '$(Nebula3_Interface_DefinitionAfterTargets)' == '' and '$(ConfigurationType)' != 'Makefile'">
+    <Nebula3_Interface_DefinitionBeforeTargets>Midl</Nebula3_Interface_DefinitionBeforeTargets>
+    <Nebula3_Interface_DefinitionAfterTargets>CustomBuild</Nebula3_Interface_DefinitionAfterTargets>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Nebula3_Interface_DefinitionDependsOn
+      Condition="'$(ConfigurationType)' != 'Makefile'">_SelectedFiles;$(Nebula3_Interface_DefinitionDependsOn)</Nebula3_Interface_DefinitionDependsOn>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <Nebula3_Interface_Definition>
+      <CommandLineTemplate>..\..\bin\win32\idlc [Inputs]</CommandLineTemplate>
+      <Outputs>%(ObjectFileName)</Outputs>
+      <ExecutionDescription>Compiling nidl file...</ExecutionDescription>
+    </Nebula3_Interface_Definition>
+  </ItemDefinitionGroup>
+</Project>

@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Nebula3>
+    <Protocol namespace="Multiplayer" name="NotificationProtocol">
+      <!-- dependencies -->
+      <Dependency header="internalmultiplayer/handle.h"/>
+      <Dependency header="internalmultiplayer/internalplayer.h"/>
+      <Dependency header="internalmultiplayer/netstream.h"/>
+      <Dependency header="internalmultiplayer/sessioninfo.h"/>
+      <Dependency header="internalmultiplayer/playerinfo.h"/>
+      <Dependency header="util/array.h"/>
+      <Dependency header="util/stringatom.h"/>
+                                                           
+      <!-- Return notifications, just return msgs from our network system -->
+      
+      <!-- base class -->
+      <Message name="ReturnNotification" fourcc="RENO" >
+      </Message>
+      
+      <!-- local player sucessfully added-->
+      <Message name="LocalPlayerAdded" fourcc="LPSA">
+        <InArg name="PlayerInfo" type="InternalMultiplayer::PlayerInfo"/>
+      </Message>
+      
+      <!-- local player sucessfully removed-->
+      <Message name="LocalPlayerRemoved" fourcc="LPSR">
+        <InArg name="PlayerHandle" type="InternalMultiplayer::PlayerHandle"/>
+      </Message>
+      
+      <!-- creating one or mroe local players has succeeded, player will be signed into network system -->
+      <Message name="CreatePlayersSucceeded" fourcc="CPLS" derivedFrom="ReturnNotification" >                    
+        <InArg name="PlayerInfo" type="Util::Dictionary<IndexT, InternalMultiplayer::PlayerInfo>"/>
+      </Message>
+      
+      <!-- creating local players has failed -->
+      <Message name="CreatePlayersFailed" fourcc="CPLF" derivedFrom="ReturnNotification" >                    
+        <InArg name="ErrorMsg" type="Util::String" /> <!-- error msg if no games could be found or other error occured -->        
+      </Message>
+
+      <!-- host session was successful -->
+      <Message name="HostSessionSucceeded" fourcc="HSSU" derivedFrom="ReturnNotification">
+        <InArg name="SessionHandle" type="InternalMultiplayer::SessionHandle"/> <!-- session handle will be valid on a successfully hosted game -->        
+        <InArg name="SessionInfo" type="InternalMultiplayer::SessionInfo" /> <!-- session info of new session -->
+      </Message>
+
+      <!-- host session was NOT successful -->
+      <Message name="HostSessionFailed" fourcc="HSFA" derivedFrom="ReturnNotification">        
+        <InArg name="ErrorMsg" type="Util::String" /> <!-- error msg if no games could be found or other error occured -->        
+      </Message>
+
+      <!-- a game search has finished -->
+      <Message name="StartGameSearchFinished" fourcc="SGSF" derivedFrom="ReturnNotification" >
+        <InArg name="Results" type="Util::Array<InternalMultiplayer::SessionInfo>" /> <!-- array of session infos -->
+      </Message>
+
+      <!-- Joining a session was successful -->
+      <Message name="JoinSessionSucceeded" fourcc="JSES" derivedFrom="ReturnNotification" >
+        <InArg name="SessionHandle" type="InternalMultiplayer::SessionHandle"/> <!-- session handle will be valid on a successfully joined game -->        
+        <InArg name="SessionInfo" type="InternalMultiplayer::SessionInfo" /> <!-- array of session infos -->
+      </Message>
+      
+      <!-- Joining a session was NOT successful -->
+      <Message name="JoinSessionFailed" fourcc="JSFA" derivedFrom="ReturnNotification" >
+        <InArg name="ErrorMsg" type="Util::String" /> <!-- error msg if no games could be found or other error occured -->        
+      </Message>
+      
+      <!-- starting a game session by host was successfull -->
+      <Message name="StartGameSucceeded" fourcc="SGAS" derivedFrom="ReturnNotification" >
+      </Message>
+      
+      <!-- starting a game session by host has failed -->
+      <Message name="StartGameFailed" fourcc="SGAF" derivedFrom="ReturnNotification" >
+      </Message>
+      
+      <!-- ending a game session by host was successfull -->
+      <Message name="EndGameSucceeded" fourcc="EGAS" derivedFrom="ReturnNotification" >
+      </Message>
+      
+      <!-- ending a game session by host has failed -->
+      <Message name="EndGameFailed" fourcc="EGAF" derivedFrom="ReturnNotification" >
+      </Message>
+      
+      <!-- leaving a session was successfull -->
+      <Message name="LeaveSessionSucceeded" fourcc="LSES" derivedFrom="ReturnNotification" >        
+        <InArg name="PlayerHandle" type="InternalMultiplayer::PlayerHandle"/>  
+      </Message>
+      
+      <!-- leaving a session was successfull -->
+      <Message name="LeaveSessionFailed" fourcc="LSEF" derivedFrom="ReturnNotification" >
+        <InArg name="ErrorMsg" type="Util::String" /> <!-- error msg if no games could be found or other error occured -->                
+      </Message>
+
+      <!-- deleting a game session was successful, must be done by host -->
+      <Message name="DeleteSessionSucceded" fourcc="DSES" derivedFrom="ReturnNotification" >        
+      </Message>
+
+      <!-- deleting a game session was successful, must be done by host -->
+      <Message name="DeleteSessionFailed" fourcc="DSEF" derivedFrom="ReturnNotification" >
+        <InArg name="ErrorMsg" type="Util::String" /> <!-- error msg if session could not be deleted -->
+      </Message>
+                                                           
+      <!-- Event notifications, coming from network invoked thru other systems -->
+            
+      <!-- local player has changed sign in state-->
+      <Message name="PlayerSignInChanged" fourcc="PSIC">
+        <InArg name="PlayerHandle" type="InternalMultiplayer::PlayerHandle"/>
+        <InArg name="SignInState" type="InternalMultiplayer::InternalPlayer::SignInState"/>
+      </Message>
+      
+      <!-- player from network has joined the session, player from outside have no sign in state -->
+      <Message name="PlayerJoinedSession" fourcc="PLJO">
+        <InArg name="PlayerHandle" type="InternalMultiplayer::PlayerHandle"/>
+        <InArg name="PlayerName" type="Util::StringAtom"/>
+        <InArg name="IsPlayerReady" type="bool"/>
+        <InArg name="UnqiueIdBlob" type="Util::Blob"/>        
+      </Message>
+      
+      <!-- player has left the session -->
+      <Message name="PlayerLeftSession" fourcc="PLEO">
+        <InArg name="PlayerHandle" type="InternalMultiplayer::PlayerHandle"/>
+      </Message>
+
+      <!-- disconnection from server -->
+      <Message name="DisconnectFromServer" fourcc="DCSR">
+      </Message>
+
+      <!-- game session was started by host, do everything to get ready and send back a game start finished -->
+      <Message name="GameStarting" fourcc="GSTI">
+        <InArg name="SessionHandle" type="InternalMultiplayer::SessionHandle"/>
+      </Message>
+      
+      <!-- game session was started, ready to play -->
+      <Message name="GameStarted" fourcc="GAST">
+        <InArg name="SessionHandle" type="InternalMultiplayer::SessionHandle"/>
+      </Message>
+
+      <!-- game session was ended, do everthing to save any game states before session will be deleted -->
+      <Message name="GameEnding" fourcc="GEIG">
+        <InArg name="SessionHandle" type="InternalMultiplayer::SessionHandle"/>
+      </Message>
+
+      <!-- game session was ended player successfully returned to Lobby -->
+      <Message name="GameEnded" fourcc="GEND">
+        <InArg name="SessionHandle" type="InternalMultiplayer::SessionHandle"/>
+      </Message>
+
+      <!-- local player has changed sign in state -->
+      <Message name="PlayerReadyChanged" fourcc="PRCH">
+        <InArg name="PlayerHandle" type="InternalMultiplayer::PlayerHandle"/>
+        <InArg name="ReadyState" type="bool"/>
+      </Message>
+
+      <!-- data received for one or all players -->
+      <Message name="DataReceived" fourcc="DARC">
+        <InArg name="FromPlayerHandle" type="InternalMultiplayer::PlayerHandle"/> <!-- sender -->
+        <InArg name="ToPlayer" type="InternalMultiplayer::PlayerHandle"/> <!-- is invalid if data is for all players -->
+        <InArg name="Stream" type="Ptr<InternalMultiplayer::NetStream>"/>
+      </Message>
+      
+    </Protocol>    
+</Nebula3>

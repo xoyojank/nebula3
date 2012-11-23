@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Nebula3>
+    <Protocol namespace="SUI" name="SUIActions">
+        <!-- dependencies -->
+        <Dependency header="util/stringatom.h"/>
+        <Dependency header="math/float2.h"/>
+
+        <!-- the base SUIAction class -->
+        <Message name="SUIAction" fourcc="suac">
+            <InArg name="LayoutId" type="Util::StringAtom"/>
+            <InArg name="ElementId" type="Util::StringAtom"/>
+        </Message>
+        
+        <!-- show an element -->
+        <Message name="SUIActionSetVisible" fourcc="suse" derivedFrom="SUIAction">
+            <InArg name="Visible" type="bool"/>
+        </Message>
+ 
+        <!-- set the size of an element -->
+        <Message name="SUIActionSetSize" fourcc="suss" derivedFrom="SUIAction">
+            <InArg name="Size" type="Math::float2"/>
+        </Message>
+        
+        <!-- start an animation on the entire layout -->
+        <Message name="SUIActionPlayLayoutAnim" fourcc="spla" derivedFrom="SUIAction">
+            <InArg name="Anim" type="Util::StringAtom"/>
+            <InArg name="ResetTime" type="bool" default="true"/>
+            <InArg name="Reverse" type="bool" default="false"/>
+            <InArg name="Speed" type="float" default="1.0"/>
+        </Message>
+        
+        <!-- start an animation on a specific element -->
+        <Message name="SUIActionPlayElementAnim" fourcc="spea" derivedFrom="SUIAction">
+            <InArg name="Anim" type="Util::StringAtom"/>
+            <InArg name="ResetTime" type="bool" default="true"/>
+            <InArg name="Reverse" type="bool" default="false"/>
+            <InArg name="Speed" type="float" default="1.0"/>
+        </Message>
+
+        <!-- start an animation on a specific element -->
+        <Message name="SUIActionHasAnimFinished" fourcc="safi" derivedFrom="SUIAction">
+            <InArg name="Anim" type="Util::StringAtom"/>
+            <OutArg name="Result" type="bool" default="false"/>
+        </Message>
+        
+        <!-- set text for a specific element -->
+        <Message name="SUIActionSetText" fourcc="sete" derivedFrom="SUIAction">
+            <InArg name="Text" type="Util::String"/>
+            <InArg name="NewLineThreshold" type="int"/>
+        </Message>
+
+        <!-- set text for a specific element -->
+        <Message name="SUIActionSetTextColor" fourcc="setc" derivedFrom="SUIAction">
+            <InArg name="Color" type="Math::float4"/>
+        </Message>
+
+        <!-- set font size for a specific text element -->
+        <Message name="SUIActionSetFontSize" fourcc="sefs" derivedFrom="SUIAction">
+            <InArg name="SizeX" type="float"/>
+            <InArg name="SizeY" type="float"/>
+        </Message>
+
+        <!-- set font size for a specific text element -->
+        <Message name="SUIActionSetPosition" fourcc="ssps" derivedFrom="SUIAction">
+            <InArg name="SizeX" type="float"/>
+            <InArg name="SizeY" type="float"/>
+        </Message>
+
+        <!-- set font size for a specific text element -->
+        <Message name="SUIActionGetPosition" fourcc="sgpo" derivedFrom="SUIAction">
+            <OutArg name="Position" type="Math::float2"/>
+        </Message>
+
+        <!-- set font size for a specific text element -->
+        <Message name="SUIActionSetPaused" fourcc="spau" derivedFrom="SUIAction">
+            <InArg name="Paused" type="bool"/>
+        </Message>
+
+    </Protocol>    
+</Nebula3>

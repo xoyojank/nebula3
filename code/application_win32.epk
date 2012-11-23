@@ -1,0 +1,44 @@
+#-------------------------------------------------------------------------------
+#   application_win32.epk
+#   (C) 2007 Radon Labs GmbH
+#-------------------------------------------------------------------------------
+
+begintarget application_nidls_win32
+    settype nidl
+    setbasedir application
+    setnidlclusters {
+        graphicsfeature physicsfeature basegamefeature stateobjectfeature scriptfeature
+    }
+endtarget
+
+begintarget application_win32
+    settype lib
+    setbasedir application
+    setprecompiledheader stdneb
+    setincpath_win32 "../foundation;../application;../application/basegamefeature;../application/graphicsfeature;../application/physicsfeature;../application/networkfeature;../application/stateobjectfeature;../addons/network;../addons/posteffect;../render;../extlibs;../addons;../extlibs/ode;"
+    setdepends {
+        posteffect_nidls_win32
+		posteffect_win32
+		application_nidls_win32
+    }
+    setclusters {
+        appgame
+        game
+        commandhandlers
+        basegamefeature basegamefeature/statehandlers basegamefeature/managers basegamefeature/basegametiming basegamefeature/loader basegamefeature/properties basegamefeature/basegameattr basegamefeature/debug
+        graphicsfeature graphicsfeature/properties graphicsfeature/graphicsattr graphicsfeature/graphicsutil graphicsfeature/managers
+        physicsfeature physicsfeature/properties physicsfeature/physicsattr
+        stateobjectfeature stateobjectfeature/properties
+        scriptfeature scriptfeature/dialog scriptfeature/managers scriptfeature/quest scriptfeature/scriptattr scriptfeature/conditions scriptfeature/log scriptfeature/actions scriptfeature/fsm scriptfeature/actions/behaviour scriptfeature/conditions/behaviour 
+    }
+endtarget         
+
+beginsolution application_win32 win32
+    settargets {
+        posteffect_nidls_win32
+		posteffect_win32
+		
+		application_nidls_win32
+        application_win32	
+    }
+endsolution   

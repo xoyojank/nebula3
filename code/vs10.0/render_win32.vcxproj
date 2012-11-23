@@ -1,0 +1,879 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Maya_Debug|Win32">
+      <Configuration>Maya_Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Maya_Release|Win32">
+      <Configuration>Maya_Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{FA7621FE-9BAE-40D0-9AB9-B1905059AA18}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Maya_Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Maya_Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="..\nidl.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Maya_Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Maya_Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\Win32\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\Win32\Debug\render_win32\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\Win32\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\Win32\Release\render_win32\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Maya_Debug|Win32'">.\Win32\Maya_Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Maya_Debug|Win32'">.\Win32\Maya_Debug\render_win32\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Maya_Release|Win32'">.\Win32\Maya_Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Maya_Release|Win32'">.\Win32\Maya_Release\render_win32\</IntDir>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Maya_Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Maya_Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Maya_Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Maya_Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Maya_Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Maya_Release|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..;../foundation;../extlibs;../render;../addons ;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>__WIN32__;WIN32;_DEBUG;NT_PLUGIN;_HAS_EXCEPTIONS=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <MinimalRebuild>true</MinimalRebuild>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdneb.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(OutDir)$(ProjectName).pch</PrecompiledHeaderOutputFile>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>.\Win32\render_win32.debug.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>..;../foundation;../extlibs;../render;../addons ;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>__WIN32__;WIN32;NT_PLUGIN;_HAS_EXCEPTIONS=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+      <CompileAs>Default</CompileAs>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdneb.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(OutDir)$(ProjectName).pch</PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>.\Win32\render_win32.release.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Maya_Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..;../foundation;../extlibs;../render;../addons ;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>__MAYA__;__WIN32__;WIN32;_DEBUG;NT_PLUGIN;_HAS_EXCEPTIONS=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdneb.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(OutDir)$(ProjectName).pch</PrecompiledHeaderOutputFile>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>.\Win32\render_win32.maya_debug.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Maya_Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>..;../foundation;../extlibs;../render;../addons ;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>__MAYA__;__WIN32__;WIN32;NT_PLUGIN;_HAS_EXCEPTIONS=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+      <CompileAs>Default</CompileAs>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdneb.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(OutDir)$(ProjectName).pch</PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>.\Win32\render_win32.maya_release.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\render\stdneb.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Maya_Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Maya_Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\render\animation\animeventhandlerbase.cc" />
+    <ClCompile Include="..\render\animation\animeventserver.cc" />
+    <ClCompile Include="..\render\animation\animjob.cc" />
+    <ClCompile Include="..\render\animation\animsequencer.cc" />
+    <ClCompile Include="..\render\animation\playclipjob.cc" />
+    <ClCompile Include="..\render\apprender\renderapplication.cc" />
+    <ClCompile Include="..\render\apprender\viewerapplication.cc" />
+    <ClCompile Include="..\render\characters\character.cc" />
+    <ClCompile Include="..\render\characters\characteranimationcontroller.cc" />
+    <ClCompile Include="..\render\characters\characteranimationlibrary.cc" />
+    <ClCompile Include="..\render\characters\characterinstance.cc" />
+    <ClCompile Include="..\render\characters\characterjoint.cc" />
+    <ClCompile Include="..\render\characters\characternode.cc" />
+    <ClCompile Include="..\render\characters\characternodeinstance.cc" />
+    <ClCompile Include="..\render\characters\characterserver.cc" />
+    <ClCompile Include="..\render\characters\characterskeleton.cc" />
+    <ClCompile Include="..\render\characters\characterskeletoninstance.cc" />
+    <ClCompile Include="..\render\characters\characterskin.cc" />
+    <ClCompile Include="..\render\characters\characterskinlibrary.cc" />
+    <ClCompile Include="..\render\characters\characterskinlist.cc" />
+    <ClCompile Include="..\render\characters\characterskinnode.cc" />
+    <ClCompile Include="..\render\characters\characterskinnodeinstance.cc" />
+    <ClCompile Include="..\render\characters\characterskinset.cc" />
+    <ClCompile Include="..\render\characters\charactervariationlibrary.cc" />
+    <ClCompile Include="..\render\characters\charactervariationset.cc" />
+    <ClCompile Include="..\render\characters\skinnedmeshrenderer.cc" />
+    <ClCompile Include="..\render\characters\base\skinnedmeshrendererbase.cc" />
+    <ClCompile Include="..\render\characters\win32\win32skinnedmeshrenderer.cc" />
+    <ClCompile Include="..\render\coreanimation\animclip.cc" />
+    <ClCompile Include="..\render\coreanimation\animeventemitter.cc" />
+    <ClCompile Include="..\render\coreanimation\animkeybuffer.cc" />
+    <ClCompile Include="..\render\coreanimation\animresource.cc" />
+    <ClCompile Include="..\render\coreanimation\animsamplebuffer.cc" />
+    <ClCompile Include="..\render\coreanimation\animutil.cc" />
+    <ClCompile Include="..\render\coreanimation\curvetype.cc" />
+    <ClCompile Include="..\render\coreanimation\infinitytype.cc" />
+    <ClCompile Include="..\render\coreanimation\managedanimresource.cc" />
+    <ClCompile Include="..\render\coreanimation\sampletype.cc" />
+    <ClCompile Include="..\render\coreanimation\streamanimationloader.cc" />
+    <ClCompile Include="..\render\coregraphics\adapter.cc" />
+    <ClCompile Include="..\render\coregraphics\antialiasquality.cc" />
+    <ClCompile Include="..\render\coregraphics\displaydevice.cc" />
+    <ClCompile Include="..\render\coregraphics\displayeventhandler.cc" />
+    <ClCompile Include="..\render\coregraphics\imagefileformat.cc" />
+    <ClCompile Include="..\render\coregraphics\indexbuffer.cc" />
+    <ClCompile Include="..\render\coregraphics\memoryindexbufferloader.cc" />
+    <ClCompile Include="..\render\coregraphics\memorymeshloader.cc" />
+    <ClCompile Include="..\render\coregraphics\memoryvertexbufferloader.cc" />
+    <ClCompile Include="..\render\coregraphics\mesh.cc" />
+    <ClCompile Include="..\render\coregraphics\mouserenderdevice.cc" />
+    <ClCompile Include="..\render\coregraphics\multiplerendertarget.cc" />
+    <ClCompile Include="..\render\coregraphics\pixelformat.cc" />
+    <ClCompile Include="..\render\coregraphics\primitivetopology.cc" />
+    <ClCompile Include="..\render\coregraphics\renderdevice.cc" />
+    <ClCompile Include="..\render\coregraphics\rendereventhandler.cc" />
+    <ClCompile Include="..\render\coregraphics\rendershape.cc" />
+    <ClCompile Include="..\render\coregraphics\rendertarget.cc" />
+    <ClCompile Include="..\render\coregraphics\shader.cc" />
+    <ClCompile Include="..\render\coregraphics\shaderfeature.cc" />
+    <ClCompile Include="..\render\coregraphics\shaderinstance.cc" />
+    <ClCompile Include="..\render\coregraphics\shaderserver.cc" />
+    <ClCompile Include="..\render\coregraphics\shadervariable.cc" />
+    <ClCompile Include="..\render\coregraphics\shadervariableinstance.cc" />
+    <ClCompile Include="..\render\coregraphics\shadervariation.cc" />
+    <ClCompile Include="..\render\coregraphics\shaperenderer.cc" />
+    <ClCompile Include="..\render\coregraphics\streammeshloader.cc" />
+    <ClCompile Include="..\render\coregraphics\streamshaderloader.cc" />
+    <ClCompile Include="..\render\coregraphics\streamtextureloader.cc" />
+    <ClCompile Include="..\render\coregraphics\streamtexturesaver.cc" />
+    <ClCompile Include="..\render\coregraphics\textelement.cc" />
+    <ClCompile Include="..\render\coregraphics\textrenderer.cc" />
+    <ClCompile Include="..\render\coregraphics\texture.cc" />
+    <ClCompile Include="..\render\coregraphics\threadsafedisplayeventhandler.cc" />
+    <ClCompile Include="..\render\coregraphics\threadsaferendereventhandler.cc" />
+    <ClCompile Include="..\render\coregraphics\transformdevice.cc" />
+    <ClCompile Include="..\render\coregraphics\vertexbuffer.cc" />
+    <ClCompile Include="..\render\coregraphics\vertexlayout.cc" />
+    <ClCompile Include="..\render\coregraphics\vertexlayoutserver.cc" />
+    <ClCompile Include="..\render\coregraphics\base\displaydevicebase.cc" />
+    <ClCompile Include="..\render\coregraphics\base\indexbufferbase.cc" />
+    <ClCompile Include="..\render\coregraphics\base\memoryindexbufferloaderbase.cc" />
+    <ClCompile Include="..\render\coregraphics\base\memoryvertexbufferloaderbase.cc" />
+    <ClCompile Include="..\render\coregraphics\base\meshbase.cc" />
+    <ClCompile Include="..\render\coregraphics\base\mouserenderdevicebase.cc" />
+    <ClCompile Include="..\render\coregraphics\base\multiplerendertargetbase.cc" />
+    <ClCompile Include="..\render\coregraphics\base\renderdevicebase.cc" />
+    <ClCompile Include="..\render\coregraphics\base\rendertargetbase.cc" />
+    <ClCompile Include="..\render\coregraphics\base\resourcebase.cc" />
+    <ClCompile Include="..\render\coregraphics\base\shaderbase.cc" />
+    <ClCompile Include="..\render\coregraphics\base\shaderinstancebase.cc" />
+    <ClCompile Include="..\render\coregraphics\base\shaderserverbase.cc" />
+    <ClCompile Include="..\render\coregraphics\base\shadervariablebase.cc" />
+    <ClCompile Include="..\render\coregraphics\base\shadervariableinstancebase.cc" />
+    <ClCompile Include="..\render\coregraphics\base\shadervariationbase.cc" />
+    <ClCompile Include="..\render\coregraphics\base\shaperendererbase.cc" />
+    <ClCompile Include="..\render\coregraphics\base\streamtexturesaverbase.cc" />
+    <ClCompile Include="..\render\coregraphics\base\textrendererbase.cc" />
+    <ClCompile Include="..\render\coregraphics\base\texturebase.cc" />
+    <ClCompile Include="..\render\coregraphics\base\transformdevicebase.cc" />
+    <ClCompile Include="..\render\coregraphics\base\vertexbufferbase.cc" />
+    <ClCompile Include="..\render\coregraphics\base\vertexlayoutbase.cc" />
+    <ClCompile Include="..\render\coregraphics\base\vertexlayoutserverbase.cc" />
+    <ClCompile Include="..\render\coregraphics\d3d9\d3d9displaydevice.cc" />
+    <ClCompile Include="..\render\coregraphics\d3d9\d3d9renderdevice.cc" />
+    <ClCompile Include="..\render\coregraphics\d3d9\d3d9rendertarget.cc" />
+    <ClCompile Include="..\render\coregraphics\d3d9\d3d9resource.cc" />
+    <ClCompile Include="..\render\coregraphics\d3d9\d3d9resourceeventhandler.cc" />
+    <ClCompile Include="..\render\coregraphics\d3d9\d3d9shader.cc" />
+    <ClCompile Include="..\render\coregraphics\d3d9\d3d9shaderinstance.cc" />
+    <ClCompile Include="..\render\coregraphics\d3d9\d3d9shaderserver.cc" />
+    <ClCompile Include="..\render\coregraphics\d3d9\d3d9shadervariable.cc" />
+    <ClCompile Include="..\render\coregraphics\d3d9\d3d9shadervariation.cc" />
+    <ClCompile Include="..\render\coregraphics\d3d9\d3d9streamshaderloader.cc" />
+    <ClCompile Include="..\render\coregraphics\d3d9\d3d9streamtextureloader.cc" />
+    <ClCompile Include="..\render\coregraphics\d3d9\d3d9textrenderer.cc" />
+    <ClCompile Include="..\render\coregraphics\d3d9\d3d9texture.cc" />
+    <ClCompile Include="..\render\coregraphics\debug\displaypagehandler.cc" />
+    <ClCompile Include="..\render\coregraphics\debug\meshpagehandler.cc" />
+    <ClCompile Include="..\render\coregraphics\debug\shaderpagehandler.cc" />
+    <ClCompile Include="..\render\coregraphics\debug\texturepagehandler.cc" />
+    <ClCompile Include="..\render\coregraphics\legacy\nvx2streamreader.cc" />
+    <ClCompile Include="..\render\coregraphics\win32\win32displaydevice.cc" />
+    <ClCompile Include="..\render\coregraphics\win360\d3d9indexbuffer.cc" />
+    <ClCompile Include="..\render\coregraphics\win360\d3d9memoryindexbufferloader.cc" />
+    <ClCompile Include="..\render\coregraphics\win360\d3d9memoryvertexbufferloader.cc" />
+    <ClCompile Include="..\render\coregraphics\win360\d3d9shaperenderer.cc" />
+    <ClCompile Include="..\render\coregraphics\win360\d3d9streammeshloader.cc" />
+    <ClCompile Include="..\render\coregraphics\win360\d3d9streamtexturesaver.cc" />
+    <ClCompile Include="..\render\coregraphics\win360\d3d9transformdevice.cc" />
+    <ClCompile Include="..\render\coregraphics\win360\d3d9types.cc" />
+    <ClCompile Include="..\render\coregraphics\win360\d3d9vertexbuffer.cc" />
+    <ClCompile Include="..\render\coregraphics\win360\d3d9vertexlayout.cc" />
+    <ClCompile Include="..\render\debugrender\debuggraphicshandler.cc" />
+    <ClCompile Include="..\render\debugrender\debugrenderprotocol.cc" />
+    <ClCompile Include="..\render\debugrender\debugshaperenderer.cc" />
+    <ClCompile Include="..\render\debugrender\debugtextrenderer.cc" />
+    <ClCompile Include="..\render\debugrender\renderconsolehandler.cc" />
+    <ClCompile Include="..\render\frame\framebatch.cc" />
+    <ClCompile Include="..\render\frame\framepass.cc" />
+    <ClCompile Include="..\render\frame\framepassbase.cc" />
+    <ClCompile Include="..\render\frame\frameposteffect.cc" />
+    <ClCompile Include="..\render\frame\frameserver.cc" />
+    <ClCompile Include="..\render\frame\frameshader.cc" />
+    <ClCompile Include="..\render\frame\frameshaderloader.cc" />
+    <ClCompile Include="..\render\frame\lightingmode.cc" />
+    <ClCompile Include="..\render\frame\sortingmode.cc" />
+    <ClCompile Include="..\render\graphics\abstractlightentity.cc" />
+    <ClCompile Include="..\render\graphics\cameraentity.cc" />
+    <ClCompile Include="..\render\graphics\display.cc" />
+    <ClCompile Include="..\render\graphics\displaysettings.cc" />
+    <ClCompile Include="..\render\graphics\globallightentity.cc" />
+    <ClCompile Include="..\render\graphics\graphicsentity.cc" />
+    <ClCompile Include="..\render\graphics\graphicshandler.cc" />
+    <ClCompile Include="..\render\graphics\graphicsinterface.cc" />
+    <ClCompile Include="..\render\graphics\graphicsprotocol.cc" />
+    <ClCompile Include="..\render\graphics\graphicsserver.cc" />
+    <ClCompile Include="..\render\graphics\modelentity.cc" />
+    <ClCompile Include="..\render\graphics\mouserenderer.cc" />
+    <ClCompile Include="..\render\graphics\pointlightentity.cc" />
+    <ClCompile Include="..\render\graphics\spotlightentity.cc" />
+    <ClCompile Include="..\render\graphics\stage.cc" />
+    <ClCompile Include="..\render\graphics\view.cc" />
+    <ClCompile Include="..\render\input\gamepad.cc" />
+    <ClCompile Include="..\render\input\inputhandler.cc" />
+    <ClCompile Include="..\render\input\inputserver.cc" />
+    <ClCompile Include="..\render\input\key.cc" />
+    <ClCompile Include="..\render\input\keyboard.cc" />
+    <ClCompile Include="..\render\input\mouse.cc" />
+    <ClCompile Include="..\render\input\mousebutton.cc" />
+    <ClCompile Include="..\render\input\base\gamepadbase.cc" />
+    <ClCompile Include="..\render\input\base\inputserverbase.cc" />
+    <ClCompile Include="..\render\input\base\keyboardbase.cc" />
+    <ClCompile Include="..\render\input\base\mousebase.cc" />
+    <ClCompile Include="..\render\input\win32\win32inputdisplayeventhandler.cc" />
+    <ClCompile Include="..\render\input\win32\win32inputserver.cc" />
+    <ClCompile Include="..\render\input\win32\win32mouse.cc" />
+    <ClCompile Include="..\render\input\xinput\xinputgamepad.cc" />
+    <ClCompile Include="..\render\internalgraphics\attachmentserver.cc" />
+    <ClCompile Include="..\render\internalgraphics\internalcameraentity.cc" />
+    <ClCompile Include="..\render\internalgraphics\internalgraphicsentity.cc" />
+    <ClCompile Include="..\render\internalgraphics\internalgraphicsserver.cc" />
+    <ClCompile Include="..\render\internalgraphics\internalmodelentity.cc" />
+    <ClCompile Include="..\render\internalgraphics\internalstage.cc" />
+    <ClCompile Include="..\render\internalgraphics\internalview.cc" />
+    <ClCompile Include="..\render\internalgraphics\debug\graphicspagehandler.cc" />
+    <ClCompile Include="..\render\internalgraphics\handlers\internalcameraentityhandler.cc" />
+    <ClCompile Include="..\render\internalgraphics\handlers\internalgraphicsentityhandler.cc" />
+    <ClCompile Include="..\render\internalgraphics\handlers\internalgraphicshandler.cc" />
+    <ClCompile Include="..\render\internalgraphics\handlers\internalmodelentityhandler.cc" />
+    <ClCompile Include="..\render\lighting\internalabstractlightentity.cc" />
+    <ClCompile Include="..\render\lighting\internalgloballightentity.cc" />
+    <ClCompile Include="..\render\lighting\internalpointlightentity.cc" />
+    <ClCompile Include="..\render\lighting\internalspotlightentity.cc" />
+    <ClCompile Include="..\render\lighting\lightserver.cc" />
+    <ClCompile Include="..\render\lighting\lighttype.cc" />
+    <ClCompile Include="..\render\lighting\pssmutil.cc" />
+    <ClCompile Include="..\render\lighting\shadowserver.cc" />
+    <ClCompile Include="..\render\lighting\base\lightserverbase.cc" />
+    <ClCompile Include="..\render\lighting\base\shadowserverbase.cc" />
+    <ClCompile Include="..\render\lighting\handlers\internalabstractlightentityhandler.cc" />
+    <ClCompile Include="..\render\lighting\handlers\internalgloballightentityhandler.cc" />
+    <ClCompile Include="..\render\lighting\handlers\internalpointlightentityhandler.cc" />
+    <ClCompile Include="..\render\lighting\handlers\internalspotlightentityhandler.cc" />
+    <ClCompile Include="..\render\lighting\lightprepass\lightprepassserver.cc" />
+    <ClCompile Include="..\render\lighting\sm30\sm30lightserver.cc" />
+    <ClCompile Include="..\render\lighting\sm30\sm30shadowserver.cc" />
+    <ClCompile Include="..\render\models\managedmodel.cc" />
+    <ClCompile Include="..\render\models\model.cc" />
+    <ClCompile Include="..\render\models\modelinstance.cc" />
+    <ClCompile Include="..\render\models\modelnode.cc" />
+    <ClCompile Include="..\render\models\modelnodeinstance.cc" />
+    <ClCompile Include="..\render\models\modelnodetype.cc" />
+    <ClCompile Include="..\render\models\modelserver.cc" />
+    <ClCompile Include="..\render\models\streammodelloader.cc" />
+    <ClCompile Include="..\render\models\visresolver.cc" />
+    <ClCompile Include="..\render\models\nodes\animatornode.cc" />
+    <ClCompile Include="..\render\models\nodes\animatornodeinstance.cc" />
+    <ClCompile Include="..\render\models\nodes\shapenode.cc" />
+    <ClCompile Include="..\render\models\nodes\shapenodeinstance.cc" />
+    <ClCompile Include="..\render\models\nodes\statenode.cc" />
+    <ClCompile Include="..\render\models\nodes\statenodeinstance.cc" />
+    <ClCompile Include="..\render\models\nodes\transformnode.cc" />
+    <ClCompile Include="..\render\models\nodes\transformnodeinstance.cc" />
+    <ClCompile Include="..\render\particles\emitterattrs.cc" />
+    <ClCompile Include="..\render\particles\emittermesh.cc" />
+    <ClCompile Include="..\render\particles\envelopecurve.cc" />
+    <ClCompile Include="..\render\particles\envelopesamplebuffer.cc" />
+    <ClCompile Include="..\render\particles\particlerenderer.cc" />
+    <ClCompile Include="..\render\particles\particleserver.cc" />
+    <ClCompile Include="..\render\particles\particlesystem.cc" />
+    <ClCompile Include="..\render\particles\particlesysteminstance.cc" />
+    <ClCompile Include="..\render\particles\particlesystemnode.cc" />
+    <ClCompile Include="..\render\particles\particlesystemnodeinstance.cc" />
+    <ClCompile Include="..\render\particles\base\particlerendererbase.cc" />
+    <ClCompile Include="..\render\particles\base\particlesysteminstancebase.cc" />
+    <ClCompile Include="..\render\particles\d3d9\d3d9particlerenderer.cc" />
+    <ClCompile Include="..\render\particles\d3d9\d3d9particlesysteminstance.cc" />
+    <ClCompile Include="..\render\rendermodules\rendermodule.cc" />
+    <ClCompile Include="..\render\rendermodules\rt\rtplugin.cc" />
+    <ClCompile Include="..\render\rendermodules\rt\rtpluginregistry.cc" />
+    <ClCompile Include="..\render\renderutil\drawfullscreenquad.cc" />
+    <ClCompile Include="..\render\renderutil\mayacamerautil.cc" />
+    <ClCompile Include="..\render\renderutil\mouserayutil.cc" />
+    <ClCompile Include="..\render\renderutil\nodelookuputil.cc" />
+    <ClCompile Include="..\render\resources\managedmesh.cc" />
+    <ClCompile Include="..\render\resources\managedresource.cc" />
+    <ClCompile Include="..\render\resources\managedtexture.cc" />
+    <ClCompile Include="..\render\resources\resource.cc" />
+    <ClCompile Include="..\render\resources\resourceallocator.cc" />
+    <ClCompile Include="..\render\resources\resourcedictionary.cc" />
+    <ClCompile Include="..\render\resources\resourceloader.cc" />
+    <ClCompile Include="..\render\resources\resourcelump.cc" />
+    <ClCompile Include="..\render\resources\resourcemanager.cc" />
+    <ClCompile Include="..\render\resources\resourcemapper.cc" />
+    <ClCompile Include="..\render\resources\resourcesaver.cc" />
+    <ClCompile Include="..\render\resources\simpleresourcemapper.cc" />
+    <ClCompile Include="..\render\resources\streamresourceloader.cc" />
+    <ClCompile Include="..\render\resources\d3d9streaming\d3d9texturecreator.cc" />
+    <ClCompile Include="..\render\resources\d3d9streaming\d3d9textureinfo.cc" />
+    <ClCompile Include="..\render\resources\d3d9streaming\d3d9texturestreamer.cc" />
+    <ClCompile Include="..\render\resources\streaming\loadingresource.cc" />
+    <ClCompile Include="..\render\resources\streaming\poolloadingresource.cc" />
+    <ClCompile Include="..\render\resources\streaming\poolresourcemapper.cc" />
+    <ClCompile Include="..\render\resources\streaming\poolscheduler.cc" />
+    <ClCompile Include="..\render\resources\streaming\resourcecreator.cc" />
+    <ClCompile Include="..\render\resources\streaming\resourcedictionaryreader.cc" />
+    <ClCompile Include="..\render\resources\streaming\resourceinfo.cc" />
+    <ClCompile Include="..\render\resources\streaming\resourcepool.cc" />
+    <ClCompile Include="..\render\resources\streaming\resourcerequestinfo.cc" />
+    <ClCompile Include="..\render\resources\streaming\resourcescheduler.cc" />
+    <ClCompile Include="..\render\resources\streaming\resourceslot.cc" />
+    <ClCompile Include="..\render\resources\streaming\streamingresourcemapper.cc" />
+    <ClCompile Include="..\render\resources\streaming\streamingtexturepagehandler.cc" />
+    <ClCompile Include="..\render\resources\streaming\texturecreator.cc" />
+    <ClCompile Include="..\render\resources\streaming\texturepoolmapperscheduler.cc" />
+    <ClCompile Include="..\render\resources\streaming\texturestreamer.cc" />
+    <ClCompile Include="..\render\shared\graphics\camerasettings.cc" />
+    <ClCompile Include="..\render\visibility\observercontext.cc" />
+    <ClCompile Include="..\render\visibility\visibilitychecker.cc" />
+    <ClCompile Include="..\render\visibility\visibilitycontainer.cc" />
+    <ClCompile Include="..\render\visibility\visibilitycontext.cc" />
+    <ClCompile Include="..\render\visibility\visibilityprotocol.cc" />
+    <ClCompile Include="..\render\visibility\visibilityquery.cc" />
+    <ClCompile Include="..\render\visibility\handler\visibilityboxhandler.cc" />
+    <ClCompile Include="..\render\visibility\handler\visibilityclusterhandler.cc" />
+    <ClCompile Include="..\render\visibility\visibilitysystems\visibilitybox.cc" />
+    <ClCompile Include="..\render\visibility\visibilitysystems\visibilityboxsystem.cc" />
+    <ClCompile Include="..\render\visibility\visibilitysystems\visibilitycell.cc" />
+    <ClCompile Include="..\render\visibility\visibilitysystems\visibilitycluster.cc" />
+    <ClCompile Include="..\render\visibility\visibilitysystems\visibilityclustersystem.cc" />
+    <ClCompile Include="..\render\visibility\visibilitysystems\visibilityquadtree.cc" />
+    <ClCompile Include="..\render\visibility\visibilitysystems\visibilitysystembase.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\render\animation\animeventhandlerbase.h" />
+    <ClInclude Include="..\render\animation\animeventinfo.h" />
+    <ClInclude Include="..\render\animation\animeventserver.h" />
+    <ClInclude Include="..\render\animation\animjob.h" />
+    <ClInclude Include="..\render\animation\animjobenqueuemode.h" />
+    <ClInclude Include="..\render\animation\animsequencer.h" />
+    <ClInclude Include="..\render\animation\playclipjob.h" />
+    <ClInclude Include="..\render\apprender\renderapplication.h" />
+    <ClInclude Include="..\render\apprender\viewerapplication.h" />
+    <ClInclude Include="..\render\characters\character.h" />
+    <ClInclude Include="..\render\characters\characteranimationcontroller.h" />
+    <ClInclude Include="..\render\characters\characteranimationlibrary.h" />
+    <ClInclude Include="..\render\characters\characterinstance.h" />
+    <ClInclude Include="..\render\characters\characterjoint.h" />
+    <ClInclude Include="..\render\characters\characternode.h" />
+    <ClInclude Include="..\render\characters\characternodeinstance.h" />
+    <ClInclude Include="..\render\characters\characterserver.h" />
+    <ClInclude Include="..\render\characters\characterskeleton.h" />
+    <ClInclude Include="..\render\characters\characterskeletoninstance.h" />
+    <ClInclude Include="..\render\characters\characterskin.h" />
+    <ClInclude Include="..\render\characters\characterskinlibrary.h" />
+    <ClInclude Include="..\render\characters\characterskinlist.h" />
+    <ClInclude Include="..\render\characters\characterskinnode.h" />
+    <ClInclude Include="..\render\characters\characterskinnodeinstance.h" />
+    <ClInclude Include="..\render\characters\characterskinset.h" />
+    <ClInclude Include="..\render\characters\charactervariationlibrary.h" />
+    <ClInclude Include="..\render\characters\charactervariationset.h" />
+    <ClInclude Include="..\render\characters\charjointcomponents.h" />
+    <ClInclude Include="..\render\characters\skinnedmeshdrawinfo.h" />
+    <ClInclude Include="..\render\characters\skinnedmeshrenderer.h" />
+    <ClInclude Include="..\render\characters\skinningtechnique.h" />
+    <ClInclude Include="..\render\characters\base\skinnedmeshdrawinfobase.h" />
+    <ClInclude Include="..\render\characters\base\skinnedmeshrendererbase.h" />
+    <ClInclude Include="..\render\characters\win32\win32skinnedmeshrenderer.h" />
+    <ClInclude Include="..\render\coreanimation\animclip.h" />
+    <ClInclude Include="..\render\coreanimation\animcurve.h" />
+    <ClInclude Include="..\render\coreanimation\animevent.h" />
+    <ClInclude Include="..\render\coreanimation\animeventemitter.h" />
+    <ClInclude Include="..\render\coreanimation\animkeybuffer.h" />
+    <ClInclude Include="..\render\coreanimation\animresource.h" />
+    <ClInclude Include="..\render\coreanimation\animsamplebuffer.h" />
+    <ClInclude Include="..\render\coreanimation\animsamplemixinfo.h" />
+    <ClInclude Include="..\render\coreanimation\animutil.h" />
+    <ClInclude Include="..\render\coreanimation\curvetype.h" />
+    <ClInclude Include="..\render\coreanimation\infinitytype.h" />
+    <ClInclude Include="..\render\coreanimation\managedanimresource.h" />
+    <ClInclude Include="..\render\coreanimation\naxfileformatstructs.h" />
+    <ClInclude Include="..\render\coreanimation\sampletype.h" />
+    <ClInclude Include="..\render\coreanimation\streamanimationloader.h" />
+    <ClInclude Include="..\render\coregraphics\adapter.h" />
+    <ClInclude Include="..\render\coregraphics\adapterinfo.h" />
+    <ClInclude Include="..\render\coregraphics\antialiasquality.h" />
+    <ClInclude Include="..\render\coregraphics\batchtype.h" />
+    <ClInclude Include="..\render\coregraphics\config.h" />
+    <ClInclude Include="..\render\coregraphics\displaydevice.h" />
+    <ClInclude Include="..\render\coregraphics\displayevent.h" />
+    <ClInclude Include="..\render\coregraphics\displayeventhandler.h" />
+    <ClInclude Include="..\render\coregraphics\displaymode.h" />
+    <ClInclude Include="..\render\coregraphics\imagefileformat.h" />
+    <ClInclude Include="..\render\coregraphics\indexbuffer.h" />
+    <ClInclude Include="..\render\coregraphics\indextype.h" />
+    <ClInclude Include="..\render\coregraphics\memoryindexbufferloader.h" />
+    <ClInclude Include="..\render\coregraphics\memorymeshloader.h" />
+    <ClInclude Include="..\render\coregraphics\memoryvertexbufferloader.h" />
+    <ClInclude Include="..\render\coregraphics\mesh.h" />
+    <ClInclude Include="..\render\coregraphics\mousepointer.h" />
+    <ClInclude Include="..\render\coregraphics\mouserenderdevice.h" />
+    <ClInclude Include="..\render\coregraphics\multiplerendertarget.h" />
+    <ClInclude Include="..\render\coregraphics\pixelformat.h" />
+    <ClInclude Include="..\render\coregraphics\primitivegroup.h" />
+    <ClInclude Include="..\render\coregraphics\primitivetopology.h" />
+    <ClInclude Include="..\render\coregraphics\renderdevice.h" />
+    <ClInclude Include="..\render\coregraphics\renderevent.h" />
+    <ClInclude Include="..\render\coregraphics\rendereventhandler.h" />
+    <ClInclude Include="..\render\coregraphics\rendershape.h" />
+    <ClInclude Include="..\render\coregraphics\rendertarget.h" />
+    <ClInclude Include="..\render\coregraphics\shader.h" />
+    <ClInclude Include="..\render\coregraphics\shaderfeature.h" />
+    <ClInclude Include="..\render\coregraphics\shaderinstance.h" />
+    <ClInclude Include="..\render\coregraphics\shadersemantics.h" />
+    <ClInclude Include="..\render\coregraphics\shaderserver.h" />
+    <ClInclude Include="..\render\coregraphics\shadervariable.h" />
+    <ClInclude Include="..\render\coregraphics\shadervariableinstance.h" />
+    <ClInclude Include="..\render\coregraphics\shadervariation.h" />
+    <ClInclude Include="..\render\coregraphics\shaperenderer.h" />
+    <ClInclude Include="..\render\coregraphics\streammeshloader.h" />
+    <ClInclude Include="..\render\coregraphics\streamshaderloader.h" />
+    <ClInclude Include="..\render\coregraphics\streamtextureloader.h" />
+    <ClInclude Include="..\render\coregraphics\streamtexturesaver.h" />
+    <ClInclude Include="..\render\coregraphics\textelement.h" />
+    <ClInclude Include="..\render\coregraphics\textrenderer.h" />
+    <ClInclude Include="..\render\coregraphics\texture.h" />
+    <ClInclude Include="..\render\coregraphics\threadsafedisplayeventhandler.h" />
+    <ClInclude Include="..\render\coregraphics\threadsaferendereventhandler.h" />
+    <ClInclude Include="..\render\coregraphics\transformdevice.h" />
+    <ClInclude Include="..\render\coregraphics\vertexbuffer.h" />
+    <ClInclude Include="..\render\coregraphics\vertexcomponent.h" />
+    <ClInclude Include="..\render\coregraphics\vertexlayout.h" />
+    <ClInclude Include="..\render\coregraphics\vertexlayoutserver.h" />
+    <ClInclude Include="..\render\coregraphics\base\displaydevicebase.h" />
+    <ClInclude Include="..\render\coregraphics\base\indexbufferbase.h" />
+    <ClInclude Include="..\render\coregraphics\base\memoryindexbufferloaderbase.h" />
+    <ClInclude Include="..\render\coregraphics\base\memoryvertexbufferloaderbase.h" />
+    <ClInclude Include="..\render\coregraphics\base\meshbase.h" />
+    <ClInclude Include="..\render\coregraphics\base\mouserenderdevicebase.h" />
+    <ClInclude Include="..\render\coregraphics\base\multiplerendertargetbase.h" />
+    <ClInclude Include="..\render\coregraphics\base\renderdevicebase.h" />
+    <ClInclude Include="..\render\coregraphics\base\rendertargetbase.h" />
+    <ClInclude Include="..\render\coregraphics\base\resourcebase.h" />
+    <ClInclude Include="..\render\coregraphics\base\shaderbase.h" />
+    <ClInclude Include="..\render\coregraphics\base\shaderinstancebase.h" />
+    <ClInclude Include="..\render\coregraphics\base\shaderserverbase.h" />
+    <ClInclude Include="..\render\coregraphics\base\shadervariablebase.h" />
+    <ClInclude Include="..\render\coregraphics\base\shadervariableinstancebase.h" />
+    <ClInclude Include="..\render\coregraphics\base\shadervariationbase.h" />
+    <ClInclude Include="..\render\coregraphics\base\shaperendererbase.h" />
+    <ClInclude Include="..\render\coregraphics\base\streamtexturesaverbase.h" />
+    <ClInclude Include="..\render\coregraphics\base\textrendererbase.h" />
+    <ClInclude Include="..\render\coregraphics\base\texturebase.h" />
+    <ClInclude Include="..\render\coregraphics\base\transformdevicebase.h" />
+    <ClInclude Include="..\render\coregraphics\base\vertexbufferbase.h" />
+    <ClInclude Include="..\render\coregraphics\base\vertexcomponentbase.h" />
+    <ClInclude Include="..\render\coregraphics\base\vertexlayoutbase.h" />
+    <ClInclude Include="..\render\coregraphics\base\vertexlayoutserverbase.h" />
+    <ClInclude Include="..\render\coregraphics\d3d9\d3d9displaydevice.h" />
+    <ClInclude Include="..\render\coregraphics\d3d9\d3d9renderdevice.h" />
+    <ClInclude Include="..\render\coregraphics\d3d9\d3d9rendertarget.h" />
+    <ClInclude Include="..\render\coregraphics\d3d9\d3d9resource.h" />
+    <ClInclude Include="..\render\coregraphics\d3d9\d3d9resourceeventhandler.h" />
+    <ClInclude Include="..\render\coregraphics\d3d9\d3d9shader.h" />
+    <ClInclude Include="..\render\coregraphics\d3d9\d3d9shaderinstance.h" />
+    <ClInclude Include="..\render\coregraphics\d3d9\d3d9shaderserver.h" />
+    <ClInclude Include="..\render\coregraphics\d3d9\d3d9shadervariable.h" />
+    <ClInclude Include="..\render\coregraphics\d3d9\d3d9shadervariation.h" />
+    <ClInclude Include="..\render\coregraphics\d3d9\d3d9streamshaderloader.h" />
+    <ClInclude Include="..\render\coregraphics\d3d9\d3d9streamtextureloader.h" />
+    <ClInclude Include="..\render\coregraphics\d3d9\d3d9textrenderer.h" />
+    <ClInclude Include="..\render\coregraphics\d3d9\d3d9texture.h" />
+    <ClInclude Include="..\render\coregraphics\debug\displaypagehandler.h" />
+    <ClInclude Include="..\render\coregraphics\debug\meshpagehandler.h" />
+    <ClInclude Include="..\render\coregraphics\debug\shaderpagehandler.h" />
+    <ClInclude Include="..\render\coregraphics\debug\texturepagehandler.h" />
+    <ClInclude Include="..\render\coregraphics\legacy\nvx2streamreader.h" />
+    <ClInclude Include="..\render\coregraphics\win32\win32displaydevice.h" />
+    <ClInclude Include="..\render\coregraphics\win360\d3d9indexbuffer.h" />
+    <ClInclude Include="..\render\coregraphics\win360\d3d9memoryindexbufferloader.h" />
+    <ClInclude Include="..\render\coregraphics\win360\d3d9memoryvertexbufferloader.h" />
+    <ClInclude Include="..\render\coregraphics\win360\d3d9shaperenderer.h" />
+    <ClInclude Include="..\render\coregraphics\win360\d3d9streammeshloader.h" />
+    <ClInclude Include="..\render\coregraphics\win360\d3d9streamtexturesaver.h" />
+    <ClInclude Include="..\render\coregraphics\win360\d3d9transformdevice.h" />
+    <ClInclude Include="..\render\coregraphics\win360\d3d9types.h" />
+    <ClInclude Include="..\render\coregraphics\win360\d3d9vertexbuffer.h" />
+    <ClInclude Include="..\render\coregraphics\win360\d3d9vertexlayout.h" />
+    <ClInclude Include="..\render\debugrender\debuggraphicshandler.h" />
+    <ClInclude Include="..\render\debugrender\debugrender.h" />
+    <ClInclude Include="..\render\debugrender\debugrenderprotocol.h" />
+    <ClInclude Include="..\render\debugrender\debugshaperenderer.h" />
+    <ClInclude Include="..\render\debugrender\debugtextrenderer.h" />
+    <ClInclude Include="..\render\debugrender\renderconsolehandler.h" />
+    <ClInclude Include="..\render\frame\framebatch.h" />
+    <ClInclude Include="..\render\frame\framepass.h" />
+    <ClInclude Include="..\render\frame\framepassbase.h" />
+    <ClInclude Include="..\render\frame\frameposteffect.h" />
+    <ClInclude Include="..\render\frame\frameserver.h" />
+    <ClInclude Include="..\render\frame\frameshader.h" />
+    <ClInclude Include="..\render\frame\frameshaderloader.h" />
+    <ClInclude Include="..\render\frame\lightingmode.h" />
+    <ClInclude Include="..\render\frame\sortingmode.h" />
+    <ClInclude Include="..\render\graphics\abstractlightentity.h" />
+    <ClInclude Include="..\render\graphics\cameraentity.h" />
+    <ClInclude Include="..\render\graphics\display.h" />
+    <ClInclude Include="..\render\graphics\displaysettings.h" />
+    <ClInclude Include="..\render\graphics\globallightentity.h" />
+    <ClInclude Include="..\render\graphics\graphicsentity.h" />
+    <ClInclude Include="..\render\graphics\graphicsentitytype.h" />
+    <ClInclude Include="..\render\graphics\graphicshandler.h" />
+    <ClInclude Include="..\render\graphics\graphicsinterface.h" />
+    <ClInclude Include="..\render\graphics\graphicsprotocol.h" />
+    <ClInclude Include="..\render\graphics\graphicsserver.h" />
+    <ClInclude Include="..\render\graphics\modelentity.h" />
+    <ClInclude Include="..\render\graphics\mouserenderer.h" />
+    <ClInclude Include="..\render\graphics\pointlightentity.h" />
+    <ClInclude Include="..\render\graphics\spotlightentity.h" />
+    <ClInclude Include="..\render\graphics\stage.h" />
+    <ClInclude Include="..\render\graphics\stagebuilders.h" />
+    <ClInclude Include="..\render\graphics\view.h" />
+    <ClInclude Include="..\render\input\char.h" />
+    <ClInclude Include="..\render\input\gamepad.h" />
+    <ClInclude Include="..\render\input\inputevent.h" />
+    <ClInclude Include="..\render\input\inputhandler.h" />
+    <ClInclude Include="..\render\input\inputpriority.h" />
+    <ClInclude Include="..\render\input\inputserver.h" />
+    <ClInclude Include="..\render\input\key.h" />
+    <ClInclude Include="..\render\input\keyboard.h" />
+    <ClInclude Include="..\render\input\mouse.h" />
+    <ClInclude Include="..\render\input\mousebutton.h" />
+    <ClInclude Include="..\render\input\base\gamepadbase.h" />
+    <ClInclude Include="..\render\input\base\inputserverbase.h" />
+    <ClInclude Include="..\render\input\base\keyboardbase.h" />
+    <ClInclude Include="..\render\input\base\mousebase.h" />
+    <ClInclude Include="..\render\input\win32\win32inputdisplayeventhandler.h" />
+    <ClInclude Include="..\render\input\win32\win32inputserver.h" />
+    <ClInclude Include="..\render\input\win32\win32mouse.h" />
+    <ClInclude Include="..\render\input\xinput\xinputgamepad.h" />
+    <ClInclude Include="..\render\internalgraphics\attachmentserver.h" />
+    <ClInclude Include="..\render\internalgraphics\internalcameraentity.h" />
+    <ClInclude Include="..\render\internalgraphics\internalgraphicsentity.h" />
+    <ClInclude Include="..\render\internalgraphics\internalgraphicsentitytype.h" />
+    <ClInclude Include="..\render\internalgraphics\internalgraphicsserver.h" />
+    <ClInclude Include="..\render\internalgraphics\internalmodelentity.h" />
+    <ClInclude Include="..\render\internalgraphics\internalstage.h" />
+    <ClInclude Include="..\render\internalgraphics\internalview.h" />
+    <ClInclude Include="..\render\internalgraphics\debug\graphicspagehandler.h" />
+    <ClInclude Include="..\render\lighting\internalabstractlightentity.h" />
+    <ClInclude Include="..\render\lighting\internalgloballightentity.h" />
+    <ClInclude Include="..\render\lighting\internalpointlightentity.h" />
+    <ClInclude Include="..\render\lighting\internalspotlightentity.h" />
+    <ClInclude Include="..\render\lighting\lightserver.h" />
+    <ClInclude Include="..\render\lighting\lighttype.h" />
+    <ClInclude Include="..\render\lighting\pssmutil.h" />
+    <ClInclude Include="..\render\lighting\shadowserver.h" />
+    <ClInclude Include="..\render\lighting\base\lightserverbase.h" />
+    <ClInclude Include="..\render\lighting\base\shadowserverbase.h" />
+    <ClInclude Include="..\render\lighting\lightprepass\lightprepassserver.h" />
+    <ClInclude Include="..\render\lighting\sm30\sm30lightserver.h" />
+    <ClInclude Include="..\render\lighting\sm30\sm30shadowserver.h" />
+    <ClInclude Include="..\render\models\managedmodel.h" />
+    <ClInclude Include="..\render\models\model.h" />
+    <ClInclude Include="..\render\models\modelinstance.h" />
+    <ClInclude Include="..\render\models\modelnode.h" />
+    <ClInclude Include="..\render\models\modelnodeinstance.h" />
+    <ClInclude Include="..\render\models\modelnodetype.h" />
+    <ClInclude Include="..\render\models\modelserver.h" />
+    <ClInclude Include="..\render\models\streammodelloader.h" />
+    <ClInclude Include="..\render\models\visresolvecontainer.h" />
+    <ClInclude Include="..\render\models\visresolver.h" />
+    <ClInclude Include="..\render\models\nodes\animatornode.h" />
+    <ClInclude Include="..\render\models\nodes\animatornodeinstance.h" />
+    <ClInclude Include="..\render\models\nodes\animkey.h" />
+    <ClInclude Include="..\render\models\nodes\animkeyarray.h" />
+    <ClInclude Include="..\render\models\nodes\animlooptype.h" />
+    <ClInclude Include="..\render\models\nodes\shapenode.h" />
+    <ClInclude Include="..\render\models\nodes\shapenodeinstance.h" />
+    <ClInclude Include="..\render\models\nodes\statenode.h" />
+    <ClInclude Include="..\render\models\nodes\statenodeinstance.h" />
+    <ClInclude Include="..\render\models\nodes\transformnode.h" />
+    <ClInclude Include="..\render\models\nodes\transformnodeinstance.h" />
+    <ClInclude Include="..\render\particles\emitterattrs.h" />
+    <ClInclude Include="..\render\particles\emittermesh.h" />
+    <ClInclude Include="..\render\particles\envelopecurve.h" />
+    <ClInclude Include="..\render\particles\envelopesamplebuffer.h" />
+    <ClInclude Include="..\render\particles\particle.h" />
+    <ClInclude Include="..\render\particles\particlerenderer.h" />
+    <ClInclude Include="..\render\particles\particlerenderinfo.h" />
+    <ClInclude Include="..\render\particles\particleserver.h" />
+    <ClInclude Include="..\render\particles\particlesystem.h" />
+    <ClInclude Include="..\render\particles\particlesysteminstance.h" />
+    <ClInclude Include="..\render\particles\particlesystemnode.h" />
+    <ClInclude Include="..\render\particles\particlesystemnodeinstance.h" />
+    <ClInclude Include="..\render\particles\particlesystemstate.h" />
+    <ClInclude Include="..\render\particles\base\particlerendererbase.h" />
+    <ClInclude Include="..\render\particles\base\particlerenderinfobase.h" />
+    <ClInclude Include="..\render\particles\base\particlesysteminstancebase.h" />
+    <ClInclude Include="..\render\particles\d3d9\d3d9particlerenderer.h" />
+    <ClInclude Include="..\render\particles\d3d9\d3d9particlesysteminstance.h" />
+    <ClInclude Include="..\render\rendermodules\rendermodule.h" />
+    <ClInclude Include="..\render\rendermodules\rt\rtplugin.h" />
+    <ClInclude Include="..\render\rendermodules\rt\rtpluginregistry.h" />
+    <ClInclude Include="..\render\renderutil\drawfullscreenquad.h" />
+    <ClInclude Include="..\render\renderutil\mayacamerautil.h" />
+    <ClInclude Include="..\render\renderutil\mouserayutil.h" />
+    <ClInclude Include="..\render\renderutil\nodelookuputil.h" />
+    <ClInclude Include="..\render\resources\managedmesh.h" />
+    <ClInclude Include="..\render\resources\managedresource.h" />
+    <ClInclude Include="..\render\resources\managedtexture.h" />
+    <ClInclude Include="..\render\resources\resource.h" />
+    <ClInclude Include="..\render\resources\resourceallocator.h" />
+    <ClInclude Include="..\render\resources\resourcedictionary.h" />
+    <ClInclude Include="..\render\resources\resourceid.h" />
+    <ClInclude Include="..\render\resources\resourceloader.h" />
+    <ClInclude Include="..\render\resources\resourcelump.h" />
+    <ClInclude Include="..\render\resources\resourcemanager.h" />
+    <ClInclude Include="..\render\resources\resourcemapper.h" />
+    <ClInclude Include="..\render\resources\resourcesaver.h" />
+    <ClInclude Include="..\render\resources\simpleresourcemapper.h" />
+    <ClInclude Include="..\render\resources\streamresourceloader.h" />
+    <ClInclude Include="..\render\resources\d3d9streaming\d3d9texturecreator.h" />
+    <ClInclude Include="..\render\resources\d3d9streaming\d3d9textureinfo.h" />
+    <ClInclude Include="..\render\resources\d3d9streaming\d3d9texturestreamer.h" />
+    <ClInclude Include="..\render\resources\streaming\loadingresource.h" />
+    <ClInclude Include="..\render\resources\streaming\poolloadingresource.h" />
+    <ClInclude Include="..\render\resources\streaming\poolresourcemapper.h" />
+    <ClInclude Include="..\render\resources\streaming\poolscheduler.h" />
+    <ClInclude Include="..\render\resources\streaming\resourcecreator.h" />
+    <ClInclude Include="..\render\resources\streaming\resourcedictionaryreader.h" />
+    <ClInclude Include="..\render\resources\streaming\resourceinfo.h" />
+    <ClInclude Include="..\render\resources\streaming\resourcepool.h" />
+    <ClInclude Include="..\render\resources\streaming\resourcerequestinfo.h" />
+    <ClInclude Include="..\render\resources\streaming\resourcescheduler.h" />
+    <ClInclude Include="..\render\resources\streaming\resourceslot.h" />
+    <ClInclude Include="..\render\resources\streaming\streamingresourcemapper.h" />
+    <ClInclude Include="..\render\resources\streaming\streamingtexturepagehandler.h" />
+    <ClInclude Include="..\render\resources\streaming\texturecreator.h" />
+    <ClInclude Include="..\render\resources\streaming\textureinfo.h" />
+    <ClInclude Include="..\render\resources\streaming\texturepoolmapperscheduler.h" />
+    <ClInclude Include="..\render\resources\streaming\texturerequestinfo.h" />
+    <ClInclude Include="..\render\resources\streaming\texturestreamer.h" />
+    <ClInclude Include="..\render\shared\graphics\camerasettings.h" />
+    <ClInclude Include="..\render\shared\graphics\charjointinfo.h" />
+    <ClInclude Include="..\render\shared\graphics\graphicsentityshared.h" />
+    <ClInclude Include="..\render\shared\graphics\modelentityshared.h" />
+    <ClInclude Include="..\render\visibility\observercontext.h" />
+    <ClInclude Include="..\render\visibility\visibilitychecker.h" />
+    <ClInclude Include="..\render\visibility\visibilitycontainer.h" />
+    <ClInclude Include="..\render\visibility\visibilitycontext.h" />
+    <ClInclude Include="..\render\visibility\visibilityprotocol.h" />
+    <ClInclude Include="..\render\visibility\visibilityquery.h" />
+    <ClInclude Include="..\render\visibility\visibilitysystems\visibilitybox.h" />
+    <ClInclude Include="..\render\visibility\visibilitysystems\visibilityboxsystem.h" />
+    <ClInclude Include="..\render\visibility\visibilitysystems\visibilitycell.h" />
+    <ClInclude Include="..\render\visibility\visibilitysystems\visibilitycluster.h" />
+    <ClInclude Include="..\render\visibility\visibilitysystems\visibilityclustersystem.h" />
+    <ClInclude Include="..\render\visibility\visibilitysystems\visibilityquadtree.h" />
+    <ClInclude Include="..\render\visibility\visibilitysystems\visibilitysystembase.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="render_animjobsamplemix_win32.vcxproj">
+      <Project>{1a407bd6-a310-4d67-91d6-8d385dc05e57}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="render_animjobsample_win32.vcxproj">
+      <Project>{b45e0219-0203-4fe1-a123-30b4179a95cf}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="render_charevalskeletonjob_win32.vcxproj">
+      <Project>{02c53b78-42c2-44b9-9a38-af8ce275ad9e}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="render_nidls_win32.vcxproj">
+      <Project>{6056c7f2-ff23-4087-9aa0-fc98bd639f39}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="render_particlejob_win32.vcxproj">
+      <Project>{d9825f53-6acf-417a-b133-a6347537e680}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="render_visibilityboxsystemjob_win32.vcxproj">
+      <Project>{cfec2519-384f-41d8-9908-12785bb6fcef}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="render_visibilityquadtreejob_win32.vcxproj">
+      <Project>{64b7ff2e-bc1e-4381-86a1-9748f66dc4b6}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="..\nidl.targets" />
+  </ImportGroup>
+</Project>

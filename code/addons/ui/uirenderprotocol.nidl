@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Nebula3>
+    <Protocol namespace="CoreUI" name="DebugRenderProtocol">
+        <!-- dependencies -->
+        <Dependency header="util/string.h"/>        
+        <Dependency header="util/array.h"/>
+        <Dependency header="threading/threadid.h"/>
+        <Dependency header="ui/rt/coreuielement.h"/>
+
+        <Message name="RenderUIElements" fourcc="ruie">            
+            <InArg name="UIElements" type="Util::Array<CoreUIElement>" />
+        </Message>      
+      
+        <Message name="LoadUITexture" fourcc="luit">
+            <InArg name="ResourceName" type="Resources::ResourceId"/>
+        </Message>
+        
+        <Message name="UnloadUITexture" fourcc="uuit">
+            <InArg name="ResourceName" type="Resources::ResourceId"/>
+        </Message>
+
+    </Protocol>
+</Nebula3>    
+    

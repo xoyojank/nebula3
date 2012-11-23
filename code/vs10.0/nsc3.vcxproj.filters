@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="nsc3">
+      <UniqueIdentifier>{51ded459-67bd-4bb5-a0b7-4215a5fa3c5e}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\tools\stdneb.cc">
+      <Filter>nsc3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tools\nsc3\nsc3.cc">
+      <Filter>nsc3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tools\nsc3\shader.cc">
+      <Filter>nsc3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tools\nsc3\shaderbinding.cc">
+      <Filter>nsc3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tools\nsc3\shadercodegenerator.cc">
+      <Filter>nsc3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tools\nsc3\shadercompiler.cc">
+      <Filter>nsc3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tools\nsc3\shadercompilerapplication.cc">
+      <Filter>nsc3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tools\nsc3\shaderfragment.cc">
+      <Filter>nsc3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tools\nsc3\shaderfragmentgroup.cc">
+      <Filter>nsc3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tools\nsc3\shaderfragmentmanager.cc">
+      <Filter>nsc3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tools\nsc3\shadernode.cc">
+      <Filter>nsc3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tools\nsc3\shaderparam.cc">
+      <Filter>nsc3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tools\nsc3\shadersampler.cc">
+      <Filter>nsc3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tools\nsc3\shadersamplermanager.cc">
+      <Filter>nsc3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tools\nsc3\shaderslot.cc">
+      <Filter>nsc3</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\tools\nsc3\shader.h">
+      <Filter>nsc3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\tools\nsc3\shaderbinding.h">
+      <Filter>nsc3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\tools\nsc3\shadercodegenerator.h">
+      <Filter>nsc3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\tools\nsc3\shadercompiler.h">
+      <Filter>nsc3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\tools\nsc3\shadercompilerapplication.h">
+      <Filter>nsc3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\tools\nsc3\shaderfragment.h">
+      <Filter>nsc3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\tools\nsc3\shaderfragmentgroup.h">
+      <Filter>nsc3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\tools\nsc3\shaderfragmentmanager.h">
+      <Filter>nsc3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\tools\nsc3\shadernode.h">
+      <Filter>nsc3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\tools\nsc3\shaderparam.h">
+      <Filter>nsc3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\tools\nsc3\shadersampler.h">
+      <Filter>nsc3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\tools\nsc3\shadersamplermanager.h">
+      <Filter>nsc3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\tools\nsc3\shaderslot.h">
+      <Filter>nsc3</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

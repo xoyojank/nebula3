@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Nebula3>
+    <Protocol namespace="MultiplayerFeature" name="DistributionProtocol">
+      <!-- dependencies -->     
+      <Dependency header="multiplayerfeature/objectview.h"/>
+      <Dependency header="multiplayerprotocol.h"/>
+
+      <!-- invocation of object view on clients -->
+      <Message name="CreateObjectView" fourcc="CROV">
+        <InArg name="ObjectViewId" type="ObjectView::ObjectViewId"/>      
+      </Message>
+
+      <Message name="PlayerMoveDirection" fourcc="PLMD" serialize="true" derivedFrom="Multiplayer::NetworkEventBase">
+        <InArg name="Direction" type="Math::float4" serialize="true"/>                
+      </Message>
+
+      <Message name="PlayerMoveStop" fourcc="PLMS" serialize="true" derivedFrom="Multiplayer::NetworkEventBase">        
+      </Message>
+      
+    </Protocol>    
+</Nebula3>

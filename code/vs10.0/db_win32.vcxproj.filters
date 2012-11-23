@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="db">
+      <UniqueIdentifier>{327dec51-dc24-407e-b713-4e5028e58240}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="db\sqlite3">
+      <UniqueIdentifier>{a1c7d49e-c274-4311-9ba3-d2731a04f776}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\addons\stdneb.cc">
+      <Filter>db</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\db\column.cc">
+      <Filter>db</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\db\command.cc">
+      <Filter>db</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\db\database.cc">
+      <Filter>db</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\db\dataset.cc">
+      <Filter>db</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\db\dbfactory.cc">
+      <Filter>db</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\db\dbserver.cc">
+      <Filter>db</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\db\filterset.cc">
+      <Filter>db</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\db\reader.cc">
+      <Filter>db</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\db\relation.cc">
+      <Filter>db</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\db\table.cc">
+      <Filter>db</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\db\valuetable.cc">
+      <Filter>db</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\db\writer.cc">
+      <Filter>db</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\db\sqlite3\sqlite3command.cc">
+      <Filter>db\sqlite3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\db\sqlite3\sqlite3database.cc">
+      <Filter>db\sqlite3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\db\sqlite3\sqlite3dataset.cc">
+      <Filter>db\sqlite3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\db\sqlite3\sqlite3factory.cc">
+      <Filter>db\sqlite3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\db\sqlite3\sqlite3filterset.cc">
+      <Filter>db\sqlite3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\db\sqlite3\sqlite3table.cc">
+      <Filter>db\sqlite3</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\addons\db\column.h">
+      <Filter>db</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\db\command.h">
+      <Filter>db</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\db\database.h">
+      <Filter>db</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\db\dataset.h">
+      <Filter>db</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\db\dbfactory.h">
+      <Filter>db</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\db\dbserver.h">
+      <Filter>db</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\db\filterset.h">
+      <Filter>db</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\db\reader.h">
+      <Filter>db</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\db\relation.h">
+      <Filter>db</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\db\table.h">
+      <Filter>db</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\db\valuetable.h">
+      <Filter>db</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\db\writer.h">
+      <Filter>db</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\db\sqlite3\sqlite3command.h">
+      <Filter>db\sqlite3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\db\sqlite3\sqlite3database.h">
+      <Filter>db\sqlite3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\db\sqlite3\sqlite3dataset.h">
+      <Filter>db\sqlite3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\db\sqlite3\sqlite3factory.h">
+      <Filter>db\sqlite3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\db\sqlite3\sqlite3filterset.h">
+      <Filter>db\sqlite3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\db\sqlite3\sqlite3table.h">
+      <Filter>db\sqlite3</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

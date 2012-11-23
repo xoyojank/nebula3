@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	Create Nebula3 API docs:
+
+	msbuild makedocs.msbuild
+	
+	Requirements:
+	- Doxygen 
+	- Microsoft Help Compiler in the path.
+	
+	(C) 2007 Radon Labs GmbH
+-->
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="BuildDocs">
+	<Target Name="BuildDocs">
+		<Exec Command="doxygen nebula3.cfg" WorkingDirectory="doc\doxygen"/>
+		<Exec Command="hhc index.hhp" WorkingDirectory="doc/nebula3/html" IgnoreExitCode="true"/>
+		<Copy SourceFiles="doc\nebula3\html\nebula3.chm" DestinationFolder="doc"/>
+		<!--<RemoveDir Directories="doc\nebula3\html"/> -->
+		<Delete Files="doc\nebula3.tag"/>
+	</Target>
+</Project>
+	

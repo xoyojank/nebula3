@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	Create Nebula3 SDK Installer:
+	
+	msbuild makesdk.msbuild
+	
+	Requirements:
+	- see compile.msbuild
+	- see makedocs.msbuild
+	- Nullsoft Install System
+	
+	(C) 2007 Radon Labs GmbH
+-->
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="BuildInstaller">
+	<PropertyGroup>
+		<SVN>false</SVN>
+		<Docs>true</Docs>
+		<Compile>true</Compile>
+        <Assets>true</Assets>
+		<Installer>true</Installer>
+	</PropertyGroup>
+	
+	<Target Name="SVNUpdate" Condition="$(SVN)=='true'">
+        <Exec Command="svn update"/>
+	</Target>
+	
+	<Target Name="BuildDocs" Condition="$(Docs)=='true'" DependsOnTargets="SVNUpdate">
+		<MSBuild Projects="makedocs.msbuild"/>
+	</Target>
+	
+	<Target Name="BuildTools" Condition="$(Compile)=='true'" DependsOnTargets="SVNUpdate">
+		<MSBuild Projects="compile.msbuild" Targets="Win32Targets" Properties="SVN=false;Rebuild=true;Config=Release"/>
+	</Target>
+
+    <Target Name="BuildAssets" Condition="$(Assets)=='true'" DependsOnTargets="SVNUpdate">
+        <MSBuild Projects="sdkbuildassets.msbuild" Targets="All" Properties="Rebuild=true;Platform=win32"/>        
+    </Target>
+	
+	<Target Name="BuildInstaller" Condition="$(Installer)=='true'" DependsOnTargets="BuildDocs;BuildTools;BuildAssets">
+        <Exec Command="makensis installer.nsi" WorkingDirectory="work\installer"/>
+	</Target>
+
+</Project>
+
+
+
+    	

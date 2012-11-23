@@ -1,0 +1,358 @@
+#-------------------------------------------------------------------------------
+#   tests_win32.epk
+#   (C) 2006 Radon Labs GmbH
+#-------------------------------------------------------------------------------
+set Win32Libs { dbghelp.lib dxguid.lib wsock32.lib rpcrt4.lib wininet.lib d3d9.lib d3dx9.lib dinput8.lib xinput.lib dxerr.lib x3daudio.lib ../../lib/fmod/win32/fmodexL_vc.lib ../../lib/fmoddesignerapi/win32/fmod_eventL.lib  ../../lib/fmoddesignerapi/win32/fmod_event_netL.lib}
+
+#-------------------------------------------------------------------------------
+begintarget testbase_win32
+    settype lib
+    setbasedir tests
+    setprecompiledheader stdneb    
+    setincpath_win32 "../foundation;../render;../extlibs;../tests;../addons;"    
+    setclusters { testbase }
+    setdepends {
+        foundation_win32
+        tinyxml_win32
+        zlib_win32
+    }
+endtarget
+#-------------------------------------------------------------------------------
+begintarget testfoundation_win32
+    settype exe
+    setbasedir tests
+    setprecompiledheader stdneb    
+    setincpath_win32 "../foundation;../render;../extlibs;../tests;../addons;"    
+    setdepends testbase_win32
+    setclusters { testfoundation }
+    setdepends {
+        foundation_win32
+        tinyxml_win32
+        zlib_win32
+        testbase_win32
+    }
+    setlibs_win32 $Win32Libs
+endtarget
+#-------------------------------------------------------------------------------
+begintarget inputtest_win32
+    settype exe
+    setbasedir tests
+    setprecompiledheader stdneb    
+    setincpath_win32 "../foundation;../render;../extlibs"    
+    setclusters { inputtest }
+    setdepends {
+        foundation_win32
+        render_win32
+        tinyxml_win32
+        zlib_win32
+    }
+    setlibs_win32 $Win32Libs
+endtarget
+#-------------------------------------------------------------------------------
+begintarget testmath_win32
+    settype exe
+    setbasedir tests
+    setprecompiledheader stdneb    
+    setincpath_win32 "../foundation;../tests;"    
+    setclusters { mathtest }
+    setdepends {        
+        foundation_win32
+        testbase_win32
+    }
+    setlibs_win32 $Win32Libs
+endtarget
+#-------------------------------------------------------------------------------
+#begintarget testrender_win32
+#    settype exe
+#    setbasedir tests
+#    setprecompiledheader stdneb    
+#    setincpath_win32 "../foundation;../render;../extlibs;../tests;../addons;"    
+#    setdepends testbase_win32
+#    setclusters { testrender }
+#    setdepends {
+#        foundation_win32
+#        render_win32
+#        tinyxml_win32
+#        zlib_win32
+#        attr_win32
+#        testbase_win32
+#    }
+#    setlibs_win32 $Win32Libs
+#endtarget
+#-------------------------------------------------------------------------------
+begintarget testtoolkit_win32
+    settype exe
+    setbasedir tests
+    setprecompiledheader stdneb    
+    setincpath_win32 "../foundation;../render;../extlibs;../tests;../addons;../toolkit"    
+    setdepends testbase_win32
+    setclusters { testtoolkit }
+    setdepends {
+        foundation_win32
+        tinyxml_win32
+        zlib_win32
+        testbase_win32
+        toolkitutil_win32
+    }
+    setlibs_win32 $Win32Libs
+endtarget
+#-------------------------------------------------------------------------------
+begintarget stresstestvieweropenclose_win32
+    settype exe
+    setbasedir tests
+    setprecompiledheader stdneb
+    setincpath_win32 "../foundation;../render;../extlibs;../tests;../addons;"    
+    setclusters { stresstestvieweropenclose }
+    setdepends {
+        foundation_win32
+        render_win32
+        vibration_win32
+        tinyxml_win32
+        zlib_win32
+        testbase_win32
+    }
+    setlibs_win32 $Win32Libs
+endtarget
+#-------------------------------------------------------------------------------
+begintarget viewerstresstest_win32
+    settype exe
+    setbasedir tests
+    setprecompiledheader stdneb
+    setincpath_win32 "../foundation;../render;../extlibs;../tests;../addons;"    
+    setclusters { viewerstresstest }
+    setdepends {
+        foundation_win32
+        render_win32
+        vibration_win32
+        tinyxml_win32
+        zlib_win32
+        testbase_win32
+    }
+    setlibs_win32 $Win32Libs
+endtarget
+#-------------------------------------------------------------------------------
+begintarget zipstresstest_win32
+    settype exe
+    setbasedir tests
+    setprecompiledheader stdneb
+    setincpath_win32 "../foundation"
+    setclusters { zipstresstest }
+    setdepends {
+        foundation_win32
+        tinyxml_win32
+        zlib_win32
+    }
+    setlibs_win32 $Win32Libs        
+endtarget
+#-------------------------------------------------------------------------------
+begintarget multiplayerconnectiontest_win32
+    settype exe
+    setbasedir tests
+    setprecompiledheader stdneb
+    setincpath_win32 "../tests;../foundation;../addons;../addons/network;../extlibs/raknet;../extlibs;"
+    setclusters { multiplayerconnectiontest }
+    setdepends {
+        foundation_win32
+        tinyxml_win32
+        zlib_win32
+        testbase_win32
+        network_win32        
+        raknet_win32
+        tinyxml_win32
+    }
+    setlibs_win32 "$Win32Libs ws2_32.lib"      
+endtarget
+#-------------------------------------------------------------------------------
+begintarget fmodcoretest_win32
+    settype exe
+    setbasedir tests
+    setprecompiledheader stdneb    
+    setincpath_win32 "../foundation;../render;../extlibs;../addons;../extlibs/fmod/win32;../extlibs/fmoddesignerapi/win32"    
+    setclusters { fmodcoretest }
+    setdepends {
+        foundation_win32
+        render_win32
+		audio2_win32
+        tinyxml_win32
+        zlib_win32
+    }
+    setlibs_win32 $Win32Libs
+endtarget
+#-------------------------------------------------------------------------------
+begintarget fmodtestsimple_win32
+    settype exe
+    setbasedir tests
+    setprecompiledheader stdneb    
+    setincpath_win32 "../foundation;../render;../extlibs;../addons"    
+    setclusters { fmodtestsimple }
+    setdepends {
+        foundation_win32
+        render_win32
+		audio2_win32
+        tinyxml_win32
+        zlib_win32
+        vibration_win32
+    }
+    setlibs_win32 $Win32Libs
+endtarget
+#-------------------------------------------------------------------------------
+begintarget fmodtest_win32
+    settype exe
+    setbasedir tests
+    setprecompiledheader stdneb
+    setincpath_win32 "../foundation;../render;../extlibs;../tests;../addons;"    
+    setclusters { fmodtest }
+    setdepends {
+        foundation_win32
+        render_win32
+		audio2_nidls_win32
+		audio2_win32
+        vibration_win32
+        tinyxml_win32
+        zlib_win32
+        testbase_win32
+    }
+    setlibs_win32 $Win32Libs
+endtarget
+#-------------------------------------------------------------------------------
+begintarget jobstest_transform_win32
+    settype job
+    setbasedir tests/jobstest
+    setincpath_win32 "../tests;../foundation"
+    setjobfiles "win360jobs" "win360_transform.cc"    
+endtarget
+#-------------------------------------------------------------------------------
+begintarget jobstest_test_win32
+    settype job
+    setbasedir tests/jobstest
+    setincpath_win32 "../tests;../foundation"
+    setjobfiles "win360jobs" "win360_testjob.cc"    
+endtarget
+#-------------------------------------------------------------------------------
+begintarget jobstest_win32
+    settype exe
+    setbasedir tests
+    setprecompiledheader stdneb
+    setincpath_win32 "../tests;../foundation;../render"
+    setclusters { jobstest }
+    setdepends {
+        foundation_win32
+        render_win32       
+        render_particlejob_win32
+        tinyxml_win32
+        zlib_win32
+    }
+    setlibs_win32 $Win32Libs
+endtarget
+#-------------------------------------------------------------------------------
+begintarget texturestreamingtest_win32
+    settype exe
+    setbasedir tests
+    setprecompiledheader stdneb    
+    setincpath_win32 "../foundation;../render;../extlibs;../tools;../addons;../toolkit"    
+    setclusters { texturestreamingtest_win32 }
+    setdepends {
+        foundation_win32
+        toolkitutil_win32
+        render_win32
+        render_charevalskeletonjob_win32
+        render_particlejob_win32
+        render_animjobsample_win32
+        render_animjobsamplemix_win32
+        zlib_win32
+        tinyxml_win32
+        vibration_win32
+        framecapture_win32
+    }    
+    setlibs_win32 $Win32Libs
+endtarget
+#-------------------------------------------------------------------------------
+begintarget ziptest_win32
+    settype exe
+    setbasedir tests
+    setprecompiledheader stdneb
+    setincpath_win32 "../foundation;../extlibs"
+    setclusters { ziptest }
+    setdepends {
+        foundation_win32
+        tinyxml_win32
+        zlib_win32
+    }
+    setlibs_win32 $Win32Libs        
+endtarget
+
+#-------------------------------------------------------------------------------
+begintarget forestviewer
+    settype exe
+    setbasedir tests
+    setprecompiledheader stdneb    
+    setincpath_win32 "../foundation;../render;../extlibs;../tools;../addons"    
+    setclusters { forestviewer }
+    setdepends {
+        foundation_win32
+        render_win32
+        render_charevalskeletonjob_win32
+        render_particlejob_win32
+        render_animjobsample_win32
+        render_animjobsamplemix_win32
+        zlib_win32
+        tinyxml_win32
+        vibration_win32
+        framecapture_win32
+		forest_win32
+    }    
+    setlibs_win32 $Win32Libs
+endtarget
+
+#-------------------------------------------------------------------------------
+beginsolution tests_win32 win32
+    settargets {
+        foundation_nidls_win32
+        render_nidls_win32
+        vibration_nidls_win32   
+        network_nidls_win32  
+		forest_nidls_win32	
+        framecapture_nidls_win32	
+
+        foundation_win32
+        render_win32
+        tinyxml_win32
+        zlib_win32
+        toolkitutil_win32
+        vibration_win32
+        network_win32
+        raknet_win32
+        attr_win32
+		audio2_nidls_win32
+		audio2_win32
+		forest_win32
+
+        render_particlejob_win32
+        render_charevalskeletonjob_win32
+        render_animjobsample_win32
+        render_animjobsamplemix_win32
+        render_visibilityquadtreejob_win32
+        render_visibilityboxsystemjob_win32
+
+        jobstest_transform_win32
+        jobstest_test_win32        
+        
+        fmodtestsimple_win32
+        fmodcoretest_win32
+		fmodtest_win32
+        testbase_win32
+        testfoundation_win32
+        inputtest_win32
+        testmath_win32
+        testtoolkit_win32
+        stresstestvieweropenclose_win32
+        viewerstresstest_win32
+        zipstresstest_win32
+        multiplayerconnectiontest_win32
+        jobstest_win32
+        ziptest_win32
+		forestviewer
+        texturestreamingtest_win32
+        framecapture_win32
+    }
+endsolution

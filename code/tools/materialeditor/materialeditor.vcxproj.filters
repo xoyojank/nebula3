@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
+    </Filter>
+    <Filter Include="Generated Files\Debug">
+      <UniqueIdentifier>{bb339c7a-4edf-41b5-aba7-95ccc457345d}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Generated Files\Release">
+      <UniqueIdentifier>{64d81cc5-c9cc-44ad-8939-32001fd33fc1}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="nsc3">
+      <UniqueIdentifier>{7c394062-ad8d-435f-b88b-decee2fe3f44}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="qnodeeditor">
+      <UniqueIdentifier>{cc5b2893-4d7d-4cce-91c2-b04b3ffa7620}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;cxx;c;def</Extensions>
+      <ParseFiles>true</ParseFiles>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h</Extensions>
+      <ParseFiles>true</ParseFiles>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Debug\moc_qnodeseditor.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_qnodeseditor.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Debug\moc_mainwindow.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_mainwindow.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="mainwindow.cpp" />
+    <ClCompile Include="..\nsc3\shader.cc">
+      <Filter>nsc3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\nsc3\shaderbinding.cc">
+      <Filter>nsc3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\nsc3\shadercodegenerator.cc">
+      <Filter>nsc3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\nsc3\shadercompiler.cc">
+      <Filter>nsc3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\nsc3\shaderfragment.cc">
+      <Filter>nsc3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\nsc3\shaderfragmentgroup.cc">
+      <Filter>nsc3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\nsc3\shaderfragmentmanager.cc">
+      <Filter>nsc3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\nsc3\shadernode.cc">
+      <Filter>nsc3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\nsc3\shaderparam.cc">
+      <Filter>nsc3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\nsc3\shadersampler.cc">
+      <Filter>nsc3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\nsc3\shadersamplermanager.cc">
+      <Filter>nsc3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\nsc3\shaderslot.cc">
+      <Filter>nsc3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\stdneb.cc" />
+    <ClCompile Include="qnodeeditor\qneblock.cpp">
+      <Filter>qnodeeditor</Filter>
+    </ClCompile>
+    <ClCompile Include="qnodeeditor\qneconnection.cpp">
+      <Filter>qnodeeditor</Filter>
+    </ClCompile>
+    <ClCompile Include="qnodeeditor\qneport.cpp">
+      <Filter>qnodeeditor</Filter>
+    </ClCompile>
+    <ClCompile Include="qnodeeditor\qnodeseditor.cpp">
+      <Filter>qnodeeditor</Filter>
+    </ClCompile>
+    <ClCompile Include="materialeditorapplication.cc" />
+    <ClCompile Include="models\shaderfragmentmodel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_shaderfragmentmodel.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_shaderfragmentmodel.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="models\shadersamplermodel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Debug\moc_shadersamplermodel.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Release\moc_shadersamplermodel.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\qrc_materialeditor.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GeneratedFiles\ui_mainwindow.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\nsc3\shader.h">
+      <Filter>nsc3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\nsc3\shaderbinding.h">
+      <Filter>nsc3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\nsc3\shadercodegenerator.h">
+      <Filter>nsc3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\nsc3\shadercompiler.h">
+      <Filter>nsc3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\nsc3\shaderfragment.h">
+      <Filter>nsc3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\nsc3\shaderfragmentgroup.h">
+      <Filter>nsc3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\nsc3\shaderfragmentmanager.h">
+      <Filter>nsc3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\nsc3\shadernode.h">
+      <Filter>nsc3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\nsc3\shaderparam.h">
+      <Filter>nsc3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\nsc3\shadersampler.h">
+      <Filter>nsc3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\nsc3\shadersamplermanager.h">
+      <Filter>nsc3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\nsc3\shaderslot.h">
+      <Filter>nsc3</Filter>
+    </ClInclude>
+    <ClInclude Include="qnodeeditor\qneport.h">
+      <Filter>qnodeeditor</Filter>
+    </ClInclude>
+    <ClInclude Include="qnodeeditor\qneblock.h">
+      <Filter>qnodeeditor</Filter>
+    </ClInclude>
+    <ClInclude Include="qnodeeditor\qneconnection.h">
+      <Filter>qnodeeditor</Filter>
+    </ClInclude>
+    <ClInclude Include="materialeditorapplication.h" />
+    <ClInclude Include="resource.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="mainwindow.h" />
+    <CustomBuild Include="mainwindow.ui" />
+    <CustomBuild Include="qnodeeditor\qnodeseditor.h">
+      <Filter>qnodeeditor</Filter>
+    </CustomBuild>
+    <CustomBuild Include="models\shaderfragmentmodel.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="models\shadersamplermodel.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="materialeditor.qrc">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

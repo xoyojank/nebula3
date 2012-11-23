@@ -1,0 +1,281 @@
+#-------------------------------------------------------------------------------
+#   tools_win32.epk
+#   (C) 2006 Radon Labs GmbH
+#-------------------------------------------------------------------------------
+set Win32Libs { dbghelp.lib 
+                dxguid.lib 
+                wsock32.lib 
+                rpcrt4.lib 
+                wininet.lib 
+                d3d9.lib 
+                d3dx9.lib 
+                dinput8.lib 
+                xinput.lib 
+                dxerr.lib 
+                x3daudio.lib 
+                ../../lib/fmod/win32/fmodex_vc.lib 
+                ../../lib/fmoddesignerapi/win32/fmod_event.lib 
+                ../../lib/fmoddesignerapi/win32/fmod_event_net.lib                 
+              }
+#-------------------------------------------------------------------------------
+begintarget nsh3
+    settype exe
+    setbasedir tools
+    setprecompiledheader stdneb    
+    setincpath_win32 "../foundation;../extlibs;../tools"    
+    setclusters { nsh3 }
+    setdepends {
+        foundation_win32
+        zlib_win32
+        tinyxml_win32
+    }    
+    setlibs_win32 $Win32Libs
+endtarget
+#-------------------------------------------------------------------------------
+begintarget nsc3
+    settype exe
+    setbasedir tools
+    setprecompiledheader stdneb    
+    setincpath_win32 "../foundation;../extlibs;../tools"    
+    setclusters { nsc3 }
+    setdepends {
+        foundation_win32
+        zlib_win32
+        tinyxml_win32
+    }    
+    setlibs_win32 $Win32Libs
+endtarget
+#-------------------------------------------------------------------------------
+begintarget testserver
+    settype exe
+    setbasedir tools
+    setprecompiledheader stdneb    
+    setincpath_win32 "../foundation;../extlibs;../tools"    
+    setclusters { testserver }
+    setdepends {
+        foundation_win32
+        zlib_win32
+        tinyxml_win32
+    }    
+    setlibs_win32 $Win32Libs
+endtarget
+#-------------------------------------------------------------------------------
+begintarget testclient
+    settype exe
+    setbasedir tools
+    setprecompiledheader stdneb    
+    setincpath_win32 "../foundation;../extlibs;../tools"    
+    setclusters { testclient }
+    setdepends {
+        foundation_win32
+        zlib_win32
+        tinyxml_win32
+    }    
+    setlibs_win32 $Win32Libs
+endtarget
+#-------------------------------------------------------------------------------
+begintarget testviewer
+    settype exe
+    setbasedir tools
+    setprecompiledheader stdneb    
+    setincpath_win32 "../foundation;../render;../extlibs;../tools;../addons"    
+    setclusters { testviewer }
+    setdepends {
+        foundation_win32
+        render_win32
+        render_charevalskeletonjob_win32
+        render_particlejob_win32
+        render_animjobsample_win32
+        render_animjobsamplemix_win32
+        render_visibilityquadtreejob_win32
+        render_visibilityboxsystemjob_win32
+        zlib_win32
+        tinyxml_win32
+        vibration_win32
+        framecapture_win32
+    }    
+    setlibs_win32 $Win32Libs
+endtarget
+#-------------------------------------------------------------------------------
+begintarget testhttpviewer
+    settype exe
+    setbasedir tools
+    setprecompiledheader stdneb    
+    setincpath_win32 "../foundation;../render;../extlibs;../tools;../addons"    
+    setclusters { testhttpviewer }
+    setrsrc_win32 { ../res/nebula.rc }    
+    setdepends {
+        foundation_win32
+        render_win32
+        render_charevalskeletonjob_win32
+        render_particlejob_win32
+        render_visibilityquadtreejob_win32
+        render_visibilityboxsystemjob_win32
+        zlib_win32
+        tinyxml_win32
+    }    
+    setlibs_win32 $Win32Libs
+endtarget
+#-------------------------------------------------------------------------------
+#begintarget testremoteviewer
+#    settype exe
+#    setbasedir tools
+#    setprecompiledheader stdneb    
+#    setincpath_win32 "../foundation;../render;../extlibs;../tools;../addons"    
+#    setclusters { testremoteviewer }
+#    setdepends {
+#        foundation_win32
+#        render_win32
+#        db_win32
+#        sqlite_win32
+#        zlib_win32
+#        tinyxml_win32
+#    }    
+#    setlibs_win32 $Win32Libs
+#endtarget
+#-------------------------------------------------------------------------------
+begintarget testgame
+   settype exe
+   setbasedir tools
+   setprecompiledheader stdneb    
+   setincpath_win32 "../application;../application/basegamefeature;../application/corefeature;../application/graphicsfeature;../application/physicsfeature;../foundation;../render;../extlibs;../tools;../addons;../extlibs/ode;"    
+   setclusters { testgame }
+   setdepends {
+       foundation_win32
+       render_win32
+       application_win32
+       physics_win32
+       ode_win32
+       opcode_win32
+       gimpact_win32
+       db_win32
+       sqlite_win32
+       zlib_win32
+       tinyxml_win32
+       vibration_win32
+       attr_win32
+       remote_win32
+       audio2_win32
+   }    
+   setlibs_win32 $Win32Libs
+endtarget
+#-------------------------------------------------------------------------------
+begintarget testnetworkgame
+   settype exe
+   setbasedir tools
+   setprecompiledheader stdneb    
+   setincpath_win32 "../application;../application/basegamefeature;../application/corefeature;../application/graphicsfeature;../application/physicsfeature;../foundation;../render;../extlibs;../network;../tools;../addons;../extlibs/ode;;../addons/network"    
+   setlibpath_win32 "../extlibs/raknet/Lib"
+   setclusters { testnetworkgame testnetworkgame/motion }
+   setdepends {
+       foundation_win32
+       render_win32
+       application_win32
+       physics_win32
+       ode_win32
+       opcode_win32
+       gimpact_win32
+       db_win32
+       sqlite_win32
+       network_win32
+       zlib_win32
+       tinyxml_win32
+       vibration_win32
+       raknet_win32
+       remote_win32
+       attr_win32
+	   audio2_win32
+   }    
+   setlibs_win32 "$Win32Libs  ws2_32.lib"
+endtarget
+#-------------------------------------------------------------------------------
+begintarget genrandtable
+    settype exe
+    setbasedir tools
+    setprecompiledheader stdneb    
+    setincpath_win32 "../foundation;../extlibs;../tools"    
+    setlibpath_win32 "../extlibs/raknet/Lib"
+    setclusters { genrandtable }
+    setdepends {
+        foundation_win32
+        zlib_win32
+        tinyxml_win32
+    }    
+    setlibs_win32 $Win32Libs
+endtarget
+#-------------------------------------------------------------------------------
+#begintarget testnetwork
+#    settype exe
+#    setbasedir tools
+#    setprecompiledheader stdneb    
+#    setincpath_win32 "../foundation;../addons/network;../extlibs;../tools;../testnetwork;"    
+#    setlibpath_win32 "../extlibs/raknet/Lib"
+#    setclusters { testnetwork }
+#    setdepends {
+#        foundation_win32
+#        render_win32
+#        application_win32
+#        physics_win32
+#        ode_win32
+#        opcode_win32
+#        gimpact_win32
+#        db_win32
+#        sqlite_win32
+#        network_win32
+#        zlib_win32
+#        tinyxml_win32
+#    }    
+#    setlibs_win32 "$Win32Libs  ws2_32.lib"
+#endtarget
+
+#-------------------------------------------------------------------------------
+beginsolution tools_win32 win32
+    settargets {
+        foundation_nidls_win32
+        render_nidls_win32
+        application_nidls_win32
+        network_nidls_win32
+        vibration_nidls_win32
+        posteffect_nidls_win32
+        remote_nidls_win32
+        framecapture_nidls_win32
+		audio2_nidls_win32
+        
+        render_charevalskeletonjob_win32
+        render_particlejob_win32
+        render_animjobsample_win32
+        render_animjobsamplemix_win32
+        render_visibilityquadtreejob_win32
+        render_visibilityboxsystemjob_win32
+
+        foundation_win32
+        render_win32
+        application_win32
+        tinyxml_win32
+        zlib_win32
+        db_win32
+        sqlite_win32
+        physics_win32
+        ode_win32
+        opcode_win32 
+        gimpact_win32
+        vibration_win32
+        raknet_win32
+        network_win32
+        posteffect_win32        
+        remote_win32
+        attr_win32
+        framecapture_win32
+		audio2_win32
+        
+        testserver
+        testclient
+        testgame
+        nsh3
+        nsc3
+        testviewer
+        testhttpviewer
+        testnetworkgame
+        genrandtable
+    }        
+endsolution

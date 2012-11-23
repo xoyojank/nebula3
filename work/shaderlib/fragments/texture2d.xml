@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Nebula3MaterialSystem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../materialsystem.xsd">
+	<Fragment name="Texture2D" category="Texturing" desc="Sample a 2D texture.">
+		<PixelShader>
+			<Inputs>
+				<Param name="texCoords" type="float2" defaultBinding="Interpolator.TexCoord0" annotation="The texture coordinates."/> 
+				<Param name="texSampler" type="sampler" defaultBinding="Sampler.DiffuseMap0Sampler" annotation="The texture sampler to use."/>
+			</Inputs>
+			<Outputs>
+				<Param name="outColor" type="float4" defaultBinding="Result.Color" annotation="The sampled color."/>
+			</Outputs>
+			<Code>
+<![CDATA[
+outColor = tex2D(texSampler, texCoords);
+]]>
+			</Code>
+		</PixelShader>
+	</Fragment>
+</Nebula3MaterialSystem>

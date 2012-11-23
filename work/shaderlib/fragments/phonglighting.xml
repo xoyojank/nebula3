@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Nebula3MaterialSystem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="D:\nebula3\work\shaderlib\materialsystem.xsd">
+	<FragmentGroup name="PhongLighting" category="Lighting" exclusive="true" desc="Implements phong lighting.">
+
+		<!-- Point Light -->
+		<Fragment name="PointLight" category="Lighting" exclusive="true" desc="Implements a point light.">		
+			<VertexShader>
+				<Inputs>
+					<Param name="vertexPos" type="float3" defaultBinding="Vertex.Position" annotation="The model space vertex position."/>
+					<Param name="vertexNormal" type="float3" defaultBinding="Vertex.Normal" annotation="The model space vertex normal."/>
+					<Param name="vertexTangent" type="float3" defaultBinding="Vertex.Tangent" annotation="The model space vertex tangent."/>
+					<Param name="vertexBinormal" type="float3" defaultBinding="Vertex.Binormal" annotation="The model space vertex binormal."/>
+					<Param name="modelEyeTransform" type="float4x4" defaultBinding="Constant.ModelEyeTransform" annotation="The model space eye matrix."/>
+					<Param name="modelLightTransform" type="float4x4" defaultBinding="Constant.ModelLightTransform" annotation="The model space light matrix."/>
+				</Inputs>
+				<Outputs>
+					<Param name="tangentLightVec" type="float3" defaultBinding="Interpolator.TangentLightVec" annotation="Light vector in tangent space."/>
+					<Param name="tangentHalfVec" type="float3" defaultBinding="Interpolator.TangentHalfVec" annotation="Half vector in tangent space."/>
+				</Outputs>
+				<Code>
+<![CDATA[
+float3 eVec = normalize(modelEyeTransform[3].xyz - vertexPos);
+float3 modelLightVec = modelLightTransform[3].xyz - vertexPos;
+float3 hVec = normalize(normalize(modelLightVec) + eVec);
+float3x3 tangentMatrix = float3x3(vertexTangent, vertexBinormal, vertexNormal);
+tangentLightVec = mul(tangentMatrix, modelLightVec);
+tangentHalfVec = mul(tangentMatrix, hVec);
+]]>
+				</Code>
+			</VertexShader>
+			<PixelShader>
+				<Inputs>
+					<Param name="matDiffuse" type="float4" defaultBinding="Constant.MaterialDiffuse" annotation="The material diffuse component."/>
+					<Param name="matSpecular" type="float4" defaultBinding="Constant.MaterialSpecular" annotation="The material specular component."/>
+					<Param name="matEmissive" type="float4" defaultBinding="Constant.MaterialEmissive" annotation="The material emissive component."/>
+					<Param name="matSpecularPower" type="float" defaultBinding="Constant.MaterialSpecularPower" annotation="The material specular power."/>
+					<Param name="shadowValue" type="float" default="1.0" annotation="The shadow intensity of the current pixel."/>
+					<Param name="lightDiffuse" type="float4" defaultBinding="Shared.LightDiffuse" annotation="The light diffuse color."/>
+					<Param name="lightSpecular" type="float4" defaultBinding="Shared.LightSpecular" annotation="The light specular color."/>
+					<Param name="lightRange" type="float" defaultBinding="Shared.LightRange" annotation="The point light range."/>
+					<Param name="tangentSurfaceNormal" type="float3" default="0.0, 1.0, 0.0" annotation="The surface normal in tangent space."/>
+					<Param name="tangentLightVec" type="float3" defaultBinding="Interpolator.TangentLightVec" annotation="Light vector in tangent space."/>
+					<Param name="tangentHalfVec" type="float3" defaultBinding="Interpolator.TangentHalfVec" annotation="Half vector in tangent space."/>
+				</Inputs>
+				<Outputs>
+					<Param name="outColor" type="float4" defaultBinding="Result.Color" annotation="The final point-lit pixel."/>
+				</Outputs>
+				<Code>
+<![CDATA[
+// compute light component intensities
+float specIntensity = pow(saturate(dot(tangentSurfaceNormal, normalize(tangentHalfVec))), matSpecularPower);
+float diffIntensity = dot(tangentSurfaceNormal, normalize(lightVec));
+
+// compute distance attenuation and shadowing
+diffIntensity *= shadowValue * (1.0 - saturate(length(lightVec) / LightRange));
+
+// sum up color components
+float3 diffuse = matDiffuse.rgb * lightDiffuse.rgb * diffIntensity;
+float3 specular = matSpecular.rgb * lightSpecular.rgb * specIntensity;
+float3 emissive = matEmissive.rgb;
+outColor = float4(diffuse + specular + emissive, matDiffuse.a);
+]]>
+				</Code>
+			</PixelShader>			
+		</Fragment>
+		
+		<!-- Directional Light -->
+		<Fragment name="DirectionalLight" category="Lighting" exclusive="true" desc="Implements a directional light.">		
+			<VertexShader>
+				<Inputs>
+					<Param name="vertexPos" type="float3" defaultBinding="Vertex.Position" annotation="The model space vertex position."/>
+					<Param name="vertexNormal" type="float3" defaultBinding="Vertex.Normal" annotation="The model space vertex normal."/>
+					<Param name="vertexTangent" type="float3" defaultBinding="Vertex.Tangent" annotation="The model space vertex tangent."/>
+					<Param name="vertexBinormal" type="float3" defaultBinding="Vertex.Binormal" annotation="The model space vertex binormal."/>
+					<Param name="modelEyeTransform" type="float4x4" defaultBinding="Constant.ModelEyeTransform" annotation="The model space eye matrix."/>
+					<Param name="modelLightTransform" type="float4x4" defaultBinding="Constant.ModelLightTransform" annotation="The model space light matrix."/>
+				</Inputs>
+				<Outputs>
+					<Param name="tangentLightVec" type="float3" defaultBinding="Interpolator.TangentLightVec" annotation="Light vector in tangent space."/>
+					<Param name="tangentHalfVec" type="float3" defaultBinding="Interpolator.TangentHalfVec" annotation="Half vector in tangent space."/>
+				</Outputs>
+				<Code>
+<![CDATA[
+// light vector is z-component of model light transform
+float3 modelLightVec = modelLightTransform[2].xyz;
+float3 eVec = normalize(modelEyeTransform[2].xyz - vertexPos);
+float3 hVec = normalize(normalize(modelLightVec) + eVec);
+float3x3 tangentMatrix = float3x3(vertexTangent, vertexBinormal, vertexNormal);
+tangentLightVec = mul(tangentMatrix, modelLightVec);
+tangentHalfVec = mul(tangentMatrix, hVec);
+]]>
+				</Code>
+			</VertexShader>
+			<PixelShader>
+				<Inputs>
+					<Param name="matDiffuse" type="float4" defaultBinding="Constant.MaterialDiffuse" annotation="The material diffuse component."/>
+					<Param name="matSpecular" type="float4" defaultBinding="Constant.MaterialSpecular" annotation="The material specular component."/>
+					<Param name="matEmissive" type="float4" defaultBinding="Constant.MaterialEmissive" annotation="The material emissive component."/>
+					<Param name="matSpecularPower" type="float" defaultBinding="Constant.MaterialSpecularPower" annotation="The material specular power."/>
+					<Param name="shadowValue" type="float" default="1.0" annotation="The shadow intensity of the current pixel."/>
+					<Param name="lightDiffuse" type="float4" defaultBinding="Shared.LightDiffuse" annotation="The light diffuse color."/>
+					<Param name="lightSpecular" type="float4" defaultBinding="Shared.LightSpecular" annotation="The light specular color."/>
+					<Param name="lightRange" type="float" defaultBinding="Shared.LightRange" annotation="The point light range."/>
+					<Param name="tangentSurfaceNormal" type="float3" default="0.0, 1.0, 0.0" annotation="The surface normal in tangent space."/>
+					<Param name="tangentLightVec" type="float3" defaultBinding="Interpolator.TangentLightVec" annotation="Light vector in tangent space."/>
+					<Param name="tangentHalfVec" type="float3" defaultBinding="Interpolator.TangentHalfVec" annotation="Half vector in tangent space."/>
+				</Inputs>
+				<Outputs>
+					<Param name="outColor" type="float4" defaultBinding="Result.Color" annotation="The final point-lit pixel."/>
+				</Outputs>
+				<Code>
+<![CDATA[
+// compute light component intensities
+float specIntensity = pow(saturate(dot(tangentSurfaceNormal, normalize(tangentHalfVec))), matSpecularPower);
+float diffIntensity = dot(tangentSurfaceNormal, normalize(lightVec));
+
+// compute distance attenuation and shadowing
+diffIntensity *= shadowValue * (1.0 - saturate(length(lightVec) / LightRange));
+
+// sum up color components
+float3 diffuse = matDiffuse.rgb * lightDiffuse.rgb * diffIntensity;
+float3 specular = matSpecular.rgb * lightSpecular.rgb * specIntensity;
+float3 emissive = matEmissive.rgb;
+outColor = float4(diffuse + specular + emissive, matDiffuse.a);
+]]>
+				</Code>
+			</PixelShader>			
+		</Fragment>		
+		
+	</FragmentGroup>
+</Nebula3MaterialSystem>

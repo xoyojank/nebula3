@@ -1,0 +1,457 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Maya_Debug|Win32">
+      <Configuration>Maya_Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Maya_Release|Win32">
+      <Configuration>Maya_Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{338830BC-3109-4CA6-9835-2F7229D34196}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Maya_Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Maya_Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="..\nidl.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Maya_Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Maya_Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\Win32\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\Win32\Debug\raknet_win32\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\Win32\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\Win32\Release\raknet_win32\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Maya_Debug|Win32'">.\Win32\Maya_Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Maya_Debug|Win32'">.\Win32\Maya_Debug\raknet_win32\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Maya_Release|Win32'">.\Win32\Maya_Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Maya_Release|Win32'">.\Win32\Maya_Release\raknet_win32\</IntDir>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Maya_Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Maya_Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Maya_Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Maya_Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Maya_Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Maya_Release|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/EHsc  %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..;../extlibs/raknet/DependentExtensions/openssl-0.9.8g;../extlibs/raknet/DependentExtensions/udt4/src; ;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>__WIN32__;WIN32;_DEBUG;NT_PLUGIN;_HAS_EXCEPTIONS=0;_CRT_SECURE_NO_DEPRECATE=1;_RAKNET_LIB;_CRT_NONSTDC_NO_DEPRECATE=1;_VC80_UPGRADE=0x0710;_MBCS;_HAS_EXCEPTIONS=1 ;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <MinimalRebuild>true</MinimalRebuild>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>.\Win32\raknet_win32.debug.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/EHsc  %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>..;../extlibs/raknet/DependentExtensions/openssl-0.9.8g;../extlibs/raknet/DependentExtensions/udt4/src; ;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>__WIN32__;WIN32;NT_PLUGIN;_HAS_EXCEPTIONS=0;_CRT_SECURE_NO_DEPRECATE=1;_RAKNET_LIB;_CRT_NONSTDC_NO_DEPRECATE=1;_VC80_UPGRADE=0x0710;_MBCS;_HAS_EXCEPTIONS=1 ;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+      <CompileAs>Default</CompileAs>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>.\Win32\raknet_win32.release.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Maya_Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..;../extlibs/raknet/DependentExtensions/openssl-0.9.8g;../extlibs/raknet/DependentExtensions/udt4/src; ;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>__MAYA__;__WIN32__;WIN32;_DEBUG;NT_PLUGIN;_HAS_EXCEPTIONS=0;_CRT_SECURE_NO_DEPRECATE=1;_RAKNET_LIB;_CRT_NONSTDC_NO_DEPRECATE=1;_VC80_UPGRADE=0x0710;_MBCS;_HAS_EXCEPTIONS=1 ;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>.\Win32\raknet_win32.maya_debug.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Maya_Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/EHsc  %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>..;../extlibs/raknet/DependentExtensions/openssl-0.9.8g;../extlibs/raknet/DependentExtensions/udt4/src; ;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>__MAYA__;__WIN32__;WIN32;NT_PLUGIN;_HAS_EXCEPTIONS=0;_CRT_SECURE_NO_DEPRECATE=1;_RAKNET_LIB;_CRT_NONSTDC_NO_DEPRECATE=1;_VC80_UPGRADE=0x0710;_MBCS;_HAS_EXCEPTIONS=1 ;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+      <CompileAs>Default</CompileAs>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>.\Win32\raknet_win32.maya_release.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\extlibs\raknet\AsynchronousFileIO.cc" />
+    <ClCompile Include="..\extlibs\raknet\AutoRPC.cc" />
+    <ClCompile Include="..\extlibs\raknet\BigInt.cc" />
+    <ClCompile Include="..\extlibs\raknet\BitStream.cc" />
+    <ClCompile Include="..\extlibs\raknet\BitStream_NoTemplate.cc" />
+    <ClCompile Include="..\extlibs\raknet\CheckSum.cc" />
+    <ClCompile Include="..\extlibs\raknet\CommandParserInterface.cc" />
+    <ClCompile Include="..\extlibs\raknet\ConnectionGraph.cc" />
+    <ClCompile Include="..\extlibs\raknet\ConnectionGraph2.cc" />
+    <ClCompile Include="..\extlibs\raknet\ConsoleServer.cc" />
+    <ClCompile Include="..\extlibs\raknet\DS_BytePool.cc" />
+    <ClCompile Include="..\extlibs\raknet\DS_ByteQueue.cc" />
+    <ClCompile Include="..\extlibs\raknet\DS_HuffmanEncodingTree.cc" />
+    <ClCompile Include="..\extlibs\raknet\DS_Table.cc" />
+    <ClCompile Include="..\extlibs\raknet\DataBlockEncryptor.cc" />
+    <ClCompile Include="..\extlibs\raknet\DataCompressor.cc" />
+    <ClCompile Include="..\extlibs\raknet\DirectoryDeltaTransfer.cc" />
+    <ClCompile Include="..\extlibs\raknet\EmailSender.cc" />
+    <ClCompile Include="..\extlibs\raknet\EncodeClassName.cc" />
+    <ClCompile Include="..\extlibs\raknet\EpochTimeToString.cc" />
+    <ClCompile Include="..\extlibs\raknet\ExtendedOverlappedPool.cc" />
+    <ClCompile Include="..\extlibs\raknet\FileList.cc" />
+    <ClCompile Include="..\extlibs\raknet\FileListTransfer.cc" />
+    <ClCompile Include="..\extlibs\raknet\FileOperations.cc" />
+    <ClCompile Include="..\extlibs\raknet\FormatString.cc" />
+    <ClCompile Include="..\extlibs\raknet\FullyConnectedMesh.cc" />
+    <ClCompile Include="..\extlibs\raknet\FullyConnectedMesh2.cc" />
+    <ClCompile Include="..\extlibs\raknet\FunctionThread.cc" />
+    <ClCompile Include="..\extlibs\raknet\Gen_RPC8.cc" />
+    <ClCompile Include="..\extlibs\raknet\GetTime.cc" />
+    <ClCompile Include="..\extlibs\raknet\GridSectorizer.cc" />
+    <ClCompile Include="..\extlibs\raknet\HTTPConnection.cc" />
+    <ClCompile Include="..\extlibs\raknet\IncrementalReadInterface.cc" />
+    <ClCompile Include="..\extlibs\raknet\InlineFunctor.cc" />
+    <ClCompile Include="..\extlibs\raknet\Itoa.cc" />
+    <ClCompile Include="..\extlibs\raknet\LightweightDatabaseClient.cc" />
+    <ClCompile Include="..\extlibs\raknet\LightweightDatabaseCommon.cc" />
+    <ClCompile Include="..\extlibs\raknet\LightweightDatabaseServer.cc" />
+    <ClCompile Include="..\extlibs\raknet\LinuxStrings.cc" />
+    <ClCompile Include="..\extlibs\raknet\LogCommandParser.cc" />
+    <ClCompile Include="..\extlibs\raknet\MessageFilter.cc" />
+    <ClCompile Include="..\extlibs\raknet\NatPunchthroughClient.cc" />
+    <ClCompile Include="..\extlibs\raknet\NatPunchthroughServer.cc" />
+    <ClCompile Include="..\extlibs\raknet\NetworkIDManager.cc" />
+    <ClCompile Include="..\extlibs\raknet\NetworkIDObject.cc" />
+    <ClCompile Include="..\extlibs\raknet\PacketConsoleLogger.cc" />
+    <ClCompile Include="..\extlibs\raknet\PacketFileLogger.cc" />
+    <ClCompile Include="..\extlibs\raknet\PacketLogger.cc" />
+    <ClCompile Include="..\extlibs\raknet\PacketOutputWindowLogger.cc" />
+    <ClCompile Include="..\extlibs\raknet\PacketizedTCP.cc" />
+    <ClCompile Include="..\extlibs\raknet\PluginInterface.cc" />
+    <ClCompile Include="..\extlibs\raknet\PluginInterface2.cc" />
+    <ClCompile Include="..\extlibs\raknet\RPCMap.cc" />
+    <ClCompile Include="..\extlibs\raknet\RSACrypt.cc" />
+    <ClCompile Include="..\extlibs\raknet\RakMemoryOverride.cc" />
+    <ClCompile Include="..\extlibs\raknet\RakNetCommandParser.cc" />
+    <ClCompile Include="..\extlibs\raknet\RakNetSocket.cc" />
+    <ClCompile Include="..\extlibs\raknet\RakNetStatistics.cc" />
+    <ClCompile Include="..\extlibs\raknet\RakNetTransport.cc" />
+    <ClCompile Include="..\extlibs\raknet\RakNetTransport2.cc" />
+    <ClCompile Include="..\extlibs\raknet\RakNetTypes.cc" />
+    <ClCompile Include="..\extlibs\raknet\RakNetworkFactory.cc" />
+    <ClCompile Include="..\extlibs\raknet\RakPeer.cc" />
+    <ClCompile Include="..\extlibs\raknet\RakSleep.cc" />
+    <ClCompile Include="..\extlibs\raknet\RakString.cc" />
+    <ClCompile Include="..\extlibs\raknet\RakThread.cc" />
+    <ClCompile Include="..\extlibs\raknet\Rand.cc" />
+    <ClCompile Include="..\extlibs\raknet\ReadyEvent.cc" />
+    <ClCompile Include="..\extlibs\raknet\ReliabilityLayer.cc" />
+    <ClCompile Include="..\extlibs\raknet\ReplicaManager.cc" />
+    <ClCompile Include="..\extlibs\raknet\ReplicaManager2.cc" />
+    <ClCompile Include="..\extlibs\raknet\ReplicaManager3.cc" />
+    <ClCompile Include="..\extlibs\raknet\Router.cc" />
+    <ClCompile Include="..\extlibs\raknet\SHA1.cc" />
+    <ClCompile Include="..\extlibs\raknet\SimpleMutex.cc" />
+    <ClCompile Include="..\extlibs\raknet\SocketLayer.cc" />
+    <ClCompile Include="..\extlibs\raknet\StringCompressor.cc" />
+    <ClCompile Include="..\extlibs\raknet\StringTable.cc" />
+    <ClCompile Include="..\extlibs\raknet\SuperFastHash.cc" />
+    <ClCompile Include="..\extlibs\raknet\SystemAddressList.cc" />
+    <ClCompile Include="..\extlibs\raknet\TCPInterface.cc" />
+    <ClCompile Include="..\extlibs\raknet\TableSerializer.cc" />
+    <ClCompile Include="..\extlibs\raknet\TelnetTransport.cc" />
+    <ClCompile Include="..\extlibs\raknet\ThreadsafePacketLogger.cc" />
+    <ClCompile Include="..\extlibs\raknet\UDPForwarder.cc" />
+    <ClCompile Include="..\extlibs\raknet\UDPProxyClient.cc" />
+    <ClCompile Include="..\extlibs\raknet\UDPProxyCoordinator.cc" />
+    <ClCompile Include="..\extlibs\raknet\UDPProxyServer.cc" />
+    <ClCompile Include="..\extlibs\raknet\WSAStartupSingleton.cc" />
+    <ClCompile Include="..\extlibs\raknet\_FindFirst.cc" />
+    <ClCompile Include="..\extlibs\raknet\gettimeofday.cc" />
+    <ClCompile Include="..\extlibs\raknet\rijndael.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\extlibs\raknet\AsynchronousFileIO.h" />
+    <ClInclude Include="..\extlibs\raknet\AutoRPC.h" />
+    <ClInclude Include="..\extlibs\raknet\AutopatcherPatchContext.h" />
+    <ClInclude Include="..\extlibs\raknet\AutopatcherRepositoryInterface.h" />
+    <ClInclude Include="..\extlibs\raknet\BigInt.h" />
+    <ClInclude Include="..\extlibs\raknet\BigTypes.h" />
+    <ClInclude Include="..\extlibs\raknet\BitStream.h" />
+    <ClInclude Include="..\extlibs\raknet\BitStream_NoTemplate.h" />
+    <ClInclude Include="..\extlibs\raknet\CheckSum.h" />
+    <ClInclude Include="..\extlibs\raknet\ClientContextStruct.h" />
+    <ClInclude Include="..\extlibs\raknet\CommandParserInterface.h" />
+    <ClInclude Include="..\extlibs\raknet\ConnectionGraph.h" />
+    <ClInclude Include="..\extlibs\raknet\ConnectionGraph2.h" />
+    <ClInclude Include="..\extlibs\raknet\ConsoleServer.h" />
+    <ClInclude Include="..\extlibs\raknet\DS_BPlusTree.h" />
+    <ClInclude Include="..\extlibs\raknet\DS_BinarySearchTree.h" />
+    <ClInclude Include="..\extlibs\raknet\DS_BytePool.h" />
+    <ClInclude Include="..\extlibs\raknet\DS_ByteQueue.h" />
+    <ClInclude Include="..\extlibs\raknet\DS_Heap.h" />
+    <ClInclude Include="..\extlibs\raknet\DS_HuffmanEncodingTree.h" />
+    <ClInclude Include="..\extlibs\raknet\DS_HuffmanEncodingTreeFactory.h" />
+    <ClInclude Include="..\extlibs\raknet\DS_HuffmanEncodingTreeNode.h" />
+    <ClInclude Include="..\extlibs\raknet\DS_LinkedList.h" />
+    <ClInclude Include="..\extlibs\raknet\DS_List.h" />
+    <ClInclude Include="..\extlibs\raknet\DS_Map.h" />
+    <ClInclude Include="..\extlibs\raknet\DS_MemoryPool.h" />
+    <ClInclude Include="..\extlibs\raknet\DS_Multilist.h" />
+    <ClInclude Include="..\extlibs\raknet\DS_OrderedChannelHeap.h" />
+    <ClInclude Include="..\extlibs\raknet\DS_OrderedList.h" />
+    <ClInclude Include="..\extlibs\raknet\DS_Queue.h" />
+    <ClInclude Include="..\extlibs\raknet\DS_QueueLinkedList.h" />
+    <ClInclude Include="..\extlibs\raknet\DS_RangeList.h" />
+    <ClInclude Include="..\extlibs\raknet\DS_Table.h" />
+    <ClInclude Include="..\extlibs\raknet\DS_Tree.h" />
+    <ClInclude Include="..\extlibs\raknet\DS_WeightedGraph.h" />
+    <ClInclude Include="..\extlibs\raknet\DataBlockEncryptor.h" />
+    <ClInclude Include="..\extlibs\raknet\DataCompressor.h" />
+    <ClInclude Include="..\extlibs\raknet\DirectoryDeltaTransfer.h" />
+    <ClInclude Include="..\extlibs\raknet\EmailSender.h" />
+    <ClInclude Include="..\extlibs\raknet\EpochTimeToString.h" />
+    <ClInclude Include="..\extlibs\raknet\Export.h" />
+    <ClInclude Include="..\extlibs\raknet\ExtendedOverlappedPool.h" />
+    <ClInclude Include="..\extlibs\raknet\FileList.h" />
+    <ClInclude Include="..\extlibs\raknet\FileListNodeContext.h" />
+    <ClInclude Include="..\extlibs\raknet\FileListTransfer.h" />
+    <ClInclude Include="..\extlibs\raknet\FileListTransferCBInterface.h" />
+    <ClInclude Include="..\extlibs\raknet\FileOperations.h" />
+    <ClInclude Include="..\extlibs\raknet\FormatString.h" />
+    <ClInclude Include="..\extlibs\raknet\FullyConnectedMesh.h" />
+    <ClInclude Include="..\extlibs\raknet\FullyConnectedMesh2.h" />
+    <ClInclude Include="..\extlibs\raknet\FunctionThread.h" />
+    <ClInclude Include="..\extlibs\raknet\Gen_RPC8.h" />
+    <ClInclude Include="..\extlibs\raknet\GetTime.h" />
+    <ClInclude Include="..\extlibs\raknet\GridSectorizer.h" />
+    <ClInclude Include="..\extlibs\raknet\HTTPConnection.h" />
+    <ClInclude Include="..\extlibs\raknet\IncrementalReadInterface.h" />
+    <ClInclude Include="..\extlibs\raknet\InlineFunctor.h" />
+    <ClInclude Include="..\extlibs\raknet\InternalPacket.h" />
+    <ClInclude Include="..\extlibs\raknet\Itoa.h" />
+    <ClInclude Include="..\extlibs\raknet\Kbhit.h" />
+    <ClInclude Include="..\extlibs\raknet\LightweightDatabaseClient.h" />
+    <ClInclude Include="..\extlibs\raknet\LightweightDatabaseCommon.h" />
+    <ClInclude Include="..\extlibs\raknet\LightweightDatabaseServer.h" />
+    <ClInclude Include="..\extlibs\raknet\LinuxStrings.h" />
+    <ClInclude Include="..\extlibs\raknet\LogCommandParser.h" />
+    <ClInclude Include="..\extlibs\raknet\MTUSize.h" />
+    <ClInclude Include="..\extlibs\raknet\MessageFilter.h" />
+    <ClInclude Include="..\extlibs\raknet\MessageIdentifiers.h" />
+    <ClInclude Include="..\extlibs\raknet\NatPunchthroughClient.h" />
+    <ClInclude Include="..\extlibs\raknet\NatPunchthroughServer.h" />
+    <ClInclude Include="..\extlibs\raknet\NativeTypes.h" />
+    <ClInclude Include="..\extlibs\raknet\NetworkIDManager.h" />
+    <ClInclude Include="..\extlibs\raknet\NetworkIDObject.h" />
+    <ClInclude Include="..\extlibs\raknet\PacketConsoleLogger.h" />
+    <ClInclude Include="..\extlibs\raknet\PacketFileLogger.h" />
+    <ClInclude Include="..\extlibs\raknet\PacketLogger.h" />
+    <ClInclude Include="..\extlibs\raknet\PacketOutputWindowLogger.h" />
+    <ClInclude Include="..\extlibs\raknet\PacketPool.h" />
+    <ClInclude Include="..\extlibs\raknet\PacketPriority.h" />
+    <ClInclude Include="..\extlibs\raknet\PacketizedTCP.h" />
+    <ClInclude Include="..\extlibs\raknet\Platform.h" />
+    <ClInclude Include="..\extlibs\raknet\PluginInterface.h" />
+    <ClInclude Include="..\extlibs\raknet\PluginInterface2.h" />
+    <ClInclude Include="..\extlibs\raknet\RPCMap.h" />
+    <ClInclude Include="..\extlibs\raknet\RPCNode.h" />
+    <ClInclude Include="..\extlibs\raknet\RSACrypt.h" />
+    <ClInclude Include="..\extlibs\raknet\RakAlloca.h" />
+    <ClInclude Include="..\extlibs\raknet\RakAssert.h" />
+    <ClInclude Include="..\extlibs\raknet\RakMemoryOverride.h" />
+    <ClInclude Include="..\extlibs\raknet\RakNetCommandParser.h" />
+    <ClInclude Include="..\extlibs\raknet\RakNetDefines.h" />
+    <ClInclude Include="..\extlibs\raknet\RakNetSmartPtr.h" />
+    <ClInclude Include="..\extlibs\raknet\RakNetSocket.h" />
+    <ClInclude Include="..\extlibs\raknet\RakNetStatistics.h" />
+    <ClInclude Include="..\extlibs\raknet\RakNetTime.h" />
+    <ClInclude Include="..\extlibs\raknet\RakNetTransport.h" />
+    <ClInclude Include="..\extlibs\raknet\RakNetTransport2.h" />
+    <ClInclude Include="..\extlibs\raknet\RakNetTypes.h" />
+    <ClInclude Include="..\extlibs\raknet\RakNetVersion.h" />
+    <ClInclude Include="..\extlibs\raknet\RakNetworkFactory.h" />
+    <ClInclude Include="..\extlibs\raknet\RakPeer.h" />
+    <ClInclude Include="..\extlibs\raknet\RakPeerInterface.h" />
+    <ClInclude Include="..\extlibs\raknet\RakSleep.h" />
+    <ClInclude Include="..\extlibs\raknet\RakString.h" />
+    <ClInclude Include="..\extlibs\raknet\RakThread.h" />
+    <ClInclude Include="..\extlibs\raknet\Rand.h" />
+    <ClInclude Include="..\extlibs\raknet\ReadyEvent.h" />
+    <ClInclude Include="..\extlibs\raknet\RefCountedObj.h" />
+    <ClInclude Include="..\extlibs\raknet\ReliabilityLayer.h" />
+    <ClInclude Include="..\extlibs\raknet\Replica.h" />
+    <ClInclude Include="..\extlibs\raknet\ReplicaEnums.h" />
+    <ClInclude Include="..\extlibs\raknet\ReplicaManager.h" />
+    <ClInclude Include="..\extlibs\raknet\ReplicaManager2.h" />
+    <ClInclude Include="..\extlibs\raknet\ReplicaManager3.h" />
+    <ClInclude Include="..\extlibs\raknet\Rijndael-Boxes.h" />
+    <ClInclude Include="..\extlibs\raknet\Rijndael.h" />
+    <ClInclude Include="..\extlibs\raknet\Router.h" />
+    <ClInclude Include="..\extlibs\raknet\RouterInterface.h" />
+    <ClInclude Include="..\extlibs\raknet\SHA1.h" />
+    <ClInclude Include="..\extlibs\raknet\SimpleMutex.h" />
+    <ClInclude Include="..\extlibs\raknet\SimpleTCPServer.h" />
+    <ClInclude Include="..\extlibs\raknet\SingleProducerConsumer.h" />
+    <ClInclude Include="..\extlibs\raknet\SocketIncludes.h" />
+    <ClInclude Include="..\extlibs\raknet\SocketLayer.h" />
+    <ClInclude Include="..\extlibs\raknet\StringCompressor.h" />
+    <ClInclude Include="..\extlibs\raknet\StringTable.h" />
+    <ClInclude Include="..\extlibs\raknet\SuperFastHash.h" />
+    <ClInclude Include="..\extlibs\raknet\SystemAddressList.h" />
+    <ClInclude Include="..\extlibs\raknet\TCPInterface.h" />
+    <ClInclude Include="..\extlibs\raknet\TableSerializer.h" />
+    <ClInclude Include="..\extlibs\raknet\TelnetTransport.h" />
+    <ClInclude Include="..\extlibs\raknet\ThreadPool.h" />
+    <ClInclude Include="..\extlibs\raknet\ThreadsafePacketLogger.h" />
+    <ClInclude Include="..\extlibs\raknet\TransportInterface.h" />
+    <ClInclude Include="..\extlibs\raknet\Types.h" />
+    <ClInclude Include="..\extlibs\raknet\UDPForwarder.h" />
+    <ClInclude Include="..\extlibs\raknet\UDPProxyClient.h" />
+    <ClInclude Include="..\extlibs\raknet\UDPProxyCommon.h" />
+    <ClInclude Include="..\extlibs\raknet\UDPProxyCoordinator.h" />
+    <ClInclude Include="..\extlibs\raknet\UDPProxyServer.h" />
+    <ClInclude Include="..\extlibs\raknet\WSAStartupSingleton.h" />
+    <ClInclude Include="..\extlibs\raknet\_FindFirst.h" />
+    <ClInclude Include="..\extlibs\raknet\gettimeofday.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="..\nidl.targets" />
+  </ImportGroup>
+</Project>

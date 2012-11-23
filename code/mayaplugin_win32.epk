@@ -1,0 +1,61 @@
+#-------------------------------------------------------------------------------
+#   mayaplugin_win32.epk
+#   (C) 2009 Radon Labs GmbH
+#-------------------------------------------------------------------------------
+set Libs { dbghelp.lib wsock32.lib rpcrt4.lib }
+set MayaLibs { Foundation.lib OpenMaya.lib OpenMayaAnim.lib }
+set Include { c:/Program Files/Autodesk/Maya2009/include;../foundation;../render;../extlibs;..addons;../toolkit;../mayaplugin}
+set MayaLibPath { c:/Program Files/Autodesk/Maya2009/lib }
+
+#-------------------------------------------------------------------------------
+begintarget mayapluginlib_win32
+    settype lib
+    setbasedir mayaplugin
+    setprecompiledheader stdneb    
+    setincpath_win32 $Include    
+    setclusters { 
+        mayacommands 
+        mayaexporters 
+        mayautil 
+        mayacore 
+        mayaextractors 
+        mayaloadsave 
+        mayashaders 
+        mayalegacy
+    }
+endtarget
+#-------------------------------------------------------------------------------
+begintarget Nebula3Maya2009Plugin
+    settype mll
+    setbasedir mayaplugin
+    setprecompiledheader stdneb
+    setclusters { mayamain }
+    setincpath_win32 "$Include"
+    setlibs_win32 "$Libs $MayaLibs"
+    setlibpath_win32 "$MayaLibPath"
+    setdepends {
+        foundation_win32
+        render_win32
+        zlib_win32
+        tinyxml_win32
+        toolkitutil_win32
+        mayapluginlib_win32  
+    }
+endtarget
+
+#-------------------------------------------------------------------------------
+beginsolution Nebula3Maya2009Plugin win32
+    settargets {
+        foundation_nidls_win32
+        render_nidls_win32
+
+        foundation_win32
+        render_win32
+        tinyxml_win32
+        zlib_win32
+        toolkitutil_win32        
+        mayapluginlib_win32
+
+        Nebula3Maya2009Plugin
+    }
+endsolution

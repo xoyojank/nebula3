@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2006 sp2 U (http://www.altova.com) by Elvis Presley (Radon Labs GmbH) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:simpleType name="int">
+		<xs:annotation>
+			<xs:documentation>Nebula3 integer type</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:int"/>
+	</xs:simpleType>
+	<xs:simpleType name="float">
+		<xs:annotation>
+			<xs:documentation>Nebula3 float type</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:float"/>
+	</xs:simpleType>
+	<xs:simpleType name="bool">
+		<xs:annotation>
+			<xs:documentation>Nebula3 bool type</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:boolean"/>
+	</xs:simpleType>
+	<xs:simpleType name="string">
+		<xs:annotation>
+			<xs:documentation>Nebula3 string type</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="vector3">
+		<xs:annotation>
+			<xs:documentation>Nebula3 vector3 type</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="vector4">
+		<xs:annotation>
+			<xs:documentation>Nebula3 vector4 type</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="matrix44">
+		<xs:annotation>
+			<xs:documentation>Nebula3 matrix44 type</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="fourcc">
+		<xs:annotation>
+			<xs:documentation>Nebula3 fourcc type</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="\p{L}\p{L}\p{L}\p{L}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="valueType">
+		<xs:annotation>
+			<xs:documentation>Nebula3 type enumeration</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="string">
+			<xs:enumeration value="string"/>
+			<xs:enumeration value="vector3"/>
+			<xs:enumeration value="float"/>
+			<xs:enumeration value="vector4"/>
+			<xs:enumeration value="object"/>
+			<xs:enumeration value="matrix44"/>
+			<xs:enumeration value="bool"/>
+			<xs:enumeration value="fourcc"/>
+			<xs:enumeration value="guid"/>
+			<xs:enumeration value="uri"/>
+			<xs:enumeration value="pointer"/>
+			<xs:enumeration value="int"/>
+			<xs:enumeration value="intArray"/>
+			<xs:enumeration value="floatArray"/>
+			<xs:enumeration value="boolArray"/>
+			<xs:enumeration value="stringArray"/>
+			<xs:enumeration value="vector3Array"/>
+			<xs:enumeration value="vector4Array"/>
+			<xs:enumeration value="matrix44Array"/>
+			<xs:enumeration value="fourccArray"/>
+			<xs:enumeration value="guidArray"/>
+			<xs:enumeration value="uriArray"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="uri">
+		<xs:annotation>
+			<xs:documentation>Nebula3 URI type enumeration</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:anyURI"/>
+	</xs:simpleType>
+	<xs:simpleType name="object">
+		<xs:annotation>
+			<xs:documentation>Nebula3 named object</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+</xs:schema>

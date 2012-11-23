@@ -1,0 +1,336 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Maya_Debug|Win32">
+      <Configuration>Maya_Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Maya_Release|Win32">
+      <Configuration>Maya_Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{FF1D84DB-ACD3-4543-B5A3-3A823D29A82D}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Maya_Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Maya_Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="..\nidl.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Maya_Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Maya_Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\Win32\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\Win32\Debug\toolkitutil_win32\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\Win32\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\Win32\Release\toolkitutil_win32\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Maya_Debug|Win32'">.\Win32\Maya_Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Maya_Debug|Win32'">.\Win32\Maya_Debug\toolkitutil_win32\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Maya_Release|Win32'">.\Win32\Maya_Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Maya_Release|Win32'">.\Win32\Maya_Release\toolkitutil_win32\</IntDir>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Maya_Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Maya_Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Maya_Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Maya_Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Maya_Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Maya_Release|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..;../foundation;../render;../extlibs;../tests;../addons;../toolkit ;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>__WIN32__;WIN32;_DEBUG;NT_PLUGIN;_HAS_EXCEPTIONS=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <MinimalRebuild>true</MinimalRebuild>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdneb.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(OutDir)$(ProjectName).pch</PrecompiledHeaderOutputFile>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>.\Win32\toolkitutil_win32.debug.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>..;../foundation;../render;../extlibs;../tests;../addons;../toolkit ;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>__WIN32__;WIN32;NT_PLUGIN;_HAS_EXCEPTIONS=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+      <CompileAs>Default</CompileAs>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdneb.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(OutDir)$(ProjectName).pch</PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>.\Win32\toolkitutil_win32.release.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Maya_Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..;../foundation;../render;../extlibs;../tests;../addons;../toolkit ;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>__MAYA__;__WIN32__;WIN32;_DEBUG;NT_PLUGIN;_HAS_EXCEPTIONS=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdneb.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(OutDir)$(ProjectName).pch</PrecompiledHeaderOutputFile>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>.\Win32\toolkitutil_win32.maya_debug.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Maya_Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>..;../foundation;../render;../extlibs;../tests;../addons;../toolkit ;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>__MAYA__;__WIN32__;WIN32;NT_PLUGIN;_HAS_EXCEPTIONS=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+      <CompileAs>Default</CompileAs>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdneb.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(OutDir)$(ProjectName).pch</PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>.\Win32\toolkitutil_win32.maya_release.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\toolkit\stdneb.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Maya_Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Maya_Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\toolkit\distributedtools\distributedjobscheduler.cc" />
+    <ClCompile Include="..\toolkit\distributedtools\distributedtoolkitapp.cc" />
+    <ClCompile Include="..\toolkit\distributedtools\remotejobservice.cc" />
+    <ClCompile Include="..\toolkit\distributedtools\shareddircontrol.cc" />
+    <ClCompile Include="..\toolkit\distributedtools\shareddircreator.cc" />
+    <ClCompile Include="..\toolkit\distributedtools\shareddirfilesystem.cc" />
+    <ClCompile Include="..\toolkit\distributedtools\shareddirftp.cc" />
+    <ClCompile Include="..\toolkit\distributedtools\distributedjobs\distributedappjob.cc" />
+    <ClCompile Include="..\toolkit\distributedtools\distributedjobs\distributedcreateemptyfilejob.cc" />
+    <ClCompile Include="..\toolkit\distributedtools\distributedjobs\distributeddeletedirectorycontentjob.cc" />
+    <ClCompile Include="..\toolkit\distributedtools\distributedjobs\distributedjob.cc" />
+    <ClCompile Include="..\toolkit\toolkitutil\applauncher.cc" />
+    <ClCompile Include="..\toolkit\toolkitutil\assetfile.cc" />
+    <ClCompile Include="..\toolkit\toolkitutil\assetregistry.cc" />
+    <ClCompile Include="..\toolkit\toolkitutil\assetupdater.cc" />
+    <ClCompile Include="..\toolkit\toolkitutil\audioexporter.cc" />
+    <ClCompile Include="..\toolkit\toolkitutil\binarymodelwriter.cc" />
+    <ClCompile Include="..\toolkit\toolkitutil\binaryxmlconverter.cc" />
+    <ClCompile Include="..\toolkit\toolkitutil\logger.cc" />
+    <ClCompile Include="..\toolkit\toolkitutil\modelwriter.cc" />
+    <ClCompile Include="..\toolkit\toolkitutil\n2batchconverter.cc" />
+    <ClCompile Include="..\toolkit\toolkitutil\n2converter.cc" />
+    <ClCompile Include="..\toolkit\toolkitutil\platform.cc" />
+    <ClCompile Include="..\toolkit\toolkitutil\projectinfo.cc" />
+    <ClCompile Include="..\toolkit\toolkitutil\rcswrapper.cc" />
+    <ClCompile Include="..\toolkit\toolkitutil\resourcedictionarybuilder.cc" />
+    <ClCompile Include="..\toolkit\toolkitutil\scenenode.cc" />
+    <ClCompile Include="..\toolkit\toolkitutil\scenenodetree.cc" />
+    <ClCompile Include="..\toolkit\toolkitutil\shadercompiler.cc" />
+    <ClCompile Include="..\toolkit\toolkitutil\toolkitapp.cc" />
+    <ClCompile Include="..\toolkit\toolkitutil\xmlmodelwriter.cc" />
+    <ClCompile Include="..\toolkit\toolkitutil\xmlnodemodifier.cc" />
+    <ClCompile Include="..\toolkit\toolkitutil\animutil\animbuilder.cc" />
+    <ClCompile Include="..\toolkit\toolkitutil\animutil\animbuilderclip.cc" />
+    <ClCompile Include="..\toolkit\toolkitutil\animutil\animbuildercurve.cc" />
+    <ClCompile Include="..\toolkit\toolkitutil\animutil\animbuilderloader.cc" />
+    <ClCompile Include="..\toolkit\toolkitutil\animutil\animbuildersaver.cc" />
+    <ClCompile Include="..\toolkit\toolkitutil\animutil\animconverter.cc" />
+    <ClCompile Include="..\toolkit\toolkitutil\meshutil\meshbuilder.cc" />
+    <ClCompile Include="..\toolkit\toolkitutil\meshutil\meshbuildergroup.cc" />
+    <ClCompile Include="..\toolkit\toolkitutil\meshutil\meshbuildersaver.cc" />
+    <ClCompile Include="..\toolkit\toolkitutil\meshutil\meshbuildertriangle.cc" />
+    <ClCompile Include="..\toolkit\toolkitutil\meshutil\meshbuildervertex.cc" />
+    <ClCompile Include="..\toolkit\toolkitutil\n2util\n2reflectioninfo.cc" />
+    <ClCompile Include="..\toolkit\toolkitutil\n2util\n2sceneloader.cc" />
+    <ClCompile Include="..\toolkit\toolkitutil\n2util\nvx2orderfreestreamreader.cc" />
+    <ClCompile Include="..\toolkit\toolkitutil\texutil\imageconverter.cc" />
+    <ClCompile Include="..\toolkit\toolkitutil\texutil\textureattrs.cc" />
+    <ClCompile Include="..\toolkit\toolkitutil\texutil\textureattrtable.cc" />
+    <ClCompile Include="..\toolkit\toolkitutil\texutil\textureconversionjob.cc" />
+    <ClCompile Include="..\toolkit\toolkitutil\texutil\textureconverter.cc" />
+    <ClCompile Include="..\toolkit\toolkitutil\texutil\win32textureconversionjob.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\toolkit\distributedtools\distributedjobscheduler.h" />
+    <ClInclude Include="..\toolkit\distributedtools\distributedtoolkitapp.h" />
+    <ClInclude Include="..\toolkit\distributedtools\remotejobservice.h" />
+    <ClInclude Include="..\toolkit\distributedtools\shareddircontrol.h" />
+    <ClInclude Include="..\toolkit\distributedtools\shareddircreator.h" />
+    <ClInclude Include="..\toolkit\distributedtools\shareddirfilesystem.h" />
+    <ClInclude Include="..\toolkit\distributedtools\shareddirftp.h" />
+    <ClInclude Include="..\toolkit\distributedtools\distributedjobs\distributedappjob.h" />
+    <ClInclude Include="..\toolkit\distributedtools\distributedjobs\distributedcreateemptyfilejob.h" />
+    <ClInclude Include="..\toolkit\distributedtools\distributedjobs\distributeddeletedirectorycontentjob.h" />
+    <ClInclude Include="..\toolkit\distributedtools\distributedjobs\distributedjob.h" />
+    <ClInclude Include="..\toolkit\toolkitutil\applauncher.h" />
+    <ClInclude Include="..\toolkit\toolkitutil\assetfile.h" />
+    <ClInclude Include="..\toolkit\toolkitutil\assetregistry.h" />
+    <ClInclude Include="..\toolkit\toolkitutil\assetupdater.h" />
+    <ClInclude Include="..\toolkit\toolkitutil\audioexporter.h" />
+    <ClInclude Include="..\toolkit\toolkitutil\binarymodelwriter.h" />
+    <ClInclude Include="..\toolkit\toolkitutil\binaryxmlconverter.h" />
+    <ClInclude Include="..\toolkit\toolkitutil\logger.h" />
+    <ClInclude Include="..\toolkit\toolkitutil\modelwriter.h" />
+    <ClInclude Include="..\toolkit\toolkitutil\n2batchconverter.h" />
+    <ClInclude Include="..\toolkit\toolkitutil\n2converter.h" />
+    <ClInclude Include="..\toolkit\toolkitutil\platform.h" />
+    <ClInclude Include="..\toolkit\toolkitutil\projectinfo.h" />
+    <ClInclude Include="..\toolkit\toolkitutil\rcswrapper.h" />
+    <ClInclude Include="..\toolkit\toolkitutil\resourcedictionarybuilder.h" />
+    <ClInclude Include="..\toolkit\toolkitutil\scenenode.h" />
+    <ClInclude Include="..\toolkit\toolkitutil\scenenodetree.h" />
+    <ClInclude Include="..\toolkit\toolkitutil\shadercompiler.h" />
+    <ClInclude Include="..\toolkit\toolkitutil\toolkitapp.h" />
+    <ClInclude Include="..\toolkit\toolkitutil\xmlmodelwriter.h" />
+    <ClInclude Include="..\toolkit\toolkitutil\xmlnodemodifier.h" />
+    <ClInclude Include="..\toolkit\toolkitutil\animutil\animbuilder.h" />
+    <ClInclude Include="..\toolkit\toolkitutil\animutil\animbuilderclip.h" />
+    <ClInclude Include="..\toolkit\toolkitutil\animutil\animbuildercurve.h" />
+    <ClInclude Include="..\toolkit\toolkitutil\animutil\animbuilderloader.h" />
+    <ClInclude Include="..\toolkit\toolkitutil\animutil\animbuildersaver.h" />
+    <ClInclude Include="..\toolkit\toolkitutil\animutil\animconverter.h" />
+    <ClInclude Include="..\toolkit\toolkitutil\meshutil\meshbuilder.h" />
+    <ClInclude Include="..\toolkit\toolkitutil\meshutil\meshbuildergroup.h" />
+    <ClInclude Include="..\toolkit\toolkitutil\meshutil\meshbuildersaver.h" />
+    <ClInclude Include="..\toolkit\toolkitutil\meshutil\meshbuildertriangle.h" />
+    <ClInclude Include="..\toolkit\toolkitutil\meshutil\meshbuildervertex.h" />
+    <ClInclude Include="..\toolkit\toolkitutil\n2util\n2reflectioninfo.h" />
+    <ClInclude Include="..\toolkit\toolkitutil\n2util\n2sceneloader.h" />
+    <ClInclude Include="..\toolkit\toolkitutil\n2util\nvx2orderfreestreamreader.h" />
+    <ClInclude Include="..\toolkit\toolkitutil\texutil\imageconverter.h" />
+    <ClInclude Include="..\toolkit\toolkitutil\texutil\textureattrs.h" />
+    <ClInclude Include="..\toolkit\toolkitutil\texutil\textureattrtable.h" />
+    <ClInclude Include="..\toolkit\toolkitutil\texutil\textureconversionjob.h" />
+    <ClInclude Include="..\toolkit\toolkitutil\texutil\textureconverter.h" />
+    <ClInclude Include="..\toolkit\toolkitutil\texutil\win32textureconversionjob.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="..\nidl.targets" />
+  </ImportGroup>
+</Project>

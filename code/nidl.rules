@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VisualStudioToolFile
+	Name="Nebula3 Interface Definition Files"
+	Version="8,00"
+	>
+	<Rules>
+		<CustomBuildRule
+			Name="Nebula3 Interface Definition"
+			DisplayName="Nebula3 Interface Definition File"
+			CommandLine="..\..\bin\win32\idlc [Inputs]"
+			Outputs="[$ObjectFileName]"
+			FileExtensions="*.nidl"
+			ExecutionDescription="Compiling nidl file..."
+			>
+			<Properties>
+			</Properties>
+		</CustomBuildRule>
+	</Rules>
+</VisualStudioToolFile>

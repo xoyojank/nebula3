@@ -1,0 +1,330 @@
+#-------------------------------------------------------------------------------
+#   addons_win32.epk
+#   (C) 2007 Radon Labs GmbH
+#-------------------------------------------------------------------------------
+begintarget attr_win32
+    settype lib
+    setbasedir addons
+    setprecompiledheader stdneb
+    setincpath_win32 "../foundation;../addons;"    
+    setclusters { attr }
+endtarget
+
+begintarget audio2_nidls_win32
+    settype nidl
+    setbasedir addons
+    setnidlclusters {
+        audio2
+    }
+endtarget
+
+begintarget audio2_win32
+    settype lib
+    setbasedir addons
+    setprecompiledheader stdneb
+    setincpath_win32 "../foundation;../render;../extlibs;../addons;../extlibs/fmod/win32;../extlibs/fmoddesignerapi/win32"
+    setdepends {
+        audio2_nidls_win32
+    }
+    setclusters {
+        audio2 audio2/fmodcoreaudio
+    }        
+endtarget
+
+begintarget db_win32
+    settype lib
+    setbasedir addons
+    setprecompiledheader stdneb
+    setincpath_win32 "../foundation;../render;../extlibs;../addons;"    
+    setclusters { db db/sqlite3 }
+endtarget
+
+begintarget physics_win32
+    settype lib
+    setbasedir addons
+    setprecompiledheader stdneb
+    setincpath_win32 "../foundation;../extlibs;../extlibs/ode;../addons;../render;../extlibs/opcode;../extlibs/ode/ode"    
+    setclusters { physics }
+endtarget
+
+begintarget scripting_nidls_win32
+    settype nidl
+    setbasedir addons
+    setnidlclusters {
+        scripting/commands
+    }
+endtarget
+
+begintarget scripting_win32
+    settype lib
+    setbasedir addons
+    setprecompiledheader stdneb
+    setincpath_win32 "../foundation;../extlibs;../addons;"
+    setdepends {
+        scripting_nidls_win32
+    }
+    setclusters {
+        scripting scripting/debug scripting/lua scripting/commands
+    }
+endtarget 
+
+begintarget remote_nidls_win32
+    settype nidl
+    setbasedir addons
+    setnidlclusters {
+        remote
+    }
+endtarget
+
+begintarget remote_win32
+    settype lib
+    setbasedir addons
+    setprecompiledheader stdneb
+    setincpath_win32 "../foundation;../extlibs;../addons;"
+    setdepends {
+        remote_nidls_win32
+    }    
+    setclusters {
+        remote
+    }
+endtarget 
+
+begintarget sui_nidls_win32
+    settype nidl
+    setbasedir addons
+    setnidlclusters {
+        sui
+    }
+endtarget
+
+begintarget sui_win32
+    settype lib
+    setbasedir addons
+    setprecompiledheader stdneb
+    setincpath_win32 "../foundation;../render;../extlibs;../addons;"
+    setdepends {
+        sui_nidls_win32
+    }
+    setclusters {
+        sui sui/base sui/rt
+    }        
+endtarget
+
+begintarget ui_nidls_win32
+    settype nidl
+    setbasedir addons
+    setnidlclusters {
+        ui
+    }
+endtarget
+
+begintarget ui_win32
+    settype lib
+    setbasedir addons
+    setprecompiledheader stdneb
+    setincpath_win32 "../foundation;../render;../extlibs;../addons;../application;"
+    setdepends {
+        ui_nidls_win32
+    }
+    setclusters {
+        ui ui/base ui/elements ui/rt ui/win360
+    }        
+endtarget
+
+begintarget vibration_nidls_win32
+    settype nidl
+    setbasedir addons
+    setnidlclusters {
+        vibration
+    }
+endtarget
+
+begintarget vibration_win32
+    settype lib
+    setbasedir addons
+    setprecompiledheader stdneb
+    setincpath_win32 "../foundation;../extlibs;../render;../addons;"
+    setdepends {
+        vibration_nidls_win32
+    }
+    setclusters { 
+        vibration
+    }
+endtarget     
+
+begintarget network_nidls_win32
+    settype nidl
+    setbasedir addons
+    setnidlclusters {
+        network
+    }    
+endtarget
+
+begintarget network_win32
+    settype lib
+    setbasedir addons
+    setprecompiledheader stdneb
+    setincpath_win32 "../foundation;../network;../addons;../addons/network;../application;../render;../application/basegamefeature;../extlibs;"
+    setdepends {
+        network_nidls_win32
+        tinyxml_win32
+    }
+    setclusters { 
+        network
+        network/multiplayerfeature
+        network/multiplayerfeature/base
+        network/multiplayer
+        network/multiplayer/base
+        network/internalmultiplayer 
+        network/internalmultiplayer/base 
+        network/internalmultiplayer/raknet
+        network/internalmultiplayer/debug
+        network/internalmultiplayer/debug/raknet
+    }
+endtarget 
+
+begintarget video_nidls_win32
+    settype nidl
+    setbasedir addons
+    setnidlclusters {
+        video
+    }
+endtarget
+
+begintarget video_win32
+    settype lib
+    setbasedir addons
+    setprecompiledheader stdneb
+    setincpath_win32 "../foundation;../render;../extlibs;../addons;"
+    setdepends {
+        video_nidls_win32
+    }
+    setclusters {
+        video video/base video/bink video/binkwin32 video/rt
+    }        
+endtarget
+
+begintarget fx_nidls_win32
+    settype nidl
+    setbasedir addons
+    setnidlclusters {
+        fx
+    }
+endtarget
+
+begintarget fx_win32
+    settype lib
+    setbasedir addons
+    setprecompiledheader stdneb
+    setincpath_win32 "../foundation;../render;../extlibs;../addons;../application;../application/basegamefeature;"
+    setdepends {
+        fx_nidls_win32
+    }
+    setclusters {
+        fx fx/fxfeature fx/fxproperties fx/rt fx/rt/effects fx/rt/mixer fx/rt/fxanimeventhandler
+    }        
+endtarget
+
+begintarget posteffect_nidls_win32
+    settype nidl
+    setbasedir addons
+    setnidlclusters {
+        posteffect
+    }
+endtarget
+
+begintarget posteffect_win32
+    settype lib
+    setbasedir addons
+    setprecompiledheader stdneb
+    setincpath_win32 "../foundation;../render;../extlibs;../addons;../application;../application/basegamefeature;../application/graphicsfeature;"
+    setdepends {
+        posteffect_nidls_win32
+    }
+    setclusters {
+        posteffect posteffect/rt posteffect/rt/params
+    }        
+endtarget
+
+begintarget framecapture_nidls_win32
+    settype nidl
+    setbasedir addons
+    setnidlclusters {
+        framecapture
+    }
+endtarget
+
+begintarget framecapture_win32
+    settype lib
+    setbasedir addons
+    setprecompiledheader stdneb
+    setincpath_win32 "../foundation;../extlibs;../render;../addons;"
+    setdepends {
+        framecapture_nidls_win32
+    }
+    setclusters { 
+        framecapture framecapture/rt
+    }
+endtarget
+
+begintarget nebula2_addons_win32
+    settype lib
+    setbasedir addons
+    setprecompiledheader stdneb
+    setincpath_win32 "../foundation;../../../radonlabs/code/nebula2/src;../addons;../extlibs"    
+    setclusters { nebula2 }
+endtarget
+
+begintarget forest_nidls_win32
+    settype nidl
+    setbasedir addons
+    setnidlclusters {
+        forest
+    }
+endtarget
+
+begintarget forest_win32
+    settype lib
+    setbasedir addons
+    setprecompiledheader stdneb
+    setincpath_win32 "../foundation;../extlibs;../render;../addons;"
+    setdepends {
+        forest_nidls_win32
+    }
+    setclusters { 
+        forest forest/rt
+    }
+endtarget
+
+beginsolution addons_win32 win32
+    settargets {
+		attr_win32
+		audio2_nidls_win32
+		audio2_win32
+        db_win32        
+        physics_win32
+        network_nidls_win32
+        network_win32
+        scripting_nidls_win32
+        scripting_win32
+        remote_nidls_win32
+        remote_win32
+        sui_nidls_win32
+        sui_win32
+        ui_nidls_win32
+        ui_win32
+        vibration_nidls_win32
+        vibration_win32
+        video_nidls_win32
+        video_win32
+        fx_nidls_win32
+        fx_win32
+        posteffect_nidls_win32
+        posteffect_win32
+        framecapture_nidls_win32
+        framecapture_win32
+		forest_nidls_win32
+		forest_win32
+        nebula2_addons_win32
+    }
+endsolution   

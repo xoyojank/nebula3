@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Export Nebula3 project assets for multiple platforms.
+    
+    (C) 2007 Radon Labs GmbH
+-->
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="All">
+
+    <!-- define properties -->
+    <PropertyGroup>
+        <ProjDir>c:\nebula3</ProjDir>
+        <ToolkitDir>$(PROGRAMFILES)\Nebula2 Toolkit For Maya\bin\win32</ToolkitDir>
+        <MayaDir>$(PROGRAMFILES)\Alias\Maya7.0\bin</MayaDir>
+        <Platform>win32</Platform>
+        <ExportDir>$(ProjDir)\export</ExportDir>
+        <Rebuild>false</Rebuild>
+        <Debug>false</Debug>
+    </PropertyGroup>
+    <Choose>
+        <When Condition="$(Rebuild)=='true'">
+            <PropertyGroup>
+                <ForceArg>-force true</ForceArg>
+            </PropertyGroup>
+        </When>
+        <Otherwise>
+            <PropertyGroup>
+                <ForceArg></ForceArg>
+            </PropertyGroup>
+        </Otherwise>
+    </Choose>
+    <Choose>
+        <When Condition="$(Debug)=='true'">
+            <PropertyGroup>
+                <DebugArg>-debug</DebugArg>
+            </PropertyGroup>
+        </When>
+        <Otherwise>
+            <PropertyGroup>
+                <DebugArg></DebugArg>
+            </PropertyGroup>
+        </Otherwise>
+    </Choose>
+    
+
+    <!-- define items -->
+    <ItemGroup>
+        <DataFiles Include="$(ProjDir)\data\**\*.xml"/>
+    </ItemGroup>
+    
+    <!-- preparation -->
+    <Target Name="Prepare">
+        <Exec Command="nsetpath -projdir $(ProjDir)" WorkingDirectory="$(ToolkitDir)"/>
+        <RemoveDir Condition="$(Rebuild)=='true'" Directories="$(ExportDir)_$(Platform)\shaders" ContinueOnError="true"/>
+    </Target>
+    
+    <!-- export graphics objects -->
+    <Target Name="ExportShader" DependsOnTargets="Prepare">
+        <Exec Command="shaderbatcher3 $(ForceArg) -platform $(Platform) $(DebugArg)" WorkingDirectory="$(ToolkitDir)"/>
+        <Exec Command="archiver3 -platform $(Platform)" WorkingDirectory="$(ToolkitDir)"/>
+    </Target>
+    
+    <!-- final target -->
+    <Target Name="All" DependsOnTargets="ExportShader" />
+    
+</Project>
+

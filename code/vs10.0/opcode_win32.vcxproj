@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Maya_Debug|Win32">
+      <Configuration>Maya_Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Maya_Release|Win32">
+      <Configuration>Maya_Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3F353464-FFFF-4EDC-937F-41F83D22D3B2}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Maya_Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Maya_Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="..\nidl.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Maya_Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Maya_Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\Win32\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\Win32\Debug\opcode_win32\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\Win32\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\Win32\Release\opcode_win32\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Maya_Debug|Win32'">.\Win32\Maya_Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Maya_Debug|Win32'">.\Win32\Maya_Debug\opcode_win32\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Maya_Release|Win32'">.\Win32\Maya_Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Maya_Release|Win32'">.\Win32\Maya_Release\opcode_win32\</IntDir>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Maya_Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Maya_Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Maya_Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Maya_Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Maya_Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Maya_Release|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..;../foundation;../extlibs/opcode;../extlibs/ode;../extlibs/GIMPACT;../extlibs/ode/ode ;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>__WIN32__;WIN32;_DEBUG;NT_PLUGIN;_HAS_EXCEPTIONS=0;_CRT_SECURE_NO_DEPRECATE=1; ;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <MinimalRebuild>true</MinimalRebuild>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>.\Win32\opcode_win32.debug.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>..;../foundation;../extlibs/opcode;../extlibs/ode;../extlibs/GIMPACT;../extlibs/ode/ode ;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>__WIN32__;WIN32;NT_PLUGIN;_HAS_EXCEPTIONS=0;_CRT_SECURE_NO_DEPRECATE=1; ;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+      <CompileAs>Default</CompileAs>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>.\Win32\opcode_win32.release.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Maya_Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..;../foundation;../extlibs/opcode;../extlibs/ode;../extlibs/GIMPACT;../extlibs/ode/ode ;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>__MAYA__;__WIN32__;WIN32;_DEBUG;NT_PLUGIN;_HAS_EXCEPTIONS=0;_CRT_SECURE_NO_DEPRECATE=1; ;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>.\Win32\opcode_win32.maya_debug.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Maya_Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>..;../foundation;../extlibs/opcode;../extlibs/ode;../extlibs/GIMPACT;../extlibs/ode/ode ;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>__MAYA__;__WIN32__;WIN32;NT_PLUGIN;_HAS_EXCEPTIONS=0;_CRT_SECURE_NO_DEPRECATE=1; ;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+      <CompileAs>Default</CompileAs>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>.\Win32\opcode_win32.maya_release.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\extlibs\OPCODE\OPC_AABBCollider.cc" />
+    <ClCompile Include="..\extlibs\OPCODE\OPC_AABBTree.cc" />
+    <ClCompile Include="..\extlibs\OPCODE\OPC_BaseModel.cc" />
+    <ClCompile Include="..\extlibs\OPCODE\OPC_BoxPruning.cc" />
+    <ClCompile Include="..\extlibs\OPCODE\OPC_Collider.cc" />
+    <ClCompile Include="..\extlibs\OPCODE\OPC_Common.cc" />
+    <ClCompile Include="..\extlibs\OPCODE\OPC_HybridModel.cc" />
+    <ClCompile Include="..\extlibs\OPCODE\OPC_LSSCollider.cc" />
+    <ClCompile Include="..\extlibs\OPCODE\OPC_MeshInterface.cc" />
+    <ClCompile Include="..\extlibs\OPCODE\OPC_Model.cc" />
+    <ClCompile Include="..\extlibs\OPCODE\OPC_OBBCollider.cc" />
+    <ClCompile Include="..\extlibs\OPCODE\OPC_OptimizedTree.cc" />
+    <ClCompile Include="..\extlibs\OPCODE\OPC_Picking.cc" />
+    <ClCompile Include="..\extlibs\OPCODE\OPC_PlanesCollider.cc" />
+    <ClCompile Include="..\extlibs\OPCODE\OPC_RayCollider.cc" />
+    <ClCompile Include="..\extlibs\OPCODE\OPC_SphereCollider.cc" />
+    <ClCompile Include="..\extlibs\OPCODE\OPC_SweepAndPrune.cc" />
+    <ClCompile Include="..\extlibs\OPCODE\OPC_ThreadLocalData.cc" />
+    <ClCompile Include="..\extlibs\OPCODE\OPC_TreeBuilders.cc" />
+    <ClCompile Include="..\extlibs\OPCODE\OPC_TreeCollider.cc" />
+    <ClCompile Include="..\extlibs\OPCODE\OPC_VolumeCollider.cc" />
+    <ClCompile Include="..\extlibs\OPCODE\Opcode.cc" />
+    <ClCompile Include="..\extlibs\OPCODE\StdAfx.cc" />
+    <ClCompile Include="..\extlibs\OPCODE\Ice\IceAABB.cc" />
+    <ClCompile Include="..\extlibs\OPCODE\Ice\IceContainer.cc" />
+    <ClCompile Include="..\extlibs\OPCODE\Ice\IceHPoint.cc" />
+    <ClCompile Include="..\extlibs\OPCODE\Ice\IceIndexedTriangle.cc" />
+    <ClCompile Include="..\extlibs\OPCODE\Ice\IceMatrix3x3.cc" />
+    <ClCompile Include="..\extlibs\OPCODE\Ice\IceMatrix4x4.cc" />
+    <ClCompile Include="..\extlibs\OPCODE\Ice\IceOBB.cc" />
+    <ClCompile Include="..\extlibs\OPCODE\Ice\IcePlane.cc" />
+    <ClCompile Include="..\extlibs\OPCODE\Ice\IcePoint.cc" />
+    <ClCompile Include="..\extlibs\OPCODE\Ice\IceRandom.cc" />
+    <ClCompile Include="..\extlibs\OPCODE\Ice\IceRay.cc" />
+    <ClCompile Include="..\extlibs\OPCODE\Ice\IceRevisitedRadix.cc" />
+    <ClCompile Include="..\extlibs\OPCODE\Ice\IceSegment.cc" />
+    <ClCompile Include="..\extlibs\OPCODE\Ice\IceTriangle.cc" />
+    <ClCompile Include="..\extlibs\OPCODE\Ice\IceUtils.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\extlibs\OPCODE\OPC_AABBCollider.h" />
+    <ClInclude Include="..\extlibs\OPCODE\OPC_AABBTree.h" />
+    <ClInclude Include="..\extlibs\OPCODE\OPC_BaseModel.h" />
+    <ClInclude Include="..\extlibs\OPCODE\OPC_BoxBoxOverlap.h" />
+    <ClInclude Include="..\extlibs\OPCODE\OPC_BoxPruning.h" />
+    <ClInclude Include="..\extlibs\OPCODE\OPC_Collider.h" />
+    <ClInclude Include="..\extlibs\OPCODE\OPC_Common.h" />
+    <ClInclude Include="..\extlibs\OPCODE\OPC_HybridModel.h" />
+    <ClInclude Include="..\extlibs\OPCODE\OPC_IceHook.h" />
+    <ClInclude Include="..\extlibs\OPCODE\OPC_LSSAABBOverlap.h" />
+    <ClInclude Include="..\extlibs\OPCODE\OPC_LSSCollider.h" />
+    <ClInclude Include="..\extlibs\OPCODE\OPC_LSSTriOverlap.h" />
+    <ClInclude Include="..\extlibs\OPCODE\OPC_MeshInterface.h" />
+    <ClInclude Include="..\extlibs\OPCODE\OPC_Model.h" />
+    <ClInclude Include="..\extlibs\OPCODE\OPC_OBBCollider.h" />
+    <ClInclude Include="..\extlibs\OPCODE\OPC_OptimizedTree.h" />
+    <ClInclude Include="..\extlibs\OPCODE\OPC_Picking.h" />
+    <ClInclude Include="..\extlibs\OPCODE\OPC_PlanesAABBOverlap.h" />
+    <ClInclude Include="..\extlibs\OPCODE\OPC_PlanesCollider.h" />
+    <ClInclude Include="..\extlibs\OPCODE\OPC_PlanesTriOverlap.h" />
+    <ClInclude Include="..\extlibs\OPCODE\OPC_RayAABBOverlap.h" />
+    <ClInclude Include="..\extlibs\OPCODE\OPC_RayCollider.h" />
+    <ClInclude Include="..\extlibs\OPCODE\OPC_RayTriOverlap.h" />
+    <ClInclude Include="..\extlibs\OPCODE\OPC_Settings.h" />
+    <ClInclude Include="..\extlibs\OPCODE\OPC_SphereAABBOverlap.h" />
+    <ClInclude Include="..\extlibs\OPCODE\OPC_SphereCollider.h" />
+    <ClInclude Include="..\extlibs\OPCODE\OPC_SphereTriOverlap.h" />
+    <ClInclude Include="..\extlibs\OPCODE\OPC_SweepAndPrune.h" />
+    <ClInclude Include="..\extlibs\OPCODE\OPC_ThreadLocalData.h" />
+    <ClInclude Include="..\extlibs\OPCODE\OPC_TreeBuilders.h" />
+    <ClInclude Include="..\extlibs\OPCODE\OPC_TreeCollider.h" />
+    <ClInclude Include="..\extlibs\OPCODE\OPC_TriBoxOverlap.h" />
+    <ClInclude Include="..\extlibs\OPCODE\OPC_TriTriOverlap.h" />
+    <ClInclude Include="..\extlibs\OPCODE\OPC_VolumeCollider.h" />
+    <ClInclude Include="..\extlibs\OPCODE\Opcode.h" />
+    <ClInclude Include="..\extlibs\OPCODE\Stdafx.h" />
+    <ClInclude Include="..\extlibs\OPCODE\Ice\IceAABB.h" />
+    <ClInclude Include="..\extlibs\OPCODE\Ice\IceAxes.h" />
+    <ClInclude Include="..\extlibs\OPCODE\Ice\IceBoundingSphere.h" />
+    <ClInclude Include="..\extlibs\OPCODE\Ice\IceContainer.h" />
+    <ClInclude Include="..\extlibs\OPCODE\Ice\IceFPU.h" />
+    <ClInclude Include="..\extlibs\OPCODE\Ice\IceHPoint.h" />
+    <ClInclude Include="..\extlibs\OPCODE\Ice\IceIndexedTriangle.h" />
+    <ClInclude Include="..\extlibs\OPCODE\Ice\IceLSS.h" />
+    <ClInclude Include="..\extlibs\OPCODE\Ice\IceMatrix3x3.h" />
+    <ClInclude Include="..\extlibs\OPCODE\Ice\IceMatrix4x4.h" />
+    <ClInclude Include="..\extlibs\OPCODE\Ice\IceMemoryMacros.h" />
+    <ClInclude Include="..\extlibs\OPCODE\Ice\IceOBB.h" />
+    <ClInclude Include="..\extlibs\OPCODE\Ice\IcePairs.h" />
+    <ClInclude Include="..\extlibs\OPCODE\Ice\IcePlane.h" />
+    <ClInclude Include="..\extlibs\OPCODE\Ice\IcePoint.h" />
+    <ClInclude Include="..\extlibs\OPCODE\Ice\IcePreprocessor.h" />
+    <ClInclude Include="..\extlibs\OPCODE\Ice\IceRandom.h" />
+    <ClInclude Include="..\extlibs\OPCODE\Ice\IceRay.h" />
+    <ClInclude Include="..\extlibs\OPCODE\Ice\IceRevisitedRadix.h" />
+    <ClInclude Include="..\extlibs\OPCODE\Ice\IceSegment.h" />
+    <ClInclude Include="..\extlibs\OPCODE\Ice\IceTriList.h" />
+    <ClInclude Include="..\extlibs\OPCODE\Ice\IceTriangle.h" />
+    <ClInclude Include="..\extlibs\OPCODE\Ice\IceTypes.h" />
+    <ClInclude Include="..\extlibs\OPCODE\Ice\IceUtils.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="..\nidl.targets" />
+  </ImportGroup>
+</Project>

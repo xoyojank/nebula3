@@ -1,0 +1,311 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="OPCODE">
+      <UniqueIdentifier>{9924e4c8-8aec-40bb-938b-a084118b1c6c}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="OPCODE\Ice">
+      <UniqueIdentifier>{0c0b49e4-38d0-42fc-9243-c837fb66adbd}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\extlibs\OPCODE\OPC_AABBCollider.cc">
+      <Filter>OPCODE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\OPCODE\OPC_AABBTree.cc">
+      <Filter>OPCODE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\OPCODE\OPC_BaseModel.cc">
+      <Filter>OPCODE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\OPCODE\OPC_BoxPruning.cc">
+      <Filter>OPCODE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\OPCODE\OPC_Collider.cc">
+      <Filter>OPCODE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\OPCODE\OPC_Common.cc">
+      <Filter>OPCODE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\OPCODE\OPC_HybridModel.cc">
+      <Filter>OPCODE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\OPCODE\OPC_LSSCollider.cc">
+      <Filter>OPCODE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\OPCODE\OPC_MeshInterface.cc">
+      <Filter>OPCODE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\OPCODE\OPC_Model.cc">
+      <Filter>OPCODE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\OPCODE\OPC_OBBCollider.cc">
+      <Filter>OPCODE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\OPCODE\OPC_OptimizedTree.cc">
+      <Filter>OPCODE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\OPCODE\OPC_Picking.cc">
+      <Filter>OPCODE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\OPCODE\OPC_PlanesCollider.cc">
+      <Filter>OPCODE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\OPCODE\OPC_RayCollider.cc">
+      <Filter>OPCODE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\OPCODE\OPC_SphereCollider.cc">
+      <Filter>OPCODE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\OPCODE\OPC_SweepAndPrune.cc">
+      <Filter>OPCODE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\OPCODE\OPC_ThreadLocalData.cc">
+      <Filter>OPCODE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\OPCODE\OPC_TreeBuilders.cc">
+      <Filter>OPCODE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\OPCODE\OPC_TreeCollider.cc">
+      <Filter>OPCODE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\OPCODE\OPC_VolumeCollider.cc">
+      <Filter>OPCODE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\OPCODE\Opcode.cc">
+      <Filter>OPCODE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\OPCODE\StdAfx.cc">
+      <Filter>OPCODE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\OPCODE\Ice\IceAABB.cc">
+      <Filter>OPCODE\Ice</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\OPCODE\Ice\IceContainer.cc">
+      <Filter>OPCODE\Ice</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\OPCODE\Ice\IceHPoint.cc">
+      <Filter>OPCODE\Ice</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\OPCODE\Ice\IceIndexedTriangle.cc">
+      <Filter>OPCODE\Ice</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\OPCODE\Ice\IceMatrix3x3.cc">
+      <Filter>OPCODE\Ice</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\OPCODE\Ice\IceMatrix4x4.cc">
+      <Filter>OPCODE\Ice</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\OPCODE\Ice\IceOBB.cc">
+      <Filter>OPCODE\Ice</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\OPCODE\Ice\IcePlane.cc">
+      <Filter>OPCODE\Ice</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\OPCODE\Ice\IcePoint.cc">
+      <Filter>OPCODE\Ice</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\OPCODE\Ice\IceRandom.cc">
+      <Filter>OPCODE\Ice</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\OPCODE\Ice\IceRay.cc">
+      <Filter>OPCODE\Ice</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\OPCODE\Ice\IceRevisitedRadix.cc">
+      <Filter>OPCODE\Ice</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\OPCODE\Ice\IceSegment.cc">
+      <Filter>OPCODE\Ice</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\OPCODE\Ice\IceTriangle.cc">
+      <Filter>OPCODE\Ice</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\OPCODE\Ice\IceUtils.cc">
+      <Filter>OPCODE\Ice</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\extlibs\OPCODE\OPC_AABBCollider.h">
+      <Filter>OPCODE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\OPCODE\OPC_AABBTree.h">
+      <Filter>OPCODE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\OPCODE\OPC_BaseModel.h">
+      <Filter>OPCODE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\OPCODE\OPC_BoxBoxOverlap.h">
+      <Filter>OPCODE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\OPCODE\OPC_BoxPruning.h">
+      <Filter>OPCODE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\OPCODE\OPC_Collider.h">
+      <Filter>OPCODE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\OPCODE\OPC_Common.h">
+      <Filter>OPCODE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\OPCODE\OPC_HybridModel.h">
+      <Filter>OPCODE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\OPCODE\OPC_IceHook.h">
+      <Filter>OPCODE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\OPCODE\OPC_LSSAABBOverlap.h">
+      <Filter>OPCODE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\OPCODE\OPC_LSSCollider.h">
+      <Filter>OPCODE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\OPCODE\OPC_LSSTriOverlap.h">
+      <Filter>OPCODE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\OPCODE\OPC_MeshInterface.h">
+      <Filter>OPCODE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\OPCODE\OPC_Model.h">
+      <Filter>OPCODE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\OPCODE\OPC_OBBCollider.h">
+      <Filter>OPCODE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\OPCODE\OPC_OptimizedTree.h">
+      <Filter>OPCODE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\OPCODE\OPC_Picking.h">
+      <Filter>OPCODE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\OPCODE\OPC_PlanesAABBOverlap.h">
+      <Filter>OPCODE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\OPCODE\OPC_PlanesCollider.h">
+      <Filter>OPCODE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\OPCODE\OPC_PlanesTriOverlap.h">
+      <Filter>OPCODE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\OPCODE\OPC_RayAABBOverlap.h">
+      <Filter>OPCODE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\OPCODE\OPC_RayCollider.h">
+      <Filter>OPCODE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\OPCODE\OPC_RayTriOverlap.h">
+      <Filter>OPCODE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\OPCODE\OPC_Settings.h">
+      <Filter>OPCODE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\OPCODE\OPC_SphereAABBOverlap.h">
+      <Filter>OPCODE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\OPCODE\OPC_SphereCollider.h">
+      <Filter>OPCODE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\OPCODE\OPC_SphereTriOverlap.h">
+      <Filter>OPCODE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\OPCODE\OPC_SweepAndPrune.h">
+      <Filter>OPCODE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\OPCODE\OPC_ThreadLocalData.h">
+      <Filter>OPCODE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\OPCODE\OPC_TreeBuilders.h">
+      <Filter>OPCODE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\OPCODE\OPC_TreeCollider.h">
+      <Filter>OPCODE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\OPCODE\OPC_TriBoxOverlap.h">
+      <Filter>OPCODE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\OPCODE\OPC_TriTriOverlap.h">
+      <Filter>OPCODE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\OPCODE\OPC_VolumeCollider.h">
+      <Filter>OPCODE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\OPCODE\Opcode.h">
+      <Filter>OPCODE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\OPCODE\Stdafx.h">
+      <Filter>OPCODE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\OPCODE\Ice\IceAABB.h">
+      <Filter>OPCODE\Ice</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\OPCODE\Ice\IceAxes.h">
+      <Filter>OPCODE\Ice</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\OPCODE\Ice\IceBoundingSphere.h">
+      <Filter>OPCODE\Ice</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\OPCODE\Ice\IceContainer.h">
+      <Filter>OPCODE\Ice</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\OPCODE\Ice\IceFPU.h">
+      <Filter>OPCODE\Ice</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\OPCODE\Ice\IceHPoint.h">
+      <Filter>OPCODE\Ice</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\OPCODE\Ice\IceIndexedTriangle.h">
+      <Filter>OPCODE\Ice</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\OPCODE\Ice\IceLSS.h">
+      <Filter>OPCODE\Ice</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\OPCODE\Ice\IceMatrix3x3.h">
+      <Filter>OPCODE\Ice</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\OPCODE\Ice\IceMatrix4x4.h">
+      <Filter>OPCODE\Ice</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\OPCODE\Ice\IceMemoryMacros.h">
+      <Filter>OPCODE\Ice</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\OPCODE\Ice\IceOBB.h">
+      <Filter>OPCODE\Ice</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\OPCODE\Ice\IcePairs.h">
+      <Filter>OPCODE\Ice</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\OPCODE\Ice\IcePlane.h">
+      <Filter>OPCODE\Ice</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\OPCODE\Ice\IcePoint.h">
+      <Filter>OPCODE\Ice</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\OPCODE\Ice\IcePreprocessor.h">
+      <Filter>OPCODE\Ice</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\OPCODE\Ice\IceRandom.h">
+      <Filter>OPCODE\Ice</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\OPCODE\Ice\IceRay.h">
+      <Filter>OPCODE\Ice</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\OPCODE\Ice\IceRevisitedRadix.h">
+      <Filter>OPCODE\Ice</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\OPCODE\Ice\IceSegment.h">
+      <Filter>OPCODE\Ice</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\OPCODE\Ice\IceTriList.h">
+      <Filter>OPCODE\Ice</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\OPCODE\Ice\IceTriangle.h">
+      <Filter>OPCODE\Ice</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\OPCODE\Ice\IceTypes.h">
+      <Filter>OPCODE\Ice</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\OPCODE\Ice\IceUtils.h">
+      <Filter>OPCODE\Ice</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

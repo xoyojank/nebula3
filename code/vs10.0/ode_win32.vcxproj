@@ -1,0 +1,350 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Maya_Debug|Win32">
+      <Configuration>Maya_Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Maya_Release|Win32">
+      <Configuration>Maya_Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{8F9E9E5C-65EC-4DD2-9E8B-C069C7A02D09}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Maya_Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Maya_Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="..\nidl.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Maya_Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Maya_Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\Win32\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\Win32\Debug\ode_win32\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\Win32\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\Win32\Release\ode_win32\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Maya_Debug|Win32'">.\Win32\Maya_Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Maya_Debug|Win32'">.\Win32\Maya_Debug\ode_win32\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Maya_Release|Win32'">.\Win32\Maya_Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Maya_Release|Win32'">.\Win32\Maya_Release\ode_win32\</IntDir>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Maya_Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Maya_Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Maya_Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Maya_Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Maya_Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Maya_Release|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/wd4267  %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..;../foundation;../extlibs/opcode;../extlibs/ode;../extlibs/GIMPACT;../extlibs/ode/ode ;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>__WIN32__;WIN32;_DEBUG;NT_PLUGIN;_HAS_EXCEPTIONS=0;_CRT_SECURE_NO_DEPRECATE=1;__ODE__; ;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <MinimalRebuild>true</MinimalRebuild>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>.\Win32\ode_win32.debug.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/wd4267  %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>..;../foundation;../extlibs/opcode;../extlibs/ode;../extlibs/GIMPACT;../extlibs/ode/ode ;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>__WIN32__;WIN32;NT_PLUGIN;_HAS_EXCEPTIONS=0;_CRT_SECURE_NO_DEPRECATE=1;__ODE__; ;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+      <CompileAs>Default</CompileAs>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>.\Win32\ode_win32.release.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Maya_Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..;../foundation;../extlibs/opcode;../extlibs/ode;../extlibs/GIMPACT;../extlibs/ode/ode ;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>__MAYA__;__WIN32__;WIN32;_DEBUG;NT_PLUGIN;_HAS_EXCEPTIONS=0;_CRT_SECURE_NO_DEPRECATE=1;__ODE__; ;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>.\Win32\ode_win32.maya_debug.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Maya_Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/wd4267  %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>..;../foundation;../extlibs/opcode;../extlibs/ode;../extlibs/GIMPACT;../extlibs/ode/ode ;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>__MAYA__;__WIN32__;WIN32;NT_PLUGIN;_HAS_EXCEPTIONS=0;_CRT_SECURE_NO_DEPRECATE=1;__ODE__; ;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+      <CompileAs>Default</CompileAs>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>.\Win32\ode_win32.maya_release.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\extlibs\ode\ode\collision.h" />
+    <ClInclude Include="..\extlibs\ode\ode\collision_space.h" />
+    <ClInclude Include="..\extlibs\ode\ode\collision_trimesh.h" />
+    <ClInclude Include="..\extlibs\ode\ode\common.h" />
+    <ClInclude Include="..\extlibs\ode\ode\compatibility.h" />
+    <ClInclude Include="..\extlibs\ode\ode\config.h" />
+    <ClInclude Include="..\extlibs\ode\ode\contact.h" />
+    <ClInclude Include="..\extlibs\ode\ode\error.h" />
+    <ClInclude Include="..\extlibs\ode\ode\export-dif.h" />
+    <ClInclude Include="..\extlibs\ode\ode\mass.h" />
+    <ClInclude Include="..\extlibs\ode\ode\matrix.h" />
+    <ClInclude Include="..\extlibs\ode\ode\memory.h" />
+    <ClInclude Include="..\extlibs\ode\ode\misc.h" />
+    <ClInclude Include="..\extlibs\ode\ode\objects.h" />
+    <ClInclude Include="..\extlibs\ode\ode\ode.h" />
+    <ClInclude Include="..\extlibs\ode\ode\odeconfig.h" />
+    <ClInclude Include="..\extlibs\ode\ode\odecpp.h" />
+    <ClInclude Include="..\extlibs\ode\ode\odecpp_collision.h" />
+    <ClInclude Include="..\extlibs\ode\ode\odeinit.h" />
+    <ClInclude Include="..\extlibs\ode\ode\odemath.h" />
+    <ClInclude Include="..\extlibs\ode\ode\rotation.h" />
+    <ClInclude Include="..\extlibs\ode\ode\timer.h" />
+    <ClInclude Include="..\extlibs\ode\src\array.h" />
+    <ClInclude Include="..\extlibs\ode\src\collision_kernel.h" />
+    <ClInclude Include="..\extlibs\ode\src\collision_space_internal.h" />
+    <ClInclude Include="..\extlibs\ode\src\collision_std.h" />
+    <ClInclude Include="..\extlibs\ode\src\collision_transform.h" />
+    <ClInclude Include="..\extlibs\ode\src\collision_trimesh_colliders.h" />
+    <ClInclude Include="..\extlibs\ode\src\collision_trimesh_internal.h" />
+    <ClInclude Include="..\extlibs\ode\src\collision_util.h" />
+    <ClInclude Include="..\extlibs\ode\src\heightfield.h" />
+    <ClInclude Include="..\extlibs\ode\src\lcp.h" />
+    <ClInclude Include="..\extlibs\ode\src\mat.h" />
+    <ClInclude Include="..\extlibs\ode\src\objects.h" />
+    <ClInclude Include="..\extlibs\ode\src\obstack.h" />
+    <ClInclude Include="..\extlibs\ode\src\odeou.h" />
+    <ClInclude Include="..\extlibs\ode\src\odetls.h" />
+    <ClInclude Include="..\extlibs\ode\src\quickstep.h" />
+    <ClInclude Include="..\extlibs\ode\src\step.h" />
+    <ClInclude Include="..\extlibs\ode\src\testing.h" />
+    <ClInclude Include="..\extlibs\ode\src\util.h" />
+    <ClInclude Include="..\extlibs\ode\src\joints\amotor.h" />
+    <ClInclude Include="..\extlibs\ode\src\joints\ball.h" />
+    <ClInclude Include="..\extlibs\ode\src\joints\contact.h" />
+    <ClInclude Include="..\extlibs\ode\src\joints\fixed.h" />
+    <ClInclude Include="..\extlibs\ode\src\joints\hinge.h" />
+    <ClInclude Include="..\extlibs\ode\src\joints\hinge2.h" />
+    <ClInclude Include="..\extlibs\ode\src\joints\joint.h" />
+    <ClInclude Include="..\extlibs\ode\src\joints\joint_internal.h" />
+    <ClInclude Include="..\extlibs\ode\src\joints\joints.h" />
+    <ClInclude Include="..\extlibs\ode\src\joints\lmotor.h" />
+    <ClInclude Include="..\extlibs\ode\src\joints\null.h" />
+    <ClInclude Include="..\extlibs\ode\src\joints\piston.h" />
+    <ClInclude Include="..\extlibs\ode\src\joints\plane2d.h" />
+    <ClInclude Include="..\extlibs\ode\src\joints\pr.h" />
+    <ClInclude Include="..\extlibs\ode\src\joints\pu.h" />
+    <ClInclude Include="..\extlibs\ode\src\joints\slider.h" />
+    <ClInclude Include="..\extlibs\ode\src\joints\universal.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\extlibs\ode\src\array.cc" />
+    <ClCompile Include="..\extlibs\ode\src\box.cc" />
+    <ClCompile Include="..\extlibs\ode\src\capsule.cc" />
+    <ClCompile Include="..\extlibs\ode\src\collision_cylinder_box.cc" />
+    <ClCompile Include="..\extlibs\ode\src\collision_cylinder_plane.cc" />
+    <ClCompile Include="..\extlibs\ode\src\collision_cylinder_sphere.cc" />
+    <ClCompile Include="..\extlibs\ode\src\collision_cylinder_trimesh.cc" />
+    <ClCompile Include="..\extlibs\ode\src\collision_kernel.cc" />
+    <ClCompile Include="..\extlibs\ode\src\collision_quadtreespace.cc" />
+    <ClCompile Include="..\extlibs\ode\src\collision_sapspace.cc" />
+    <ClCompile Include="..\extlibs\ode\src\collision_space.cc" />
+    <ClCompile Include="..\extlibs\ode\src\collision_transform.cc" />
+    <ClCompile Include="..\extlibs\ode\src\collision_trimesh_box.cc" />
+    <ClCompile Include="..\extlibs\ode\src\collision_trimesh_ccylinder.cc" />
+    <ClCompile Include="..\extlibs\ode\src\collision_trimesh_disabled.cc" />
+    <ClCompile Include="..\extlibs\ode\src\collision_trimesh_distance.cc" />
+    <ClCompile Include="..\extlibs\ode\src\collision_trimesh_gimpact.cc" />
+    <ClCompile Include="..\extlibs\ode\src\collision_trimesh_opcode.cc" />
+    <ClCompile Include="..\extlibs\ode\src\collision_trimesh_plane.cc" />
+    <ClCompile Include="..\extlibs\ode\src\collision_trimesh_ray.cc" />
+    <ClCompile Include="..\extlibs\ode\src\collision_trimesh_sphere.cc" />
+    <ClCompile Include="..\extlibs\ode\src\collision_trimesh_trimesh.cc" />
+    <ClCompile Include="..\extlibs\ode\src\collision_trimesh_trimesh_new.cc" />
+    <ClCompile Include="..\extlibs\ode\src\collision_util.cc" />
+    <ClCompile Include="..\extlibs\ode\src\convex.cc" />
+    <ClCompile Include="..\extlibs\ode\src\cylinder.cc" />
+    <ClCompile Include="..\extlibs\ode\src\error.cc" />
+    <ClCompile Include="..\extlibs\ode\src\export-dif.cc" />
+    <ClCompile Include="..\extlibs\ode\src\fastdot.c" />
+    <ClCompile Include="..\extlibs\ode\src\fastldlt.c" />
+    <ClCompile Include="..\extlibs\ode\src\fastlsolve.c" />
+    <ClCompile Include="..\extlibs\ode\src\fastltsolve.c" />
+    <ClCompile Include="..\extlibs\ode\src\heightfield.cc" />
+    <ClCompile Include="..\extlibs\ode\src\lcp.cc" />
+    <ClCompile Include="..\extlibs\ode\src\mass.cc" />
+    <ClCompile Include="..\extlibs\ode\src\mat.cc" />
+    <ClCompile Include="..\extlibs\ode\src\matrix.cc" />
+    <ClCompile Include="..\extlibs\ode\src\memory.cc" />
+    <ClCompile Include="..\extlibs\ode\src\misc.cc" />
+    <ClCompile Include="..\extlibs\ode\src\obstack.cc" />
+    <ClCompile Include="..\extlibs\ode\src\ode.cc" />
+    <ClCompile Include="..\extlibs\ode\src\odeinit.cc" />
+    <ClCompile Include="..\extlibs\ode\src\odemath.cc" />
+    <ClCompile Include="..\extlibs\ode\src\odeou.cc" />
+    <ClCompile Include="..\extlibs\ode\src\odetls.cc" />
+    <ClCompile Include="..\extlibs\ode\src\plane.cc" />
+    <ClCompile Include="..\extlibs\ode\src\quickstep.cc" />
+    <ClCompile Include="..\extlibs\ode\src\ray.cc" />
+    <ClCompile Include="..\extlibs\ode\src\rotation.cc" />
+    <ClCompile Include="..\extlibs\ode\src\sphere.cc" />
+    <ClCompile Include="..\extlibs\ode\src\step.cc" />
+    <ClCompile Include="..\extlibs\ode\src\stepfast.cc" />
+    <ClCompile Include="..\extlibs\ode\src\testing.cc" />
+    <ClCompile Include="..\extlibs\ode\src\timer.cc" />
+    <ClCompile Include="..\extlibs\ode\src\util.cc" />
+    <ClCompile Include="..\extlibs\ode\src\joints\amotor.cc" />
+    <ClCompile Include="..\extlibs\ode\src\joints\ball.cc" />
+    <ClCompile Include="..\extlibs\ode\src\joints\contact.cc" />
+    <ClCompile Include="..\extlibs\ode\src\joints\fixed.cc" />
+    <ClCompile Include="..\extlibs\ode\src\joints\hinge.cc" />
+    <ClCompile Include="..\extlibs\ode\src\joints\hinge2.cc" />
+    <ClCompile Include="..\extlibs\ode\src\joints\joint.cc" />
+    <ClCompile Include="..\extlibs\ode\src\joints\lmotor.cc" />
+    <ClCompile Include="..\extlibs\ode\src\joints\null.cc" />
+    <ClCompile Include="..\extlibs\ode\src\joints\piston.cc" />
+    <ClCompile Include="..\extlibs\ode\src\joints\plane2d.cc" />
+    <ClCompile Include="..\extlibs\ode\src\joints\pr.cc" />
+    <ClCompile Include="..\extlibs\ode\src\joints\pu.cc" />
+    <ClCompile Include="..\extlibs\ode\src\joints\slider.cc" />
+    <ClCompile Include="..\extlibs\ode\src\joints\universal.cc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="..\nidl.targets" />
+  </ImportGroup>
+</Project>

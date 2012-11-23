@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TrackElementSet xmlns="http://www.radonlabs.de/xmlschema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.radonlabs.de/xmlschema
+C:\src\nebula3_tools\code\Nebula3Tools\io\attributeschema.xsd">
+<Config viewerFile="c:\programme\nebula2 Toolkit For Maya\bin\win32\mviewer.exe" />
+  <TrackElement name="Window" type="Canvas" startFrame="0" endFrame="30">
+    <Attribute name="Color" label="Item color" smartControl="none" type="color">
+      <Attribute name="cr" label="Color R" smartControl="none" type="int" value="0" default="0" />
+      <Attribute name="cg" label="Color G" smartControl="none" type="int" value="0" default="0" />
+      <Attribute name="cb" label="Color B" smartControl="none" type="int" value="0" default="0" />
+      <Attribute name="ca" label="Color A" smartControl="none" type="int" value="255" default="255" />
+    </Attribute>
+    <Attribute name="Texture" label="Window Texture" smartControl="GUIItemTexture" type="string" value="pfad\test.jpg/0/1/2/3/4/5/6/7/8/9/10/11/12" />
+    <Attribute name="graphicstrans" label="Graphics Transform" smartControl="none" type="transform">
+      <Attribute name="tx" label="Translation X" smartControl="none" type="float" value="0"  default="0" />
+      <Attribute name="ty" label="Translation Y" smartControl="none" type="float" value="0" default="0" />
+      <Attribute name="sx" label="Scale X" smartControl="none" type="float" value="100" default="0" />
+      <Attribute name="sy" label="Scale Y" smartControl="none" type="float" value="100" default="0" />
+    </Attribute>
+  </TrackElement>
+  <TrackElement name="Anchor" type="Window" startFrame="0" endFrame="30">
+    <Attribute name="align" label="Align" smartControl="GUIItemAlign" type="string" value="CenterX/CenterY" /> 
+    <Attribute name="graphicstrans" label="Graphics Transform" smartControl="none" type="transform">
+      <Attribute name="tx" label="Translation X" smartControl="none" type="float" value="0"  default="0" />
+      <Attribute name="ty" label="Translation Y" smartControl="none" type="float" value="0" default="0" />
+      <Attribute name="sx" label="Scale X" smartControl="none" type="float" value="50" default="0" />
+      <Attribute name="sy" label="Scale Y" smartControl="none" type="float" value="50" default="0" />
+    </Attribute>  
+  </TrackElement>
+</TrackElementSet>

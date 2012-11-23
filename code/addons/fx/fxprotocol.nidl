@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Nebula3>
+    <Protocol namespace="FX" name="DebugRenderProtocol">
+        <!-- dependencies -->
+        <Dependency header="fx/rt/effects/effect.h"/>
+        <Dependency header="fx/rt/mixer/effectmixer.h"/>
+
+        <!-- attach a generic effect-->
+        <Message name="AttachEffect" fourcc="atfx">
+          <InArg name="Effect" type="Ptr<FX::Effect>"/>          
+        </Message>
+        
+        <!-- attach an effect mixer-->
+        <Message name="AttachEffectMixer" fourcc="afxm">
+          <InArg name="EffectMixer" type="Ptr<FX::EffectMixer>"/>
+        </Message>
+      
+    </Protocol>
+</Nebula3>    
+    

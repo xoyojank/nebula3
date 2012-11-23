@@ -1,0 +1,104 @@
+#-------------------------------------------------------------------------------
+#   render_win32.epk
+#   (C) 2006 Radon Labs GmbH
+#-------------------------------------------------------------------------------
+begintarget render_nidls_win32
+    settype nidl
+    setbasedir render
+    setnidlclusters {
+        graphics
+        debugrender
+        visibility
+    }
+endtarget
+
+begintarget render_charevalskeletonjob_win32
+    settype job
+    setbasedir render/characters
+    setincpath_win32 "../foundation;../render"
+    setjobfiles "jobs" "charevalskeletonjob.cc"
+endtarget
+
+begintarget render_particlejob_win32
+    settype job
+    setbasedir render/particles
+    setincpath_win32 "../foundation;../render"
+    setjobfiles "jobs" "particlejob.cc"
+endtarget 
+
+begintarget render_animjobsample_win32
+    settype job
+    setbasedir render/coreanimation
+    setincpath_win32 "../foundation;../render"
+    setjobfiles "jobs" "animjobsample.cc"
+endtarget
+
+begintarget render_animjobsamplemix_win32
+    settype job
+    setbasedir render/coreanimation
+    setincpath_win32 "../foundation;../render"
+    setjobfiles "jobs" "animjobsamplemix.cc"
+endtarget
+
+begintarget render_visibilityquadtreejob_win32
+    settype job
+    setbasedir render/visibility
+    setincpath_win32 "../foundation;../render"
+    setjobfiles "jobs" "visibilityquadtreejob.cc"
+endtarget
+
+begintarget render_visibilityboxsystemjob_win32
+    settype job
+    setbasedir render/visibility
+    setincpath_win32 "../foundation;../render"
+    setjobfiles "jobs" "visibilityboxsystemjob.cc"
+endtarget
+
+begintarget render_win32
+    settype lib
+    setbasedir render
+    setprecompiledheader stdneb
+    setincpath_win32 "../foundation;../extlibs;../render;../addons"
+    setdepends {
+        render_nidls_win32
+        render_charevalskeletonjob_win32
+        render_particlejob_win32
+        render_animjobsample_win32
+        render_animjobsamplemix_win32
+        render_visibilityquadtreejob_win32
+        render_visibilityboxsystemjob_win32
+    }
+    setclusters {
+        apprender
+        characters characters/base characters/win32
+        debugrender
+        coregraphics coregraphics/base coregraphics/win32 coregraphics/win360 coregraphics/d3d9 coregraphics/legacy coregraphics/debug
+        input input/base input/win32 input/xinput
+        models models/nodes
+        frame
+        resources resources/streaming resources/d3d9streaming
+        internalgraphics internalgraphics/debug internalgraphics/handlers
+        lighting lighting/base lighting/sm30 lighting/lightprepass lighting/handlers
+        renderutil
+        graphics
+        shared shared/graphics
+        coreanimation
+        animation
+        particles particles/base particles/d3d9
+        rendermodules rendermodules/rt        
+        visibility visibility/handler visibility/visibilitysystems
+    }
+endtarget            
+
+beginsolution render_win32 win32
+    settargets {
+        render_nidls_win32
+        render_charevalskeletonjob_win32
+        render_particlejob_win32
+        render_animjobsample_win32
+        render_animjobsamplemix_win32
+        render_visibilityquadtreejob_win32
+        render_visibilityboxsystemjob_win32
+        render_win32
+    }
+endsolution

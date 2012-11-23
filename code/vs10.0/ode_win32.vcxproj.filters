@@ -1,0 +1,409 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="ode">
+      <UniqueIdentifier>{93ae9202-793e-452c-a937-6f531df72cb4}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="ode\ode">
+      <UniqueIdentifier>{a80769d8-70a7-463c-b8a3-893dfa602ba9}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="ode\src">
+      <UniqueIdentifier>{93d97f9a-c2b5-4b57-a2d0-f702ffd6b647}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="ode\src\joints">
+      <UniqueIdentifier>{4069d84a-5290-48dc-8e14-29921ce3ebad}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\extlibs\ode\ode\collision.h">
+      <Filter>ode\ode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\ode\ode\collision_space.h">
+      <Filter>ode\ode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\ode\ode\collision_trimesh.h">
+      <Filter>ode\ode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\ode\ode\common.h">
+      <Filter>ode\ode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\ode\ode\compatibility.h">
+      <Filter>ode\ode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\ode\ode\config.h">
+      <Filter>ode\ode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\ode\ode\contact.h">
+      <Filter>ode\ode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\ode\ode\error.h">
+      <Filter>ode\ode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\ode\ode\export-dif.h">
+      <Filter>ode\ode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\ode\ode\mass.h">
+      <Filter>ode\ode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\ode\ode\matrix.h">
+      <Filter>ode\ode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\ode\ode\memory.h">
+      <Filter>ode\ode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\ode\ode\misc.h">
+      <Filter>ode\ode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\ode\ode\objects.h">
+      <Filter>ode\ode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\ode\ode\ode.h">
+      <Filter>ode\ode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\ode\ode\odeconfig.h">
+      <Filter>ode\ode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\ode\ode\odecpp.h">
+      <Filter>ode\ode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\ode\ode\odecpp_collision.h">
+      <Filter>ode\ode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\ode\ode\odeinit.h">
+      <Filter>ode\ode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\ode\ode\odemath.h">
+      <Filter>ode\ode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\ode\ode\rotation.h">
+      <Filter>ode\ode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\ode\ode\timer.h">
+      <Filter>ode\ode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\ode\src\array.h">
+      <Filter>ode\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\ode\src\collision_kernel.h">
+      <Filter>ode\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\ode\src\collision_space_internal.h">
+      <Filter>ode\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\ode\src\collision_std.h">
+      <Filter>ode\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\ode\src\collision_transform.h">
+      <Filter>ode\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\ode\src\collision_trimesh_colliders.h">
+      <Filter>ode\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\ode\src\collision_trimesh_internal.h">
+      <Filter>ode\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\ode\src\collision_util.h">
+      <Filter>ode\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\ode\src\heightfield.h">
+      <Filter>ode\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\ode\src\lcp.h">
+      <Filter>ode\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\ode\src\mat.h">
+      <Filter>ode\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\ode\src\objects.h">
+      <Filter>ode\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\ode\src\obstack.h">
+      <Filter>ode\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\ode\src\odeou.h">
+      <Filter>ode\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\ode\src\odetls.h">
+      <Filter>ode\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\ode\src\quickstep.h">
+      <Filter>ode\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\ode\src\step.h">
+      <Filter>ode\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\ode\src\testing.h">
+      <Filter>ode\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\ode\src\util.h">
+      <Filter>ode\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\ode\src\joints\amotor.h">
+      <Filter>ode\src\joints</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\ode\src\joints\ball.h">
+      <Filter>ode\src\joints</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\ode\src\joints\contact.h">
+      <Filter>ode\src\joints</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\ode\src\joints\fixed.h">
+      <Filter>ode\src\joints</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\ode\src\joints\hinge.h">
+      <Filter>ode\src\joints</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\ode\src\joints\hinge2.h">
+      <Filter>ode\src\joints</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\ode\src\joints\joint.h">
+      <Filter>ode\src\joints</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\ode\src\joints\joint_internal.h">
+      <Filter>ode\src\joints</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\ode\src\joints\joints.h">
+      <Filter>ode\src\joints</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\ode\src\joints\lmotor.h">
+      <Filter>ode\src\joints</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\ode\src\joints\null.h">
+      <Filter>ode\src\joints</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\ode\src\joints\piston.h">
+      <Filter>ode\src\joints</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\ode\src\joints\plane2d.h">
+      <Filter>ode\src\joints</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\ode\src\joints\pr.h">
+      <Filter>ode\src\joints</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\ode\src\joints\pu.h">
+      <Filter>ode\src\joints</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\ode\src\joints\slider.h">
+      <Filter>ode\src\joints</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\ode\src\joints\universal.h">
+      <Filter>ode\src\joints</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\extlibs\ode\src\array.cc">
+      <Filter>ode\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\ode\src\box.cc">
+      <Filter>ode\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\ode\src\capsule.cc">
+      <Filter>ode\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\ode\src\collision_cylinder_box.cc">
+      <Filter>ode\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\ode\src\collision_cylinder_plane.cc">
+      <Filter>ode\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\ode\src\collision_cylinder_sphere.cc">
+      <Filter>ode\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\ode\src\collision_cylinder_trimesh.cc">
+      <Filter>ode\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\ode\src\collision_kernel.cc">
+      <Filter>ode\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\ode\src\collision_quadtreespace.cc">
+      <Filter>ode\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\ode\src\collision_sapspace.cc">
+      <Filter>ode\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\ode\src\collision_space.cc">
+      <Filter>ode\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\ode\src\collision_transform.cc">
+      <Filter>ode\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\ode\src\collision_trimesh_box.cc">
+      <Filter>ode\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\ode\src\collision_trimesh_ccylinder.cc">
+      <Filter>ode\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\ode\src\collision_trimesh_disabled.cc">
+      <Filter>ode\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\ode\src\collision_trimesh_distance.cc">
+      <Filter>ode\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\ode\src\collision_trimesh_gimpact.cc">
+      <Filter>ode\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\ode\src\collision_trimesh_opcode.cc">
+      <Filter>ode\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\ode\src\collision_trimesh_plane.cc">
+      <Filter>ode\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\ode\src\collision_trimesh_ray.cc">
+      <Filter>ode\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\ode\src\collision_trimesh_sphere.cc">
+      <Filter>ode\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\ode\src\collision_trimesh_trimesh.cc">
+      <Filter>ode\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\ode\src\collision_trimesh_trimesh_new.cc">
+      <Filter>ode\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\ode\src\collision_util.cc">
+      <Filter>ode\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\ode\src\convex.cc">
+      <Filter>ode\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\ode\src\cylinder.cc">
+      <Filter>ode\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\ode\src\error.cc">
+      <Filter>ode\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\ode\src\export-dif.cc">
+      <Filter>ode\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\ode\src\fastdot.c">
+      <Filter>ode\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\ode\src\fastldlt.c">
+      <Filter>ode\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\ode\src\fastlsolve.c">
+      <Filter>ode\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\ode\src\fastltsolve.c">
+      <Filter>ode\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\ode\src\heightfield.cc">
+      <Filter>ode\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\ode\src\lcp.cc">
+      <Filter>ode\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\ode\src\mass.cc">
+      <Filter>ode\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\ode\src\mat.cc">
+      <Filter>ode\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\ode\src\matrix.cc">
+      <Filter>ode\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\ode\src\memory.cc">
+      <Filter>ode\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\ode\src\misc.cc">
+      <Filter>ode\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\ode\src\obstack.cc">
+      <Filter>ode\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\ode\src\ode.cc">
+      <Filter>ode\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\ode\src\odeinit.cc">
+      <Filter>ode\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\ode\src\odemath.cc">
+      <Filter>ode\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\ode\src\odeou.cc">
+      <Filter>ode\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\ode\src\odetls.cc">
+      <Filter>ode\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\ode\src\plane.cc">
+      <Filter>ode\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\ode\src\quickstep.cc">
+      <Filter>ode\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\ode\src\ray.cc">
+      <Filter>ode\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\ode\src\rotation.cc">
+      <Filter>ode\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\ode\src\sphere.cc">
+      <Filter>ode\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\ode\src\step.cc">
+      <Filter>ode\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\ode\src\stepfast.cc">
+      <Filter>ode\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\ode\src\testing.cc">
+      <Filter>ode\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\ode\src\timer.cc">
+      <Filter>ode\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\ode\src\util.cc">
+      <Filter>ode\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\ode\src\joints\amotor.cc">
+      <Filter>ode\src\joints</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\ode\src\joints\ball.cc">
+      <Filter>ode\src\joints</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\ode\src\joints\contact.cc">
+      <Filter>ode\src\joints</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\ode\src\joints\fixed.cc">
+      <Filter>ode\src\joints</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\ode\src\joints\hinge.cc">
+      <Filter>ode\src\joints</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\ode\src\joints\hinge2.cc">
+      <Filter>ode\src\joints</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\ode\src\joints\joint.cc">
+      <Filter>ode\src\joints</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\ode\src\joints\lmotor.cc">
+      <Filter>ode\src\joints</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\ode\src\joints\null.cc">
+      <Filter>ode\src\joints</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\ode\src\joints\piston.cc">
+      <Filter>ode\src\joints</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\ode\src\joints\plane2d.cc">
+      <Filter>ode\src\joints</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\ode\src\joints\pr.cc">
+      <Filter>ode\src\joints</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\ode\src\joints\pu.cc">
+      <Filter>ode\src\joints</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\ode\src\joints\slider.cc">
+      <Filter>ode\src\joints</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\ode\src\joints\universal.cc">
+      <Filter>ode\src\joints</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

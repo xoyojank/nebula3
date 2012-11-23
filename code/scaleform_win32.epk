@@ -1,0 +1,47 @@
+#-------------------------------------------------------------------------------
+#   scaleform_win32.epk
+#   (C) 2007 Radon Labs GmbH
+#-------------------------------------------------------------------------------
+set Win32LibsRelease { ../../../nebula3/lib/scaleform/win32/release/libgfx.lib
+                       ../../../nebula3/lib/scaleform/win32/release/libgrenderer_d3d9.lib
+                       ../../../nebula3/lib/scaleform/win32/release/libgfx_expat.lib
+                       ../../../nebula3/lib/scaleform/win32/release/libgsound_fmod.lib
+                     }
+
+set Win32LibsDebug { ../../../nebula3/lib/scaleform/win32/debug/libgfx.lib
+                     ../../../nebula3/lib/scaleform/win32/debug/libgrenderer_d3d9.lib
+                     ../../../nebula3/lib/scaleform/win32/debug/libgfx_expat.lib
+                     ../../../nebula3/lib/scaleform/win32/debug/libgsound_fmod.lib
+                   }                     
+begintarget scaleform_nidls_win32
+    settype nidl
+    setbasedir addons
+    setnidlclusters {
+        scaleform
+    }
+endtarget
+
+begintarget scaleform_win32
+    settype lib
+    setbasedir addons
+    setprecompiledheader stdneb
+    setincpath_win32 "../foundation;../render;../extlibs;../addons;../application;../extlibs/scaleform;"
+    setdepends {
+        scaleform_nidls_win32
+    }
+    setclusters {
+        scaleform scaleform/base scaleform/asinterface scaleform/rt scaleform/win32
+    }        
+    setlibs_win32_release       $Win32LibsRelease
+    setlibs_win32_public_build  $Win32LibsRelease
+    setlibs_win32_securom       $Win32LibsRelease
+    setlibs_win32_debug         $Win32LibsDebug
+    setlibs_win32_programming   $Win32LibsDebug    
+endtarget
+
+beginsolution scaleform_win32 win32
+    settargets {
+        scaleform_nidls_win32
+        scaleform_win32
+    }
+endsolution   

@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="posteffect">
+      <UniqueIdentifier>{b2003a26-f567-4433-846a-a6362d173cc2}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="posteffect\rt">
+      <UniqueIdentifier>{cb64fc28-7e9f-4729-bbc7-a6cfe2e4e9b8}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="posteffect\rt\params">
+      <UniqueIdentifier>{f30ba32d-6df1-4b4f-9db0-72ccd491d50c}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\addons\stdneb.cc">
+      <Filter>posteffect</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\posteffect\posteffectentity.cc">
+      <Filter>posteffect</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\posteffect\posteffectmanager.cc">
+      <Filter>posteffect</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\posteffect\posteffectprotocol.cc">
+      <Filter>posteffect</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\posteffect\posteffectrendermodule.cc">
+      <Filter>posteffect</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\posteffect\rt\posteffecthandler.cc">
+      <Filter>posteffect\rt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\posteffect\rt\posteffectrtplugin.cc">
+      <Filter>posteffect\rt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\posteffect\rt\posteffectserver.cc">
+      <Filter>posteffect\rt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\posteffect\rt\params\colorparams.cc">
+      <Filter>posteffect\rt\params</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\posteffect\rt\params\depthoffieldparams.cc">
+      <Filter>posteffect\rt\params</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\posteffect\rt\params\fogparams.cc">
+      <Filter>posteffect\rt\params</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\posteffect\rt\params\hdrparams.cc">
+      <Filter>posteffect\rt\params</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\posteffect\rt\params\lightparams.cc">
+      <Filter>posteffect\rt\params</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\posteffect\rt\params\parambase.cc">
+      <Filter>posteffect\rt\params</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\posteffect\rt\params\skyparams.cc">
+      <Filter>posteffect\rt\params</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\addons\posteffect\posteffectentity.h">
+      <Filter>posteffect</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\posteffect\posteffectmanager.h">
+      <Filter>posteffect</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\posteffect\posteffectprotocol.h">
+      <Filter>posteffect</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\posteffect\posteffectrendermodule.h">
+      <Filter>posteffect</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\posteffect\rt\posteffecthandler.h">
+      <Filter>posteffect\rt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\posteffect\rt\posteffectrtplugin.h">
+      <Filter>posteffect\rt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\posteffect\rt\posteffectserver.h">
+      <Filter>posteffect\rt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\posteffect\rt\params\colorparams.h">
+      <Filter>posteffect\rt\params</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\posteffect\rt\params\depthoffieldparams.h">
+      <Filter>posteffect\rt\params</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\posteffect\rt\params\fogparams.h">
+      <Filter>posteffect\rt\params</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\posteffect\rt\params\hdrparams.h">
+      <Filter>posteffect\rt\params</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\posteffect\rt\params\lightparams.h">
+      <Filter>posteffect\rt\params</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\posteffect\rt\params\parambase.h">
+      <Filter>posteffect\rt\params</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\posteffect\rt\params\skyparams.h">
+      <Filter>posteffect\rt\params</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

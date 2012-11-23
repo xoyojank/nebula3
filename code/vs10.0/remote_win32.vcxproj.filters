@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="remote">
+      <UniqueIdentifier>{6a47d818-8f9a-4a2d-be3b-487cae8e8a2d}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\addons\stdneb.cc">
+      <Filter>remote</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\remote\defaultremoterequesthandler.cc">
+      <Filter>remote</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\remote\remotecommandhandler.cc">
+      <Filter>remote</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\remote\remotecontrol.cc">
+      <Filter>remote</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\remote\remotecontrolproxy.cc">
+      <Filter>remote</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\remote\remoteinterface.cc">
+      <Filter>remote</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\remote\remotemessagehandler.cc">
+      <Filter>remote</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\remote\remoteprotocol.cc">
+      <Filter>remote</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\remote\remoterequest.cc">
+      <Filter>remote</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\remote\remoterequesthandler.cc">
+      <Filter>remote</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\remote\remoterequestreader.cc">
+      <Filter>remote</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\remote\remoteresponsewriter.cc">
+      <Filter>remote</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\remote\remotestatus.cc">
+      <Filter>remote</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\addons\remote\defaultremoterequesthandler.h">
+      <Filter>remote</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\remote\remotecommandhandler.h">
+      <Filter>remote</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\remote\remotecontrol.h">
+      <Filter>remote</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\remote\remotecontrolproxy.h">
+      <Filter>remote</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\remote\remoteinterface.h">
+      <Filter>remote</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\remote\remotemessagehandler.h">
+      <Filter>remote</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\remote\remoteprotocol.h">
+      <Filter>remote</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\remote\remoterequest.h">
+      <Filter>remote</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\remote\remoterequesthandler.h">
+      <Filter>remote</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\remote\remoterequestreader.h">
+      <Filter>remote</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\remote\remoteresponsewriter.h">
+      <Filter>remote</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\remote\remotestatus.h">
+      <Filter>remote</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

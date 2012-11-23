@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="audio2">
+      <UniqueIdentifier>{3a106f45-bb53-4aea-91f0-2b2a06bcbb8c}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Nebula3_Interface_Definition Include="..\addons\audio2\audio2protocol.nidl">
+      <Filter>audio2</Filter>
+    </Nebula3_Interface_Definition>
+  </ItemGroup>
+</Project>

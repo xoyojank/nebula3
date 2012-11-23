@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Nebula3 Build Script
+
+    Example usage:
+    
+    msbuild compile.msbuild /p:Config=Debug;Rebuild=true
+    svn-update (kinda pointless outside of Radon Labs), and recompiles the Debug configuration.
+    Only builds the libraries.
+    
+    msbuild compile.msbuild /p:SVN=false;Config=Release;Rebuild=true /t:Tools
+    Recompiles the Release version without a svn-update, builds libraries and all the executables.
+-->
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Win32Targets">
+
+    <!-- define basic properties -->
+    <PropertyGroup>
+        <Config>Debug</Config>
+        <Rebuild>false</Rebuild>
+        <SVN>false</SVN>
+    </PropertyGroup>
+
+    <!-- define vstudio project files (order is important!) -->
+    <ItemGroup>
+        <!-- link libs -->
+        <Win32Targets Include="code/vs9.0/tools_win32.sln"/>
+        <Win32Targets Include="code/vs9.0/tests_win32.sln"/>
+        <Win32Targets Include="code/vs9.0/benchmarks_win32.sln"/>
+    </ItemGroup>
+
+    <!-- run SVN Update on entire project -->
+    <Target Name="SVNUpdate" Condition="$(SVN)=='true'">
+        <Exec Command="svn update" WorkingDirectory="."/>
+    </Target>
+
+    <!-- run tclsh update to update project files -->
+    <Target Name="TclshUpdate" DependsOnTargets="SVNUpdate">
+        <Exec Command="tclsh update.tcl" WorkingDirectory="code"/>
+    </Target>
+
+    <!-- build Nebula3 Foundation libs -->
+    <Target Name="Win32Targets" DependsOnTargets="TclshUpdate">
+        <MSBuild Projects="@(Win32Targets)" Properties="Configuration=$(Config);Rebuild=$(Rebuild)"/>
+    </Target>
+    <Target Name="AllTargets" DependsOnTargets="Win32Targets"/>
+</Project>

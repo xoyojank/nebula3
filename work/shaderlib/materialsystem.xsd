@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2006 sp2 U (http://www.altova.com) by Elvis Presley (Radon Labs GmbH) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="Nebula3MaterialSystem">
+		<xs:annotation>
+			<xs:documentation>The root element of the Nebula3 material system.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:choice>
+				<xs:element name="Fragment" type="ShaderFragment" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="FragmentGroup" type="ShaderFragmentGroup" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="Shader" type="Shader" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="Sampler" type="ShaderSampler" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="ShaderPipelineFragment">
+		<xs:annotation>
+			<xs:documentation>A shader fragment with input/output slots and code.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Inputs" type="ShaderParamSet"/>
+			<xs:element name="Outputs" type="ShaderParamSet"/>
+			<xs:element name="Code" type="ShaderCode"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ShaderParam">
+		<xs:annotation>
+			<xs:documentation>Describes a shader parameter</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="name" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>The parameter's name as it shows up in HLSL code.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="type" type="ShaderParamType" use="required">
+			<xs:annotation>
+				<xs:documentation>The parameter's data type.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="annotation" use="required">
+			<xs:annotation>
+				<xs:documentation>Optional human readable annotation.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="default">
+			<xs:annotation>
+				<xs:documentation>Optional default value for the parameter.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="defaultBinding">
+			<xs:annotation>
+				<xs:documentation>Optional default binding (by semantics).</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="min">
+			<xs:annotation>
+				<xs:documentation>Optional minimum value.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="max">
+			<xs:annotation>
+				<xs:documentation>Optional maximum value.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:simpleType name="ShaderParamType">
+		<xs:annotation>
+			<xs:documentation>A shader parameter data type.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="float"/>
+			<xs:enumeration value="float2"/>
+			<xs:enumeration value="float3"/>
+			<xs:enumeration value="float4"/>
+			<xs:enumeration value="float2x2"/>
+			<xs:enumeration value="float3x3"/>
+			<xs:enumeration value="float4x4"/>
+			<xs:enumeration value="int"/>
+			<xs:enumeration value="int2"/>
+			<xs:enumeration value="int3"/>
+			<xs:enumeration value="int4"/>
+			<xs:enumeration value="bool"/>
+			<xs:enumeration value="bool2"/>
+			<xs:enumeration value="bool3"/>
+			<xs:enumeration value="bool4"/>
+			<xs:enumeration value="sampler"/>
+			<xs:enumeration value="floatArray"/>
+			<xs:enumeration value="float2Array"/>
+			<xs:enumeration value="float3Array"/>
+			<xs:enumeration value="float4Array"/>
+			<xs:enumeration value="float2x2Array"/>
+			<xs:enumeration value="float3x3Array"/>
+			<xs:enumeration value="float4x4Array"/>
+			<xs:enumeration value="intArray"/>
+			<xs:enumeration value="int2Array"/>
+			<xs:enumeration value="int3Array"/>
+			<xs:enumeration value="int4Array"/>
+			<xs:enumeration value="boolArray"/>
+			<xs:enumeration value="bool2Array"/>
+			<xs:enumeration value="bool3Array"/>
+			<xs:enumeration value="bool4Array"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="ShaderParamSet">
+		<xs:annotation>
+			<xs:documentation>A set of shader parameters, for instance input and output parameters of a shader fragment.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Param" type="ShaderParam" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ShaderCode">
+		<xs:annotation>
+			<xs:documentation>Shader fragment HLSL code.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="xs:string"/>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="ShaderFragment">
+		<xs:annotation>
+			<xs:documentation>A shader fragment, consisting of vertex and/or pixel shader fragments.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="VertexShader" type="ShaderPipelineFragment" minOccurs="0"/>
+			<xs:element name="PixelShader" type="ShaderPipelineFragment" minOccurs="0"/>
+			<xs:element name="RenderStates" type="ShaderStateSet" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attribute name="name" use="required">
+			<xs:annotation>
+				<xs:documentation>The fragment name.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="category" use="required">
+			<xs:annotation>
+				<xs:documentation>The category this feature belongs to, e.g. "Lighting", "Deformer", etc...</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="desc" use="required">
+			<xs:annotation>
+				<xs:documentation>A human-readable description what the fragment does.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="exclusive" type="xs:boolean">
+			<xs:annotation>
+				<xs:documentation>If true, only one fragment of this category may exist in a shader.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="ShaderState">
+		<xs:annotation>
+			<xs:documentation>A render state definition in a shader.</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="name" type="ShaderStateEnum" use="required">
+			<xs:annotation>
+				<xs:documentation>The render state name, compatible with D3DX effect format.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="value" use="required">
+			<xs:annotation>
+				<xs:documentation>The render state value, compatible with D3DX effects.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="ShaderStateSet">
+		<xs:annotation>
+			<xs:documentation>A set of render state definitions.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="State" type="ShaderState" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="ShaderStateEnum">
+		<xs:annotation>
+			<xs:documentation>Enumeration of shader states.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="AlphaBlendEnable"/>
+			<xs:enumeration value="AlphaFunc"/>
+			<xs:enumeration value="AlphaRef"/>
+			<xs:enumeration value="AlphaTestEnable"/>
+			<xs:enumeration value="BlendOp"/>
+			<xs:enumeration value="ColorWriteEnable"/>
+			<xs:enumeration value="DepthBias"/>
+			<xs:enumeration value="DestBlend"/>
+			<xs:enumeration value="DitherEnable"/>
+			<xs:enumeration value="FillMode"/>
+			<xs:enumeration value="LastPixel"/>
+			<xs:enumeration value="ShadeMode"/>
+			<xs:enumeration value="SlopeScaleDepthBias"/>
+			<xs:enumeration value="SrcBlend"/>
+			<xs:enumeration value="StencilEnable"/>
+			<xs:enumeration value="StencilFail"/>
+			<xs:enumeration value="StencilFunc"/>
+			<xs:enumeration value="StencilMask"/>
+			<xs:enumeration value="StencilPass"/>
+			<xs:enumeration value="StencilRef"/>
+			<xs:enumeration value="StencilWriteMask"/>
+			<xs:enumeration value="StencilZFail"/>
+			<xs:enumeration value="TextureFactor"/>
+			<xs:enumeration value="Wrap0"/>
+			<xs:enumeration value="Wrap1"/>
+			<xs:enumeration value="Wrap2"/>
+			<xs:enumeration value="Wrap3"/>
+			<xs:enumeration value="Wrap4"/>
+			<xs:enumeration value="Wrap5"/>
+			<xs:enumeration value="Wrap6"/>
+			<xs:enumeration value="Wrap7"/>
+			<xs:enumeration value="Wrap8"/>
+			<xs:enumeration value="Wrap9"/>
+			<xs:enumeration value="Wrap10"/>
+			<xs:enumeration value="Wrap11"/>
+			<xs:enumeration value="Wrap12"/>
+			<xs:enumeration value="Wrap13"/>
+			<xs:enumeration value="Wrap14"/>
+			<xs:enumeration value="Wrap15"/>
+			<xs:enumeration value="ZEnable"/>
+			<xs:enumeration value="ZFunc"/>
+			<xs:enumeration value="ZWriteEnable"/>
+			<xs:enumeration value="CullMode"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="Shader">
+		<xs:annotation>
+			<xs:documentation>A compound shader description</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Node" type="ShaderNode" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="name" use="required">
+			<xs:annotation>
+				<xs:documentation>A unique and descriptive name for the shader.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="ShaderNode">
+		<xs:annotation>
+			<xs:documentation>References a shader feature in a compound shader.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Bind" type="ShaderParamBinding" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="name" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>A unique name for the feature.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="fragment" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>The feature name that is referenced.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="ShaderParamBinding">
+		<xs:annotation>
+			<xs:documentation>Describe a parameter binding in a compound shader.</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="param" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>The fragment's input parameter to bind.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="bindto" use="required">
+			<xs:annotation>
+				<xs:documentation>The source slot for the parameter in the form "scope.param".</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="ShaderSampler">
+		<xs:annotation>
+			<xs:documentation>Describes a texture sampler.</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="name" use="required">
+			<xs:annotation>
+				<xs:documentation>The sampler name.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="texture" use="required">
+			<xs:annotation>
+				<xs:documentation>The texture parameter name.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="addrU" type="TextureAddressMode">
+			<xs:annotation>
+				<xs:documentation>Addressing mode for U dimension.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="addrV" type="TextureAddressMode">
+			<xs:annotation>
+				<xs:documentation>Addressing mode for V dimension.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="addrW">
+			<xs:annotation>
+				<xs:documentation>Addressing mode for W dimension.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="borderColor" type="float4">
+			<xs:annotation>
+				<xs:documentation>Border color when addressing mode is "Border".</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="magnifyFilter" type="TextureMinMagFilter">
+			<xs:annotation>
+				<xs:documentation>Magnification filter.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="minifyFilter" type="TextureMinMagFilter">
+			<xs:annotation>
+				<xs:documentation>Minification filter.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="mipMapFilter">
+			<xs:annotation>
+				<xs:documentation>Mipmapping filter.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="maxAnisotropy" type="xs:int">
+			<xs:annotation>
+				<xs:documentation>Max anisotropy to use when anistropic filtering is enabled.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="maxMipLevel" type="xs:int">
+			<xs:annotation>
+				<xs:documentation>Maximum mipmap level to use (0 is most detailed).</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="mipMapLodBias" type="xs:float">
+			<xs:annotation>
+				<xs:documentation>LOD bias for mipmapping.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="srgbTexture" type="xs:float">
+			<xs:annotation>
+				<xs:documentation>For automatic gamma correction (see D3D docs)</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:simpleType name="TextureAddressMode">
+		<xs:annotation>
+			<xs:documentation>Texture addressing modes.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Wrap"/>
+			<xs:enumeration value="Mirror"/>
+			<xs:enumeration value="Clamp"/>
+			<xs:enumeration value="Border"/>
+			<xs:enumeration value="MirrorOnce"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="float4">
+		<xs:annotation>
+			<xs:documentation>A 4-component vector</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="\d+.\d+\s*,\s*\d+.\d+\s*,\s*\d+.\d+\s*,\s*\d+.\d+"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="float3">
+		<xs:annotation>
+			<xs:documentation>A 3-component vector</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="\d+.\d+\s*,\s*\d+.\d+\s*,\s*\d+.\d+"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TextureMinMagFilter">
+		<xs:annotation>
+			<xs:documentation>Magnify/Minify filter for texture sampling.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Point"/>
+			<xs:enumeration value="Linear"/>
+			<xs:enumeration value="Anisotropic"/>
+			<xs:enumeration value="PyramidalQuad"/>
+			<xs:enumeration value="GaussianQuad"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TextureMipFilter">
+		<xs:annotation>
+			<xs:documentation>Mipmapping filter for texture sampling.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="None"/>
+			<xs:enumeration value="Point"/>
+			<xs:enumeration value="Linear"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="ShaderFragmentGroup">
+		<xs:annotation>
+			<xs:documentation>Mutual exclusive variations (e.g. PointLight, DirectionalLight, etc...)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Fragment" type="ShaderFragment" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="name" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>The name of the fragment group (e.g. PhongLighting)</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="category" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>The category of the fragment (e.g. Lighting)</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="desc" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>A human readable description of what the fragment does.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="exclusive" type="xs:boolean">
+			<xs:annotation>
+				<xs:documentation>If true, only one fragment of this category may exist in a shader.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+</xs:schema>

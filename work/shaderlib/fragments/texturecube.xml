@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Nebula3MaterialSystem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../materialsystem.xsd">
+	<Fragment name="TextureCube" category="Texturing" desc="Sample a cube texture.">
+		<PixelShader>
+			<Inputs>
+				<Param name="texCoord" type="float3" defaultBinding="Interpolator.CubeTexCoords" annotation="The pixel shader texture lookup vector."/>
+				<Param name="texSampler" type="sampler" defaultBinding="Sampler.CubeMap0Sampler" annotation="The texture sampler to use."/>
+			</Inputs>
+			<Outputs>
+				<Param name="outColor" type="float4" defaultBinding="Result.Color" annotation="The output color."/>
+			</Outputs>
+			<Code>
+<![CDATA[
+outColor = texCUBE(texSampler texCoord);
+]]>
+			</Code>
+		</PixelShader>
+	</Fragment>
+</Nebula3MaterialSystem>

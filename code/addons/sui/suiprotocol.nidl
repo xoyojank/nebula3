@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Nebula3>
+    <Protocol namespace="SUI" name="SUIProtocol">
+        <!-- dependencies -->
+        <Dependency header="util/array.h"/>
+        <Dependency header="util/stringatom.h"/>
+        <Dependency header="resources/resourceid.h"/>
+        <Dependency header="input/inputevent.h"/>
+        <Dependency header="sui/suievent.h"/>
+        <Dependency header="sui/suiactions.h"/>
+
+        <!-- create an SUI layout -->
+        <Message name="CreateLayout" fourcc="sucl">
+            <InArg name="LayoutId" type="Util::StringAtom"/>
+            <InArg name="ResourceId" type="Resources::ResourceId"/>
+        </Message>
+        
+        <!-- destroy an SUI layout -->
+        <Message name="DestroyLayout" fourcc="sudl">
+            <InArg name="LayoutId" type="Util::StringAtom"/>
+        </Message>
+        
+        <!-- show an SUI layout -->
+        <Message name="ShowLayout" fourcc="susl">
+            <InArg name="LayoutId" type="Util::StringAtom"/>
+            <InArg name="ZPrio" type="int" default="1"/>
+        </Message>
+        
+        <!-- hide an SUI layout -->
+        <Message name="HideLayout" fourcc="suhl">
+            <InArg name="LayoutId" type="Util::StringAtom"/>
+        </Message>
+        
+        <!-- process input events -->
+        <Message name="ProcessEvents" fourcc="supe">
+            <InArg name="InputEvents" type="Util::Array<Input::InputEvent>"/>
+            <OutArg name="SUIEvents" type="Util::Array<SUI::SUIEvent>"/>
+        </Message>
+        
+        <!-- send an SUIAction -->
+        <Message name="InvokeAction" fourcc="suia">
+            <InArg name="Action" type="Ptr<SUI::SUIAction>"/>
+        </Message>
+    </Protocol>
+    
+</Nebula3>

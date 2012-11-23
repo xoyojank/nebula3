@@ -1,0 +1,719 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="appgame">
+      <UniqueIdentifier>{f07b8524-a04c-4451-84b9-27b0bd12777f}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="basegamefeature">
+      <UniqueIdentifier>{758859d8-4a4b-44dc-8342-f0246e394546}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="basegamefeature\basegameattr">
+      <UniqueIdentifier>{51411389-1b5a-44d5-a146-af35fce84141}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="basegamefeature\basegametiming">
+      <UniqueIdentifier>{1be1512d-fa9b-43fb-b426-917807e9dbc7}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="basegamefeature\debug">
+      <UniqueIdentifier>{432cc57a-240f-4463-ab52-7d7a1b37451a}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="basegamefeature\loader">
+      <UniqueIdentifier>{28a773fc-058d-4986-988c-bfaf29705b9a}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="basegamefeature\managers">
+      <UniqueIdentifier>{9f383a50-6985-455f-af63-baed29a348a7}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="basegamefeature\properties">
+      <UniqueIdentifier>{3901c6bb-a38e-4a07-aff3-9699555a4917}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="basegamefeature\statehandlers">
+      <UniqueIdentifier>{9ce9478f-8dc0-484e-ab2f-4a43a9a757de}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="commandhandlers">
+      <UniqueIdentifier>{5bfbca42-49f2-4209-b5ca-784aa92419f1}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="game">
+      <UniqueIdentifier>{45faedfb-8f33-4d8c-ab44-3aabe600d25e}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="graphicsfeature">
+      <UniqueIdentifier>{8bb8830b-15f2-4d56-9727-fd8e78c8e81e}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="graphicsfeature\graphicsattr">
+      <UniqueIdentifier>{ae0e2245-1b07-4147-a450-360db99c2cad}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="graphicsfeature\graphicsutil">
+      <UniqueIdentifier>{4d234a22-49a3-43ce-b168-78b22780790f}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="graphicsfeature\managers">
+      <UniqueIdentifier>{d574aebf-5afc-4c08-82bb-ddd1ab20f391}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="graphicsfeature\properties">
+      <UniqueIdentifier>{d6991e71-feca-4425-913f-e25474d55a10}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="physicsfeature">
+      <UniqueIdentifier>{de0f6485-a77f-48b3-8165-f570cac14c73}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="physicsfeature\physicsattr">
+      <UniqueIdentifier>{3a259014-0b89-4b8e-822b-d6453e33f230}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="physicsfeature\properties">
+      <UniqueIdentifier>{0f8b44ec-7d71-406e-9e8c-b65f709ca1ed}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="scriptfeature">
+      <UniqueIdentifier>{3cb2b39f-78c1-4629-8338-88ad7839d721}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="scriptfeature\actions">
+      <UniqueIdentifier>{ad198ded-fc25-458f-9aac-e93614281421}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="scriptfeature\actions\behaviour">
+      <UniqueIdentifier>{f257791b-30f2-42fc-b105-874110b60e31}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="scriptfeature\conditions">
+      <UniqueIdentifier>{a03fe10c-40e7-4988-b7f6-078380a8ce1a}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="scriptfeature\conditions\behaviour">
+      <UniqueIdentifier>{0446296f-7336-4f70-8c52-c735ff49a64f}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="scriptfeature\dialog">
+      <UniqueIdentifier>{56c2fe66-d5ba-40c9-ac0e-1fd6ad4967e1}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="scriptfeature\fsm">
+      <UniqueIdentifier>{f47fdbb1-3c05-4ca4-aa60-60bde6ceb433}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="scriptfeature\log">
+      <UniqueIdentifier>{0b91d448-273f-450b-a8e9-48826cbe2e12}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="scriptfeature\managers">
+      <UniqueIdentifier>{ffed66a5-3d97-4d5d-adca-b599ba6a3cd9}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="scriptfeature\quest">
+      <UniqueIdentifier>{4ddcd331-11e9-4949-89ba-a6893971e9a1}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="scriptfeature\scriptattr">
+      <UniqueIdentifier>{07f875d8-de7e-4802-8456-437804934a61}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="stateobjectfeature">
+      <UniqueIdentifier>{919d93be-d47c-46a2-93a8-e590f3fa7da4}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="stateobjectfeature\properties">
+      <UniqueIdentifier>{a67631c7-f255-4e0b-9c18-3611502055b4}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\application\stdneb.cc">
+      <Filter>appgame</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\appgame\gameapplication.cc">
+      <Filter>appgame</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\appgame\statehandler.cc">
+      <Filter>appgame</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\basegamefeature\basegamefeatureunit.cc">
+      <Filter>basegamefeature</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\basegamefeature\basegameprotocol.cc">
+      <Filter>basegamefeature</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\basegamefeature\basegameattr\basegameattributes.cc">
+      <Filter>basegamefeature\basegameattr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\basegamefeature\basegametiming\gametimesource.cc">
+      <Filter>basegamefeature\basegametiming</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\basegamefeature\basegametiming\inputtimesource.cc">
+      <Filter>basegamefeature\basegametiming</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\basegamefeature\basegametiming\systemtimesource.cc">
+      <Filter>basegamefeature\basegametiming</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\basegamefeature\basegametiming\timemanager.cc">
+      <Filter>basegamefeature\basegametiming</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\basegamefeature\basegametiming\timesource.cc">
+      <Filter>basegamefeature\basegametiming</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\basegamefeature\debug\objectinspectorhandler.cc">
+      <Filter>basegamefeature\debug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\basegamefeature\loader\entityloader.cc">
+      <Filter>basegamefeature\loader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\basegamefeature\loader\entityloaderbase.cc">
+      <Filter>basegamefeature\loader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\basegamefeature\loader\environmentloader.cc">
+      <Filter>basegamefeature\loader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\basegamefeature\loader\levelloader.cc">
+      <Filter>basegamefeature\loader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\basegamefeature\loader\loaderserver.cc">
+      <Filter>basegamefeature\loader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\basegamefeature\loader\userprofile.cc">
+      <Filter>basegamefeature\loader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\basegamefeature\managers\animeventmanager.cc">
+      <Filter>basegamefeature\managers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\basegamefeature\managers\categorymanager.cc">
+      <Filter>basegamefeature\managers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\basegamefeature\managers\entitymanager.cc">
+      <Filter>basegamefeature\managers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\basegamefeature\managers\enventitymanager.cc">
+      <Filter>basegamefeature\managers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\basegamefeature\managers\envquerymanager.cc">
+      <Filter>basegamefeature\managers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\basegamefeature\managers\factorymanager.cc">
+      <Filter>basegamefeature\managers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\basegamefeature\managers\focusmanager.cc">
+      <Filter>basegamefeature\managers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\basegamefeature\managers\globalattrsmanager.cc">
+      <Filter>basegamefeature\managers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\basegamefeature\properties\timeproperty.cc">
+      <Filter>basegamefeature\properties</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\basegamefeature\properties\transformableproperty.cc">
+      <Filter>basegamefeature\properties</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\basegamefeature\statehandlers\gamestatehandler.cc">
+      <Filter>basegamefeature\statehandlers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\commandhandlers\createentitycommand.cc">
+      <Filter>commandhandlers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\game\entity.cc">
+      <Filter>game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\game\featureunit.cc">
+      <Filter>game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\game\gameserver.cc">
+      <Filter>game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\game\manager.cc">
+      <Filter>game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\game\property.cc">
+      <Filter>game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\graphicsfeature\graphicsfeatureprotocol.cc">
+      <Filter>graphicsfeature</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\graphicsfeature\graphicsfeatureunit.cc">
+      <Filter>graphicsfeature</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\graphicsfeature\graphicsattr\graphicsattributes.cc">
+      <Filter>graphicsfeature\graphicsattr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\graphicsfeature\graphicsutil\lightflickerutil.cc">
+      <Filter>graphicsfeature\graphicsutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\graphicsfeature\graphicsutil\segmentedgfxutil.cc">
+      <Filter>graphicsfeature\graphicsutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\graphicsfeature\managers\attachmentmanager.cc">
+      <Filter>graphicsfeature\managers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\graphicsfeature\properties\actorgraphicsproperty.cc">
+      <Filter>graphicsfeature\properties</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\graphicsfeature\properties\ambiencebubbleproperty.cc">
+      <Filter>graphicsfeature\properties</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\graphicsfeature\properties\animationcontrolproperty.cc">
+      <Filter>graphicsfeature\properties</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\graphicsfeature\properties\cameraproperty.cc">
+      <Filter>graphicsfeature\properties</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\graphicsfeature\properties\chasecameraproperty.cc">
+      <Filter>graphicsfeature\properties</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\graphicsfeature\properties\cutscenecameraproperty.cc">
+      <Filter>graphicsfeature\properties</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\graphicsfeature\properties\environmentgraphicsproperty.cc">
+      <Filter>graphicsfeature\properties</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\graphicsfeature\properties\graphicsproperty.cc">
+      <Filter>graphicsfeature\properties</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\graphicsfeature\properties\inputproperty.cc">
+      <Filter>graphicsfeature\properties</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\graphicsfeature\properties\lightproperty.cc">
+      <Filter>graphicsfeature\properties</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\graphicsfeature\properties\mayacameraproperty.cc">
+      <Filter>graphicsfeature\properties</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\graphicsfeature\properties\pathanimproperty.cc">
+      <Filter>graphicsfeature\properties</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\physicsfeature\physicsfeatureunit.cc">
+      <Filter>physicsfeature</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\physicsfeature\physicsprotocol.cc">
+      <Filter>physicsfeature</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\physicsfeature\physicsattr\physicsattributes.cc">
+      <Filter>physicsfeature\physicsattr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\physicsfeature\properties\actorphysicsproperty.cc">
+      <Filter>physicsfeature\properties</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\physicsfeature\properties\environmentcollideproperty.cc">
+      <Filter>physicsfeature\properties</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\physicsfeature\properties\mousegripperproperty.cc">
+      <Filter>physicsfeature\properties</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\physicsfeature\properties\physicsproperty.cc">
+      <Filter>physicsfeature\properties</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\physicsfeature\properties\triggerproperty.cc">
+      <Filter>physicsfeature\properties</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\scriptfeature\actionreader.cc">
+      <Filter>scriptfeature</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\scriptfeature\scriptfeatureunit.cc">
+      <Filter>scriptfeature</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\scriptfeature\scriptprotocol.cc">
+      <Filter>scriptfeature</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\scriptfeature\scripttable.cc">
+      <Filter>scriptfeature</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\scriptfeature\actions\action.cc">
+      <Filter>scriptfeature\actions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\scriptfeature\actions\actionlist.cc">
+      <Filter>scriptfeature\actions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\scriptfeature\actions\ifthenelseaction.cc">
+      <Filter>scriptfeature\actions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\scriptfeature\actions\sequenceaction.cc">
+      <Filter>scriptfeature\actions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\scriptfeature\actions\behaviour\fsmaction.cc">
+      <Filter>scriptfeature\actions\behaviour</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\scriptfeature\conditions\and.cc">
+      <Filter>scriptfeature\conditions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\scriptfeature\conditions\condition.cc">
+      <Filter>scriptfeature\conditions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\scriptfeature\conditions\not.cc">
+      <Filter>scriptfeature\conditions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\scriptfeature\conditions\or.cc">
+      <Filter>scriptfeature\conditions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\scriptfeature\conditions\behaviour\fsmcondition.cc">
+      <Filter>scriptfeature\conditions\behaviour</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\scriptfeature\dialog\dialog.cc">
+      <Filter>scriptfeature\dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\scriptfeature\dialog\dialogdesc.cc">
+      <Filter>scriptfeature\dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\scriptfeature\dialog\dialogtake.cc">
+      <Filter>scriptfeature\dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\scriptfeature\fsm\behaviourproperty.cc">
+      <Filter>scriptfeature\fsm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\scriptfeature\fsm\state.cc">
+      <Filter>scriptfeature\fsm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\scriptfeature\fsm\statemachine.cc">
+      <Filter>scriptfeature\fsm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\scriptfeature\fsm\transition.cc">
+      <Filter>scriptfeature\fsm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\scriptfeature\log\infolog.cc">
+      <Filter>scriptfeature\log</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\scriptfeature\log\infologfilter.cc">
+      <Filter>scriptfeature\log</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\scriptfeature\managers\dialogmanager.cc">
+      <Filter>scriptfeature\managers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\scriptfeature\managers\logmanager.cc">
+      <Filter>scriptfeature\managers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\scriptfeature\managers\questmanager.cc">
+      <Filter>scriptfeature\managers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\scriptfeature\managers\scriptmanager.cc">
+      <Filter>scriptfeature\managers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\scriptfeature\managers\scripttemplatemanager.cc">
+      <Filter>scriptfeature\managers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\scriptfeature\managers\substitutionmanager.cc">
+      <Filter>scriptfeature\managers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\scriptfeature\quest\task.cc">
+      <Filter>scriptfeature\quest</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\scriptfeature\scriptattr\scriptattributes.cc">
+      <Filter>scriptfeature\scriptattr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\stateobjectfeature\stateobjectprotocol.cc">
+      <Filter>stateobjectfeature</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\stateobjectfeature\properties\stategraphicsproperty.cc">
+      <Filter>stateobjectfeature\properties</Filter>
+    </ClCompile>
+    <ClCompile Include="..\application\stateobjectfeature\properties\stateproperty.cc">
+      <Filter>stateobjectfeature\properties</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\application\appgame\appconfig.h">
+      <Filter>appgame</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\appgame\gameapplication.h">
+      <Filter>appgame</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\appgame\statehandler.h">
+      <Filter>appgame</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\basegamefeature\basegamefeatureunit.h">
+      <Filter>basegamefeature</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\basegamefeature\basegameprotocol.h">
+      <Filter>basegamefeature</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\basegamefeature\basegameattr\basegameattributes.h">
+      <Filter>basegamefeature\basegameattr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\basegamefeature\basegametiming\gametimesource.h">
+      <Filter>basegamefeature\basegametiming</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\basegamefeature\basegametiming\inputtimesource.h">
+      <Filter>basegamefeature\basegametiming</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\basegamefeature\basegametiming\systemtimesource.h">
+      <Filter>basegamefeature\basegametiming</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\basegamefeature\basegametiming\timemanager.h">
+      <Filter>basegamefeature\basegametiming</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\basegamefeature\basegametiming\timesource.h">
+      <Filter>basegamefeature\basegametiming</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\basegamefeature\debug\objectinspectorhandler.h">
+      <Filter>basegamefeature\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\basegamefeature\loader\entityloader.h">
+      <Filter>basegamefeature\loader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\basegamefeature\loader\entityloaderbase.h">
+      <Filter>basegamefeature\loader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\basegamefeature\loader\environmentloader.h">
+      <Filter>basegamefeature\loader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\basegamefeature\loader\levelloader.h">
+      <Filter>basegamefeature\loader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\basegamefeature\loader\loaderserver.h">
+      <Filter>basegamefeature\loader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\basegamefeature\loader\userprofile.h">
+      <Filter>basegamefeature\loader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\basegamefeature\managers\animeventmanager.h">
+      <Filter>basegamefeature\managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\basegamefeature\managers\categorymanager.h">
+      <Filter>basegamefeature\managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\basegamefeature\managers\entitymanager.h">
+      <Filter>basegamefeature\managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\basegamefeature\managers\enventitymanager.h">
+      <Filter>basegamefeature\managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\basegamefeature\managers\envquerymanager.h">
+      <Filter>basegamefeature\managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\basegamefeature\managers\factorymanager.h">
+      <Filter>basegamefeature\managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\basegamefeature\managers\focusmanager.h">
+      <Filter>basegamefeature\managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\basegamefeature\managers\globalattrsmanager.h">
+      <Filter>basegamefeature\managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\basegamefeature\properties\timeproperty.h">
+      <Filter>basegamefeature\properties</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\basegamefeature\properties\transformableproperty.h">
+      <Filter>basegamefeature\properties</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\basegamefeature\statehandlers\gamestatehandler.h">
+      <Filter>basegamefeature\statehandlers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\commandhandlers\createentitycommand.h">
+      <Filter>commandhandlers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\game\entity.h">
+      <Filter>game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\game\featureunit.h">
+      <Filter>game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\game\gameserver.h">
+      <Filter>game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\game\manager.h">
+      <Filter>game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\game\property.h">
+      <Filter>game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\graphicsfeature\graphicsfeatureproperties.h">
+      <Filter>graphicsfeature</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\graphicsfeature\graphicsfeatureprotocol.h">
+      <Filter>graphicsfeature</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\graphicsfeature\graphicsfeatureunit.h">
+      <Filter>graphicsfeature</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\graphicsfeature\graphicsattr\graphicsattributes.h">
+      <Filter>graphicsfeature\graphicsattr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\graphicsfeature\graphicsutil\lightflickerutil.h">
+      <Filter>graphicsfeature\graphicsutil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\graphicsfeature\graphicsutil\segmentedgfxutil.h">
+      <Filter>graphicsfeature\graphicsutil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\graphicsfeature\managers\attachmentmanager.h">
+      <Filter>graphicsfeature\managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\graphicsfeature\properties\actorgraphicsproperty.h">
+      <Filter>graphicsfeature\properties</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\graphicsfeature\properties\ambiencebubbleproperty.h">
+      <Filter>graphicsfeature\properties</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\graphicsfeature\properties\animationcontrolproperty.h">
+      <Filter>graphicsfeature\properties</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\graphicsfeature\properties\cameraproperty.h">
+      <Filter>graphicsfeature\properties</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\graphicsfeature\properties\chasecameraproperty.h">
+      <Filter>graphicsfeature\properties</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\graphicsfeature\properties\cutscenecameraproperty.h">
+      <Filter>graphicsfeature\properties</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\graphicsfeature\properties\environmentgraphicsproperty.h">
+      <Filter>graphicsfeature\properties</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\graphicsfeature\properties\graphicsproperty.h">
+      <Filter>graphicsfeature\properties</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\graphicsfeature\properties\inputproperty.h">
+      <Filter>graphicsfeature\properties</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\graphicsfeature\properties\lightproperty.h">
+      <Filter>graphicsfeature\properties</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\graphicsfeature\properties\mayacameraproperty.h">
+      <Filter>graphicsfeature\properties</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\graphicsfeature\properties\pathanimproperty.h">
+      <Filter>graphicsfeature\properties</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\physicsfeature\physicsfeatureunit.h">
+      <Filter>physicsfeature</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\physicsfeature\physicsprotocol.h">
+      <Filter>physicsfeature</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\physicsfeature\physicsattr\physicsattributes.h">
+      <Filter>physicsfeature\physicsattr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\physicsfeature\properties\actorphysicsproperty.h">
+      <Filter>physicsfeature\properties</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\physicsfeature\properties\environmentcollideproperty.h">
+      <Filter>physicsfeature\properties</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\physicsfeature\properties\mousegripperproperty.h">
+      <Filter>physicsfeature\properties</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\physicsfeature\properties\physicsproperty.h">
+      <Filter>physicsfeature\properties</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\physicsfeature\properties\triggerproperty.h">
+      <Filter>physicsfeature\properties</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\scriptfeature\actionreader.h">
+      <Filter>scriptfeature</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\scriptfeature\scriptfeatureunit.h">
+      <Filter>scriptfeature</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\scriptfeature\scriptprotocol.h">
+      <Filter>scriptfeature</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\scriptfeature\scripttable.h">
+      <Filter>scriptfeature</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\scriptfeature\actions\action.h">
+      <Filter>scriptfeature\actions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\scriptfeature\actions\actionlist.h">
+      <Filter>scriptfeature\actions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\scriptfeature\actions\ifthenelseaction.h">
+      <Filter>scriptfeature\actions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\scriptfeature\actions\sequenceaction.h">
+      <Filter>scriptfeature\actions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\scriptfeature\actions\behaviour\fsmaction.h">
+      <Filter>scriptfeature\actions\behaviour</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\scriptfeature\conditions\and.h">
+      <Filter>scriptfeature\conditions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\scriptfeature\conditions\condition.h">
+      <Filter>scriptfeature\conditions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\scriptfeature\conditions\not.h">
+      <Filter>scriptfeature\conditions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\scriptfeature\conditions\operator.h">
+      <Filter>scriptfeature\conditions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\scriptfeature\conditions\or.h">
+      <Filter>scriptfeature\conditions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\scriptfeature\conditions\behaviour\fsmcondition.h">
+      <Filter>scriptfeature\conditions\behaviour</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\scriptfeature\dialog\dialog.h">
+      <Filter>scriptfeature\dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\scriptfeature\dialog\dialogdesc.h">
+      <Filter>scriptfeature\dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\scriptfeature\dialog\dialogtake.h">
+      <Filter>scriptfeature\dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\scriptfeature\fsm\behaviourproperty.h">
+      <Filter>scriptfeature\fsm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\scriptfeature\fsm\state.h">
+      <Filter>scriptfeature\fsm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\scriptfeature\fsm\statemachine.h">
+      <Filter>scriptfeature\fsm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\scriptfeature\fsm\transition.h">
+      <Filter>scriptfeature\fsm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\scriptfeature\log\infolog.h">
+      <Filter>scriptfeature\log</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\scriptfeature\log\infologfilter.h">
+      <Filter>scriptfeature\log</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\scriptfeature\managers\dialogmanager.h">
+      <Filter>scriptfeature\managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\scriptfeature\managers\logmanager.h">
+      <Filter>scriptfeature\managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\scriptfeature\managers\questmanager.h">
+      <Filter>scriptfeature\managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\scriptfeature\managers\scriptmanager.h">
+      <Filter>scriptfeature\managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\scriptfeature\managers\scripttemplatemanager.h">
+      <Filter>scriptfeature\managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\scriptfeature\managers\substitutionmanager.h">
+      <Filter>scriptfeature\managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\scriptfeature\quest\task.h">
+      <Filter>scriptfeature\quest</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\scriptfeature\scriptattr\scriptattributes.h">
+      <Filter>scriptfeature\scriptattr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\stateobjectfeature\stateobjectfeatureunit.h">
+      <Filter>stateobjectfeature</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\stateobjectfeature\stateobjectprotocol.h">
+      <Filter>stateobjectfeature</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\stateobjectfeature\properties\stategraphicsproperty.h">
+      <Filter>stateobjectfeature\properties</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\stateobjectfeature\properties\stateinfo.h">
+      <Filter>stateobjectfeature\properties</Filter>
+    </ClInclude>
+    <ClInclude Include="..\application\stateobjectfeature\properties\stateproperty.h">
+      <Filter>stateobjectfeature\properties</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

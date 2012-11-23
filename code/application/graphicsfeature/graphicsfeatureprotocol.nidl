@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Nebula3>
+  <Protocol namespace="GraphicsFeature" name="GraphicsFeatureProtocol">
+
+    <!-- dependencies -->
+    <Dependency header="graphics/modelentity.h"/>
+    <Dependency header="graphics/abstractlightentity.h"/>
+    <Dependency header="util/variant.h"/>
+
+    <!-- Change the distance of a 3rd camera to its lookat point. -->
+    <Message name="CameraDistance" fourcc="MCAD">
+        <InArg name="RelativeDistanceChange" type="float" default="0.0f"/>
+    </Message>
+      
+    <!-- Message for obtaining camera focus. -->
+    <Message name="CameraFocus" fourcc="CAFC">
+        <InArg name="ObtainFocus" type="bool"/>
+    </Message>
+      
+    <!-- A camera orbit rotation message. -->
+    <Message name="CameraOrbit" fourcc="MCAO">
+        <InArg name="HorizontalRotation" type="float" default="0.0f"/>
+        <InArg name="VerticalRotation" type="float" default="0.0f"/>
+    </Message>
+      
+    <!-- A camera reset message. -->
+    <Message name="CameraReset" fourcc="CARE">
+    </Message>
+      
+    <!-- Returns the graphics entities used by a game entity for rendering. -->
+    <Message name="GetGraphicsEntities" fourcc="GGEN">
+        <InArg name="Entities" type="Util::Array<Ptr<Graphics::ModelEntity> >"/>
+        <InArg name="Entity" type="Ptr<Graphics::ModelEntity>"/>
+    </Message>
+
+    <!-- Returns the graphics entities used by a light entity -->
+    <Message name="GetLightEntity" fourcc="GLEN">
+        <InArg name="Entity" type="Ptr<Graphics::AbstractLightEntity>"/>
+    </Message>
+          
+    <!-- Commands an entity to turn into the specified direction defined
+         by a 3d vector. The direction vector can be absolute or camera relative. -->
+    <Message name="InputFocus" fourcc="INFC">
+        <InArg name="ObtainFocus" type="bool" default="true"/>
+    </Message>
+      
+    <!-- Shows or hides all graphics entities of a game entity. -->
+    <Message name="SetVisibleMsg" fourcc="MGFV">
+        <InArg name="Visible" type="bool"/>
+    </Message>
+
+    <!-- Set an overwrite color -->
+    <Message name="SetOverwriteColor" fourcc="SEOC">
+        <InArg name="Color" type="Math::float4"/>
+        <InArg name="NodeName" type="Util::String"/>
+    </Message>
+
+    <!-- Set an overwrite color -->
+    <Message name="SetShaderVariable" fourcc="SSHV">      
+        <InArg name="ShaderVarName" type="Util::String"/>
+        <InArg name="Value" type="Util::Variant"/>
+        <InArg name="NodeName" type="Util::String"/>
+    </Message>
+
+    <!-- Anim play message -->
+    <Message name="AnimPlay" fourcc="ANPL" />   
+
+    <!-- Anim rewind message -->
+    <Message name="AnimRewind" fourcc="ANRE" />
+
+    <!-- Anim rewind message -->
+    <Message name="AnimStop" fourcc="ANST" />
+
+    <!-- Anim rewind message -->
+    <Message name="AnimUpdate" fourcc="ANUP">
+      <InArg name="AnimPath" type="Util::String"/>
+    </Message>
+
+    <!-- Anim rewind message -->
+    <Message name="CutsceneControl" fourcc="CUCO">
+        <InArg name="Command" type="int"/>
+    </Message>
+
+    <!-- check graphics entity resources -->
+    <Message name="AreGraphicsEntityResourcesLoaded" fourcc="AGEL">
+      <InArg name="ResourcesLoaded" type="bool"/>
+    </Message>
+
+  </Protocol>
+
+</Nebula3>

@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="audio2">
+      <UniqueIdentifier>{e48ea765-fb75-4504-9453-6232afa5b858}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="audio2\fmodcoreaudio">
+      <UniqueIdentifier>{4758a1e1-c434-4911-905d-ae44b2ac3f97}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\addons\stdneb.cc">
+      <Filter>audio2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\audio2\audio2emitter.cc">
+      <Filter>audio2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\audio2\audio2interface.cc">
+      <Filter>audio2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\audio2\audio2listener.cc">
+      <Filter>audio2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\audio2\audio2player.cc">
+      <Filter>audio2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\audio2\audio2protocol.cc">
+      <Filter>audio2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\audio2\audio2server.cc">
+      <Filter>audio2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\audio2\fmodcoreaudio\fmodaudiodevice.cc">
+      <Filter>audio2\fmodcoreaudio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\audio2\fmodcoreaudio\fmodaudiohandler.cc">
+      <Filter>audio2\fmodcoreaudio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\audio2\fmodcoreaudio\fmodcoreaudiopagehandler.cc">
+      <Filter>audio2\fmodcoreaudio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\audio2\fmodcoreaudio\fmoderror.cc">
+      <Filter>audio2\fmodcoreaudio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\audio2\fmodcoreaudio\fmodeventwrapper.cc">
+      <Filter>audio2\fmodcoreaudio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\audio2\fmodcoreaudio\fmodlistener.cc">
+      <Filter>audio2\fmodcoreaudio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\audio2\fmodcoreaudio\fmodmusicpromptwrapper.cc">
+      <Filter>audio2\fmodcoreaudio</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\addons\audio2\audio2emitter.h">
+      <Filter>audio2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\audio2\audio2interface.h">
+      <Filter>audio2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\audio2\audio2listener.h">
+      <Filter>audio2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\audio2\audio2player.h">
+      <Filter>audio2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\audio2\audio2protocol.h">
+      <Filter>audio2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\audio2\audio2server.h">
+      <Filter>audio2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\audio2\fmodeventcategoryid.h">
+      <Filter>audio2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\audio2\fmodeventhandle.h">
+      <Filter>audio2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\audio2\fmodeventid.h">
+      <Filter>audio2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\audio2\fmodeventparameterid.h">
+      <Filter>audio2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\audio2\fmodeventprojectid.h">
+      <Filter>audio2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\audio2\fmodeventstate.h">
+      <Filter>audio2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\audio2\fmodpitchunit.h">
+      <Filter>audio2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\audio2\fmodcoreaudio\fmodaudiodevice.h">
+      <Filter>audio2\fmodcoreaudio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\audio2\fmodcoreaudio\fmodaudiohandler.h">
+      <Filter>audio2\fmodcoreaudio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\audio2\fmodcoreaudio\fmodcoreaudiopagehandler.h">
+      <Filter>audio2\fmodcoreaudio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\audio2\fmodcoreaudio\fmoderror.h">
+      <Filter>audio2\fmodcoreaudio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\audio2\fmodcoreaudio\fmodeventwrapper.h">
+      <Filter>audio2\fmodcoreaudio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\audio2\fmodcoreaudio\fmodlistener.h">
+      <Filter>audio2\fmodcoreaudio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\audio2\fmodcoreaudio\fmodmusicpromptwrapper.h">
+      <Filter>audio2\fmodcoreaudio</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

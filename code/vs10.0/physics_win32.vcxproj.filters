@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="physics">
+      <UniqueIdentifier>{8a2804da-91e0-48d7-8eda-3dbf1d3b7353}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\addons\stdneb.cc">
+      <Filter>physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\physics\amotor.cc">
+      <Filter>physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\physics\areaimpulse.cc">
+      <Filter>physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\physics\balljoint.cc">
+      <Filter>physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\physics\boxshape.cc">
+      <Filter>physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\physics\capsuleshape.cc">
+      <Filter>physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\physics\charentity.cc">
+      <Filter>physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\physics\collideshapeloader.cc">
+      <Filter>physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\physics\composite.cc">
+      <Filter>physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\physics\compositeloader.cc">
+      <Filter>physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\physics\contactpoint.cc">
+      <Filter>physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\physics\explosionareaimpulse.cc">
+      <Filter>physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\physics\filterset.cc">
+      <Filter>physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\physics\hinge2joint.cc">
+      <Filter>physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\physics\hingejoint.cc">
+      <Filter>physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\physics\joint.cc">
+      <Filter>physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\physics\level.cc">
+      <Filter>physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\physics\materialtable.cc">
+      <Filter>physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\physics\meshcache.cc">
+      <Filter>physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\physics\meshshape.cc">
+      <Filter>physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\physics\mousegripper.cc">
+      <Filter>physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\physics\physicsentity.cc">
+      <Filter>physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\physics\physicsmesh.cc">
+      <Filter>physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\physics\physicsserver.cc">
+      <Filter>physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\physics\physicsutil.cc">
+      <Filter>physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\physics\probesphere.cc">
+      <Filter>physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\physics\ray.cc">
+      <Filter>physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\physics\rigidbody.cc">
+      <Filter>physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\physics\shape.cc">
+      <Filter>physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\physics\sliderjoint.cc">
+      <Filter>physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\physics\sphereshape.cc">
+      <Filter>physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\physics\stateentity.cc">
+      <Filter>physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\physics\universaljoint.cc">
+      <Filter>physics</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\addons\physics\amotor.h">
+      <Filter>physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\physics\areaimpulse.h">
+      <Filter>physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\physics\balljoint.h">
+      <Filter>physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\physics\boxshape.h">
+      <Filter>physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\physics\capsuleshape.h">
+      <Filter>physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\physics\charentity.h">
+      <Filter>physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\physics\collidecategory.h">
+      <Filter>physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\physics\collideshapeloader.h">
+      <Filter>physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\physics\composite.h">
+      <Filter>physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\physics\compositeloader.h">
+      <Filter>physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\physics\contactpoint.h">
+      <Filter>physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\physics\explosionareaimpulse.h">
+      <Filter>physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\physics\filterset.h">
+      <Filter>physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\physics\hinge2joint.h">
+      <Filter>physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\physics\hingejoint.h">
+      <Filter>physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\physics\joint.h">
+      <Filter>physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\physics\jointaxis.h">
+      <Filter>physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\physics\level.h">
+      <Filter>physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\physics\materialtable.h">
+      <Filter>physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\physics\meshcache.h">
+      <Filter>physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\physics\meshshape.h">
+      <Filter>physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\physics\mousegripper.h">
+      <Filter>physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\physics\physicsentity.h">
+      <Filter>physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\physics\physicsmesh.h">
+      <Filter>physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\physics\physicsserver.h">
+      <Filter>physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\physics\physicsutil.h">
+      <Filter>physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\physics\probesphere.h">
+      <Filter>physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\physics\ray.h">
+      <Filter>physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\physics\rigidbody.h">
+      <Filter>physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\physics\shape.h">
+      <Filter>physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\physics\sliderjoint.h">
+      <Filter>physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\physics\sphereshape.h">
+      <Filter>physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\physics\stateentity.h">
+      <Filter>physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\physics\universaljoint.h">
+      <Filter>physics</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

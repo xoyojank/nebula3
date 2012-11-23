@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Nebula3Shaders>
+    
+    <!-- default shader -->
+    <Shader id="Standard" label="Default Material" filter="Standard" shader="static" class="Models::ShapeNode">
+        <Desc>The default shader.</Desc>
+        <VertexComponents>
+            <Comp name="Position" index="0" format="Float3"/>
+            <Comp name="Normal" index="0" format="UByte4N"/>
+            <Comp name="TexCoord" index="0" format="Short2N" mayaUvSet="map1"/>
+            <Comp name="Tangent" index="0" format="UByte4N"/>
+            <Comp name="Binormal" index="0" format="UByte4N"/>
+        </VertexComponents>
+        <Params>
+            <Param id="DiffMap0" label="Diffuse Map" type="Texture" gui="true" export="true" def="system/white" desc="The color texture." />
+            <Param id="EmsvMap0" label="Emissive Map" type="Texture" gui="true" export="true" def="system/black" desc="The emissive texture." />
+            <Param id="SpecMap0" label="Specular Map" type="Texture" gui="true" export="true" def="system/white" desc="The specular texture." />
+            <Param id="BumpMap0" label="Bump Map" type="Texture" gui="true" export="true" def="system/nobump" desc="The normal texture." />
+            <Param id="MatEmissiveIntensity" label="Emissive Intensity" type="Float" gui="true" export="true" min="0.0" max="10.0" def="1.0" desc="Intensity of emissive component."/>
+            <Param id="MatSpecularIntensity" label="Specular Intensity" type="Float" gui="true" export="true" min="0.0" max="10.0" def="1.0" desc="Intensity of specular highlight."/>
+            <Param id="MatSpecularPower" label="Specular Power" type="Float" gui="true" export="true" min="0.1" max="256.0" def="32.0" desc="Size of specular highlight."/>
+        </Params>
+    </Shader>
+
+</Nebula3Shaders>

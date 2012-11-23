@@ -1,0 +1,718 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="raknet">
+      <UniqueIdentifier>{2610a878-26c8-4acb-b2ea-427d25dfeac5}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\extlibs\raknet\AsynchronousFileIO.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\AutoRPC.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\BigInt.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\BitStream.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\BitStream_NoTemplate.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\CheckSum.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\CommandParserInterface.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\ConnectionGraph.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\ConnectionGraph2.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\ConsoleServer.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\DS_BytePool.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\DS_ByteQueue.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\DS_HuffmanEncodingTree.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\DS_Table.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\DataBlockEncryptor.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\DataCompressor.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\DirectoryDeltaTransfer.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\EmailSender.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\EncodeClassName.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\EpochTimeToString.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\ExtendedOverlappedPool.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\FileList.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\FileListTransfer.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\FileOperations.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\FormatString.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\FullyConnectedMesh.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\FullyConnectedMesh2.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\FunctionThread.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\Gen_RPC8.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\GetTime.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\GridSectorizer.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\HTTPConnection.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\IncrementalReadInterface.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\InlineFunctor.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\Itoa.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\LightweightDatabaseClient.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\LightweightDatabaseCommon.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\LightweightDatabaseServer.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\LinuxStrings.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\LogCommandParser.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\MessageFilter.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\NatPunchthroughClient.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\NatPunchthroughServer.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\NetworkIDManager.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\NetworkIDObject.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\PacketConsoleLogger.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\PacketFileLogger.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\PacketLogger.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\PacketOutputWindowLogger.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\PacketizedTCP.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\PluginInterface.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\PluginInterface2.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\RPCMap.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\RSACrypt.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\RakMemoryOverride.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\RakNetCommandParser.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\RakNetSocket.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\RakNetStatistics.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\RakNetTransport.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\RakNetTransport2.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\RakNetTypes.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\RakNetworkFactory.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\RakPeer.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\RakSleep.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\RakString.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\RakThread.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\Rand.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\ReadyEvent.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\ReliabilityLayer.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\ReplicaManager.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\ReplicaManager2.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\ReplicaManager3.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\Router.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\SHA1.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\SimpleMutex.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\SocketLayer.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\StringCompressor.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\StringTable.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\SuperFastHash.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\SystemAddressList.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\TCPInterface.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\TableSerializer.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\TelnetTransport.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\ThreadsafePacketLogger.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\UDPForwarder.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\UDPProxyClient.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\UDPProxyCoordinator.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\UDPProxyServer.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\WSAStartupSingleton.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\_FindFirst.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\gettimeofday.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\raknet\rijndael.cc">
+      <Filter>raknet</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\extlibs\raknet\AsynchronousFileIO.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\AutoRPC.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\AutopatcherPatchContext.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\AutopatcherRepositoryInterface.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\BigInt.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\BigTypes.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\BitStream.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\BitStream_NoTemplate.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\CheckSum.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\ClientContextStruct.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\CommandParserInterface.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\ConnectionGraph.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\ConnectionGraph2.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\ConsoleServer.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\DS_BPlusTree.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\DS_BinarySearchTree.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\DS_BytePool.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\DS_ByteQueue.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\DS_Heap.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\DS_HuffmanEncodingTree.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\DS_HuffmanEncodingTreeFactory.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\DS_HuffmanEncodingTreeNode.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\DS_LinkedList.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\DS_List.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\DS_Map.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\DS_MemoryPool.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\DS_Multilist.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\DS_OrderedChannelHeap.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\DS_OrderedList.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\DS_Queue.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\DS_QueueLinkedList.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\DS_RangeList.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\DS_Table.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\DS_Tree.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\DS_WeightedGraph.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\DataBlockEncryptor.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\DataCompressor.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\DirectoryDeltaTransfer.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\EmailSender.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\EpochTimeToString.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\Export.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\ExtendedOverlappedPool.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\FileList.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\FileListNodeContext.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\FileListTransfer.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\FileListTransferCBInterface.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\FileOperations.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\FormatString.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\FullyConnectedMesh.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\FullyConnectedMesh2.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\FunctionThread.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\Gen_RPC8.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\GetTime.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\GridSectorizer.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\HTTPConnection.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\IncrementalReadInterface.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\InlineFunctor.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\InternalPacket.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\Itoa.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\Kbhit.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\LightweightDatabaseClient.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\LightweightDatabaseCommon.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\LightweightDatabaseServer.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\LinuxStrings.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\LogCommandParser.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\MTUSize.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\MessageFilter.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\MessageIdentifiers.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\NatPunchthroughClient.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\NatPunchthroughServer.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\NativeTypes.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\NetworkIDManager.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\NetworkIDObject.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\PacketConsoleLogger.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\PacketFileLogger.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\PacketLogger.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\PacketOutputWindowLogger.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\PacketPool.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\PacketPriority.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\PacketizedTCP.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\Platform.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\PluginInterface.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\PluginInterface2.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\RPCMap.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\RPCNode.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\RSACrypt.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\RakAlloca.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\RakAssert.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\RakMemoryOverride.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\RakNetCommandParser.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\RakNetDefines.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\RakNetSmartPtr.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\RakNetSocket.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\RakNetStatistics.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\RakNetTime.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\RakNetTransport.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\RakNetTransport2.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\RakNetTypes.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\RakNetVersion.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\RakNetworkFactory.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\RakPeer.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\RakPeerInterface.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\RakSleep.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\RakString.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\RakThread.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\Rand.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\ReadyEvent.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\RefCountedObj.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\ReliabilityLayer.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\Replica.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\ReplicaEnums.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\ReplicaManager.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\ReplicaManager2.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\ReplicaManager3.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\Rijndael-Boxes.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\Rijndael.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\Router.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\RouterInterface.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\SHA1.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\SimpleMutex.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\SimpleTCPServer.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\SingleProducerConsumer.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\SocketIncludes.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\SocketLayer.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\StringCompressor.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\StringTable.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\SuperFastHash.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\SystemAddressList.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\TCPInterface.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\TableSerializer.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\TelnetTransport.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\ThreadPool.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\ThreadsafePacketLogger.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\TransportInterface.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\Types.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\UDPForwarder.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\UDPProxyClient.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\UDPProxyCommon.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\UDPProxyCoordinator.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\UDPProxyServer.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\WSAStartupSingleton.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\_FindFirst.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\raknet\gettimeofday.h">
+      <Filter>raknet</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

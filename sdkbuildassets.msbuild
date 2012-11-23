@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Export Nebula3 project assets for multiple platforms.
+    
+    (C) 2007 Radon Labs GmbH
+-->
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="All">
+
+    <!-- define properties -->
+    <PropertyGroup>
+        <ProjDir>c:\nebula3</ProjDir>
+        <ToolkitDir>$(PROGRAMFILES)\Nebula2 Toolkit For Maya\bin\win32</ToolkitDir>
+        <MayaDir>$(PROGRAMFILES)\Autodesk\Maya2009\bin</MayaDir>
+        <Platform>win32</Platform>
+        <Rebuild>false</Rebuild>
+        <RebuildShaders>false</RebuildShaders>
+        <Debug>false</Debug>
+        <Scaleform>false</Scaleform>
+        <ExportDir>export_$(Platform)</ExportDir>
+    </PropertyGroup>
+    <Choose>
+        <When Condition="$(Rebuild)=='true'">   <PropertyGroup><ForceArg>-force</ForceArg></PropertyGroup>  </When>
+        <Otherwise>                             <PropertyGroup><ForceArg></ForceArg></PropertyGroup> </Otherwise>
+    </Choose>
+    <Choose>
+        <When Condition="$(Debug)=='true'">     <PropertyGroup><DebugArg>-debug</DebugArg></PropertyGroup> </When>
+        <Otherwise>                             <PropertyGroup><DebugArg></DebugArg></PropertyGroup> </Otherwise>
+    </Choose>
+    <Choose>
+        <When Condition="$(Platform)=='ps3'">   <PropertyGroup><FmodArg>-fmod</FmodArg></PropertyGroup> </When>
+        <Otherwise>                             <PropertyGroup><FmodArg></FmodArg></PropertyGroup> </Otherwise>
+    </Choose>    
+    <Choose>
+        <When Condition="$(Platform)=='xbox360'">
+            <PropertyGroup>
+                <VideoExtension>wmv</VideoExtension>
+            </PropertyGroup>
+        </When>
+        <Otherwise>
+            <PropertyGroup>
+                <VideoExtension>bik</VideoExtension>
+            </PropertyGroup>
+        </Otherwise>
+    </Choose>
+
+    <!-- define items -->
+    <ItemGroup>
+        <DataFiles Include="$(ProjDir)\data\**\*.xml"/>
+        <VideoFiles Include="$(ProjDir)\work\video\*.$(VideoExtension)"/>
+        <Textures Include="$(ProjDir)\work\textures\**\*.*"/>
+        <ExtraData Include="$(ProjDir)\work\$(Platform)data\*.*"/>
+        <UIFiles Include="$(ProjDir)\work\ui\*.*"/>
+    </ItemGroup>
+    
+    <!-- preparation -->
+    <Target Name="Prepare">
+        <Exec Command="nsetpath -projdir $(ProjDir)" WorkingDirectory="$(ToolkitDir)"/>
+        <RemoveDir Condition="$(Rebuild)=='true'" Directories="$(ExportDir)" ContinueOnError="true"/>
+        <RemoveDir Condition="$(RebuildShaders)=='true'" Directories="$(ExportDir)_$(Platform)\shaders" ContinueOnError="true"/>
+    </Target>
+    
+    <!-- export graphics objects -->
+    <Target Name="ExportAssets" DependsOnTargets="Prepare">
+        <Copy SourceFiles="@(DataFiles)" DestinationFiles="@(DataFiles->'$(ExportDir)\data\%(RecursiveDir)%(Filename)%(Extension)')" ContinueOnError="true"/>
+        <Copy SourceFiles="@(VideoFiles)" DestinationFiles="@(VideoFiles->'$(ExportDir)\video\%(RecursiveDir)%(Filename)%(Extension)')" ContinueOnError="true"/>
+        <Exec Command="nmayabatcher2009 $(ForceArg) -platform $(Platform) -exportdir $(ExportDir) -jobs 2" WorkingDirectory="$(MayaDir)"/>
+        <Exec Command="texturebatcher3 $(ForceArg) -platform $(Platform)" WorkingDirectory="$(ToolkitDir)"/>
+        <Exec Command="animconverter3 $(ForceArg) -platform $(Platform)" WorkingDirectory="$(ToolkitDir)"/>
+        <Exec Command="shaderbatcher3 $(ForceArg) -platform $(Platform) $(DebugArg)" WorkingDirectory="$(ToolkitDir)"/>
+        <Exec Command="audiobatcher3 $(ForceArg) -platform $(Platform)" WorkingDirectory="$(ToolkitDir)"/>
+        <Exec Command="buildresdict3 -platform $(Platform)" WorkingDirectory="$(ToolkitDir)"/>        
+        <Exec Command="n2converter3 -platform $(Platform)" WorkingDirectory="$(ToolkitDir)"/>
+        <!--<Exec Command="suiconverter3 -platform $(Platform)" WorkingDirectory="$(ToolkitDir)" ContinueOnError="true"/>-->
+        <Copy SourceFiles="@(ExtraData)" DestinationFolder="$(ProjDir)\$(ExportDir)\$(Platform)data"/>        
+        <Copy SourceFiles="@(UIFiles)" DestinationFiles="@(UIFiles->'$(ExportDir)\ui\%(Filename)%(Extension)')" ContinueOnError="true"/>
+        <!-- finally put everything into archives -->
+        <Exec Command="archiver3 -platform $(Platform)" WorkingDirectory="$(ToolkitDir)"/>
+    </Target>
+    
+    <!-- export scaleform objects -->
+    <Target Name="ScaleformExportAssets" DependsOnTargets="Prepare" Condition="$(Scaleform)=='true'">
+        <Exec Command="scaleformbatcher3 -platform $(Platform)" WorkingDirectory="$(ToolkitDir)"/>
+    </Target>
+
+    <!-- final target -->
+    <Target Name="All" DependsOnTargets="ExportAssets;ScaleformExportAssets" />
+
+</Project>
+

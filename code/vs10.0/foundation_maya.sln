@@ -1,0 +1,42 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libs", "Libs", "{832A854F-2030-4EA4-86FE-EDEEC017E78E}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "foundation_maya", "foundation_maya.foundation_maya.vcproj", "{C33C71FB-A27F-4056-8682-7D61B26BE39A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{ED4CF36F-E823-47DF-884F-D57E47E7E9FD} = {ED4CF36F-E823-47DF-884F-D57E47E7E9FD}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+		Programming|Win32 = Programming|Win32
+		Public_Build|Win32 = Public_Build|Win32
+		Securom|Win32 = Securom|Win32
+		Maya_Debug|Win32 = Maya_Debug|Win32
+		Maya_Release|Win32 = Maya_Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C33C71FB-A27F-4056-8682-7D61B26BE39A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C33C71FB-A27F-4056-8682-7D61B26BE39A}.Debug|Win32.Build.0 = Debug|Win32
+		{C33C71FB-A27F-4056-8682-7D61B26BE39A}.Release|Win32.ActiveCfg = Release|Win32
+		{C33C71FB-A27F-4056-8682-7D61B26BE39A}.Release|Win32.Build.0 = Release|Win32
+		{C33C71FB-A27F-4056-8682-7D61B26BE39A}.Programming|Win32.ActiveCfg = Programming|Win32
+		{C33C71FB-A27F-4056-8682-7D61B26BE39A}.Programming|Win32.Build.0 = Programming|Win32
+		{C33C71FB-A27F-4056-8682-7D61B26BE39A}.Public_Build|Win32.ActiveCfg = Public_Build|Win32
+		{C33C71FB-A27F-4056-8682-7D61B26BE39A}.Public_Build|Win32.Build.0 = Public_Build|Win32
+		{C33C71FB-A27F-4056-8682-7D61B26BE39A}.Securom|Win32.ActiveCfg = Securom|Win32
+		{C33C71FB-A27F-4056-8682-7D61B26BE39A}.Securom|Win32.Build.0 = Securom|Win32
+		{C33C71FB-A27F-4056-8682-7D61B26BE39A}.Maya_Debug|Win32.ActiveCfg = Maya_Debug|Win32
+		{C33C71FB-A27F-4056-8682-7D61B26BE39A}.Maya_Debug|Win32.Build.0 = Maya_Debug|Win32
+		{C33C71FB-A27F-4056-8682-7D61B26BE39A}.Maya_Release|Win32.ActiveCfg = Maya_Release|Win32
+		{C33C71FB-A27F-4056-8682-7D61B26BE39A}.Maya_Release|Win32.Build.0 = Maya_Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C33C71FB-A27F-4056-8682-7D61B26BE39A} = {832A854F-2030-4EA4-86FE-EDEEC017E78E}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="tinyxml">
+      <UniqueIdentifier>{e965b568-3428-4980-8b54-b82bfb397f70}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\extlibs\stdneb.cc">
+      <Filter>tinyxml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\tinyxml\tinystr.cc">
+      <Filter>tinyxml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\tinyxml\tinyxml.cc">
+      <Filter>tinyxml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\tinyxml\tinyxmlerror.cc">
+      <Filter>tinyxml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\extlibs\tinyxml\tinyxmlparser.cc">
+      <Filter>tinyxml</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\extlibs\tinyxml\tinystr.h">
+      <Filter>tinyxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\extlibs\tinyxml\tinyxml.h">
+      <Filter>tinyxml</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

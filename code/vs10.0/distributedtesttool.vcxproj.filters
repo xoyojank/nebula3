@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="distributedtesttool">
+      <UniqueIdentifier>{5631ba6c-edfd-4527-9679-32d94b3f215f}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\toolkit\stdneb.cc">
+      <Filter>distributedtesttool</Filter>
+    </ClCompile>
+    <ClCompile Include="..\toolkit\distributedtesttool\distributedtesttool.cc">
+      <Filter>distributedtesttool</Filter>
+    </ClCompile>
+    <ClCompile Include="..\toolkit\distributedtesttool\distributedtesttoolapp.cc">
+      <Filter>distributedtesttool</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\toolkit\distributedtesttool\distributedtesttoolapp.h">
+      <Filter>distributedtesttool</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

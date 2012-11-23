@@ -1,0 +1,46 @@
+#-------------------------------------------------------------------------------
+#   foundation_win32.epk
+#   (C) 2006 Radon Labs GmbH
+#-------------------------------------------------------------------------------
+begintarget foundation_nidls_win32
+    settype nidl
+    setbasedir foundation
+    setnidlclusters {
+        http io
+    }
+endtarget
+
+begintarget foundation_win32
+    settype lib
+    setbasedir foundation
+    setprecompiledheader stdneb
+    setincpath_win32 "../foundation;../extlibs"
+    setdepends {
+        foundation_nidls_win32
+    }
+    setclusters {
+        core core/win32 core/debug
+        memory memory/win32 memory/win360 memory/debug
+        debug debug/win32
+        util util/win32
+        interface
+        io io/base io/win32 io/win360 io/zipfs io/debug io/archfs io/util
+        math math/xnamath
+        messaging
+        threading threading/debug threading/win360 
+        timing timing/base timing/win360
+        net net/socket net/tcp net/win360
+        system system/base system/win32
+        app
+        http http/debug http/html http/svg
+        jobs jobs/base jobs/tp
+        framesync
+    }
+endtarget            
+
+beginsolution foundation_win32 win32
+    settargets {
+        foundation_nidls_win32
+        foundation_win32
+    }
+endsolution

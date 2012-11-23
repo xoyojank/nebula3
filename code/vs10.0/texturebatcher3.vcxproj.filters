@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="texturebatcher3">
+      <UniqueIdentifier>{44403699-e9e3-467e-bc34-12d813b09b81}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\toolkit\stdneb.cc">
+      <Filter>texturebatcher3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\toolkit\texturebatcher3\texturebatcher3.cc">
+      <Filter>texturebatcher3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\toolkit\texturebatcher3\texturebatcherapp.cc">
+      <Filter>texturebatcher3</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\toolkit\texturebatcher3\texturebatcherapp.h">
+      <Filter>texturebatcher3</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

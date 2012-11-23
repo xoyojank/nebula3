@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <PropertyPageSchema
+      Include="$(MSBuildThisFileDirectory)$(MSBuildThisFileName).xml" />
+    <AvailableItemName
+      Include="Nebula3_Interface_Definition">
+      <Targets>_Nebula3_Interface_Definition</Targets>
+    </AvailableItemName>
+  </ItemGroup>
+  <UsingTask
+    TaskName="Nebula3_Interface_Definition"
+    TaskFactory="XamlTaskFactory"
+    AssemblyName="Microsoft.Build.Tasks.v4.0">
+    <Task>$(MSBuildThisFileDirectory)$(MSBuildThisFileName).xml</Task>
+  </UsingTask>
+  <Target
+    Name="_Nebula3_Interface_Definition"
+    BeforeTargets="$(Nebula3_Interface_DefinitionBeforeTargets)"
+    AfterTargets="$(Nebula3_Interface_DefinitionAfterTargets)"
+    Condition="'@(Nebula3_Interface_Definition)' != ''"
+    DependsOnTargets="$(Nebula3_Interface_DefinitionDependsOn);ComputeNebula3_Interface_DefinitionOutput"
+    Outputs="@(Nebula3_Interface_Definition-&gt;Metadata('Outputs')-&gt;Distinct())"
+    Inputs="@(Nebula3_Interface_Definition);%(Nebula3_Interface_Definition.AdditionalDependencies);$(MSBuildProjectFile)">
+    <ItemGroup
+      Condition="'@(SelectedFiles)' != ''">
+      <Nebula3_Interface_Definition
+        Remove="@(Nebula3_Interface_Definition)"
+        Condition="'%(Identity)' != '@(SelectedFiles)'" />
+    </ItemGroup>
+    <ItemGroup>
+      <Nebula3_Interface_Definition_tlog
+        Include="%(Nebula3_Interface_Definition.Outputs)"
+        Condition="'%(Nebula3_Interface_Definition.Outputs)' != '' and '%(Nebula3_Interface_Definition.ExcludedFromBuild)' != 'true'">
+        <Source>@(Nebula3_Interface_Definition, '|')</Source>
+      </Nebula3_Interface_Definition_tlog>
+    </ItemGroup>
+    <Message
+      Importance="High"
+      Text="%(Nebula3_Interface_Definition.ExecutionDescription)" />
+    <WriteLinesToFile
+      Condition="'@(Nebula3_Interface_Definition_tlog)' != '' and '%(Nebula3_Interface_Definition_tlog.ExcludedFromBuild)' != 'true'"
+      File="$(IntDir)$(ProjectName).write.1.tlog"
+      Lines="^%(Nebula3_Interface_Definition_tlog.Source);@(Nebula3_Interface_Definition_tlog-&gt;'%(Fullpath)')" />
+    <Nebula3_Interface_Definition
+      Condition="'@(Nebula3_Interface_Definition)' != '' and '%(Nebula3_Interface_Definition.ExcludedFromBuild)' != 'true'"
+      CommandLineTemplate="%(Nebula3_Interface_Definition.CommandLineTemplate)"
+      AdditionalOptions="%(Nebula3_Interface_Definition.AdditionalOptions)"
+      Inputs="@(Nebula3_Interface_Definition)" />
+  </Target>
+  <PropertyGroup>
+    <ComputeLinkInputsTargets>
+            $(ComputeLinkInputsTargets);
+            ComputeNebula3_Interface_DefinitionOutput;
+          </ComputeLinkInputsTargets>
+    <ComputeLibInputsTargets>
+            $(ComputeLibInputsTargets);
+            ComputeNebula3_Interface_DefinitionOutput;
+          </ComputeLibInputsTargets>
+  </PropertyGroup>
+  <Target
+    Name="ComputeNebula3_Interface_DefinitionOutput"
+    Condition="'@(Nebula3_Interface_Definition)' != ''">
+    <ItemGroup>
+      <Nebula3_Interface_DefinitionDirsToMake
+        Condition="'@(Nebula3_Interface_Definition)' != '' and '%(Nebula3_Interface_Definition.ExcludedFromBuild)' != 'true'"
+        Include="%(Nebula3_Interface_Definition.Outputs)" />
+      <Link
+        Include="%(Nebula3_Interface_DefinitionDirsToMake.Identity)"
+        Condition="'%(Extension)'=='.obj' or '%(Extension)'=='.res' or '%(Extension)'=='.rsc' or '%(Extension)'=='.lib'" />
+      <Lib
+        Include="%(Nebula3_Interface_DefinitionDirsToMake.Identity)"
+        Condition="'%(Extension)'=='.obj' or '%(Extension)'=='.res' or '%(Extension)'=='.rsc' or '%(Extension)'=='.lib'" />
+      <ImpLib
+        Include="%(Nebula3_Interface_DefinitionDirsToMake.Identity)"
+        Condition="'%(Extension)'=='.obj' or '%(Extension)'=='.res' or '%(Extension)'=='.rsc' or '%(Extension)'=='.lib'" />
+    </ItemGroup>
+    <MakeDir
+      Directories="@(Nebula3_Interface_DefinitionDirsToMake-&gt;'%(RootDir)%(Directory)')" />
+  </Target>
+</Project>

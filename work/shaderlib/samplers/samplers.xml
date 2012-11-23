@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Nebula3MaterialSystem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="D:\nebula3\work\shaderlib\materialsystem.xsd">
+
+	<Sampler name="DiffuseMap0Sampler" texture="DiffuseMap0" addrU="Wrap" addrV="Wrap" minifyFilter="Linear" magnifyFilter="Linear" mipMapFilter="Point" />
+	<Sampler name="DiffuseMap1Sampler" texture="DiffuseMap1" addrU="Wrap" addrV="Wrap" minifyFilter="Linear" magnifyFilter="Linear" mipMapFilter="Point" />
+	<Sampler name="DiffuseMap2Sampler" texture="DiffuseMap2" addrU="Wrap" addrV="Wrap" minifyFilter="Linear" magnifyFilter="Linear" mipMapFilter="Point" />
+	<Sampler name="DiffuseMap3Sampler" texture="DiffuseMap3" addrU="Wrap" addrV="Wrap" minifyFilter="Linear" magnifyFilter="Linear" mipMapFilter="Point" />
+	<Sampler name="DiffuseMap4Sampler" texture="DiffuseMap4" addrU="Wrap" addrV="Wrap" minifyFilter="Linear" magnifyFilter="Linear" mipMapFilter="Point" />
+	<Sampler name="DiffuseMap5Sampler" texture="DiffuseMap5" addrU="Wrap" addrV="Wrap" minifyFilter="Linear" magnifyFilter="Linear" mipMapFilter="Point" />
+	<Sampler name="DiffuseMap6Sampler" texture="DiffuseMap6" addrU="Wrap" addrV="Wrap" minifyFilter="Linear" magnifyFilter="Linear" mipMapFilter="Point" />
+	<Sampler name="DiffuseMap7Sampler" texture="DiffuseMap7" addrU="Wrap" addrV="Wrap" minifyFilter="Linear" magnifyFilter="Linear" mipMapFilter="Point" />
+
+	<Sampler name="SpecularMap0Sampler" texture="SpecularMap0" addrU="Wrap" addrV="Wrap" minifyFilter="Linear" magnifyFilter="Linear" mipMapFilter="Point" />
+	<Sampler name="SpecularMap1Sampler" texture="SpecularMap1" addrU="Wrap" addrV="Wrap" minifyFilter="Linear" magnifyFilter="Linear" mipMapFilter="Point" />
+	<Sampler name="SpecularMap2Sampler" texture="SpecularMap2" addrU="Wrap" addrV="Wrap" minifyFilter="Linear" magnifyFilter="Linear" mipMapFilter="Point" />
+	<Sampler name="SpecularMap3Sampler" texture="SpecularMap3" addrU="Wrap" addrV="Wrap" minifyFilter="Linear" magnifyFilter="Linear" mipMapFilter="Point" />
+	<Sampler name="SpecularMap4Sampler" texture="SpecularMap4" addrU="Wrap" addrV="Wrap" minifyFilter="Linear" magnifyFilter="Linear" mipMapFilter="Point" />
+	<Sampler name="SpecularMap5Sampler" texture="SpecularMap5" addrU="Wrap" addrV="Wrap" minifyFilter="Linear" magnifyFilter="Linear" mipMapFilter="Point" />
+	<Sampler name="SpecularMap6Sampler" texture="SpecularMap6" addrU="Wrap" addrV="Wrap" minifyFilter="Linear" magnifyFilter="Linear" mipMapFilter="Point" />
+	<Sampler name="SpecularMap7Sampler" texture="SpecularMap7" addrU="Wrap" addrV="Wrap" minifyFilter="Linear" magnifyFilter="Linear" mipMapFilter="Point" />
+
+	<Sampler name="EmissiveMap0Sampler" texture="EmissiveMap0" addrU="Wrap" addrV="Wrap" minifyFilter="Linear" magnifyFilter="Linear" mipMapFilter="Point" />
+	<Sampler name="EmissiveMap1Sampler" texture="EmissiveMap1" addrU="Wrap" addrV="Wrap" minifyFilter="Linear" magnifyFilter="Linear" mipMapFilter="Point" />
+	<Sampler name="EmissiveMap2Sampler" texture="EmissiveMap2" addrU="Wrap" addrV="Wrap" minifyFilter="Linear" magnifyFilter="Linear" mipMapFilter="Point" />
+	<Sampler name="EmissiveMap3Sampler" texture="EmissiveMap3" addrU="Wrap" addrV="Wrap" minifyFilter="Linear" magnifyFilter="Linear" mipMapFilter="Point" />
+	<Sampler name="EmissiveMap4Sampler" texture="EmissiveMap4" addrU="Wrap" addrV="Wrap" minifyFilter="Linear" magnifyFilter="Linear" mipMapFilter="Point" />
+	<Sampler name="EmissiveMap5Sampler" texture="EmissiveMap5" addrU="Wrap" addrV="Wrap" minifyFilter="Linear" magnifyFilter="Linear" mipMapFilter="Point" />
+	<Sampler name="EmissiveMap6Sampler" texture="EmissiveMap6" addrU="Wrap" addrV="Wrap" minifyFilter="Linear" magnifyFilter="Linear" mipMapFilter="Point" />
+	<Sampler name="EmissiveMap7Sampler" texture="EmissiveMap7" addrU="Wrap" addrV="Wrap" minifyFilter="Linear" magnifyFilter="Linear" mipMapFilter="Point" />
+
+	<Sampler name="BumpMap0Sampler" texture="BumpMap0" addrU="Wrap" addrV="Wrap" minifyFilter="Linear" magnifyFilter="Linear" mipMapFilter="Point" />
+	<Sampler name="BumpMap1Sampler" texture="BumpMap1" addrU="Wrap" addrV="Wrap" minifyFilter="Linear" magnifyFilter="Linear" mipMapFilter="Point" />
+	<Sampler name="BumpMap2Sampler" texture="BumpMap2" addrU="Wrap" addrV="Wrap" minifyFilter="Linear" magnifyFilter="Linear" mipMapFilter="Point" />
+	<Sampler name="BumpMap3Sampler" texture="BumpMap3" addrU="Wrap" addrV="Wrap" minifyFilter="Linear" magnifyFilter="Linear" mipMapFilter="Point" />
+	<Sampler name="BumpMap4Sampler" texture="BumpMap4" addrU="Wrap" addrV="Wrap" minifyFilter="Linear" magnifyFilter="Linear" mipMapFilter="Point" />
+	<Sampler name="BumpMap5Sampler" texture="BumpMap5" addrU="Wrap" addrV="Wrap" minifyFilter="Linear" magnifyFilter="Linear" mipMapFilter="Point" />
+	<Sampler name="BumpMap6Sampler" texture="BumpMap6" addrU="Wrap" addrV="Wrap" minifyFilter="Linear" magnifyFilter="Linear" mipMapFilter="Point" />
+	<Sampler name="BumpMap7Sampler" texture="BumpMap7" addrU="Wrap" addrV="Wrap" minifyFilter="Linear" magnifyFilter="Linear" mipMapFilter="Point" />
+
+</Nebula3MaterialSystem>

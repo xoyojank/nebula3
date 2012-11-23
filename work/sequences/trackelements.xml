@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TrackElementSet xmlns="http://www.radonlabs.de/xmlschema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.radonlabs.de/xmlschema
+C:\src\nebula3_tools\code\Nebula3Tools\io\attributeschema.xsd">
+<Config viewerFile="c:\programme\nebula2 Toolkit For Maya\bin\win32\mviewer.exe" viewerProcessNames = "mviewer/drakensang" />
+
+  <TrackElement name="Show Graphics" type="GraphicsObjectTrackBar" startFrame="0" endFrame="30">
+    <Attribute name="graphicsname" label="Graphics Name" smartControl="GraphicsObject" type="string" value="empty/empty" min="" max="" default="empty" />
+    <Attribute name="graphicstrans" label="Graphics Transform" smartControl="none" type="transform">
+      <Attribute name="tx" label="Translation X" smartControl="none" type="float" value="0"  default="0" />
+      <Attribute name="ty" label="Translation Y" smartControl="none" type="float" value="0" default="0" />
+      <Attribute name="tz" label="Translation Z" smartControl="none" type="float" value="0"  default="0" />
+      <Attribute name="sx" label="Scale X" smartControl="none" type="float" value="1" default="0" />
+      <Attribute name="sy" label="Scale Y" smartControl="none" type="float" value="1" default="0" />
+      <Attribute name="sz" label="Scale Z" smartControl="none" type="float" value="1"  default="0" />
+      <Attribute name="rx" label="Rotation X" smartControl="none" type="float" value="0" min="0" max="6.2831853071795865" default="0" />
+      <Attribute name="ry" label="Rotation Y" smartControl="none" type="float" value="0" min="0" max="6.2831853071795865" default="0" />
+      <Attribute name="rz" label="Rotation Z" smartControl="none" type="float" value="0" min="0" max="6.2831853071795865" default="0" />
+    </Attribute>
+  </TrackElement>
+  <TrackElement name="Character" type="CharacterTrackBar" startFrame="0" endFrame="30">
+    <Attribute name="characterobject" label="Character" smartControl="CharacterObject" type="string" value="empty/empty/empty" min="" max="" default="empty" />
+    <Attribute name="fadein" label="Fade In (Frames)" smartControl="none" type="int" value="0" min="0" max="100" default="0" />
+	<Attribute name="animOffset" label="Animation Offset (Frames)" smartControl="none" type="int" value="0" min="0" max="1000" default="0" />
+    <Attribute name="graphicstrans" label="Graphics Transform" smartControl="none" type="transform">
+      <Attribute name="tx" label="Translation X" smartControl="none" type="float" value="0"  default="0" />
+      <Attribute name="ty" label="Translation Y" smartControl="none" type="float" value="0" default="0" />
+      <Attribute name="tz" label="Translation Z" smartControl="none" type="float" value="0"  default="0" />
+      <Attribute name="sx" label="Scale X" smartControl="none" type="float" value="1" default="0" />
+      <Attribute name="sy" label="Scale Y" smartControl="none" type="float" value="1" default="0" />
+      <Attribute name="sz" label="Scale Z" smartControl="none" type="float" value="1"  default="0" />
+      <Attribute name="rx" label="Rotation X" smartControl="none" type="float" value="0" min="0" max="6.2831853071795865" default="0" />
+      <Attribute name="ry" label="Rotation Y" smartControl="none" type="float" value="0" min="0" max="6.2831853071795865" default="0" />
+      <Attribute name="rz" label="Rotation Z" smartControl="none" type="float" value="0" min="0" max="6.2831853071795865" default="0" />
+    </Attribute>
+  </TrackElement>
+  <TrackElement name="Camera Animation" type="CameraTrackBar" startFrame="0" endFrame="30">
+    <Attribute name="cameratransl" label="Translation" smartControl="none" type="vector3">
+      <Attribute name="x" label="Translation X" smartControl="none" type="float" value="0"  default="0" />
+      <Attribute name="y" label="Translation Y" smartControl="none" type="float" value="0" default="0" />
+      <Attribute name="z" label="Translation Z" smartControl="none" type="float" value="0"  default="0" />
+    </Attribute>
+    <Attribute name="camerarot" label="Rotation" smartControl="none" type="vector3">
+      <Attribute name="x" label="Rotation X" smartControl="none" type="float" value="0" min="0" max="6.2831853071795865" default="0" />
+      <Attribute name="y" label="Rotation Y" smartControl="none" type="float" value="0" min="0" max="6.2831853071795865" default="0" />
+      <Attribute name="z" label="Rotation Z" smartControl="none" type="float" value="0" min="0" max="6.2831853071795865" default="0" />
+    </Attribute>
+	<Attribute name="angleofview" label="Angle of view" smartControl="none" type="float" value = "45" min="0" max="180" default = "45" />
+  </TrackElement>
+  <TrackElement name="Point Light" type="PointLightTrackBar" startFrame="0" endFrame="30">
+    <Attribute name="lighttrans" label="Graphics Transform" smartControl="none" type="transform">
+      <Attribute name="tx" label="Translation X" smartControl="none" type="float" value="0"  default="0" />
+      <Attribute name="ty" label="Translation Y" smartControl="none" type="float" value="0" default="0" />
+      <Attribute name="tz" label="Translation Z" smartControl="none" type="float" value="0"  default="0" />
+      <Attribute name="sx" label="Scale X" smartControl="none" type="float" value="1" default="0" />
+      <Attribute name="sy" label="Scale Y" smartControl="none" type="float" value="1" default="0" />
+      <Attribute name="sz" label="Scale Z" smartControl="none" type="float" value="1"  default="0" />
+      <Attribute name="rx" label="Rotation X" smartControl="none" type="float" value="0" min="0" max="6.2831853071795865" default="0" />
+      <Attribute name="ry" label="Rotation Y" smartControl="none" type="float" value="0" min="0" max="6.2831853071795865" default="0" />
+      <Attribute name="rz" label="Rotation Z" smartControl="none" type="float" value="0" min="0" max="6.2831853071795865" default="0" />
+    </Attribute>
+    <Attribute name="color" label="Color" smartControl="ColorObject" type="vector4">
+      <Attribute name="x" label="Red" smartControl="none" type="float" value="0"  default="0" />
+      <Attribute name="y" label="Green" smartControl="none" type="float" value="0" default="0" />
+      <Attribute name="z" label="Blue" smartControl="none" type="float" value="0"  default="0" />
+	  <Attribute name="w" label="Alpha" smartControl="none" type="float" value="255"  default="255" />
+    </Attribute>
+    <Attribute name="oppositecolor" label="Opposite Color" smartControl="ColorObject" type="vector4">
+      <Attribute name="x" label="Red" smartControl="none" type="float" value="0"  default="0" />
+      <Attribute name="y" label="Green" smartControl="none" type="float" value="0" default="0" />
+      <Attribute name="z" label="Blue" smartControl="none" type="float" value="0"  default="0" />
+	  <Attribute name="w" label="Alpha" smartControl="none" type="float" value="255"  default="255" />
+    </Attribute>
+    <Attribute name="intensity" label="Intensity" smartControl="none" type="float" value="1" min="0" max="10" default="1" />
+    <Attribute name="range" label="Range" smartControl="none" type="float" value="1" min="0" max="100" default="10" />
+    <Attribute name="backlight" label="Back Light" smartControl="none" type="float" value="0" min="0" max="10" default="0" />
+    <Attribute name="shadow" label="Enable Shadow" smartControl="none" type="bool" value="True" min="False" max="True" default="True" />
+    <Attribute name="shadowintensity" label="Shadow Intensity" smartControl="none" type="float" value="0.5" min="0" max="1" default="0.5" />
+    <Attribute name="flicker" label="Enable Flicker" smartControl="none" type="bool" value="False" min="False" max="True" default="True" />
+    <Attribute name="flickerfrequency" label="Flicker Frequency" smartControl="none" type="float" value="5" min="0" max="100" default="5" />
+    <Attribute name="flickerintensity" label="Flicker Intensity" smartControl="none" type="float" value="0.5" min="0" max="1" default="0.5" />
+    <Attribute name="flickerposition" label="Flicker Position" smartControl="none" type="float" value="0.25" min="0" max="1" default="0.25" />
+  </TrackElement>
+  <TrackElement name="Play Sound" type="PlaySoundTrackBar" startFrame="0" endFrame="30">
+    <Attribute name="volume" label="Volume" smartControl="none" type="float" value="50" min="0" max="100" default="50" />
+    <Attribute name="soundname" label="Sound Name" smartControl="SoundObject" type="string" value="empty/empty" min="" max="" default="empty/empty" />
+    <Attribute name="ambientsound" label="Ambient Sound" smartControl="none" type="bool" value="True" min="False" max="True" default="True" />
+    <Attribute name="soundpos" label="Sound Position" smartControl="none" type="transform">
+      <Attribute name="tx" label="Translation X" smartControl="none" type="float" value="0"  default="0" />
+      <Attribute name="ty" label="Translation Y" smartControl="none" type="float" value="0" default="0" />
+      <Attribute name="tz" label="Translation Z" smartControl="none" type="float" value="0"  default="0" />
+      <Attribute name="sx" label="Scale X" smartControl="none" type="float" value="1" default="0" enabled="false" />
+      <Attribute name="sy" label="Scale Y" smartControl="none" type="float" value="1" default="0" enabled="false" />
+      <Attribute name="sz" label="Scale Z" smartControl="none" type="float" value="1"  default="0" enabled="false" />
+      <Attribute name="rx" label="Rotation X" smartControl="none" type="float" value="0" min="0" max="6.2831853071795865" default="0" enabled="false" />
+      <Attribute name="ry" label="Rotation Y" smartControl="none" type="float" value="0" min="0" max="6.2831853071795865" default="0" enabled="false" />
+      <Attribute name="rz" label="Rotation Z" smartControl="none" type="float" value="0" min="0" max="6.2831853071795865" default="0" enabled="false" />
+    </Attribute>
+  </TrackElement>
+  <TrackElement name="Camera Shake" type="CameraShakeTrackBar" startFrame="0" endFrame="30">
+    <Attribute name="startdelay" label="Start Delay" smartControl="none" type="float" value="0" min="0" max="10" default="1" />
+    <Attribute name="range" label="Range" smartControl="none" type="float" value="1" min="0" max="50" default="1" />
+    <Attribute name="intensity" label="Intensity" smartControl="none" type="float" value="1" min="0" max="50" default="1" />
+    <Attribute name="shaketrans" label="Shake Transform" smartControl="none" type="transform">
+      <Attribute name="tx" label="Translation X" smartControl="none" type="float" value="0"  default="0" />
+      <Attribute name="ty" label="Translation Y" smartControl="none" type="float" value="0" default="0" />
+      <Attribute name="tz" label="Translation Z" smartControl="none" type="float" value="0"  default="0" />
+      <Attribute name="sx" label="Scale X" smartControl="none" type="float" value="1" default="0" />
+      <Attribute name="sy" label="Scale Y" smartControl="none" type="float" value="1" default="0" />
+      <Attribute name="sz" label="Scale Z" smartControl="none" type="float" value="1"  default="0" />
+      <Attribute name="rx" label="Rotation X" smartControl="none" type="float" value="0" min="0" max="6.2831853071795865" default="0" />
+      <Attribute name="ry" label="Rotation Y" smartControl="none" type="float" value="0" min="0" max="6.2831853071795865" default="0" />
+      <Attribute name="rz" label="Rotation Z" smartControl="none" type="float" value="0" min="0" max="6.2831853071795865" default="0" />
+    </Attribute>
+  </TrackElement>
+  <TrackElement name="Depth Of Field" type="DepthOfFieldTrackBar" startFrame="0" endFrame="30">
+      <Attribute name="focusdistance" label="Focus Distance" smartControl="none" type="float" value="0" min="0" max="1000" default="0"/>
+      <Attribute name="focuslength" label="Focus Length" smartControl="none" type="float" value="100" min="0.01" max="1000" default="100" />
+      <Attribute name="filtersize" label="Filter Size" smartControl="none" type="float" value="0" min="0" max="10" default="0" />        
+  </TrackElement>
+  <TrackElement name="Script" type="ScriptTrackBar" startFrame="0" endFrame="30">
+      <Attribute name="scriptfile" label="Script File" smartControl="ScriptObject" type="string" value="empty/empty" min="" max="" default="empty"/>
+  </TrackElement>
+  <TrackElement name="Hijack Object" type="HijackingTrackBar" startFrame="0" endFrame="30">
+    <Attribute name="hijackedobject" label="Hijack Object" smartControl="HijackObject" type="string" value="empty/empty/empty" min="" max="" default="empty"/>
+	<Attribute name="fadein" label="Fade In (Frames)" smartControl="none" type="int" value="0" min="0" max="100" default="0" />
+	<Attribute name="animOffset" label="Animation Offset (Frames)" smartControl="none" type="int" value="0" min="0" max="1000" default="0" />
+    <Attribute name="graphicstrans" label="Graphics Transform" smartControl="none" type="transform">
+      <Attribute name="tx" label="Translation X" smartControl="none" type="float" value="0"  default="0" />
+      <Attribute name="ty" label="Translation Y" smartControl="none" type="float" value="0" default="0" />
+      <Attribute name="tz" label="Translation Z" smartControl="none" type="float" value="0"  default="0" />
+      <Attribute name="sx" label="Scale X" smartControl="none" type="float" value="1" default="0" />
+      <Attribute name="sy" label="Scale Y" smartControl="none" type="float" value="1" default="0" />
+      <Attribute name="sz" label="Scale Z" smartControl="none" type="float" value="1"  default="0" />
+      <Attribute name="rx" label="Rotation X" smartControl="none" type="float" value="0" min="0" max="6.2831853071795865" default="0" />
+      <Attribute name="ry" label="Rotation Y" smartControl="none" type="float" value="0" min="0" max="6.2831853071795865" default="0" />
+      <Attribute name="rz" label="Rotation Z" smartControl="none" type="float" value="0" min="0" max="6.2831853071795865" default="0" />
+    </Attribute>
+  </TrackElement>
+  <TrackElement name="Debug Text" type="DebugTextTrackBar" startFrame="0" endFrame="30">
+    <Attribute name="debugtext" label="Text" smartControl="ExpandedStringObject" type="string" value="" min="" max="" default=""/>
+  </TrackElement>
+  
+<TrackElement name="Transformation" type="TransformTrackBar" startFrame="0" endFrame="30">
+    <Attribute name="children" label="Text" smartControl="none" type="string" value="" min="" max="" default=""/>
+	<Attribute name="transform" label="Transform" smartControl="none" type="transform">
+		  <Attribute name="tx" label="Translation X" smartControl="none" type="float" value="0"  default="0" />
+		  <Attribute name="ty" label="Translation Y" smartControl="none" type="float" value="0" default="0" />
+		  <Attribute name="tz" label="Translation Z" smartControl="none" type="float" value="0"  default="0" />
+		  <Attribute name="sx" label="Scale X" smartControl="none" type="float" value="1" default="0" />
+		  <Attribute name="sy" label="Scale Y" smartControl="none" type="float" value="1" default="0" />
+		  <Attribute name="sz" label="Scale Z" smartControl="none" type="float" value="1"  default="0" />
+		  <Attribute name="rx" label="Rotation X" smartControl="none" type="float" value="0" min="0" max="6.2831853071795865" default="0" />
+		  <Attribute name="ry" label="Rotation Y" smartControl="none" type="float" value="0" min="0" max="6.2831853071795865" default="0" />
+		  <Attribute name="rz" label="Rotation Z" smartControl="none" type="float" value="0" min="0" max="6.2831853071795865" default="0" />
+	</Attribute>
+  </TrackElement>
+    <TrackElement name="Dialog Take" type="DialogTrackBar" startFrame="0" endFrame="30">
+    <Attribute name="dialogobject" label="Dialog Take" smartControl="DialogObject" type="string" value="empty/empty/empty/empty/empty" min="" max="" default=""/>
+  </TrackElement>
+  <TrackElement name="Attachment" type="AttachmentTrackBar" startFrame="0" endFrame="30">
+      <Attribute name="attachmentobject" label="Attachment" smartControl="AttachmentObject" type="string" value="empty/empty/empty/empty/empty/empty/false" min="" max="" default=""/>
+  </TrackElement>
+  <TrackElement name="StateObject" type="StateObjectTrackBar" startFrame="0" endFrame="30">
+      <Attribute name="stateobject" label="State Object" smartControl="StateObject" type="string" value="empty/empty" min="" max="" default=""/>
+      <Attribute name="state" label="State" smartControl="none" type="string" value="empty" min="" max="" default=""/>
+  </TrackElement>
+  <TrackElement name="Ambience Bubble " type="AmbienceBubbleTrackBar" startFrame="0" endFrame="30">
+    <Attribute name="fadeTime" label="Fade Time" smartControl="none" type="float" value="0" min="0" max="60.0" default="0" />
+    <Attribute name="saturation" label="Saturation" smartControl="none" type="float" value="0" min="0" max="1.0" default="0" />
+	<Attribute name="balance" label="Balance" smartControl="ColorObject" type="vector4">
+      <Attribute name="x" label="Red" smartControl="none" type="float" value="0"  default="0" />
+      <Attribute name="y" label="Green" smartControl="none" type="float" value="0" default="0" />
+      <Attribute name="z" label="Blue" smartControl="none" type="float" value="0"  default="0" />
+      <Attribute name="w" label="Alpha" smartControl="none" type="float" value="255"  default="255" />
+    </Attribute>
+    <Attribute name="bloomScale" label="Bloom Scale" smartControl="none" type="float" value="0" min="0.0" max="5.0" default="0" />
+	<Attribute name="bloomColor" label="Bloom Color" smartControl="ColorObject" type="vector4">
+      <Attribute name="x" label="Red" smartControl="none" type="float" value="0"  default="0" />
+      <Attribute name="y" label="Green" smartControl="none" type="float" value="0" default="0" />
+      <Attribute name="z" label="Blue" smartControl="none" type="float" value="0"  default="0" />
+      <Attribute name="w" label="Alpha" smartControl="none" type="float" value="255"  default="255" />
+    </Attribute>
+	<Attribute name="brightPassThreshold" label="Bright Pass Threshold" smartControl="none" type="float" value="0" min="0" max="2.0" default="0" />
+	<Attribute name="fogColor" label="Fog Color" smartControl="ColorObject" type="vector4">
+	  <Attribute name="x" label="Red" smartControl="none" type="float" value="0"  default="0" />
+      <Attribute name="y" label="Green" smartControl="none" type="float" value="0" default="0" />
+      <Attribute name="z" label="Blue" smartControl="none" type="float" value="0"  default="0" />
+      <Attribute name="w" label="Alpha" smartControl="none" type="float" value="255"  default="255" />
+    </Attribute>
+	<Attribute name="fogIntensity" label="Fog Intensity" smartControl="none" type="float" value="0" min="0" max="1.0" default="0" />
+	<Attribute name="fogHeight" label="Fog Height" smartControl="none" type="float" value="0" min="0" max="1000.0" default="0" />
+	<Attribute name="fogNearDist" label="Fog Near Dist" smartControl="none" type="float" value="0" min="-10000.0" max="10000.0" default="0" />
+	<Attribute name="fogFarDist" label="Fog Far Dist" smartControl="none" type="float" value="0" min="0.0" max="10000.0" default="0" />
+	<Attribute name="primFogColor" label="Prim Fog Color" smartControl="ColorObject" type="vector4">
+	  <Attribute name="x" label="Red" smartControl="none" type="float" value="0"  default="0" />
+      <Attribute name="y" label="Green" smartControl="none" type="float" value="0" default="0" />
+      <Attribute name="z" label="Blue" smartControl="none" type="float" value="0"  default="0" />
+      <Attribute name="w" label="Alpha" smartControl="none" type="float" value="255"  default="255" />
+    </Attribute>
+	<Attribute name="primFogIntensity" label="Prim Fog Intensity" smartControl="none" type="float" value="0" min="0.0" max="1.0" default="0" />
+	<Attribute name="primFogHeight" label="Prim Fog Height" smartControl="none" type="float" value="0" min="0" max="1000.0" default="0" />
+	<Attribute name="primFogNearDist" label="Prim Fog Near Dist" smartControl="none" type="float" value="0" min="-10000.0" max="10000.0" default="0" />
+	<Attribute name="primFogFarDist" label="Prim Fog Far Dist" smartControl="none" type="float" value="0" min="0" max="10000.0" default="0" />
+	<Attribute name="fogConeAngle" label="Fog Cone Angle" smartControl="none" type="float" value="0" min="0" max="360.0" default="0" />
+	<Attribute name="focusDist" label="Focus Dist" smartControl="none" type="float" value="0" min="0" max="10000.0" default="0" />
+	<Attribute name="focusLength" label="Focus Length" smartControl="none" type="float" value="0" min="0" max="10000.0" default="0" />
+	<Attribute name="lightColor" label="Light Color" smartControl="ColorObject" type="vector4">
+      <Attribute name="x" label="Red" smartControl="none" type="float" value="0"  default="0" />
+      <Attribute name="y" label="Green" smartControl="none" type="float" value="0" default="0" />
+      <Attribute name="z" label="Blue" smartControl="none" type="float" value="0"  default="0" />
+      <Attribute name="w" label="Alpha" smartControl="none" type="float" value="255"  default="255" />
+    </Attribute>
+	<Attribute name="lightOppositeColor" label="Light Opposite Color" smartControl="ColorObject" type="vector4">
+	  <Attribute name="x" label="Red" smartControl="none" type="float" value="0"  default="0" />
+      <Attribute name="y" label="Green" smartControl="none" type="float" value="0" default="0" />
+      <Attribute name="z" label="Blue" smartControl="none" type="float" value="0"  default="0" />
+      <Attribute name="w" label="Alpha" smartControl="none" type="float" value="255"  default="255" />
+    </Attribute>
+	<Attribute name="lightIntensity" label="Light Intensity" smartControl="none" type="float" value="0" min="0" max="10.0" default="0" />
+	<Attribute name="lightAmbient" label="Light Ambient" smartControl="ColorObject" type="vector4">
+	  <Attribute name="x" label="Red" smartControl="none" type="float" value="0"  default="0" />
+      <Attribute name="y" label="Green" smartControl="none" type="float" value="0" default="0" />
+      <Attribute name="z" label="Blue" smartControl="none" type="float" value="0"  default="0" />
+      <Attribute name="w" label="Alpha" smartControl="none" type="float" value="255"  default="255" />
+    </Attribute>
+	<Attribute name="backLightFactor" label="Back Light Factor" smartControl="none" type="float" value="0" min="0" max="2.0" default="0" />
+	<Attribute name="lightShadowIntensity" label="Light Shadow Intensity" smartControl="none" type="float" value="0" min="0" max="1.0" default="0" />
+	<Attribute name="skyTexture" label="Sky Texture" smartControl="none" type="string" value="empty" min="" max="" default="0" />
+	<Attribute name="skyContrast" label="Sky Contrast" smartControl="none" type="float" value="0" min="0" max="10.0" default="0" />
+	<Attribute name="skyBrightness" label="Sky Brightness" smartControl="none" type="float" value="0" min="0" max="10.0" default="0" />
+  </TrackElement>
+</TrackElementSet>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="testserver">
+      <UniqueIdentifier>{105cd1b5-57b1-4741-b811-d88d498ff9a0}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\tools\stdneb.cc">
+      <Filter>testserver</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tools\testserver\testserver.cc">
+      <Filter>testserver</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tools\testserver\testserverapplication.cc">
+      <Filter>testserver</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\tools\testserver\testserverapplication.h">
+      <Filter>testserver</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

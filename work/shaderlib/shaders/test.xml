@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Nebula3MaterialSystem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../materialsystem.xsd">
+	<Shader name="test">
+		<Node name="SampleDiffuseMap" fragment="Texture2D">
+			<Bind param="texSampler" bindto="Sampler.DiffuseMap0Sampler"/>
+		</Node>
+		<Node name="SampleSpecularMap" fragment="Texture2D">
+			<Bind param="texSampler" bindto="Sampler.SpecularMap0Sampler"/>
+		</Node>
+		<Node name="SampleEmissiveMap" fragment="Texture2D">
+			<Bind param="texSampler" bindto="Sampler.EmissiveMap0Sampler"/>
+		</Node>
+		<Node name="Lighting" fragment="PhongLighting">
+			<Bind param="matDiffuse" bindto="SampleDiffuseMap.outColor"/>
+			<Bind param="matSpecular" bindto="SampleSpecularMap.outColor"/>
+			<Bind param="matEmissive" bindto="SampleEmissiveMap.outColor"/>
+		</Node>
+	</Shader>
+</Nebula3MaterialSystem>

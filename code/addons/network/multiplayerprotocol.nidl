@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Nebula3>
+    <Protocol namespace="Multiplayer" name="MultiplayerProtocol">
+      <!-- dependencies -->
+      <Dependency header="internalmultiplayer/handle.h"/>
+      <Dependency header="internalmultiplayer/multiplayertype.h"/>
+      <Dependency header="internalmultiplayer/sessioninfo.h"/>
+      <Dependency header="internalmultiplayer/internalplayer.h"/>
+      <Dependency header="internalmultiplayer/netstream.h"/>
+      <Dependency header="internalmultiplayer/packetpriority.h"/>
+      <Dependency header="internalmultiplayer/packetchannel.h"/>
+      <Dependency header="multiplayer/base/multiplayernotificationhandlerbase.h"/>
+      <Dependency header="internalmultiplayer/base/parameterresolverbase.h"/>
+      <Dependency header="util/array.h"/>
+      <Dependency header="util/dictionary.h"/>
+      <Dependency header="util/stringatom.h"/>
+
+      <!-- ///////////////////// PARENT CLASSES ///////////////////// -->
+      <!-- Message send from multiplayer::player -->
+      <Message name="PlayerMessage" fourcc="PLME">
+        <InArg name="PlayerHandle" type="InternalMultiplayer::PlayerHandle"/>
+      </Message>
+      
+      <!-- base class for master events which are sent from master to slave (could be a move event or a action)-->
+      <Message name="NetworkEventBase" fourcc="NEBA" serialize="true">
+        <InArg name="TimeStamp" type="int" serialize="true"/> <!-- set the server time when this action was generated, will be correctly updated from object view on receive from network to match client relative time -->
+      </Message>
+      
+      <!-- ///////////////////// CONTROL MESSAGES /////////////////// -->    
+      <!-- Message creating a player, player will be signed into network system -->
+      <Message name="CreatePlayers" fourcc="CRPL" >          
+          <InArg  name="MaxLocalPlayers" type="SizeT" /> <!-- number of players allowed for this game on local system (on xbox360 1-4) -->
+      </Message>
+
+      <!-- create a local player-->
+      <Message name="AddLocalPlayer" fourcc="ADLP">
+      </Message>
+      
+      <!-- remove local player from current session -->
+      <Message name="RemoveLocalPlayer" fourcc="RMLP">
+        <InArg name="PlayerHandle" type="InternalMultiplayer::PlayerHandle"/>
+      </Message>
+      
+      <!-- Message for starting to host a game session -->      
+      <Message name="HostSession" fourcc="HOSE" derivedFrom="PlayerMessage">        
+        <InArg name="LocalPlayers" type="Util::Array<InternalMultiplayer::PlayerHandle>"/> <!-- Players on the same system which join this session -->
+        <InArg name="PublicSlots" type="ushort"/>
+        <InArg name="PrivateSlots" type="ushort"/>
+        <InArg name="ParameterResolver" type="Ptr<Base::ParameterResolverBase>"/>
+        <InArg name="MultiplayerType" type="InternalMultiplayer::MultiplayerType::Code"/>
+      </Message>
+
+      <!-- Message for starting game search -->
+      <Message name="StartGameSearch" fourcc="STGS" derivedFrom="PlayerMessage">
+        <InArg name="LocalPlayers" type="Util::Array<InternalMultiplayer::PlayerHandle>"/> <!-- Players on the same system which also search for a game-->
+        <InArg name="ParameterResolver" type="Ptr<Base::ParameterResolverBase>"/>
+        <InArg name="MaxResults" type="SizeT"/>
+        <InArg name="Timeout" type="Timing::Time" def="2.0"/>
+      </Message>
+
+      <!-- Message for joining a session, identified by session info -->
+      <Message name="JoinSession" fourcc="JOSE" derivedFrom="PlayerMessage">
+        <InArg name="LocalPlayers" type="Util::Array<InternalMultiplayer::PlayerHandle>"/> <!-- Players on the same system which also join a session-->        
+        <InArg name="SessionInfo" type="InternalMultiplayer::SessionInfo" /> <!-- array of session infos -->
+      </Message>
+      
+      <!-- Message for leaving a session -->
+      <Message name="LeaveSession" fourcc="LESE" derivedFrom="PlayerMessage">
+        <InArg name="LocalPlayers" type="Util::Array<InternalMultiplayer::PlayerHandle>"/> <!-- Players on the same system which want to leave the session -->
+      </Message>
+
+      <!-- Message for deleting a game session, must be done by host -->
+      <Message name="DeleteSession" fourcc="DESE">
+      </Message>
+      
+      <!-- Message for setting state of one local player, ready to start the game -->
+      <Message name="SetPlayerReady" fourcc="SPLR" derivedFrom="PlayerMessage">
+        <InArg name="Ready" type="bool" /> <!-- set player ready or unready -->        
+      </Message>
+      
+      <!-- Message for starting the game, will be set to handled after registering process -->
+      <Message name="StartGame" fourcc="STGA">                
+      </Message>
+      
+      <!-- Message for ending the game, will be set to handled after ending process -->
+      <Message name="EndGame" fourcc="ENGA">                
+      </Message>
+
+      <!-- Message for informing host, that we are ready to play-->
+      <Message name="StartingGameFinished" fourcc="STGF">      
+      </Message>
+      
+      <!-- Send a bitstream to given player -->
+      <Message name="SendDataToPlayer" fourcc="SDTP" derivedFrom="PlayerMessage">
+        <InArg name="TargetPlayerHandle" type="InternalMultiplayer::PlayerHandle"/>
+        <InArg name="Stream" type="Ptr<InternalMultiplayer::NetStream>" /> <!-- stream-->
+        <InArg name="Reliable" type="bool" def="false" />   <!-- can get lost or not -->
+        <InArg name="Sequential" type="bool" def="false" /> <!-- message order relevant in queue, discard old messages -->
+        <InArg name="Ordered" type="bool" def="false" /> <!-- message order relevant in queue, wait for older messages to arrive -->  
+        <InArg name="Direct" type="bool" def="false" />      <!-- direct to player or via host -->
+        <InArg name="Channel" type="InternalMultiplayer::PacketChannel::Code" def="InternalMultiplayer::PacketChannel::DefaultChannel" />     <!-- which send queue should be used -->
+        <InArg name="Priority" type="InternalMultiplayer::PacketPriority::Code" def="InternalMultiplayer::PacketPriority::NormalPriority" />        <!-- which priority should be used -->
+        <OutArg name="ErrorMsg" type="Util::String" /> <!-- error msg if no games could be found or other error occured -->
+      </Message>
+      
+      <!-- Send a bitstream to all players -->
+      <Message name="BroadcastData" fourcc="SDTA" >
+        <InArg name="Stream" type="Ptr<InternalMultiplayer::NetStream>" /> <!-- stream-->
+        <InArg name="Reliable" type="bool" def="false" />     <!-- can get lost or not -->
+        <InArg name="Sequential" type="bool" def="false" /> <!-- message order relevant in queue, discard old messages -->
+        <InArg name="Ordered" type="bool" def="false" /> <!-- message order relevant in queue, wait for older messages to arrive -->  
+        <InArg name="Direct" type="bool" def="false" />        <!-- direct to player or via host -->
+        <InArg name="Channel" type="InternalMultiplayer::PacketChannel::Code" def="InternalMultiplayer::PacketChannel::DefaultChannel" />     <!-- which send queue should be used -->
+        <InArg name="Priority" type="InternalMultiplayer::PacketPriority::Code" def="InternalMultiplayer::PacketPriority::NormalPriority" />          <!-- which priority should be used -->        
+        <OutArg name="ErrorMsg" type="Util::String" /> <!-- error msg if no games could be found or other error occured -->
+      </Message>
+      
+      <!-- Send a bitstream to all players -->
+      <Message name="SendDataToHost" fourcc="SDTH" >
+        <InArg name="Stream" type="Ptr<InternalMultiplayer::NetStream>" /> <!-- stream-->
+        <InArg name="Reliable" type="bool" def="false" />     <!-- can get lost or not -->
+        <InArg name="Sequential" type="bool" def="false" /> <!-- message order relevant in queue, discard old messages -->
+        <InArg name="Ordered" type="bool" def="false" /> <!-- message order relevant in queue, wait for older messages to arrive -->  
+        <InArg name="Direct" type="bool" def="false" />        <!-- direct to player or via host -->
+        <InArg name="Channel" type="InternalMultiplayer::PacketChannel::Code" def="InternalMultiplayer::PacketChannel::DefaultChannel" />     <!-- which send queue should be used -->
+        <InArg name="Priority" type="InternalMultiplayer::PacketPriority::Code" def="InternalMultiplayer::PacketPriority::NormalPriority" />          <!-- which priority should be used -->        
+        <OutArg name="ErrorMsg" type="Util::String" /> <!-- error msg if no games could be found or other error occured -->
+      </Message>
+      
+      <!-- attach a NotificationHandler -->
+      <Message name="AttachNotificationHandler" fourcc="ANOH">
+        <InArg name="NotificationHandler" type="Ptr<Base::MultiplayerNotificationHandlerBase>"/>                       
+      </Message>
+
+      <!-- remove a NotificationHandler -->
+      <Message name="RemoveNotificationHandler" fourcc="RNOH">
+        <InArg name="NotificationHandler" type="Ptr<Base::MultiplayerNotificationHandlerBase>"/> 
+      </Message>
+      
+    </Protocol>    
+</Nebula3>

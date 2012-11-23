@@ -1,0 +1,1456 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="app">
+      <UniqueIdentifier>{43fae4fc-a167-4fcd-9096-23e02ccffc8c}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{7f45ef93-1605-4dd8-b376-9c223e07c3dd}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="core\debug">
+      <UniqueIdentifier>{4be4d52d-6a14-4771-b62c-2bf7466e267f}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="core\win32">
+      <UniqueIdentifier>{590ea0e5-7bfe-4358-a5f6-31d2331b365e}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="core\debug\win32">
+      <UniqueIdentifier>{6434e4cf-9935-475a-add2-eea035e260dd}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="framesync">
+      <UniqueIdentifier>{6e5d273f-1352-4b6f-baad-b703f931d5d1}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="http">
+      <UniqueIdentifier>{b7a9fda6-c774-497e-bf88-d1ecc9bae4e5}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="http\debug">
+      <UniqueIdentifier>{e37478bd-6b57-4c1a-b5ef-15935ec3321b}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="http\html">
+      <UniqueIdentifier>{165426ce-c830-4dc8-afcd-fc7b00ab4ef6}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="http\svg">
+      <UniqueIdentifier>{eeb8e5c3-e0be-4f4a-94bf-8d5961b27be3}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="interface">
+      <UniqueIdentifier>{18f50202-411f-46b7-9356-4c100bea700e}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="io">
+      <UniqueIdentifier>{740e2052-cf2a-4315-ac7a-7f7fb787076b}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="io\archfs">
+      <UniqueIdentifier>{68c4ba8b-7117-48c8-a882-a307d4acfe06}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="io\base">
+      <UniqueIdentifier>{c95dd773-eb28-4b64-8424-0b48e7fe2f7b}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="io\debug">
+      <UniqueIdentifier>{4b25de25-1015-40cd-85bb-1ba6601c5098}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="io\util">
+      <UniqueIdentifier>{581954fc-cc36-413c-b3ab-d1d589e1815a}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="io\win32">
+      <UniqueIdentifier>{b641fa39-a867-410e-a32b-6549a46305da}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="io\win360">
+      <UniqueIdentifier>{f58fd8cb-bab0-4849-bda8-209953a356e1}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="io\zipfs">
+      <UniqueIdentifier>{1d72effd-a81e-4c59-80c3-cc2db6c35c1f}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="jobs">
+      <UniqueIdentifier>{4f616792-b9e0-4ae6-9a39-8f593e10cc11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="jobs\base">
+      <UniqueIdentifier>{3d00fd68-0cd9-4369-85d9-b5e601bf75b8}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="jobs\tp">
+      <UniqueIdentifier>{caf22639-d740-44db-861b-67ab54ded175}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="math">
+      <UniqueIdentifier>{6747923a-11f0-4234-b4da-707f5afe9c6c}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="math\xnamath">
+      <UniqueIdentifier>{ff30822b-b1d8-4eef-83f3-739a74a78455}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="memory">
+      <UniqueIdentifier>{1fb2c28e-996e-4475-a08d-ff01851337e6}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="memory\debug">
+      <UniqueIdentifier>{41d53f1e-e255-4e8a-8a6d-1d31b0c3a308}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="memory\win32">
+      <UniqueIdentifier>{822acfa1-5fdb-4c90-82c7-e1a3277d6039}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="memory\win360">
+      <UniqueIdentifier>{e61ae53b-b44b-4b1b-b864-424e6ff83a82}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="messaging">
+      <UniqueIdentifier>{e54a8ae5-ead1-4af3-ad81-0a37d7068778}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="net">
+      <UniqueIdentifier>{981b317a-fc24-4691-a5ce-8b958b1ac34e}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="net\socket">
+      <UniqueIdentifier>{5427d165-d018-451a-9bc6-96ffeab19a1b}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="net\tcp">
+      <UniqueIdentifier>{86c5f1c7-4fbb-4e9b-bb07-654bf0a46a17}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="net\win360">
+      <UniqueIdentifier>{ef2ddcf9-8b3a-411b-b3ca-795e83653c27}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="system">
+      <UniqueIdentifier>{4b5cfb82-b711-4f15-8dee-5489e2010b2e}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="system\base">
+      <UniqueIdentifier>{413ee9de-f12d-4a61-8491-66f4ecf62714}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="system\win32">
+      <UniqueIdentifier>{722dca92-8b10-41ef-814e-b39fed9bbef8}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="threading">
+      <UniqueIdentifier>{db6c89c1-7807-4959-94c9-c90470984335}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="threading\debug">
+      <UniqueIdentifier>{c94d019a-fc18-4152-a8cb-4e712b4e3bcf}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="threading\win360">
+      <UniqueIdentifier>{22854770-2be0-4b35-93a5-c9576fd43d7a}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="timing">
+      <UniqueIdentifier>{b8c864a0-c188-4530-b50f-2b5c2673e644}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="timing\base">
+      <UniqueIdentifier>{33183f3e-17a4-408b-8aca-fe361bfeef6c}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="timing\win360">
+      <UniqueIdentifier>{ced79c15-8f5f-48b1-8574-8e401e761c15}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="io\util\win32">
+      <UniqueIdentifier>{22386186-1851-4183-af07-191ff988ec43}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\foundation\stdneb.cc">
+      <Filter>app</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\app\application.cc">
+      <Filter>app</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\app\consoleapplication.cc">
+      <Filter>app</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\core\coreserver.cc">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\core\debug.cc">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\core\exithandler.cc">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\core\factory.cc">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\core\refcounted.cc">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\core\refcountedlist.cc">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\core\rtti.cc">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\core\debug\corepagehandler.cc">
+      <Filter>core\debug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\core\debug\stringatompagehandler.cc">
+      <Filter>core\debug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\core\win32\win32sysfunc.cc">
+      <Filter>core\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\debug\debugcounter.cc">
+      <Filter>core\debug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\debug\debughandler.cc">
+      <Filter>core\debug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\debug\debuginterface.cc">
+      <Filter>core\debug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\debug\debugpagehandler.cc">
+      <Filter>core\debug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\debug\debugserver.cc">
+      <Filter>core\debug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\debug\debugtimer.cc">
+      <Filter>core\debug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\debug\win32\win32minidump.cc">
+      <Filter>core\debug\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\framesync\framesynchandlerthread.cc">
+      <Filter>framesync</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\framesync\framesyncshareddata.cc">
+      <Filter>framesync</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\framesync\framesynctimer.cc">
+      <Filter>framesync</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\http\defaulthttprequesthandler.cc">
+      <Filter>http</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\http\httpclient.cc">
+      <Filter>http</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\http\httpclientregistry.cc">
+      <Filter>http</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\http\httpinterface.cc">
+      <Filter>http</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\http\httpmessagehandler.cc">
+      <Filter>http</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\http\httpnzstream.cc">
+      <Filter>http</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\http\httpprotocol.cc">
+      <Filter>http</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\http\httprequest.cc">
+      <Filter>http</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\http\httprequesthandler.cc">
+      <Filter>http</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\http\httprequestreader.cc">
+      <Filter>http</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\http\httprequestwriter.cc">
+      <Filter>http</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\http\httpresponsereader.cc">
+      <Filter>http</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\http\httpresponsewriter.cc">
+      <Filter>http</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\http\httpserver.cc">
+      <Filter>http</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\http\httpserverproxy.cc">
+      <Filter>http</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\http\httpstatus.cc">
+      <Filter>http</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\http\httpstream.cc">
+      <Filter>http</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\http\debug\helloworldrequesthandler.cc">
+      <Filter>http\debug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\http\debug\svgtestpagehandler.cc">
+      <Filter>http\debug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\http\html\htmlelement.cc">
+      <Filter>http\html</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\http\html\htmlpagewriter.cc">
+      <Filter>http\html</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\http\svg\svglinechartwriter.cc">
+      <Filter>http\svg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\http\svg\svgpagewriter.cc">
+      <Filter>http\svg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\interface\interfacebase.cc">
+      <Filter>interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\interface\interfacehandlerbase.cc">
+      <Filter>interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\io\assignregistry.cc">
+      <Filter>io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\io\binaryreader.cc">
+      <Filter>io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\io\binarywriter.cc">
+      <Filter>io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\io\bxmlreader.cc">
+      <Filter>io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\io\console.cc">
+      <Filter>io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\io\consolehandler.cc">
+      <Filter>io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\io\excelxmlreader.cc">
+      <Filter>io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\io\filestream.cc">
+      <Filter>io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\io\gamecontentserver.cc">
+      <Filter>io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\io\historyconsolehandler.cc">
+      <Filter>io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\io\iointerface.cc">
+      <Filter>io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\io\iointerfacehandler.cc">
+      <Filter>io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\io\iointerfaceprotocol.cc">
+      <Filter>io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\io\ioserver.cc">
+      <Filter>io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\io\logfileconsolehandler.cc">
+      <Filter>io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\io\memorystream.cc">
+      <Filter>io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\io\schemeregistry.cc">
+      <Filter>io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\io\stream.cc">
+      <Filter>io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\io\streamreader.cc">
+      <Filter>io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\io\streamwriter.cc">
+      <Filter>io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\io\textreader.cc">
+      <Filter>io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\io\textwriter.cc">
+      <Filter>io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\io\uri.cc">
+      <Filter>io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\io\xmlreader.cc">
+      <Filter>io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\io\xmlwriter.cc">
+      <Filter>io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\io\archfs\archive.cc">
+      <Filter>io\archfs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\io\archfs\archivebase.cc">
+      <Filter>io\archfs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\io\archfs\archivefilesystem.cc">
+      <Filter>io\archfs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\io\archfs\archivefilesystembase.cc">
+      <Filter>io\archfs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\io\base\gamecontentserverbase.cc">
+      <Filter>io\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\io\debug\consolepagehandler.cc">
+      <Filter>io\debug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\io\debug\iopagehandler.cc">
+      <Filter>io\debug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\io\util\bxmlloaderutil.cc">
+      <Filter>io\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\io\win32\win32consolehandler.cc">
+      <Filter>io\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\io\win360\win360filetime.cc">
+      <Filter>io\win360</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\io\win360\win360fswrapper.cc">
+      <Filter>io\win360</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\io\zipfs\ziparchive.cc">
+      <Filter>io\zipfs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\io\zipfs\zipdirentry.cc">
+      <Filter>io\zipfs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\io\zipfs\zipfileentry.cc">
+      <Filter>io\zipfs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\io\zipfs\zipfilestream.cc">
+      <Filter>io\zipfs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\io\zipfs\zipfilesystem.cc">
+      <Filter>io\zipfs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\jobs\job.cc">
+      <Filter>jobs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\jobs\jobport.cc">
+      <Filter>jobs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\jobs\jobsystem.cc">
+      <Filter>jobs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\jobs\base\jobbase.cc">
+      <Filter>jobs\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\jobs\base\jobportbase.cc">
+      <Filter>jobs\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\jobs\base\jobsystembase.cc">
+      <Filter>jobs\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\jobs\tp\tpjob.cc">
+      <Filter>jobs\tp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\jobs\tp\tpjobport.cc">
+      <Filter>jobs\tp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\jobs\tp\tpjobslice.cc">
+      <Filter>jobs\tp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\jobs\tp\tpjobsystem.cc">
+      <Filter>jobs\tp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\jobs\tp\tpjobthreadpool.cc">
+      <Filter>jobs\tp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\jobs\tp\tpworkerthread.cc">
+      <Filter>jobs\tp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\math\bbox.cc">
+      <Filter>math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\math\line.cc">
+      <Filter>math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\math\sphere_.cc">
+      <Filter>math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\math\xnamath\xna_float4.cc">
+      <Filter>math\xnamath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\math\xnamath\xna_matrix44.cc">
+      <Filter>math\xnamath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\math\xnamath\xna_plane.cc">
+      <Filter>math\xnamath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\math\xnamath\xna_quaternion.cc">
+      <Filter>math\xnamath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\memory\poolarrayallocator.cc">
+      <Filter>memory</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\memory\debug\memorypagehandler.cc">
+      <Filter>memory\debug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\memory\win360\win360heap.cc">
+      <Filter>memory\win360</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\memory\win360\win360memory.cc">
+      <Filter>memory\win360</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\memory\win360\win360memoryconfig.cc">
+      <Filter>memory\win360</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\memory\win360\win360memorypool.cc">
+      <Filter>memory\win360</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\messaging\asyncport.cc">
+      <Filter>messaging</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\messaging\batchmessage.cc">
+      <Filter>messaging</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\messaging\blockinghandlerthread.cc">
+      <Filter>messaging</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\messaging\delegatetable.cc">
+      <Filter>messaging</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\messaging\dispatcher.cc">
+      <Filter>messaging</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\messaging\handler.cc">
+      <Filter>messaging</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\messaging\handlerthreadbase.cc">
+      <Filter>messaging</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\messaging\message.cc">
+      <Filter>messaging</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\messaging\messagereader.cc">
+      <Filter>messaging</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\messaging\messagewriter.cc">
+      <Filter>messaging</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\messaging\port.cc">
+      <Filter>messaging</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\messaging\runthroughhandlerthread.cc">
+      <Filter>messaging</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\messaging\staticmessagehandler.cc">
+      <Filter>messaging</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\net\debugpacket.cc">
+      <Filter>net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\net\messageclient.cc">
+      <Filter>net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\net\messageclientconnection.cc">
+      <Filter>net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\net\tcpclient.cc">
+      <Filter>net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\net\tcpclientconnection.cc">
+      <Filter>net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\net\tcpmessagecodec.cc">
+      <Filter>net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\net\tcpserver.cc">
+      <Filter>net</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\net\socket\socket.cc">
+      <Filter>net\socket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\net\tcp\stdtcpclient.cc">
+      <Filter>net\tcp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\net\tcp\stdtcpclientconnection.cc">
+      <Filter>net\tcp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\net\tcp\stdtcpserver.cc">
+      <Filter>net\tcp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\net\win360\win360ipaddress.cc">
+      <Filter>net\win360</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\net\win360\win360socket.cc">
+      <Filter>net\win360</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\system\base\systeminfobase.cc">
+      <Filter>system\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\system\win32\win32environment.cc">
+      <Filter>system\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\system\win32\win32registry.cc">
+      <Filter>system\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\system\win32\win32systeminfo.cc">
+      <Filter>system\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\threading\objectref.cc">
+      <Filter>threading</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\threading\thread.cc">
+      <Filter>threading</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\threading\debug\threadpagehandler.cc">
+      <Filter>threading\debug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\threading\win360\win360criticalsection.cc">
+      <Filter>threading\win360</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\threading\win360\win360thread.cc">
+      <Filter>threading\win360</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\timing\base\calendartimebase.cc">
+      <Filter>timing\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\timing\win360\win360calendartime.cc">
+      <Filter>timing\win360</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\timing\win360\win360timer.cc">
+      <Filter>timing\win360</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\util\blob.cc">
+      <Filter>io\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\util\commandlineargs.cc">
+      <Filter>io\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\util\crc.cc">
+      <Filter>io\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\util\globalstringatomtable.cc">
+      <Filter>io\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\util\localstringatomtable.cc">
+      <Filter>io\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\util\randomnumbertable.cc">
+      <Filter>io\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\util\runlengthcodec.cc">
+      <Filter>io\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\util\string.cc">
+      <Filter>io\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\util\stringatom.cc">
+      <Filter>io\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\util\stringatomtablebase.cc">
+      <Filter>io\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\util\stringbuffer.cc">
+      <Filter>io\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\util\win32\win32guid.cc">
+      <Filter>io\util\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\foundation\util\win32\win32stringconverter.cc">
+      <Filter>io\util\win32</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\foundation\app\application.h">
+      <Filter>app</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\app\consoleapplication.h">
+      <Filter>app</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\core\config.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\core\coreserver.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\core\debug.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\core\exithandler.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\core\factory.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\core\ptr.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\core\refcounted.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\core\refcountedlist.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\core\rtti.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\core\rttimacros.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\core\singleton.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\core\sysfunc.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\core\types.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\core\weakptr.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\core\debug\corepagehandler.h">
+      <Filter>core\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\core\debug\stringatompagehandler.h">
+      <Filter>core\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\core\win32\precompiled.h">
+      <Filter>core\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\core\win32\win32singleton.h">
+      <Filter>core\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\core\win32\win32sysfunc.h">
+      <Filter>core\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\debug\debugcounter.h">
+      <Filter>core\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\debug\debugfloat.h">
+      <Filter>core\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\debug\debughandler.h">
+      <Filter>core\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\debug\debuginterface.h">
+      <Filter>core\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\debug\debugpagehandler.h">
+      <Filter>core\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\debug\debugserver.h">
+      <Filter>core\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\debug\debugtimer.h">
+      <Filter>core\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\debug\minidump.h">
+      <Filter>core\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\debug\win32\win32minidump.h">
+      <Filter>core\debug\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\framesync\framesynchandlerthread.h">
+      <Filter>framesync</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\framesync\framesyncshareddata.h">
+      <Filter>framesync</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\framesync\framesynctimer.h">
+      <Filter>framesync</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\http\defaulthttprequesthandler.h">
+      <Filter>http</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\http\httpclient.h">
+      <Filter>http</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\http\httpclientregistry.h">
+      <Filter>http</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\http\httpinterface.h">
+      <Filter>http</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\http\httpmessagehandler.h">
+      <Filter>http</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\http\httpmethod.h">
+      <Filter>http</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\http\httpnzstream.h">
+      <Filter>http</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\http\httpprotocol.h">
+      <Filter>http</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\http\httprequest.h">
+      <Filter>http</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\http\httprequesthandler.h">
+      <Filter>http</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\http\httprequestreader.h">
+      <Filter>http</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\http\httprequestwriter.h">
+      <Filter>http</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\http\httpresponsereader.h">
+      <Filter>http</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\http\httpresponsewriter.h">
+      <Filter>http</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\http\httpserver.h">
+      <Filter>http</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\http\httpserverproxy.h">
+      <Filter>http</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\http\httpstatus.h">
+      <Filter>http</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\http\httpstream.h">
+      <Filter>http</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\http\debug\helloworldrequesthandler.h">
+      <Filter>http\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\http\debug\svgtestpagehandler.h">
+      <Filter>http\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\http\html\htmlelement.h">
+      <Filter>http\html</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\http\html\htmlpagewriter.h">
+      <Filter>http\html</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\http\svg\svglinechartwriter.h">
+      <Filter>http\svg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\http\svg\svgpagewriter.h">
+      <Filter>http\svg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\interface\interfacebase.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\interface\interfacehandlerbase.h">
+      <Filter>interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\io\assign.h">
+      <Filter>io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\io\assignregistry.h">
+      <Filter>io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\io\binaryreader.h">
+      <Filter>io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\io\binarywriter.h">
+      <Filter>io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\io\bxmlreader.h">
+      <Filter>io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\io\console.h">
+      <Filter>io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\io\consolehandler.h">
+      <Filter>io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\io\excelxmlreader.h">
+      <Filter>io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\io\filestream.h">
+      <Filter>io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\io\filetime.h">
+      <Filter>io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\io\fswrapper.h">
+      <Filter>io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\io\gamecontentserver.h">
+      <Filter>io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\io\historyconsolehandler.h">
+      <Filter>io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\io\iointerface.h">
+      <Filter>io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\io\iointerfacehandler.h">
+      <Filter>io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\io\iointerfaceprotocol.h">
+      <Filter>io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\io\ioserver.h">
+      <Filter>io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\io\logfileconsolehandler.h">
+      <Filter>io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\io\mediatype.h">
+      <Filter>io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\io\memorystream.h">
+      <Filter>io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\io\schemeregistry.h">
+      <Filter>io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\io\stream.h">
+      <Filter>io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\io\streamreader.h">
+      <Filter>io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\io\streamwriter.h">
+      <Filter>io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\io\textreader.h">
+      <Filter>io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\io\textwriter.h">
+      <Filter>io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\io\uri.h">
+      <Filter>io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\io\xmlreader.h">
+      <Filter>io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\io\xmlwriter.h">
+      <Filter>io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\io\archfs\archive.h">
+      <Filter>io\archfs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\io\archfs\archivebase.h">
+      <Filter>io\archfs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\io\archfs\archivefilesystem.h">
+      <Filter>io\archfs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\io\archfs\archivefilesystembase.h">
+      <Filter>io\archfs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\io\base\gamecontentserverbase.h">
+      <Filter>io\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\io\debug\consolepagehandler.h">
+      <Filter>io\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\io\debug\iopagehandler.h">
+      <Filter>io\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\io\util\bxmlfilestructs.h">
+      <Filter>io\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\io\util\bxmlloaderutil.h">
+      <Filter>io\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\io\win32\win32consolehandler.h">
+      <Filter>io\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\io\win360\win360filetime.h">
+      <Filter>io\win360</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\io\win360\win360fswrapper.h">
+      <Filter>io\win360</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\io\zipfs\ziparchive.h">
+      <Filter>io\zipfs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\io\zipfs\zipdirentry.h">
+      <Filter>io\zipfs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\io\zipfs\zipfileentry.h">
+      <Filter>io\zipfs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\io\zipfs\zipfilestream.h">
+      <Filter>io\zipfs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\io\zipfs\zipfilesystem.h">
+      <Filter>io\zipfs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\jobs\job.h">
+      <Filter>jobs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\jobs\jobdatadesc.h">
+      <Filter>jobs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\jobs\jobfunccontext.h">
+      <Filter>jobs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\jobs\jobfuncdesc.h">
+      <Filter>jobs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\jobs\jobport.h">
+      <Filter>jobs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\jobs\jobsystem.h">
+      <Filter>jobs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\jobs\jobuniformdesc.h">
+      <Filter>jobs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\jobs\stdjob.h">
+      <Filter>jobs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\jobs\base\jobbase.h">
+      <Filter>jobs\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\jobs\base\jobfuncdescbase.h">
+      <Filter>jobs\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\jobs\base\jobportbase.h">
+      <Filter>jobs\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\jobs\base\jobsystembase.h">
+      <Filter>jobs\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\jobs\tp\tpjob.h">
+      <Filter>jobs\tp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\jobs\tp\tpjobcommand.h">
+      <Filter>jobs\tp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\jobs\tp\tpjobfuncdesc.h">
+      <Filter>jobs\tp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\jobs\tp\tpjobport.h">
+      <Filter>jobs\tp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\jobs\tp\tpjobslice.h">
+      <Filter>jobs\tp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\jobs\tp\tpjobsystem.h">
+      <Filter>jobs\tp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\jobs\tp\tpjobthreadpool.h">
+      <Filter>jobs\tp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\jobs\tp\tpworkerthread.h">
+      <Filter>jobs\tp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\math\angularpfeedbackloop.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\math\bbox.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\math\clipstatus.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\math\extrapolator.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\math\float2.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\math\float4.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\math\frustum.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\math\line.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\math\matrix44.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\math\noise.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\math\pfeedbackloop.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\math\pidfeedbackloop.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\math\plane.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\math\point.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\math\polar.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\math\quaternion.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\math\rectangle.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\math\scalar.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\math\sphere_.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\math\transform44.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\math\vector.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\math\xnamath\xna_float4.h">
+      <Filter>math\xnamath</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\math\xnamath\xna_matrix44.h">
+      <Filter>math\xnamath</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\math\xnamath\xna_plane.h">
+      <Filter>math\xnamath</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\math\xnamath\xna_point.h">
+      <Filter>math\xnamath</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\math\xnamath\xna_quaternion.h">
+      <Filter>math\xnamath</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\math\xnamath\xna_scalar.h">
+      <Filter>math\xnamath</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\math\xnamath\xna_vector.h">
+      <Filter>math\xnamath</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\memory\heap.h">
+      <Filter>memory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\memory\memory.h">
+      <Filter>memory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\memory\memorypool.h">
+      <Filter>memory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\memory\poolarrayallocator.h">
+      <Filter>memory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\memory\debug\memorypagehandler.h">
+      <Filter>memory\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\memory\win32\win32memory.h">
+      <Filter>memory\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\memory\win360\win360heap.h">
+      <Filter>memory\win360</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\memory\win360\win360memory.h">
+      <Filter>memory\win360</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\memory\win360\win360memoryconfig.h">
+      <Filter>memory\win360</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\memory\win360\win360memorypool.h">
+      <Filter>memory\win360</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\messaging\asyncport.h">
+      <Filter>messaging</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\messaging\batchmessage.h">
+      <Filter>messaging</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\messaging\blockinghandlerthread.h">
+      <Filter>messaging</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\messaging\delegatetable.h">
+      <Filter>messaging</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\messaging\dispatcher.h">
+      <Filter>messaging</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\messaging\handler.h">
+      <Filter>messaging</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\messaging\handlerthreadbase.h">
+      <Filter>messaging</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\messaging\id.h">
+      <Filter>messaging</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\messaging\message.h">
+      <Filter>messaging</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\messaging\messagereader.h">
+      <Filter>messaging</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\messaging\messagewriter.h">
+      <Filter>messaging</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\messaging\port.h">
+      <Filter>messaging</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\messaging\runthroughhandlerthread.h">
+      <Filter>messaging</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\messaging\staticmessagehandler.h">
+      <Filter>messaging</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\net\debugmessage.h">
+      <Filter>net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\net\debugpacket.h">
+      <Filter>net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\net\messageclient.h">
+      <Filter>net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\net\messageclientconnection.h">
+      <Filter>net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\net\tcpclient.h">
+      <Filter>net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\net\tcpclientconnection.h">
+      <Filter>net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\net\tcpmessagecodec.h">
+      <Filter>net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\net\tcpserver.h">
+      <Filter>net</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\net\socket\ipaddress.h">
+      <Filter>net\socket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\net\socket\socket.h">
+      <Filter>net\socket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\net\tcp\stdtcpclient.h">
+      <Filter>net\tcp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\net\tcp\stdtcpclientconnection.h">
+      <Filter>net\tcp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\net\tcp\stdtcpserver.h">
+      <Filter>net\tcp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\net\win360\win360ipaddress.h">
+      <Filter>net\win360</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\net\win360\win360socket.h">
+      <Filter>net\win360</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\system\appentry.h">
+      <Filter>system</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\system\byteorder.h">
+      <Filter>system</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\system\cpu.h">
+      <Filter>system</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\system\systeminfo.h">
+      <Filter>system</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\system\base\systeminfobase.h">
+      <Filter>system\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\system\win32\win32cpu.h">
+      <Filter>system\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\system\win32\win32environment.h">
+      <Filter>system\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\system\win32\win32registry.h">
+      <Filter>system\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\system\win32\win32systeminfo.h">
+      <Filter>system\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\threading\barrier.h">
+      <Filter>threading</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\threading\criticalsection.h">
+      <Filter>threading</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\threading\event.h">
+      <Filter>threading</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\threading\interlocked.h">
+      <Filter>threading</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\threading\objectref.h">
+      <Filter>threading</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\threading\safeflag.h">
+      <Filter>threading</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\threading\safepriorityqueue.h">
+      <Filter>threading</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\threading\safequeue.h">
+      <Filter>threading</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\threading\thread.h">
+      <Filter>threading</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\threading\threadbarrier.h">
+      <Filter>threading</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\threading\threadid.h">
+      <Filter>threading</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\threading\debug\threadpagehandler.h">
+      <Filter>threading\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\threading\win360\win360barrier.h">
+      <Filter>threading\win360</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\threading\win360\win360criticalsection.h">
+      <Filter>threading\win360</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\threading\win360\win360event.h">
+      <Filter>threading\win360</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\threading\win360\win360interlocked.h">
+      <Filter>threading\win360</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\threading\win360\win360thread.h">
+      <Filter>threading\win360</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\threading\win360\win360threadbarrier.h">
+      <Filter>threading\win360</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\threading\win360\win360threadid.h">
+      <Filter>threading\win360</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\timing\calendartime.h">
+      <Filter>timing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\timing\time.h">
+      <Filter>timing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\timing\timer.h">
+      <Filter>timing</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\timing\base\calendartimebase.h">
+      <Filter>timing\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\timing\win360\win360calendartime.h">
+      <Filter>timing\win360</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\timing\win360\win360timer.h">
+      <Filter>timing\win360</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\util\array.h">
+      <Filter>io\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\util\bitfield.h">
+      <Filter>io\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\util\blob.h">
+      <Filter>io\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\util\commandlineargs.h">
+      <Filter>io\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\util\crc.h">
+      <Filter>io\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\util\delegate.h">
+      <Filter>io\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\util\dictionary.h">
+      <Filter>io\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\util\fixedarray.h">
+      <Filter>io\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\util\fixedtable.h">
+      <Filter>io\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\util\fourcc.h">
+      <Filter>io\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\util\globalstringatomtable.h">
+      <Filter>io\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\util\guid.h">
+      <Filter>io\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\util\hashtable.h">
+      <Filter>io\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\util\keyvaluepair.h">
+      <Filter>io\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\util\list.h">
+      <Filter>io\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\util\localstringatomtable.h">
+      <Filter>io\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\util\priorityarray.h">
+      <Filter>io\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\util\quadtree.h">
+      <Filter>io\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\util\queue.h">
+      <Filter>io\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\util\randomnumbertable.h">
+      <Filter>io\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\util\ringbuffer.h">
+      <Filter>io\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\util\round.h">
+      <Filter>io\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\util\runlengthcodec.h">
+      <Filter>io\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\util\simpletree.h">
+      <Filter>io\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\util\sparsetable.h">
+      <Filter>io\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\util\stack.h">
+      <Filter>io\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\util\string.h">
+      <Filter>io\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\util\stringatom.h">
+      <Filter>io\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\util\stringatomtablebase.h">
+      <Filter>io\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\util\stringbuffer.h">
+      <Filter>io\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\util\typepunning.h">
+      <Filter>io\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\util\variant.h">
+      <Filter>io\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\util\win32\win32guid.h">
+      <Filter>io\util\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\foundation\util\win32\win32stringconverter.h">
+      <Filter>io\util\win32</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

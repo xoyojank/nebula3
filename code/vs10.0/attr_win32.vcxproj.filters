@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="attr">
+      <UniqueIdentifier>{04ef5779-55ce-462c-af13-92c518f6e76f}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\addons\stdneb.cc">
+      <Filter>attr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\attr\attrexithandler.cc">
+      <Filter>attr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\attr\attributecontainer.cc">
+      <Filter>attr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\attr\attributedefinitionbase.cc">
+      <Filter>attr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\attr\attributetable.cc">
+      <Filter>attr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\attr\attrid.cc">
+      <Filter>attr</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\addons\attr\accessmode.h">
+      <Filter>attr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\attr\attrexithandler.h">
+      <Filter>attr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\attr\attribute.h">
+      <Filter>attr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\attr\attributecontainer.h">
+      <Filter>attr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\attr\attributedefinition.h">
+      <Filter>attr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\attr\attributedefinitionbase.h">
+      <Filter>attr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\attr\attributetable.h">
+      <Filter>attr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\attr\attrid.h">
+      <Filter>attr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\attr\blobattrid.h">
+      <Filter>attr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\attr\boolattrid.h">
+      <Filter>attr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\attr\float4attrid.h">
+      <Filter>attr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\attr\floatattrid.h">
+      <Filter>attr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\attr\guidattrid.h">
+      <Filter>attr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\attr\intattrid.h">
+      <Filter>attr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\attr\matrix44attrid.h">
+      <Filter>attr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\attr\stringattrid.h">
+      <Filter>attr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\attr\valuetype.h">
+      <Filter>attr</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

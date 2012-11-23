@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="testnetworkgame">
+      <UniqueIdentifier>{f7cf3158-0ea8-4bac-ad78-0e3862339eb3}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="testnetworkgame\motion">
+      <UniqueIdentifier>{bbe0c71a-25cf-466e-ba3d-90f55f2a1dd5}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\tools\stdneb.cc">
+      <Filter>testnetworkgame</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tools\testnetworkgame\lobbygamestate.cc">
+      <Filter>testnetworkgame</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tools\testnetworkgame\testgamenotificationhandler.cc">
+      <Filter>testnetworkgame</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tools\testnetworkgame\testgamestate.cc">
+      <Filter>testnetworkgame</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tools\testnetworkgame\testnetworkgame.cc">
+      <Filter>testnetworkgame</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tools\testnetworkgame\testnetworkgameapplication.cc">
+      <Filter>testnetworkgame</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tools\testnetworkgame\motion\distributemotionproperty.cc">
+      <Filter>testnetworkgame\motion</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tools\testnetworkgame\motion\motionobjectview.cc">
+      <Filter>testnetworkgame\motion</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\tools\testnetworkgame\lobbygamestate.h">
+      <Filter>testnetworkgame</Filter>
+    </ClInclude>
+    <ClInclude Include="..\tools\testnetworkgame\testgamenotificationhandler.h">
+      <Filter>testnetworkgame</Filter>
+    </ClInclude>
+    <ClInclude Include="..\tools\testnetworkgame\testgamestate.h">
+      <Filter>testnetworkgame</Filter>
+    </ClInclude>
+    <ClInclude Include="..\tools\testnetworkgame\testnetworkgameapplication.h">
+      <Filter>testnetworkgame</Filter>
+    </ClInclude>
+    <ClInclude Include="..\tools\testnetworkgame\motion\distributemotionproperty.h">
+      <Filter>testnetworkgame\motion</Filter>
+    </ClInclude>
+    <ClInclude Include="..\tools\testnetworkgame\motion\motionobjectview.h">
+      <Filter>testnetworkgame\motion</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

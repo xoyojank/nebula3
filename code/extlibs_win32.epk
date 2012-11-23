@@ -1,0 +1,82 @@
+#-------------------------------------------------------------------------------
+#   extlibs_win32.epk
+#   (C) 2006 Radon Labs GmbH
+#-------------------------------------------------------------------------------
+begintarget lua_win32
+    settype lib
+    setbasedir extlibs
+    setclusters { lua }
+    setdefines { _CRT_SECURE_NO_DEPRECATE=1; }
+endtarget
+
+begintarget tinyxml_win32
+    settype lib
+    setprecompiledheader stdneb
+    setincpath_win32 "../foundation"
+    setbasedir extlibs
+    setclusters { tinyxml }
+endtarget
+
+begintarget zlib_win32
+    settype lib
+    setbasedir extlibs
+    setincpath_win32 "../foundation"
+    setclibclusters { zlib }
+    setdefines { _CRT_SECURE_NO_DEPRECATE=1; }
+endtarget
+
+begintarget sqlite_win32
+    settype lib
+    setbasedir extlibs
+    setincpath_win32 "../foundation"
+    setclibclusters { sqlite }
+endtarget
+
+begintarget ode_win32
+    settype lib    
+    setbasedir extlibs
+    setclusters { ode/ode ode/src ode/src/joints}
+    setincpath_win32 "../foundation;../extlibs/opcode;../extlibs/ode;../extlibs/GIMPACT;../extlibs/ode/ode"
+    setdefines { _CRT_SECURE_NO_DEPRECATE=1;__ODE__;}
+    setadditionaloptions { /wd4267 }
+endtarget
+
+begintarget opcode_win32
+    settype lib    
+    setbasedir extlibs
+    setclusters { OPCODE OPCODE/Ice }
+    setincpath_win32 "../foundation;../extlibs/opcode;../extlibs/ode;../extlibs/GIMPACT;../extlibs/ode/ode"
+    setdefines { _CRT_SECURE_NO_DEPRECATE=1;}
+endtarget
+
+begintarget gimpact_win32
+    settype lib    
+    setbasedir extlibs
+    setclusters { gimpact gimpact/gimpact }
+    setincpath_win32 "../foundation;../extlibs/opcode;../extlibs/ode;../extlibs/GIMPACT;../extlibs/ode/ode"
+    setdefines { _CRT_SECURE_NO_DEPRECATE=1;}
+    setadditionaloptions { /wd4311 /wd4312 }
+endtarget
+
+begintarget raknet_win32
+    settype lib
+    setbasedir extlibs
+    setclusters { raknet }
+    setincpath_win32 "../extlibs/raknet/DependentExtensions/openssl-0.9.8g;../extlibs/raknet/DependentExtensions/udt4/src;"
+    setdefines { _CRT_SECURE_NO_DEPRECATE=1;_RAKNET_LIB;_CRT_NONSTDC_NO_DEPRECATE=1;_VC80_UPGRADE=0x0710;_MBCS;_HAS_EXCEPTIONS=1 }
+    setadditionaloptions { /EHsc }
+endtarget
+
+beginsolution extlibs_win32 win32
+    settargets {
+        lua_win32
+        tinyxml_win32
+        zlib_win32
+        sqlite_win32
+        ode_win32
+        opcode_win32
+        gimpact_win32
+        raknet_win32
+    }
+endsolution
+

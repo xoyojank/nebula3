@@ -1,0 +1,358 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="network">
+      <UniqueIdentifier>{55a34c9e-db62-4141-8b3e-bb97e6557a35}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="network\internalmultiplayer">
+      <UniqueIdentifier>{5a4d420c-bb26-4dd5-b47d-4621f0620ce4}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="network\internalmultiplayer\base">
+      <UniqueIdentifier>{6ff7f8f2-cf23-49fa-a1ca-4ca58052aaea}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="network\internalmultiplayer\debug">
+      <UniqueIdentifier>{369f0463-9026-46b2-8ea5-0f35ccfd2804}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="network\internalmultiplayer\debug\raknet">
+      <UniqueIdentifier>{f3293b20-e497-4d66-b4b8-91c6ab905d0d}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="network\internalmultiplayer\raknet">
+      <UniqueIdentifier>{17e6d701-c38c-4831-8c5a-b1121965d18e}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="network\multiplayer">
+      <UniqueIdentifier>{af630ce2-da70-4eff-90e8-835f899ac59b}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="network\multiplayer\base">
+      <UniqueIdentifier>{21975639-3507-4e9a-a9f5-bc9d7439fca5}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="network\multiplayerfeature">
+      <UniqueIdentifier>{06aa7ec3-b363-4120-95b9-dc38ef480a24}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="network\multiplayerfeature\base">
+      <UniqueIdentifier>{5f85f94b-c9ae-4a0f-8103-c5ae8ccd87b0}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\addons\stdneb.cc">
+      <Filter>network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\network\distributionprotocol.cc">
+      <Filter>network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\network\multiplayerprotocol.cc">
+      <Filter>network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\network\notificationprotocol.cc">
+      <Filter>network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\network\internalmultiplayer\bitreader.cc">
+      <Filter>network\internalmultiplayer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\network\internalmultiplayer\bitwriter.cc">
+      <Filter>network\internalmultiplayer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\network\internalmultiplayer\internalmultiplayerhandler.cc">
+      <Filter>network\internalmultiplayer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\network\internalmultiplayer\internalmultiplayerinterface.cc">
+      <Filter>network\internalmultiplayer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\network\internalmultiplayer\internalmultiplayerserver.cc">
+      <Filter>network\internalmultiplayer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\network\internalmultiplayer\internalplayer.cc">
+      <Filter>network\internalmultiplayer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\network\internalmultiplayer\internalsession.cc">
+      <Filter>network\internalmultiplayer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\network\internalmultiplayer\netstream.cc">
+      <Filter>network\internalmultiplayer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\network\internalmultiplayer\sessioninfo.cc">
+      <Filter>network\internalmultiplayer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\network\internalmultiplayer\base\internalmultiplayerserverbase.cc">
+      <Filter>network\internalmultiplayer\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\network\internalmultiplayer\base\internalplayerbase.cc">
+      <Filter>network\internalmultiplayer\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\network\internalmultiplayer\base\netstreambase.cc">
+      <Filter>network\internalmultiplayer\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\network\internalmultiplayer\base\parameterresolverbase.cc">
+      <Filter>network\internalmultiplayer\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\network\internalmultiplayer\base\parametersetbase.cc">
+      <Filter>network\internalmultiplayer\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\network\internalmultiplayer\base\sessioninfobase.cc">
+      <Filter>network\internalmultiplayer\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\network\internalmultiplayer\base\uniqueplayeridbase.cc">
+      <Filter>network\internalmultiplayer\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\network\internalmultiplayer\debug\networkpagehandler.cc">
+      <Filter>network\internalmultiplayer\debug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\network\internalmultiplayer\debug\raknet\raknetnetworkpagehandler.cc">
+      <Filter>network\internalmultiplayer\debug\raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\network\internalmultiplayer\raknet\raknetinternalmultiplayerserver.cc">
+      <Filter>network\internalmultiplayer\raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\network\internalmultiplayer\raknet\raknetinternalplayer.cc">
+      <Filter>network\internalmultiplayer\raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\network\internalmultiplayer\raknet\raknetpacketchannel.cc">
+      <Filter>network\internalmultiplayer\raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\network\internalmultiplayer\raknet\raknetpacketpriority.cc">
+      <Filter>network\internalmultiplayer\raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\network\internalmultiplayer\raknet\raknetparameterresolver.cc">
+      <Filter>network\internalmultiplayer\raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\network\internalmultiplayer\raknet\raknetsessioninfo.cc">
+      <Filter>network\internalmultiplayer\raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\network\internalmultiplayer\raknet\raknetstream.cc">
+      <Filter>network\internalmultiplayer\raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\network\internalmultiplayer\raknet\raknettimestamp.cc">
+      <Filter>network\internalmultiplayer\raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\network\internalmultiplayer\raknet\raknetuniqueplayerid.cc">
+      <Filter>network\internalmultiplayer\raknet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\network\multiplayer\defaultmultiplayernotificationhandler.cc">
+      <Filter>network\multiplayer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\network\multiplayer\multiplayermanager.cc">
+      <Filter>network\multiplayer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\network\multiplayer\player.cc">
+      <Filter>network\multiplayer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\network\multiplayer\session.cc">
+      <Filter>network\multiplayer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\network\multiplayer\base\multiplayernotificationhandlerbase.cc">
+      <Filter>network\multiplayer\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\network\multiplayerfeature\distributionclient.cc">
+      <Filter>network\multiplayerfeature</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\network\multiplayerfeature\distributionhost.cc">
+      <Filter>network\multiplayerfeature</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\network\multiplayerfeature\distributionmanager.cc">
+      <Filter>network\multiplayerfeature</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\network\multiplayerfeature\distributionnotificationhandler.cc">
+      <Filter>network\multiplayerfeature</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\network\multiplayerfeature\distributionproperty.cc">
+      <Filter>network\multiplayerfeature</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\network\multiplayerfeature\multiplayerfeatureunit.cc">
+      <Filter>network\multiplayerfeature</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\network\multiplayerfeature\networkattribute.cc">
+      <Filter>network\multiplayerfeature</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\network\multiplayerfeature\objectview.cc">
+      <Filter>network\multiplayerfeature</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\network\multiplayerfeature\base\distributionsystem.cc">
+      <Filter>network\multiplayerfeature\base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\network\multiplayerfeature\base\playeraction.cc">
+      <Filter>network\multiplayerfeature\base</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\addons\network\distributionprotocol.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\network\multiplayerprotocol.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\network\notificationprotocol.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\network\internalmultiplayer\bitreader.h">
+      <Filter>network\internalmultiplayer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\network\internalmultiplayer\bitwriter.h">
+      <Filter>network\internalmultiplayer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\network\internalmultiplayer\handle.h">
+      <Filter>network\internalmultiplayer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\network\internalmultiplayer\internalmultiplayerhandler.h">
+      <Filter>network\internalmultiplayer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\network\internalmultiplayer\internalmultiplayerinterface.h">
+      <Filter>network\internalmultiplayer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\network\internalmultiplayer\internalmultiplayerserver.h">
+      <Filter>network\internalmultiplayer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\network\internalmultiplayer\internalplayer.h">
+      <Filter>network\internalmultiplayer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\network\internalmultiplayer\internalsession.h">
+      <Filter>network\internalmultiplayer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\network\internalmultiplayer\multiplayertype.h">
+      <Filter>network\internalmultiplayer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\network\internalmultiplayer\netstream.h">
+      <Filter>network\internalmultiplayer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\network\internalmultiplayer\packetchannel.h">
+      <Filter>network\internalmultiplayer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\network\internalmultiplayer\packetid.h">
+      <Filter>network\internalmultiplayer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\network\internalmultiplayer\packetpriority.h">
+      <Filter>network\internalmultiplayer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\network\internalmultiplayer\playerinfo.h">
+      <Filter>network\internalmultiplayer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\network\internalmultiplayer\sessioninfo.h">
+      <Filter>network\internalmultiplayer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\network\internalmultiplayer\timestamp.h">
+      <Filter>network\internalmultiplayer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\network\internalmultiplayer\uniqueplayerid.h">
+      <Filter>network\internalmultiplayer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\network\internalmultiplayer\base\internalmultiplayerserverbase.h">
+      <Filter>network\internalmultiplayer\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\network\internalmultiplayer\base\internalplayerbase.h">
+      <Filter>network\internalmultiplayer\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\network\internalmultiplayer\base\netstreambase.h">
+      <Filter>network\internalmultiplayer\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\network\internalmultiplayer\base\packetchannelbase.h">
+      <Filter>network\internalmultiplayer\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\network\internalmultiplayer\base\packetprioritybase.h">
+      <Filter>network\internalmultiplayer\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\network\internalmultiplayer\base\parameterresolverbase.h">
+      <Filter>network\internalmultiplayer\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\network\internalmultiplayer\base\parametersetbase.h">
+      <Filter>network\internalmultiplayer\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\network\internalmultiplayer\base\sessioninfobase.h">
+      <Filter>network\internalmultiplayer\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\network\internalmultiplayer\base\uniqueplayeridbase.h">
+      <Filter>network\internalmultiplayer\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\network\internalmultiplayer\debug\networkpagehandler.h">
+      <Filter>network\internalmultiplayer\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\network\internalmultiplayer\debug\raknet\raknetnetworkpagehandler.h">
+      <Filter>network\internalmultiplayer\debug\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\network\internalmultiplayer\raknet\raknetinternalmultiplayerserver.h">
+      <Filter>network\internalmultiplayer\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\network\internalmultiplayer\raknet\raknetinternalplayer.h">
+      <Filter>network\internalmultiplayer\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\network\internalmultiplayer\raknet\raknetpacketchannel.h">
+      <Filter>network\internalmultiplayer\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\network\internalmultiplayer\raknet\raknetpacketid.h">
+      <Filter>network\internalmultiplayer\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\network\internalmultiplayer\raknet\raknetpacketpriority.h">
+      <Filter>network\internalmultiplayer\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\network\internalmultiplayer\raknet\raknetparameterresolver.h">
+      <Filter>network\internalmultiplayer\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\network\internalmultiplayer\raknet\raknetsessioninfo.h">
+      <Filter>network\internalmultiplayer\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\network\internalmultiplayer\raknet\raknetstream.h">
+      <Filter>network\internalmultiplayer\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\network\internalmultiplayer\raknet\raknettimestamp.h">
+      <Filter>network\internalmultiplayer\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\network\internalmultiplayer\raknet\raknetuniqueplayerid.h">
+      <Filter>network\internalmultiplayer\raknet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\network\multiplayer\defaultmultiplayernotificationhandler.h">
+      <Filter>network\multiplayer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\network\multiplayer\multiplayermanager.h">
+      <Filter>network\multiplayer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\network\multiplayer\player.h">
+      <Filter>network\multiplayer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\network\multiplayer\session.h">
+      <Filter>network\multiplayer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\network\multiplayer\base\multiplayernotificationhandlerbase.h">
+      <Filter>network\multiplayer\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\network\multiplayerfeature\distributionclient.h">
+      <Filter>network\multiplayerfeature</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\network\multiplayerfeature\distributionhost.h">
+      <Filter>network\multiplayerfeature</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\network\multiplayerfeature\distributionid.h">
+      <Filter>network\multiplayerfeature</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\network\multiplayerfeature\distributionmanager.h">
+      <Filter>network\multiplayerfeature</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\network\multiplayerfeature\distributionnotificationhandler.h">
+      <Filter>network\multiplayerfeature</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\network\multiplayerfeature\distributionproperty.h">
+      <Filter>network\multiplayerfeature</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\network\multiplayerfeature\multiplayerfeatureunit.h">
+      <Filter>network\multiplayerfeature</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\network\multiplayerfeature\networkattribute.h">
+      <Filter>network\multiplayerfeature</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\network\multiplayerfeature\objectview.h">
+      <Filter>network\multiplayerfeature</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\network\multiplayerfeature\base\distributionsystem.h">
+      <Filter>network\multiplayerfeature\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\network\multiplayerfeature\base\playeraction.h">
+      <Filter>network\multiplayerfeature\base</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

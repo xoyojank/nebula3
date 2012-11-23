@@ -1,0 +1,352 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="distributedtools">
+      <UniqueIdentifier>{627b2b2e-aa23-44ee-bdf1-3c074b7f2ca8}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="distributedtools\distributedjobs">
+      <UniqueIdentifier>{36bf5033-0f59-4ad6-8cc4-2f4e4b2f787a}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="toolkitutil">
+      <UniqueIdentifier>{adc37a96-aa3a-4065-bf72-7e449a8c88a1}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="toolkitutil\animutil">
+      <UniqueIdentifier>{e1b2cd90-0aa2-40b3-a800-6d57d3dc7b6c}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="toolkitutil\meshutil">
+      <UniqueIdentifier>{dccf65fe-3a79-4ccd-a078-682346f05c15}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="toolkitutil\n2util">
+      <UniqueIdentifier>{a086269c-f944-474b-8b43-002d947bca5b}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="toolkitutil\texutil">
+      <UniqueIdentifier>{526af2cf-b011-4688-9f7c-1ccb5cdfd7d1}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\toolkit\stdneb.cc">
+      <Filter>distributedtools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\toolkit\distributedtools\distributedjobscheduler.cc">
+      <Filter>distributedtools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\toolkit\distributedtools\distributedtoolkitapp.cc">
+      <Filter>distributedtools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\toolkit\distributedtools\remotejobservice.cc">
+      <Filter>distributedtools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\toolkit\distributedtools\shareddircontrol.cc">
+      <Filter>distributedtools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\toolkit\distributedtools\shareddircreator.cc">
+      <Filter>distributedtools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\toolkit\distributedtools\shareddirfilesystem.cc">
+      <Filter>distributedtools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\toolkit\distributedtools\shareddirftp.cc">
+      <Filter>distributedtools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\toolkit\distributedtools\distributedjobs\distributedappjob.cc">
+      <Filter>distributedtools\distributedjobs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\toolkit\distributedtools\distributedjobs\distributedcreateemptyfilejob.cc">
+      <Filter>distributedtools\distributedjobs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\toolkit\distributedtools\distributedjobs\distributeddeletedirectorycontentjob.cc">
+      <Filter>distributedtools\distributedjobs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\toolkit\distributedtools\distributedjobs\distributedjob.cc">
+      <Filter>distributedtools\distributedjobs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\toolkit\toolkitutil\applauncher.cc">
+      <Filter>toolkitutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\toolkit\toolkitutil\assetfile.cc">
+      <Filter>toolkitutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\toolkit\toolkitutil\assetregistry.cc">
+      <Filter>toolkitutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\toolkit\toolkitutil\assetupdater.cc">
+      <Filter>toolkitutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\toolkit\toolkitutil\audioexporter.cc">
+      <Filter>toolkitutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\toolkit\toolkitutil\binarymodelwriter.cc">
+      <Filter>toolkitutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\toolkit\toolkitutil\binaryxmlconverter.cc">
+      <Filter>toolkitutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\toolkit\toolkitutil\logger.cc">
+      <Filter>toolkitutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\toolkit\toolkitutil\modelwriter.cc">
+      <Filter>toolkitutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\toolkit\toolkitutil\n2batchconverter.cc">
+      <Filter>toolkitutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\toolkit\toolkitutil\n2converter.cc">
+      <Filter>toolkitutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\toolkit\toolkitutil\platform.cc">
+      <Filter>toolkitutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\toolkit\toolkitutil\projectinfo.cc">
+      <Filter>toolkitutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\toolkit\toolkitutil\rcswrapper.cc">
+      <Filter>toolkitutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\toolkit\toolkitutil\resourcedictionarybuilder.cc">
+      <Filter>toolkitutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\toolkit\toolkitutil\scenenode.cc">
+      <Filter>toolkitutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\toolkit\toolkitutil\scenenodetree.cc">
+      <Filter>toolkitutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\toolkit\toolkitutil\shadercompiler.cc">
+      <Filter>toolkitutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\toolkit\toolkitutil\toolkitapp.cc">
+      <Filter>toolkitutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\toolkit\toolkitutil\xmlmodelwriter.cc">
+      <Filter>toolkitutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\toolkit\toolkitutil\xmlnodemodifier.cc">
+      <Filter>toolkitutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\toolkit\toolkitutil\animutil\animbuilder.cc">
+      <Filter>toolkitutil\animutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\toolkit\toolkitutil\animutil\animbuilderclip.cc">
+      <Filter>toolkitutil\animutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\toolkit\toolkitutil\animutil\animbuildercurve.cc">
+      <Filter>toolkitutil\animutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\toolkit\toolkitutil\animutil\animbuilderloader.cc">
+      <Filter>toolkitutil\animutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\toolkit\toolkitutil\animutil\animbuildersaver.cc">
+      <Filter>toolkitutil\animutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\toolkit\toolkitutil\animutil\animconverter.cc">
+      <Filter>toolkitutil\animutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\toolkit\toolkitutil\meshutil\meshbuilder.cc">
+      <Filter>toolkitutil\meshutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\toolkit\toolkitutil\meshutil\meshbuildergroup.cc">
+      <Filter>toolkitutil\meshutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\toolkit\toolkitutil\meshutil\meshbuildersaver.cc">
+      <Filter>toolkitutil\meshutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\toolkit\toolkitutil\meshutil\meshbuildertriangle.cc">
+      <Filter>toolkitutil\meshutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\toolkit\toolkitutil\meshutil\meshbuildervertex.cc">
+      <Filter>toolkitutil\meshutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\toolkit\toolkitutil\n2util\n2reflectioninfo.cc">
+      <Filter>toolkitutil\n2util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\toolkit\toolkitutil\n2util\n2sceneloader.cc">
+      <Filter>toolkitutil\n2util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\toolkit\toolkitutil\n2util\nvx2orderfreestreamreader.cc">
+      <Filter>toolkitutil\n2util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\toolkit\toolkitutil\texutil\imageconverter.cc">
+      <Filter>toolkitutil\texutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\toolkit\toolkitutil\texutil\textureattrs.cc">
+      <Filter>toolkitutil\texutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\toolkit\toolkitutil\texutil\textureattrtable.cc">
+      <Filter>toolkitutil\texutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\toolkit\toolkitutil\texutil\textureconversionjob.cc">
+      <Filter>toolkitutil\texutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\toolkit\toolkitutil\texutil\textureconverter.cc">
+      <Filter>toolkitutil\texutil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\toolkit\toolkitutil\texutil\win32textureconversionjob.cc">
+      <Filter>toolkitutil\texutil</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\toolkit\distributedtools\distributedjobscheduler.h">
+      <Filter>distributedtools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\toolkit\distributedtools\distributedtoolkitapp.h">
+      <Filter>distributedtools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\toolkit\distributedtools\remotejobservice.h">
+      <Filter>distributedtools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\toolkit\distributedtools\shareddircontrol.h">
+      <Filter>distributedtools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\toolkit\distributedtools\shareddircreator.h">
+      <Filter>distributedtools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\toolkit\distributedtools\shareddirfilesystem.h">
+      <Filter>distributedtools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\toolkit\distributedtools\shareddirftp.h">
+      <Filter>distributedtools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\toolkit\distributedtools\distributedjobs\distributedappjob.h">
+      <Filter>distributedtools\distributedjobs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\toolkit\distributedtools\distributedjobs\distributedcreateemptyfilejob.h">
+      <Filter>distributedtools\distributedjobs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\toolkit\distributedtools\distributedjobs\distributeddeletedirectorycontentjob.h">
+      <Filter>distributedtools\distributedjobs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\toolkit\distributedtools\distributedjobs\distributedjob.h">
+      <Filter>distributedtools\distributedjobs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\toolkit\toolkitutil\applauncher.h">
+      <Filter>toolkitutil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\toolkit\toolkitutil\assetfile.h">
+      <Filter>toolkitutil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\toolkit\toolkitutil\assetregistry.h">
+      <Filter>toolkitutil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\toolkit\toolkitutil\assetupdater.h">
+      <Filter>toolkitutil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\toolkit\toolkitutil\audioexporter.h">
+      <Filter>toolkitutil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\toolkit\toolkitutil\binarymodelwriter.h">
+      <Filter>toolkitutil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\toolkit\toolkitutil\binaryxmlconverter.h">
+      <Filter>toolkitutil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\toolkit\toolkitutil\logger.h">
+      <Filter>toolkitutil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\toolkit\toolkitutil\modelwriter.h">
+      <Filter>toolkitutil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\toolkit\toolkitutil\n2batchconverter.h">
+      <Filter>toolkitutil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\toolkit\toolkitutil\n2converter.h">
+      <Filter>toolkitutil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\toolkit\toolkitutil\platform.h">
+      <Filter>toolkitutil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\toolkit\toolkitutil\projectinfo.h">
+      <Filter>toolkitutil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\toolkit\toolkitutil\rcswrapper.h">
+      <Filter>toolkitutil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\toolkit\toolkitutil\resourcedictionarybuilder.h">
+      <Filter>toolkitutil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\toolkit\toolkitutil\scenenode.h">
+      <Filter>toolkitutil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\toolkit\toolkitutil\scenenodetree.h">
+      <Filter>toolkitutil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\toolkit\toolkitutil\shadercompiler.h">
+      <Filter>toolkitutil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\toolkit\toolkitutil\toolkitapp.h">
+      <Filter>toolkitutil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\toolkit\toolkitutil\xmlmodelwriter.h">
+      <Filter>toolkitutil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\toolkit\toolkitutil\xmlnodemodifier.h">
+      <Filter>toolkitutil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\toolkit\toolkitutil\animutil\animbuilder.h">
+      <Filter>toolkitutil\animutil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\toolkit\toolkitutil\animutil\animbuilderclip.h">
+      <Filter>toolkitutil\animutil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\toolkit\toolkitutil\animutil\animbuildercurve.h">
+      <Filter>toolkitutil\animutil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\toolkit\toolkitutil\animutil\animbuilderloader.h">
+      <Filter>toolkitutil\animutil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\toolkit\toolkitutil\animutil\animbuildersaver.h">
+      <Filter>toolkitutil\animutil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\toolkit\toolkitutil\animutil\animconverter.h">
+      <Filter>toolkitutil\animutil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\toolkit\toolkitutil\meshutil\meshbuilder.h">
+      <Filter>toolkitutil\meshutil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\toolkit\toolkitutil\meshutil\meshbuildergroup.h">
+      <Filter>toolkitutil\meshutil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\toolkit\toolkitutil\meshutil\meshbuildersaver.h">
+      <Filter>toolkitutil\meshutil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\toolkit\toolkitutil\meshutil\meshbuildertriangle.h">
+      <Filter>toolkitutil\meshutil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\toolkit\toolkitutil\meshutil\meshbuildervertex.h">
+      <Filter>toolkitutil\meshutil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\toolkit\toolkitutil\n2util\n2reflectioninfo.h">
+      <Filter>toolkitutil\n2util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\toolkit\toolkitutil\n2util\n2sceneloader.h">
+      <Filter>toolkitutil\n2util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\toolkit\toolkitutil\n2util\nvx2orderfreestreamreader.h">
+      <Filter>toolkitutil\n2util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\toolkit\toolkitutil\texutil\imageconverter.h">
+      <Filter>toolkitutil\texutil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\toolkit\toolkitutil\texutil\textureattrs.h">
+      <Filter>toolkitutil\texutil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\toolkit\toolkitutil\texutil\textureattrtable.h">
+      <Filter>toolkitutil\texutil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\toolkit\toolkitutil\texutil\textureconversionjob.h">
+      <Filter>toolkitutil\texutil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\toolkit\toolkitutil\texutil\textureconverter.h">
+      <Filter>toolkitutil\texutil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\toolkit\toolkitutil\texutil\win32textureconversionjob.h">
+      <Filter>toolkitutil\texutil</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

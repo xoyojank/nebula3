@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2006 sp2 U (http://www.altova.com) by Elvis Presley (Radon Labs GmbH) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="types.xsd"/>
+	<xs:element name="Nebula3">
+		<xs:annotation>
+			<xs:documentation>The Nebula3 IDL root element.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:choice>
+				<xs:element name="Library" type="Library" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="Protocol" type="Protocol" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="Arg">
+		<xs:annotation>
+			<xs:documentation>A command argument.</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="name" type="string" use="required">
+			<xs:annotation>
+				<xs:documentation>The argument's name.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="type" type="valueType" use="required">
+			<xs:annotation>
+				<xs:documentation>The argument's type.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="default">
+			<xs:annotation>
+				<xs:documentation>An optional default value.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="Command">
+		<xs:annotation>
+			<xs:documentation>An interface command.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="InArg" type="Arg" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>An input argument to the command</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="OutArg" type="Arg" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>An output argument of the command.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Code" type="xs:string"/>
+		</xs:sequence>
+		<xs:attribute name="name" type="string" use="required">
+			<xs:annotation>
+				<xs:documentation>The name of the command.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="fourcc" type="fourcc" use="required">
+			<xs:annotation>
+				<xs:documentation>A fourcc code for the command.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="desc" type="string" use="required">
+			<xs:annotation>
+				<xs:documentation>A human-readable short description of what the command does.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="Library">
+		<xs:annotation>
+			<xs:documentation>A Nebula3 command library</xs:documentation>
+		</xs:annotation>
+		<xs:choice maxOccurs="unbounded">
+			<xs:element name="Command" type="Command" maxOccurs="unbounded"/>
+			<xs:element name="Dependency" type="Dependency" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:choice>
+		<xs:attribute name="name" type="string" use="required">
+			<xs:annotation>
+				<xs:documentation>The library name.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="Dependency">
+		<xs:annotation>
+			<xs:documentation>Define a C++ include statement.</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="header" type="string" use="required">
+			<xs:annotation>
+				<xs:documentation>The header file path.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="Message">
+		<xs:annotation>
+			<xs:documentation>A message.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="InArg" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="Arg">
+							<xs:sequence>
+								<xs:element name="Encode" type="xs:string" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>Optionale serialization code.</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="Decode" type="xs:string" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>Optional deserialization code.</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:extension>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="OutArg" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="Arg">
+							<xs:sequence>
+								<xs:element name="Encode" type="xs:string" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>Optionale serialization code.</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="Decode" type="xs:string" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>Optional deserialization code.</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:extension>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="name" type="string" use="required">
+			<xs:annotation>
+				<xs:documentation>The message name.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="fourcc" type="fourcc" use="required">
+			<xs:annotation>
+				<xs:documentation>A fourcc code for the message</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="Protocol">
+		<xs:annotation>
+			<xs:documentation>A protocol is a group of related messages.</xs:documentation>
+		</xs:annotation>
+		<xs:choice maxOccurs="unbounded">
+			<xs:element name="Message" type="Message" maxOccurs="unbounded"/>
+			<xs:element name="Dependency" type="Dependency" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:choice>
+		<xs:attribute name="name" use="required">
+			<xs:annotation>
+				<xs:documentation>The name of the protocol.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="fourcc" use="required">
+			<xs:annotation>
+				<xs:documentation>The fourcc code of the protocol.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+</xs:schema>

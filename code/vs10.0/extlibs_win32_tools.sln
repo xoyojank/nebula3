@@ -1,0 +1,39 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libs", "Libs", "{832A854F-2030-4EA4-86FE-EDEEC017E78E}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "sqlite_win32_tools", "extlibs_win32_tools.sqlite_win32_tools.vcproj", "{A836A3C3-79EE-4800-90F4-A40A5E886CDE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+		Programming|Win32 = Programming|Win32
+		Public_Build|Win32 = Public_Build|Win32
+		Securom|Win32 = Securom|Win32
+		Maya_Debug|Win32 = Maya_Debug|Win32
+		Maya_Release|Win32 = Maya_Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A836A3C3-79EE-4800-90F4-A40A5E886CDE}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A836A3C3-79EE-4800-90F4-A40A5E886CDE}.Debug|Win32.Build.0 = Debug|Win32
+		{A836A3C3-79EE-4800-90F4-A40A5E886CDE}.Release|Win32.ActiveCfg = Release|Win32
+		{A836A3C3-79EE-4800-90F4-A40A5E886CDE}.Release|Win32.Build.0 = Release|Win32
+		{A836A3C3-79EE-4800-90F4-A40A5E886CDE}.Programming|Win32.ActiveCfg = Programming|Win32
+		{A836A3C3-79EE-4800-90F4-A40A5E886CDE}.Programming|Win32.Build.0 = Programming|Win32
+		{A836A3C3-79EE-4800-90F4-A40A5E886CDE}.Public_Build|Win32.ActiveCfg = Public_Build|Win32
+		{A836A3C3-79EE-4800-90F4-A40A5E886CDE}.Public_Build|Win32.Build.0 = Public_Build|Win32
+		{A836A3C3-79EE-4800-90F4-A40A5E886CDE}.Securom|Win32.ActiveCfg = Securom|Win32
+		{A836A3C3-79EE-4800-90F4-A40A5E886CDE}.Securom|Win32.Build.0 = Securom|Win32
+		{A836A3C3-79EE-4800-90F4-A40A5E886CDE}.Maya_Debug|Win32.ActiveCfg = Maya_Debug|Win32
+		{A836A3C3-79EE-4800-90F4-A40A5E886CDE}.Maya_Debug|Win32.Build.0 = Maya_Debug|Win32
+		{A836A3C3-79EE-4800-90F4-A40A5E886CDE}.Maya_Release|Win32.ActiveCfg = Maya_Release|Win32
+		{A836A3C3-79EE-4800-90F4-A40A5E886CDE}.Maya_Release|Win32.Build.0 = Maya_Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A836A3C3-79EE-4800-90F4-A40A5E886CDE} = {832A854F-2030-4EA4-86FE-EDEEC017E78E}
+	EndGlobalSection
+EndGlobal

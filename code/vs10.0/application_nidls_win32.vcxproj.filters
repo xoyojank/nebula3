@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="basegamefeature">
+      <UniqueIdentifier>{ccbf5069-d53a-48cf-81d6-b10487c4f88f}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="graphicsfeature">
+      <UniqueIdentifier>{0839afc2-e201-47ce-8ab4-0dc12b0cd34c}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="physicsfeature">
+      <UniqueIdentifier>{cd6477c7-5c16-4d68-9e51-e2daff127a3d}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="scriptfeature">
+      <UniqueIdentifier>{6a3e2682-0e05-4e6c-a48a-a058d4067f02}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+    <Filter Include="stateobjectfeature">
+      <UniqueIdentifier>{4717c6cb-821e-471a-b282-6e4e19de3823}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Nebula3_Interface_Definition Include="..\application\basegamefeature\basegameprotocol.nidl">
+      <Filter>basegamefeature</Filter>
+    </Nebula3_Interface_Definition>
+    <Nebula3_Interface_Definition Include="..\application\graphicsfeature\graphicsfeatureprotocol.nidl">
+      <Filter>graphicsfeature</Filter>
+    </Nebula3_Interface_Definition>
+    <Nebula3_Interface_Definition Include="..\application\physicsfeature\physicsprotocol.nidl">
+      <Filter>physicsfeature</Filter>
+    </Nebula3_Interface_Definition>
+    <Nebula3_Interface_Definition Include="..\application\scriptfeature\scriptprotocol.nidl">
+      <Filter>scriptfeature</Filter>
+    </Nebula3_Interface_Definition>
+    <Nebula3_Interface_Definition Include="..\application\stateobjectfeature\stateobjectprotocol.nidl">
+      <Filter>stateobjectfeature</Filter>
+    </Nebula3_Interface_Definition>
+  </ItemGroup>
+</Project>

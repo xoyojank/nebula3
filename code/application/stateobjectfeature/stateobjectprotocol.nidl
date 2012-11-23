@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Nebula3>
+  <Protocol namespace="StateObjectFeature" name="StateObjectProtocol">
+
+    <!-- dependencies -->
+    <Dependency header="properties/stateinfo.h"/>
+    
+    <!-- Returns the Physics entity used by a game entity. -->
+    <Message name="ContainsState" fourcc="CONT">
+      <InArg name="StateName" type="Util::String"/>
+      <InArg name="Result" type="bool"/>
+    </Message>
+    
+    <!-- Sets the trigger property active/inactive-->
+    <Message name="GetActiveState" fourcc="GEAC">
+      <InArg name="StateName" type="Util::String"/>
+    </Message>
+    
+    <!-- Returns the active/inactive state of the trigger-->
+    <Message name="InternalSwitchActiveState" fourcc="ISAS">
+      <InArg name="StateName" type="Util::String"/>
+    </Message>
+    
+    <!-- Sets the trigger scale-->
+    <Message name="SwitchActiveState" fourcc="SAST">
+      <InArg name="StateName" type="Util::String"/>
+    </Message>
+
+    <!-- Sets the trigger scale-->
+    <Message name="Resources" fourcc="RESO">
+      <InArg name="Resources" type="Util::Dictionary<Util::String, StateInfo>"/>
+    </Message>
+  </Protocol>
+
+</Nebula3>

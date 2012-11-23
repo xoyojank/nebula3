@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="vibration">
+      <UniqueIdentifier>{8fe40d47-10c7-44d1-b64a-1485243cafbc}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\addons\stdneb.cc">
+      <Filter>vibration</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\vibration\vibrationhandler.cc">
+      <Filter>vibration</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\vibration\vibrationinterface.cc">
+      <Filter>vibration</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\vibration\vibrationplayer.cc">
+      <Filter>vibration</Filter>
+    </ClCompile>
+    <ClCompile Include="..\addons\vibration\vibrationprotocol.cc">
+      <Filter>vibration</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\addons\vibration\vibrationhandler.h">
+      <Filter>vibration</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\vibration\vibrationinterface.h">
+      <Filter>vibration</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\vibration\vibrationplayer.h">
+      <Filter>vibration</Filter>
+    </ClInclude>
+    <ClInclude Include="..\addons\vibration\vibrationprotocol.h">
+      <Filter>vibration</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

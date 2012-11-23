@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2006 sp2 U (http://www.altova.com) by Andre Weissflog (Radon Labs GmbH) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="types.xsd"/>
+	<xs:element name="Nebula3">
+		<xs:annotation>
+			<xs:documentation>Generic Nebula3 root element</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="FrameShader" type="FrameShader" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="FrameShader">
+		<xs:annotation>
+			<xs:documentation>Describes how a frame is rendered</xs:documentation>
+		</xs:annotation>
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="DeclareRenderTarget" type="RenderTarget" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="Pass" type="Pass" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="PostEffect" type="PostEffect" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:choice>
+		<xs:attribute name="name" use="required">
+			<xs:annotation>
+				<xs:documentation>A human readable unique name of the frame shader.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="RenderTarget">
+		<xs:annotation>
+			<xs:documentation>Describes a render target for use in the frame shader</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="name" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Shared resource name of render target texture.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="format" type="RTPixelFormat" use="required">
+			<xs:annotation>
+				<xs:documentation>Pixel format of render target surface.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="format2" type="RTPixelFormat">
+			<xs:annotation>
+				<xs:documentation>Pixel format of optional 2nd render taregt surface for MRT rendering</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="format3" type="RTPixelFormat">
+			<xs:annotation>
+				<xs:documentation>Pixel format of optional 3rd render target surface for MRT rendering.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="format4" type="RTPixelFormat">
+			<xs:annotation>
+				<xs:documentation>Pixel format of optional 4th render target surface for MRT rendering.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="depth" type="xs:boolean">
+			<xs:annotation>
+				<xs:documentation>Pixel format of optional depth/stencil surface.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="width" type="xs:int">
+			<xs:annotation>
+				<xs:documentation>Absolute width of render target surface in pixels.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="height" type="xs:int">
+			<xs:annotation>
+				<xs:documentation>Absolute height of render target surface in pixels.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="relWidth">
+			<xs:annotation>
+				<xs:documentation>Display-relative width of render target.</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:float">
+					<xs:minInclusive value="0.0"/>
+					<xs:maxInclusive value="1.0"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="relHeight">
+			<xs:annotation>
+				<xs:documentation>Display-relative height of render target.</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:float">
+					<xs:minInclusive value="0.0"/>
+					<xs:maxInclusive value="1.0"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="msaa" type="xs:boolean">
+			<xs:annotation>
+				<xs:documentation>True if this is a multisampled render target.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:simpleType name="RTPixelFormat">
+		<xs:annotation>
+			<xs:documentation>RenderTarget pixel formats</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="X8R8G8B8"/>
+			<xs:enumeration value="A8R8G8B8"/>
+			<xs:enumeration value="R5G6B5"/>
+			<xs:enumeration value="G16R16F"/>
+			<xs:enumeration value="A16B16G16R16F"/>
+			<xs:enumeration value="R32F"/>
+			<xs:enumeration value="A32B32G32R32F"/>
+			<xs:enumeration value="X2R10G10B10"/>
+			<xs:enumeration value="A2R10G10B10"/>
+			<xs:enumeration value="G16R16"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="Pass">
+		<xs:annotation>
+			<xs:documentation>Encapsulates the complete 3d rendering to one render target.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ApplyShaderVariable" type="ApplyShaderVariable" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="Batch" type="Batch" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="name" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>A human readable name of the pass.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="shader" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Resource name of pass shader.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="renderTarget">
+			<xs:annotation>
+				<xs:documentation>Resource name of render target this pass will render to. If not present, the FrameShader's main render target will be used.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="clearColor" type="vector4">
+			<xs:annotation>
+				<xs:documentation>If present, clear color buffer to the indicated color.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="clearDepth">
+			<xs:annotation>
+				<xs:documentation>If present, clear depth buffer to the indicated value.</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:float">
+					<xs:minInclusive value="0.0"/>
+					<xs:maxInclusive value="1.0"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="clearStencil">
+			<xs:annotation>
+				<xs:documentation>If present, clear stencil buffer to the indicated value.</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:int">
+					<xs:minInclusive value="0"/>
+					<xs:maxInclusive value="255"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="PostEffect">
+		<xs:annotation>
+			<xs:documentation>Implements a fullscreen post effect to a render target.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ApplyShaderVariable" type="ApplyShaderVariable" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="name" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>A human readable name of the post effect.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="shader" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Resource name of post effect shader.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="renderTarget" type="xs:string">
+			<xs:annotation>
+				<xs:documentation>Name of render target, if not present, the main render target of the frame shader will be used.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="Batch">
+		<xs:annotation>
+			<xs:documentation>Encapsulates rendering a batch of 3d nodes.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ApplyShaderVariable" type="ApplyShaderVariable" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="shader" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Name of batch shader which contains render state valid for the entire batch.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="type" use="required">
+			<xs:annotation>
+				<xs:documentation>Defines the batch type (Depth, Solid, Alpha, etc...)</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="Depth"/>
+					<xs:enumeration value="Solid"/>
+					<xs:enumeration value="Alpha"/>
+					<xs:enumeration value="SolidAutoZ"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="shdFeatures" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Defines shader feature bits for shader variation selection.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="nodeFilter" use="required">
+			<xs:annotation>
+				<xs:documentation>Only render nodes of the given type in this batch.</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="Solid"/>
+					<xs:enumeration value="Alpha"/>
+					<xs:enumeration value="Occluder"/>
+					<xs:enumeration value="ShadowCaster"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="lighting" use="required">
+			<xs:annotation>
+				<xs:documentation>Lighting strategy to use for this batch.</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="None"/>
+					<xs:enumeration value="SinglePass"/>
+					<xs:enumeration value="MultiPass"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="sorting" use="required">
+			<xs:annotation>
+				<xs:documentation>Sorting strategy to use for this batch.</xs:documentation>
+			</xs:annotation>
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="FrontToBack"/>
+					<xs:enumeration value="BackToFront"/>
+					<xs:enumeration value="None"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="ApplyShaderVariable">
+		<xs:annotation>
+			<xs:documentation>Encapsulates setting a shader variable.</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="sem" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Semantic name of the shader variable.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="value" type="xs:string" use="required">
+			<xs:annotation>
+				<xs:documentation>Value to set. The data type will be extracted from the shader variable.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="jobs">
+      <UniqueIdentifier>{449fdae8-edf2-44ae-9d44-166782da1d6f}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;cc</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\render\coreanimation\jobs\animjobsample.cc">
+      <Filter>jobs</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

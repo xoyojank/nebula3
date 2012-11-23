@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Nebula3 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="C:\nebula3\schemas\projectinfo.xsd">
+    
+    <Project name="Nebula3" defaultPlatform="win32">
+        
+        <!-- Win32 Platform Info -->
+        <Platform name="win32">
+            <!-- general settings -->
+            <Attr name="DstDir" value="proj:export_win32"/>
+            <Attr name="SrcDir" value="proj:work"/>
+            <Attr name="IntDir" value="proj:intermediate"/>
+
+            <!-- shader compilation -->
+            <Attr name="ShaderTool" value="$(env:DXSDK_DIR)/Utilities/bin/x86/fxc.exe"/>
+            <Attr name="ShaderToolParams" value="/I ../lib /I lib"/>
+            <Attr name="ShaderSrcDir" value="src:shaders/sm3"/>
+            <Attr name="ShaderDstDir" value="dst:shaders"/>
+            <Attr name="FrameShaderSrcDir" value="src:frame/win32"/>
+            <Attr name="FrameShaderDstDir" value="dst:frame"/>
+            
+            <!-- texture conversion -->
+            <Attr name="TextureTool" value="toolkit:bin/win32/nvdxt.exe"/>
+            <Attr name="TextureAttrTable" value="src:textures/batchattributes.xml"/>
+            <Attr name="TextureSrcDir" value="src:textures"/>
+            <Attr name="TextureDstDir" value="dst:textures"/>
+            
+            <!-- animation conversion -->
+            <Attr name="AnimSrcDir" value="int:anims"/>
+            <Attr name="AnimDstDir" value="dst:anims"/>
+            
+            <!-- audio export -->
+            <Attr name="AudioDstDir" value="dst:audio"/>
+            <Attr name="AudioTool" value="programs:FMOD SoundSystem/FMOD Designer/fmod_designercl.exe"/>
+            <Attr name="AudioSrcDir" value="src:audio"/>
+			
+			<!-- scaleform export -->
+            <Attr name="ScaleformTool" value="programs:Scaleform/GFx SDK 3.1/Bin/gfxexport.exe"/>
+			<Attr name="ScaleformParams" value="-i DDS -sd"/>
+            <Attr name="ScaleformDstDir" value="dst:ui"/>
+            <Attr name="ScaleformSrcDir" value="src:ui"/>
+
+            <!-- N2->N3 model file conversion -->
+            <Attr name="N2ConverterSrcDir" value="proj:export_win32/gfxlib"/>
+            <Attr name="N2ConverterDstDir" value="dst:models"/>
+            
+            <!-- archiver tool -->
+            <Attr name="ArchiverTool" value="proj:bin/win32/zip.exe"/>
+            <Attr name="ArchiverExcludePatterns" value="*.db4;*.bik"/>
+
+            <!-- Sync Tool Settings -->
+            <Attr name="SVNToolPath" value="programs:CollabNet Subversion/svn.exe"/>
+            <Attr name="BuildServerRoot" value="file://gambar/io/floh/remotetest"/>
+            <Attr name="AssetRegistry" value="assetregistry.bin"/>
+            <Attr name="AssetSourceDirs" value="proj:work;proj:data"/>
+            <Attr name="SyncDirs" value="export;export_win32"/>
+            <Attr name="SyncGfxBatchTool" value="programs:alias/maya7.0/bin/nmayabatcher70.exe"/>
+            <Attr name="SyncGfxBatchArgs" value="-allmodels -alllevels"/>
+            <Attr name="SyncTexBatchTool" value="c:/nebula3/bin/win32/texturebatcher3.exe"/>
+            <Attr name="SyncTexBatchArgs" value=""/>
+        </Platform>
+
+        <!-- Xbox360 Platform Info -->
+        <Platform name="xbox360">
+            <!-- general settings -->
+            <Attr name="DstDir" value="proj:export_xbox360"/>
+            <Attr name="SrcDir" value="proj:work"/>
+            <Attr name="IntDir" value="proj:intermediate"/>
+
+            <Attr name="ExtraDataSrcDir" value="src:xbox360data"/>
+            <Attr name="ExtraDataDstDir" value="dst:xbox360data"/>
+
+            <!-- shader compilation -->
+            <Attr name="ShaderTool" value="$(env:XEDK)/bin/win32/fxc.exe"/>
+            <Attr name="ShaderToolParams" value="/I ../lib /I lib"/>
+            <Attr name="ShaderSrcDir" value="src:shaders/xbox360"/>
+            <Attr name="ShaderDstDir" value="dst:shaders"/>
+            <Attr name="FrameShaderSrcDir" value="src:frame/xbox360"/>
+            <Attr name="FrameShaderDstDir" value="dst:frame"/>
+
+            <!-- texture conversion -->
+            <Attr name="TextureTool" value="$(env:XEDK)/bin/win32/bundler.exe"/>
+            <Attr name="TextureAttrTable" value="src:textures/batchattributes.xml"/>
+            <Attr name="TextureSrcDir" value="src:textures"/>
+            <Attr name="TextureDstDir" value="dst:textures"/>
+
+            <!-- animation conversion -->
+            <Attr name="AnimSrcDir" value="int:anims"/>
+            <Attr name="AnimDstDir" value="dst:anims"/>
+
+            <!-- audio export -->
+            <Attr name="AudioTool" value="$(env:XEDK)/bin/win32/xactbld3.exe"/>
+            <Attr name="AudioProjectFile" value="src:audio/audio.xap"/>
+            <Attr name="AudioDstDir" value="dst:audio"/>
+            <Attr name="AudioSrcDir" value="src:audio"/>
+			
+			<!-- scaleform export -->
+            <Attr name="ScaleformTool" value="programs:Scaleform/GFx SDK 3.1/Bin/gfxexport.exe"/>
+			<Attr name="ScaleformParams" value="-i DDS -sd"/>
+            <Attr name="ScaleformDstDir" value="dst:ui"/>
+            <Attr name="ScaleformSrcDir" value="src:ui"/>
+
+            <!-- N2->N3 model file conversion -->
+            <Attr name="N2ConverterSrcDir" value="proj:export_xbox360/gfxlib"/>
+            <Attr name="N2ConverterDstDir" value="dst:models"/>
+
+            <!-- archiver tool -->
+            <Attr name="ArchiverTool" value="proj:bin/win32/zip.exe"/>
+            <Attr name="ArchiverExcludePatterns" value="*.db4;*.bik"/>
+
+        </Platform>
+
+        <!-- Wii Platform Info -->
+        <Platform name="wii">
+            <!-- general settings -->
+            <Attr name="DstDir" value="proj:export_wii"/>
+            <Attr name="SrcDir" value="proj:work"/>
+            <Attr name="IntDir" value="proj:intermediate"/>
+
+            <!-- shader compilation -->
+            <Attr name="ShaderSrcDir" value="src:shaders/wii"/>
+            <Attr name="ShaderDstDir" value="dst:shaders"/>
+            <Attr name="FrameShaderSrcDir" value="src:frame/wii"/>
+            <Attr name="FrameShaderDstDir" value="dst:frame"/>
+
+            <!-- texture conversion -->
+            <Attr name="TextureTool" value="$(env:REVOLUTION_SDK_ROOT)/X86/bin/texconv.exe"/>
+            <Attr name="TextureAttrTable" value="src:textures/batchattributes.xml"/>
+            <Attr name="TextureSrcDir" value="src:textures"/>
+            <Attr name="TextureDstDir" value="dst:textures"/>
+
+            <!-- N2->N3 model file conversion -->
+            <Attr name="N2ConverterSrcDir" value="proj:export_wii/gfxlib"/>
+            <Attr name="N2ConverterDstDir" value="dst:models"/>
+            
+            <!-- archiver tool -->
+            <Attr name="ArchiverTool" value="$(env:REVOLUTION_SDK_ROOT)/X86/bin/darchD.exe"/>
+            <Attr name="WiiDvdRoot" value="proj:dvdroot"/>
+            <Attr name="ArchiverExcludePatterns" value="*.db4;*.bik"/>
+
+            <!-- SUI converter tool -->
+            <Attr name="NW4RLayoutConverterTool" value="$(env:NW4R_ROOT)/CommandLineTools/bin/nw4r_lytcvtr.exe"/>
+
+            <!-- animation conversion -->
+            <Attr name="AnimSrcDir" value="int:anims"/>
+            <Attr name="AnimDstDir" value="dst:anims"/>
+
+            <!-- audio export -->
+            <Attr name="AudioTool" value="$(env:NW4R_ROOT)/SoundMaker/nw4r_sndprjcvtr.exe"/>
+            <Attr name="AudioSrcDir" value="src:audio"/>
+            <Attr name="AudioDstDir" value="proj:dvdroot/export_wii_audio"/>
+
+        </Platform>
+
+        <!-- PS3 Platform Info -->
+        <Platform name="ps3">
+                     
+            <!-- general settings -->
+            <Attr name="DstDir" value="proj:export_ps3"/>
+            <Attr name="SrcDir" value="proj:work"/>
+            <Attr name="IntDir" value="proj:intermediate"/>
+
+            <!-- shader compilation -->
+            <Attr name="ShaderTool" value="$(env:SCE_PS3_ROOT)/host-win32/Cg/bin/sce-cgc"/>
+            <!-- <Attr name="ShaderToolParams" value="/I ../lib /I lib"/> -->
+            <Attr name="ShaderSrcDir" value="src:shaders/ps3"/>
+            <Attr name="ShaderDstDir" value="dst:shaders"/>
+            <Attr name="FrameShaderSrcDir" value="src:frame/ps3"/>
+            <Attr name="FrameShaderDstDir" value="dst:frame"/>
+
+            <!-- texture conversion -->
+            <Attr name="TextureTool" value="$(env:SCE_PS3_ROOT)/host-win32/bin/dds2gtf.exe"/>
+            <Attr name="PS3NvdxtTool" value="toolkit:bin/win32/nvdxt.exe"/>
+            <Attr name="TextureAttrTable" value="src:textures/batchattributes.xml"/>
+            <Attr name="TextureSrcDir" value="src:textures"/>
+            <Attr name="TextureDstDir" value="dst:textures"/>
+
+            <!-- N2->N3 model file conversion -->
+            <Attr name="N2ConverterSrcDir" value="proj:export_ps3/gfxlib"/>
+            <Attr name="N2ConverterDstDir" value="dst:models"/>
+
+            <!-- archive tool -->
+            <Attr name="ArchiverTool" value="$(env:SCE_PS3_ROOT)/host-win32/bin/psarc.exe"/>
+            <Attr name="ArchiverExcludePatterns" value="*.db4;*.bik"/>
+
+            <!-- animation conversion -->
+            <Attr name="AnimSrcDir" value="int:anims"/>
+            <Attr name="AnimDstDir" value="dst:anims"/>
+
+            <!-- audio export -->
+            <Attr name="AudioDstDir" value="dst:audio"/>
+            <Attr name="AudioTool" value="programs:FMOD SoundSystem/FMOD Designer/fmod_designercl.exe"/>
+            <Attr name="AudioSrcDir" value="src:audio"/>
+
+        </Platform>
+
+        <!-- Legacy Nebula2 Platform Info -->
+        <Platform name="nebula2">
+            <!-- general settings -->
+            <Attr name="DstDir" value="proj:export"/>
+            <Attr name="SrcDir" value="proj:work"/>
+            <Attr name="IntDir" value="proj:intermediate"/>
+
+            <!-- shader compilation -->
+            <Attr name="ShaderTool" value="$(env:DXSDK_DIR)/Utilities/bin/x86/fxc.exe"/>
+            <Attr name="ShaderToolParams" value="/I ../lib /I lib"/>
+            <Attr name="ShaderSrcDir" value="src:shaders/2.0"/>
+            <Attr name="ShaderDstDir" value="dst:shaders/2.0"/>
+            <Attr name="FrameShaderSrcDir" value="src:shaders"/>
+            <Attr name="FrameShaderDstDir" value="dst:shaders"/>
+            
+            <!-- texture conversion -->
+            <Attr name="TextureTool" value="toolkit:bin/win32/nvdxt.exe"/>
+            <Attr name="TextureAttrTable" value="src:textures/batchattributes.xml"/>
+            <Attr name="TextureSrcDir" value="src:textures"/>
+            <Attr name="TextureDstDir" value="dst:textures"/>
+            
+            <!-- animation conversion -->
+            <Attr name="AnimSrcDir" value="int:anims"/>
+            <Attr name="AnimDstDir" value="dst:anims"/>
+            
+            <!-- audio export -->
+            <Attr name="AudioTool" value="$(env:DXSDK_DIR)/Utilities/bin/x86/xactbld3.exe"/>
+            <Attr name="AudioProjectFile" value="src:audio/audio.xap"/>
+            <Attr name="AudioDstDir" value="dst:audio"/>
+            <Attr name="FmodAudioTool" value="programs:FMOD SoundSystem/FMOD Designer/fmod_designercl.exe"/>
+            <Attr name="AudioSrcDir" value="src:audio"/>
+
+            <!-- Sync Tool Settings -->
+            <Attr name="SVNToolPath" value="programs:CollabNet Subversion/svn.exe"/>
+            <Attr name="BuildServerRoot" value="file://gambar/io/floh/remotetest"/>
+            <Attr name="AssetRegistry" value="assetregistry.bin"/>
+            <Attr name="AssetSourceDirs" value="proj:work;proj:data"/>
+            <Attr name="SyncDirs" value="export;export_win32"/>
+            <Attr name="SyncGfxBatchTool" value="programs:alias/maya7.0/bin/nmayabatcher70.exe"/>
+            <Attr name="SyncGfxBatchArgs" value="-allmodels -alllevels"/>
+            <Attr name="SyncTexBatchTool" value="c:/nebula3/bin/win32/texturebatcher3.exe"/>
+            <Attr name="SyncTexBatchArgs" value=""/>
+        </Platform>
+
+    </Project>
+</Nebula3>

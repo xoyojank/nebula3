@@ -1,0 +1,439 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Maya_Debug|Win32">
+      <Configuration>Maya_Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Maya_Release|Win32">
+      <Configuration>Maya_Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E5DB49B8-71F3-4297-80EC-DEAB9CA813F8}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Maya_Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Maya_Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="..\nidl.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Maya_Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Maya_Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\Win32\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\Win32\Debug\application_win32\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\Win32\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\Win32\Release\application_win32\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Maya_Debug|Win32'">.\Win32\Maya_Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Maya_Debug|Win32'">.\Win32\Maya_Debug\application_win32\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Maya_Release|Win32'">.\Win32\Maya_Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Maya_Release|Win32'">.\Win32\Maya_Release\application_win32\</IntDir>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Maya_Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Maya_Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Maya_Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Maya_Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Maya_Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Maya_Release|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..;../foundation;../application;../application/basegamefeature;../application/graphicsfeature;../application/physicsfeature;../application/networkfeature;../application/stateobjectfeature;../addons/network;../addons/posteffect;../render;../extlibs;../addons;../extlibs/ode; ;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>__WIN32__;WIN32;_DEBUG;NT_PLUGIN;_HAS_EXCEPTIONS=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <MinimalRebuild>true</MinimalRebuild>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdneb.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(OutDir)$(ProjectName).pch</PrecompiledHeaderOutputFile>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>.\Win32\application_win32.debug.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>..;../foundation;../application;../application/basegamefeature;../application/graphicsfeature;../application/physicsfeature;../application/networkfeature;../application/stateobjectfeature;../addons/network;../addons/posteffect;../render;../extlibs;../addons;../extlibs/ode; ;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>__WIN32__;WIN32;NT_PLUGIN;_HAS_EXCEPTIONS=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+      <CompileAs>Default</CompileAs>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdneb.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(OutDir)$(ProjectName).pch</PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>.\Win32\application_win32.release.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Maya_Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..;../foundation;../application;../application/basegamefeature;../application/graphicsfeature;../application/physicsfeature;../application/networkfeature;../application/stateobjectfeature;../addons/network;../addons/posteffect;../render;../extlibs;../addons;../extlibs/ode; ;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>__MAYA__;__WIN32__;WIN32;_DEBUG;NT_PLUGIN;_HAS_EXCEPTIONS=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdneb.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(OutDir)$(ProjectName).pch</PrecompiledHeaderOutputFile>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>.\Win32\application_win32.maya_debug.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Maya_Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>..;../foundation;../application;../application/basegamefeature;../application/graphicsfeature;../application/physicsfeature;../application/networkfeature;../application/stateobjectfeature;../addons/network;../addons/posteffect;../render;../extlibs;../addons;../extlibs/ode; ;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>__MAYA__;__WIN32__;WIN32;NT_PLUGIN;_HAS_EXCEPTIONS=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+      <CompileAs>Default</CompileAs>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdneb.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(OutDir)$(ProjectName).pch</PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>.\Win32\application_win32.maya_release.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\application\stdneb.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Maya_Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Maya_Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\application\appgame\gameapplication.cc" />
+    <ClCompile Include="..\application\appgame\statehandler.cc" />
+    <ClCompile Include="..\application\basegamefeature\basegamefeatureunit.cc" />
+    <ClCompile Include="..\application\basegamefeature\basegameprotocol.cc" />
+    <ClCompile Include="..\application\basegamefeature\basegameattr\basegameattributes.cc" />
+    <ClCompile Include="..\application\basegamefeature\basegametiming\gametimesource.cc" />
+    <ClCompile Include="..\application\basegamefeature\basegametiming\inputtimesource.cc" />
+    <ClCompile Include="..\application\basegamefeature\basegametiming\systemtimesource.cc" />
+    <ClCompile Include="..\application\basegamefeature\basegametiming\timemanager.cc" />
+    <ClCompile Include="..\application\basegamefeature\basegametiming\timesource.cc" />
+    <ClCompile Include="..\application\basegamefeature\debug\objectinspectorhandler.cc" />
+    <ClCompile Include="..\application\basegamefeature\loader\entityloader.cc" />
+    <ClCompile Include="..\application\basegamefeature\loader\entityloaderbase.cc" />
+    <ClCompile Include="..\application\basegamefeature\loader\environmentloader.cc" />
+    <ClCompile Include="..\application\basegamefeature\loader\levelloader.cc" />
+    <ClCompile Include="..\application\basegamefeature\loader\loaderserver.cc" />
+    <ClCompile Include="..\application\basegamefeature\loader\userprofile.cc" />
+    <ClCompile Include="..\application\basegamefeature\managers\animeventmanager.cc" />
+    <ClCompile Include="..\application\basegamefeature\managers\categorymanager.cc" />
+    <ClCompile Include="..\application\basegamefeature\managers\entitymanager.cc" />
+    <ClCompile Include="..\application\basegamefeature\managers\enventitymanager.cc" />
+    <ClCompile Include="..\application\basegamefeature\managers\envquerymanager.cc" />
+    <ClCompile Include="..\application\basegamefeature\managers\factorymanager.cc" />
+    <ClCompile Include="..\application\basegamefeature\managers\focusmanager.cc" />
+    <ClCompile Include="..\application\basegamefeature\managers\globalattrsmanager.cc" />
+    <ClCompile Include="..\application\basegamefeature\properties\timeproperty.cc" />
+    <ClCompile Include="..\application\basegamefeature\properties\transformableproperty.cc" />
+    <ClCompile Include="..\application\basegamefeature\statehandlers\gamestatehandler.cc" />
+    <ClCompile Include="..\application\commandhandlers\createentitycommand.cc" />
+    <ClCompile Include="..\application\game\entity.cc" />
+    <ClCompile Include="..\application\game\featureunit.cc" />
+    <ClCompile Include="..\application\game\gameserver.cc" />
+    <ClCompile Include="..\application\game\manager.cc" />
+    <ClCompile Include="..\application\game\property.cc" />
+    <ClCompile Include="..\application\graphicsfeature\graphicsfeatureprotocol.cc" />
+    <ClCompile Include="..\application\graphicsfeature\graphicsfeatureunit.cc" />
+    <ClCompile Include="..\application\graphicsfeature\graphicsattr\graphicsattributes.cc" />
+    <ClCompile Include="..\application\graphicsfeature\graphicsutil\lightflickerutil.cc" />
+    <ClCompile Include="..\application\graphicsfeature\graphicsutil\segmentedgfxutil.cc" />
+    <ClCompile Include="..\application\graphicsfeature\managers\attachmentmanager.cc" />
+    <ClCompile Include="..\application\graphicsfeature\properties\actorgraphicsproperty.cc" />
+    <ClCompile Include="..\application\graphicsfeature\properties\ambiencebubbleproperty.cc" />
+    <ClCompile Include="..\application\graphicsfeature\properties\animationcontrolproperty.cc" />
+    <ClCompile Include="..\application\graphicsfeature\properties\cameraproperty.cc" />
+    <ClCompile Include="..\application\graphicsfeature\properties\chasecameraproperty.cc" />
+    <ClCompile Include="..\application\graphicsfeature\properties\cutscenecameraproperty.cc" />
+    <ClCompile Include="..\application\graphicsfeature\properties\environmentgraphicsproperty.cc" />
+    <ClCompile Include="..\application\graphicsfeature\properties\graphicsproperty.cc" />
+    <ClCompile Include="..\application\graphicsfeature\properties\inputproperty.cc" />
+    <ClCompile Include="..\application\graphicsfeature\properties\lightproperty.cc" />
+    <ClCompile Include="..\application\graphicsfeature\properties\mayacameraproperty.cc" />
+    <ClCompile Include="..\application\graphicsfeature\properties\pathanimproperty.cc" />
+    <ClCompile Include="..\application\physicsfeature\physicsfeatureunit.cc" />
+    <ClCompile Include="..\application\physicsfeature\physicsprotocol.cc" />
+    <ClCompile Include="..\application\physicsfeature\physicsattr\physicsattributes.cc" />
+    <ClCompile Include="..\application\physicsfeature\properties\actorphysicsproperty.cc" />
+    <ClCompile Include="..\application\physicsfeature\properties\environmentcollideproperty.cc" />
+    <ClCompile Include="..\application\physicsfeature\properties\mousegripperproperty.cc" />
+    <ClCompile Include="..\application\physicsfeature\properties\physicsproperty.cc" />
+    <ClCompile Include="..\application\physicsfeature\properties\triggerproperty.cc" />
+    <ClCompile Include="..\application\scriptfeature\actionreader.cc" />
+    <ClCompile Include="..\application\scriptfeature\scriptfeatureunit.cc" />
+    <ClCompile Include="..\application\scriptfeature\scriptprotocol.cc" />
+    <ClCompile Include="..\application\scriptfeature\scripttable.cc" />
+    <ClCompile Include="..\application\scriptfeature\actions\action.cc" />
+    <ClCompile Include="..\application\scriptfeature\actions\actionlist.cc" />
+    <ClCompile Include="..\application\scriptfeature\actions\ifthenelseaction.cc" />
+    <ClCompile Include="..\application\scriptfeature\actions\sequenceaction.cc" />
+    <ClCompile Include="..\application\scriptfeature\actions\behaviour\fsmaction.cc" />
+    <ClCompile Include="..\application\scriptfeature\conditions\and.cc" />
+    <ClCompile Include="..\application\scriptfeature\conditions\condition.cc" />
+    <ClCompile Include="..\application\scriptfeature\conditions\not.cc" />
+    <ClCompile Include="..\application\scriptfeature\conditions\or.cc" />
+    <ClCompile Include="..\application\scriptfeature\conditions\behaviour\fsmcondition.cc" />
+    <ClCompile Include="..\application\scriptfeature\dialog\dialog.cc" />
+    <ClCompile Include="..\application\scriptfeature\dialog\dialogdesc.cc" />
+    <ClCompile Include="..\application\scriptfeature\dialog\dialogtake.cc" />
+    <ClCompile Include="..\application\scriptfeature\fsm\behaviourproperty.cc" />
+    <ClCompile Include="..\application\scriptfeature\fsm\state.cc" />
+    <ClCompile Include="..\application\scriptfeature\fsm\statemachine.cc" />
+    <ClCompile Include="..\application\scriptfeature\fsm\transition.cc" />
+    <ClCompile Include="..\application\scriptfeature\log\infolog.cc" />
+    <ClCompile Include="..\application\scriptfeature\log\infologfilter.cc" />
+    <ClCompile Include="..\application\scriptfeature\managers\dialogmanager.cc" />
+    <ClCompile Include="..\application\scriptfeature\managers\logmanager.cc" />
+    <ClCompile Include="..\application\scriptfeature\managers\questmanager.cc" />
+    <ClCompile Include="..\application\scriptfeature\managers\scriptmanager.cc" />
+    <ClCompile Include="..\application\scriptfeature\managers\scripttemplatemanager.cc" />
+    <ClCompile Include="..\application\scriptfeature\managers\substitutionmanager.cc" />
+    <ClCompile Include="..\application\scriptfeature\quest\task.cc" />
+    <ClCompile Include="..\application\scriptfeature\scriptattr\scriptattributes.cc" />
+    <ClCompile Include="..\application\stateobjectfeature\stateobjectprotocol.cc" />
+    <ClCompile Include="..\application\stateobjectfeature\properties\stategraphicsproperty.cc" />
+    <ClCompile Include="..\application\stateobjectfeature\properties\stateproperty.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\application\appgame\appconfig.h" />
+    <ClInclude Include="..\application\appgame\gameapplication.h" />
+    <ClInclude Include="..\application\appgame\statehandler.h" />
+    <ClInclude Include="..\application\basegamefeature\basegamefeatureunit.h" />
+    <ClInclude Include="..\application\basegamefeature\basegameprotocol.h" />
+    <ClInclude Include="..\application\basegamefeature\basegameattr\basegameattributes.h" />
+    <ClInclude Include="..\application\basegamefeature\basegametiming\gametimesource.h" />
+    <ClInclude Include="..\application\basegamefeature\basegametiming\inputtimesource.h" />
+    <ClInclude Include="..\application\basegamefeature\basegametiming\systemtimesource.h" />
+    <ClInclude Include="..\application\basegamefeature\basegametiming\timemanager.h" />
+    <ClInclude Include="..\application\basegamefeature\basegametiming\timesource.h" />
+    <ClInclude Include="..\application\basegamefeature\debug\objectinspectorhandler.h" />
+    <ClInclude Include="..\application\basegamefeature\loader\entityloader.h" />
+    <ClInclude Include="..\application\basegamefeature\loader\entityloaderbase.h" />
+    <ClInclude Include="..\application\basegamefeature\loader\environmentloader.h" />
+    <ClInclude Include="..\application\basegamefeature\loader\levelloader.h" />
+    <ClInclude Include="..\application\basegamefeature\loader\loaderserver.h" />
+    <ClInclude Include="..\application\basegamefeature\loader\userprofile.h" />
+    <ClInclude Include="..\application\basegamefeature\managers\animeventmanager.h" />
+    <ClInclude Include="..\application\basegamefeature\managers\categorymanager.h" />
+    <ClInclude Include="..\application\basegamefeature\managers\entitymanager.h" />
+    <ClInclude Include="..\application\basegamefeature\managers\enventitymanager.h" />
+    <ClInclude Include="..\application\basegamefeature\managers\envquerymanager.h" />
+    <ClInclude Include="..\application\basegamefeature\managers\factorymanager.h" />
+    <ClInclude Include="..\application\basegamefeature\managers\focusmanager.h" />
+    <ClInclude Include="..\application\basegamefeature\managers\globalattrsmanager.h" />
+    <ClInclude Include="..\application\basegamefeature\properties\timeproperty.h" />
+    <ClInclude Include="..\application\basegamefeature\properties\transformableproperty.h" />
+    <ClInclude Include="..\application\basegamefeature\statehandlers\gamestatehandler.h" />
+    <ClInclude Include="..\application\commandhandlers\createentitycommand.h" />
+    <ClInclude Include="..\application\game\entity.h" />
+    <ClInclude Include="..\application\game\featureunit.h" />
+    <ClInclude Include="..\application\game\gameserver.h" />
+    <ClInclude Include="..\application\game\manager.h" />
+    <ClInclude Include="..\application\game\property.h" />
+    <ClInclude Include="..\application\graphicsfeature\graphicsfeatureproperties.h" />
+    <ClInclude Include="..\application\graphicsfeature\graphicsfeatureprotocol.h" />
+    <ClInclude Include="..\application\graphicsfeature\graphicsfeatureunit.h" />
+    <ClInclude Include="..\application\graphicsfeature\graphicsattr\graphicsattributes.h" />
+    <ClInclude Include="..\application\graphicsfeature\graphicsutil\lightflickerutil.h" />
+    <ClInclude Include="..\application\graphicsfeature\graphicsutil\segmentedgfxutil.h" />
+    <ClInclude Include="..\application\graphicsfeature\managers\attachmentmanager.h" />
+    <ClInclude Include="..\application\graphicsfeature\properties\actorgraphicsproperty.h" />
+    <ClInclude Include="..\application\graphicsfeature\properties\ambiencebubbleproperty.h" />
+    <ClInclude Include="..\application\graphicsfeature\properties\animationcontrolproperty.h" />
+    <ClInclude Include="..\application\graphicsfeature\properties\cameraproperty.h" />
+    <ClInclude Include="..\application\graphicsfeature\properties\chasecameraproperty.h" />
+    <ClInclude Include="..\application\graphicsfeature\properties\cutscenecameraproperty.h" />
+    <ClInclude Include="..\application\graphicsfeature\properties\environmentgraphicsproperty.h" />
+    <ClInclude Include="..\application\graphicsfeature\properties\graphicsproperty.h" />
+    <ClInclude Include="..\application\graphicsfeature\properties\inputproperty.h" />
+    <ClInclude Include="..\application\graphicsfeature\properties\lightproperty.h" />
+    <ClInclude Include="..\application\graphicsfeature\properties\mayacameraproperty.h" />
+    <ClInclude Include="..\application\graphicsfeature\properties\pathanimproperty.h" />
+    <ClInclude Include="..\application\physicsfeature\physicsfeatureunit.h" />
+    <ClInclude Include="..\application\physicsfeature\physicsprotocol.h" />
+    <ClInclude Include="..\application\physicsfeature\physicsattr\physicsattributes.h" />
+    <ClInclude Include="..\application\physicsfeature\properties\actorphysicsproperty.h" />
+    <ClInclude Include="..\application\physicsfeature\properties\environmentcollideproperty.h" />
+    <ClInclude Include="..\application\physicsfeature\properties\mousegripperproperty.h" />
+    <ClInclude Include="..\application\physicsfeature\properties\physicsproperty.h" />
+    <ClInclude Include="..\application\physicsfeature\properties\triggerproperty.h" />
+    <ClInclude Include="..\application\scriptfeature\actionreader.h" />
+    <ClInclude Include="..\application\scriptfeature\scriptfeatureunit.h" />
+    <ClInclude Include="..\application\scriptfeature\scriptprotocol.h" />
+    <ClInclude Include="..\application\scriptfeature\scripttable.h" />
+    <ClInclude Include="..\application\scriptfeature\actions\action.h" />
+    <ClInclude Include="..\application\scriptfeature\actions\actionlist.h" />
+    <ClInclude Include="..\application\scriptfeature\actions\ifthenelseaction.h" />
+    <ClInclude Include="..\application\scriptfeature\actions\sequenceaction.h" />
+    <ClInclude Include="..\application\scriptfeature\actions\behaviour\fsmaction.h" />
+    <ClInclude Include="..\application\scriptfeature\conditions\and.h" />
+    <ClInclude Include="..\application\scriptfeature\conditions\condition.h" />
+    <ClInclude Include="..\application\scriptfeature\conditions\not.h" />
+    <ClInclude Include="..\application\scriptfeature\conditions\operator.h" />
+    <ClInclude Include="..\application\scriptfeature\conditions\or.h" />
+    <ClInclude Include="..\application\scriptfeature\conditions\behaviour\fsmcondition.h" />
+    <ClInclude Include="..\application\scriptfeature\dialog\dialog.h" />
+    <ClInclude Include="..\application\scriptfeature\dialog\dialogdesc.h" />
+    <ClInclude Include="..\application\scriptfeature\dialog\dialogtake.h" />
+    <ClInclude Include="..\application\scriptfeature\fsm\behaviourproperty.h" />
+    <ClInclude Include="..\application\scriptfeature\fsm\state.h" />
+    <ClInclude Include="..\application\scriptfeature\fsm\statemachine.h" />
+    <ClInclude Include="..\application\scriptfeature\fsm\transition.h" />
+    <ClInclude Include="..\application\scriptfeature\log\infolog.h" />
+    <ClInclude Include="..\application\scriptfeature\log\infologfilter.h" />
+    <ClInclude Include="..\application\scriptfeature\managers\dialogmanager.h" />
+    <ClInclude Include="..\application\scriptfeature\managers\logmanager.h" />
+    <ClInclude Include="..\application\scriptfeature\managers\questmanager.h" />
+    <ClInclude Include="..\application\scriptfeature\managers\scriptmanager.h" />
+    <ClInclude Include="..\application\scriptfeature\managers\scripttemplatemanager.h" />
+    <ClInclude Include="..\application\scriptfeature\managers\substitutionmanager.h" />
+    <ClInclude Include="..\application\scriptfeature\quest\task.h" />
+    <ClInclude Include="..\application\scriptfeature\scriptattr\scriptattributes.h" />
+    <ClInclude Include="..\application\stateobjectfeature\stateobjectfeatureunit.h" />
+    <ClInclude Include="..\application\stateobjectfeature\stateobjectprotocol.h" />
+    <ClInclude Include="..\application\stateobjectfeature\properties\stategraphicsproperty.h" />
+    <ClInclude Include="..\application\stateobjectfeature\properties\stateinfo.h" />
+    <ClInclude Include="..\application\stateobjectfeature\properties\stateproperty.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="application_nidls_win32.vcxproj">
+      <Project>{1dcaf1b2-f140-46bd-9098-4fd1039f1e4c}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="posteffect_nidls_win32.vcxproj">
+      <Project>{c10801e3-dac0-4966-a9b1-f0cc0ce9d236}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="posteffect_win32.vcxproj">
+      <Project>{b183f1ba-dfbc-4f10-8a6e-4e26d633b4ba}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="..\nidl.targets" />
+  </ImportGroup>
+</Project>

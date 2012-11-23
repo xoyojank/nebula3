@@ -1,0 +1,662 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Maya_Debug|Win32">
+      <Configuration>Maya_Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Maya_Release|Win32">
+      <Configuration>Maya_Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{0CD03495-AE37-4084-A0C3-7479D6813DB5}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Maya_Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Maya_Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="..\nidl.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Maya_Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Maya_Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\Win32\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\Win32\Debug\foundation_win32\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\Win32\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\Win32\Release\foundation_win32\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Maya_Debug|Win32'">.\Win32\Maya_Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Maya_Debug|Win32'">.\Win32\Maya_Debug\foundation_win32\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Maya_Release|Win32'">.\Win32\Maya_Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Maya_Release|Win32'">.\Win32\Maya_Release\foundation_win32\</IntDir>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Maya_Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Maya_Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Maya_Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Maya_Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Maya_Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Maya_Release|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..;../foundation;../extlibs ;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>__WIN32__;WIN32;_DEBUG;NT_PLUGIN;_HAS_EXCEPTIONS=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <MinimalRebuild>true</MinimalRebuild>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdneb.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(OutDir)$(ProjectName).pch</PrecompiledHeaderOutputFile>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>.\Win32\foundation_win32.debug.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>..;../foundation;../extlibs ;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>__WIN32__;WIN32;NT_PLUGIN;_HAS_EXCEPTIONS=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+      <CompileAs>Default</CompileAs>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdneb.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(OutDir)$(ProjectName).pch</PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>.\Win32\foundation_win32.release.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Maya_Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..;../foundation;../extlibs ;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>__MAYA__;__WIN32__;WIN32;_DEBUG;NT_PLUGIN;_HAS_EXCEPTIONS=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdneb.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(OutDir)$(ProjectName).pch</PrecompiledHeaderOutputFile>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>.\Win32\foundation_win32.maya_debug.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Maya_Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>..;../foundation;../extlibs ;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>__MAYA__;__WIN32__;WIN32;NT_PLUGIN;_HAS_EXCEPTIONS=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+      <CompileAs>Default</CompileAs>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdneb.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(OutDir)$(ProjectName).pch</PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>.\Win32\foundation_win32.maya_release.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\foundation\stdneb.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Maya_Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Maya_Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\foundation\app\application.cc" />
+    <ClCompile Include="..\foundation\app\consoleapplication.cc" />
+    <ClCompile Include="..\foundation\core\coreserver.cc" />
+    <ClCompile Include="..\foundation\core\debug.cc" />
+    <ClCompile Include="..\foundation\core\exithandler.cc" />
+    <ClCompile Include="..\foundation\core\factory.cc" />
+    <ClCompile Include="..\foundation\core\refcounted.cc" />
+    <ClCompile Include="..\foundation\core\refcountedlist.cc" />
+    <ClCompile Include="..\foundation\core\rtti.cc" />
+    <ClCompile Include="..\foundation\core\debug\corepagehandler.cc" />
+    <ClCompile Include="..\foundation\core\debug\stringatompagehandler.cc" />
+    <ClCompile Include="..\foundation\core\win32\win32sysfunc.cc" />
+    <ClCompile Include="..\foundation\debug\debugcounter.cc" />
+    <ClCompile Include="..\foundation\debug\debughandler.cc" />
+    <ClCompile Include="..\foundation\debug\debuginterface.cc" />
+    <ClCompile Include="..\foundation\debug\debugpagehandler.cc" />
+    <ClCompile Include="..\foundation\debug\debugserver.cc" />
+    <ClCompile Include="..\foundation\debug\debugtimer.cc" />
+    <ClCompile Include="..\foundation\debug\win32\win32minidump.cc" />
+    <ClCompile Include="..\foundation\framesync\framesynchandlerthread.cc" />
+    <ClCompile Include="..\foundation\framesync\framesyncshareddata.cc" />
+    <ClCompile Include="..\foundation\framesync\framesynctimer.cc" />
+    <ClCompile Include="..\foundation\http\defaulthttprequesthandler.cc" />
+    <ClCompile Include="..\foundation\http\httpclient.cc" />
+    <ClCompile Include="..\foundation\http\httpclientregistry.cc" />
+    <ClCompile Include="..\foundation\http\httpinterface.cc" />
+    <ClCompile Include="..\foundation\http\httpmessagehandler.cc" />
+    <ClCompile Include="..\foundation\http\httpnzstream.cc" />
+    <ClCompile Include="..\foundation\http\httpprotocol.cc" />
+    <ClCompile Include="..\foundation\http\httprequest.cc" />
+    <ClCompile Include="..\foundation\http\httprequesthandler.cc" />
+    <ClCompile Include="..\foundation\http\httprequestreader.cc" />
+    <ClCompile Include="..\foundation\http\httprequestwriter.cc" />
+    <ClCompile Include="..\foundation\http\httpresponsereader.cc" />
+    <ClCompile Include="..\foundation\http\httpresponsewriter.cc" />
+    <ClCompile Include="..\foundation\http\httpserver.cc" />
+    <ClCompile Include="..\foundation\http\httpserverproxy.cc" />
+    <ClCompile Include="..\foundation\http\httpstatus.cc" />
+    <ClCompile Include="..\foundation\http\httpstream.cc" />
+    <ClCompile Include="..\foundation\http\debug\helloworldrequesthandler.cc" />
+    <ClCompile Include="..\foundation\http\debug\svgtestpagehandler.cc" />
+    <ClCompile Include="..\foundation\http\html\htmlelement.cc" />
+    <ClCompile Include="..\foundation\http\html\htmlpagewriter.cc" />
+    <ClCompile Include="..\foundation\http\svg\svglinechartwriter.cc" />
+    <ClCompile Include="..\foundation\http\svg\svgpagewriter.cc" />
+    <ClCompile Include="..\foundation\interface\interfacebase.cc" />
+    <ClCompile Include="..\foundation\interface\interfacehandlerbase.cc" />
+    <ClCompile Include="..\foundation\io\assignregistry.cc" />
+    <ClCompile Include="..\foundation\io\binaryreader.cc" />
+    <ClCompile Include="..\foundation\io\binarywriter.cc" />
+    <ClCompile Include="..\foundation\io\bxmlreader.cc" />
+    <ClCompile Include="..\foundation\io\console.cc" />
+    <ClCompile Include="..\foundation\io\consolehandler.cc" />
+    <ClCompile Include="..\foundation\io\excelxmlreader.cc" />
+    <ClCompile Include="..\foundation\io\filestream.cc" />
+    <ClCompile Include="..\foundation\io\gamecontentserver.cc" />
+    <ClCompile Include="..\foundation\io\historyconsolehandler.cc" />
+    <ClCompile Include="..\foundation\io\iointerface.cc" />
+    <ClCompile Include="..\foundation\io\iointerfacehandler.cc" />
+    <ClCompile Include="..\foundation\io\iointerfaceprotocol.cc" />
+    <ClCompile Include="..\foundation\io\ioserver.cc" />
+    <ClCompile Include="..\foundation\io\logfileconsolehandler.cc" />
+    <ClCompile Include="..\foundation\io\memorystream.cc" />
+    <ClCompile Include="..\foundation\io\schemeregistry.cc" />
+    <ClCompile Include="..\foundation\io\stream.cc" />
+    <ClCompile Include="..\foundation\io\streamreader.cc" />
+    <ClCompile Include="..\foundation\io\streamwriter.cc" />
+    <ClCompile Include="..\foundation\io\textreader.cc" />
+    <ClCompile Include="..\foundation\io\textwriter.cc" />
+    <ClCompile Include="..\foundation\io\uri.cc" />
+    <ClCompile Include="..\foundation\io\xmlreader.cc" />
+    <ClCompile Include="..\foundation\io\xmlwriter.cc" />
+    <ClCompile Include="..\foundation\io\archfs\archive.cc" />
+    <ClCompile Include="..\foundation\io\archfs\archivebase.cc" />
+    <ClCompile Include="..\foundation\io\archfs\archivefilesystem.cc" />
+    <ClCompile Include="..\foundation\io\archfs\archivefilesystembase.cc" />
+    <ClCompile Include="..\foundation\io\base\gamecontentserverbase.cc" />
+    <ClCompile Include="..\foundation\io\debug\consolepagehandler.cc" />
+    <ClCompile Include="..\foundation\io\debug\iopagehandler.cc" />
+    <ClCompile Include="..\foundation\io\util\bxmlloaderutil.cc" />
+    <ClCompile Include="..\foundation\io\win32\win32consolehandler.cc" />
+    <ClCompile Include="..\foundation\io\win360\win360filetime.cc" />
+    <ClCompile Include="..\foundation\io\win360\win360fswrapper.cc" />
+    <ClCompile Include="..\foundation\io\zipfs\ziparchive.cc" />
+    <ClCompile Include="..\foundation\io\zipfs\zipdirentry.cc" />
+    <ClCompile Include="..\foundation\io\zipfs\zipfileentry.cc" />
+    <ClCompile Include="..\foundation\io\zipfs\zipfilestream.cc" />
+    <ClCompile Include="..\foundation\io\zipfs\zipfilesystem.cc" />
+    <ClCompile Include="..\foundation\jobs\job.cc" />
+    <ClCompile Include="..\foundation\jobs\jobport.cc" />
+    <ClCompile Include="..\foundation\jobs\jobsystem.cc" />
+    <ClCompile Include="..\foundation\jobs\base\jobbase.cc" />
+    <ClCompile Include="..\foundation\jobs\base\jobportbase.cc" />
+    <ClCompile Include="..\foundation\jobs\base\jobsystembase.cc" />
+    <ClCompile Include="..\foundation\jobs\tp\tpjob.cc" />
+    <ClCompile Include="..\foundation\jobs\tp\tpjobport.cc" />
+    <ClCompile Include="..\foundation\jobs\tp\tpjobslice.cc" />
+    <ClCompile Include="..\foundation\jobs\tp\tpjobsystem.cc" />
+    <ClCompile Include="..\foundation\jobs\tp\tpjobthreadpool.cc" />
+    <ClCompile Include="..\foundation\jobs\tp\tpworkerthread.cc" />
+    <ClCompile Include="..\foundation\math\bbox.cc" />
+    <ClCompile Include="..\foundation\math\line.cc" />
+    <ClCompile Include="..\foundation\math\sphere_.cc" />
+    <ClCompile Include="..\foundation\math\xnamath\xna_float4.cc" />
+    <ClCompile Include="..\foundation\math\xnamath\xna_matrix44.cc" />
+    <ClCompile Include="..\foundation\math\xnamath\xna_plane.cc" />
+    <ClCompile Include="..\foundation\math\xnamath\xna_quaternion.cc" />
+    <ClCompile Include="..\foundation\memory\poolarrayallocator.cc" />
+    <ClCompile Include="..\foundation\memory\debug\memorypagehandler.cc" />
+    <ClCompile Include="..\foundation\memory\win360\win360heap.cc" />
+    <ClCompile Include="..\foundation\memory\win360\win360memory.cc" />
+    <ClCompile Include="..\foundation\memory\win360\win360memoryconfig.cc" />
+    <ClCompile Include="..\foundation\memory\win360\win360memorypool.cc" />
+    <ClCompile Include="..\foundation\messaging\asyncport.cc" />
+    <ClCompile Include="..\foundation\messaging\batchmessage.cc" />
+    <ClCompile Include="..\foundation\messaging\blockinghandlerthread.cc" />
+    <ClCompile Include="..\foundation\messaging\delegatetable.cc" />
+    <ClCompile Include="..\foundation\messaging\dispatcher.cc" />
+    <ClCompile Include="..\foundation\messaging\handler.cc" />
+    <ClCompile Include="..\foundation\messaging\handlerthreadbase.cc" />
+    <ClCompile Include="..\foundation\messaging\message.cc" />
+    <ClCompile Include="..\foundation\messaging\messagereader.cc" />
+    <ClCompile Include="..\foundation\messaging\messagewriter.cc" />
+    <ClCompile Include="..\foundation\messaging\port.cc" />
+    <ClCompile Include="..\foundation\messaging\runthroughhandlerthread.cc" />
+    <ClCompile Include="..\foundation\messaging\staticmessagehandler.cc" />
+    <ClCompile Include="..\foundation\net\debugpacket.cc" />
+    <ClCompile Include="..\foundation\net\messageclient.cc" />
+    <ClCompile Include="..\foundation\net\messageclientconnection.cc" />
+    <ClCompile Include="..\foundation\net\tcpclient.cc" />
+    <ClCompile Include="..\foundation\net\tcpclientconnection.cc" />
+    <ClCompile Include="..\foundation\net\tcpmessagecodec.cc" />
+    <ClCompile Include="..\foundation\net\tcpserver.cc" />
+    <ClCompile Include="..\foundation\net\socket\socket.cc" />
+    <ClCompile Include="..\foundation\net\tcp\stdtcpclient.cc" />
+    <ClCompile Include="..\foundation\net\tcp\stdtcpclientconnection.cc" />
+    <ClCompile Include="..\foundation\net\tcp\stdtcpserver.cc" />
+    <ClCompile Include="..\foundation\net\win360\win360ipaddress.cc" />
+    <ClCompile Include="..\foundation\net\win360\win360socket.cc" />
+    <ClCompile Include="..\foundation\system\base\systeminfobase.cc" />
+    <ClCompile Include="..\foundation\system\win32\win32environment.cc" />
+    <ClCompile Include="..\foundation\system\win32\win32registry.cc" />
+    <ClCompile Include="..\foundation\system\win32\win32systeminfo.cc" />
+    <ClCompile Include="..\foundation\threading\objectref.cc" />
+    <ClCompile Include="..\foundation\threading\thread.cc" />
+    <ClCompile Include="..\foundation\threading\debug\threadpagehandler.cc" />
+    <ClCompile Include="..\foundation\threading\win360\win360criticalsection.cc" />
+    <ClCompile Include="..\foundation\threading\win360\win360thread.cc" />
+    <ClCompile Include="..\foundation\timing\base\calendartimebase.cc" />
+    <ClCompile Include="..\foundation\timing\win360\win360calendartime.cc" />
+    <ClCompile Include="..\foundation\timing\win360\win360timer.cc" />
+    <ClCompile Include="..\foundation\util\blob.cc" />
+    <ClCompile Include="..\foundation\util\commandlineargs.cc" />
+    <ClCompile Include="..\foundation\util\crc.cc" />
+    <ClCompile Include="..\foundation\util\globalstringatomtable.cc" />
+    <ClCompile Include="..\foundation\util\localstringatomtable.cc" />
+    <ClCompile Include="..\foundation\util\randomnumbertable.cc" />
+    <ClCompile Include="..\foundation\util\runlengthcodec.cc" />
+    <ClCompile Include="..\foundation\util\string.cc" />
+    <ClCompile Include="..\foundation\util\stringatom.cc" />
+    <ClCompile Include="..\foundation\util\stringatomtablebase.cc" />
+    <ClCompile Include="..\foundation\util\stringbuffer.cc" />
+    <ClCompile Include="..\foundation\util\win32\win32guid.cc" />
+    <ClCompile Include="..\foundation\util\win32\win32stringconverter.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\foundation\app\application.h" />
+    <ClInclude Include="..\foundation\app\consoleapplication.h" />
+    <ClInclude Include="..\foundation\core\config.h" />
+    <ClInclude Include="..\foundation\core\coreserver.h" />
+    <ClInclude Include="..\foundation\core\debug.h" />
+    <ClInclude Include="..\foundation\core\exithandler.h" />
+    <ClInclude Include="..\foundation\core\factory.h" />
+    <ClInclude Include="..\foundation\core\ptr.h" />
+    <ClInclude Include="..\foundation\core\refcounted.h" />
+    <ClInclude Include="..\foundation\core\refcountedlist.h" />
+    <ClInclude Include="..\foundation\core\rtti.h" />
+    <ClInclude Include="..\foundation\core\rttimacros.h" />
+    <ClInclude Include="..\foundation\core\singleton.h" />
+    <ClInclude Include="..\foundation\core\sysfunc.h" />
+    <ClInclude Include="..\foundation\core\types.h" />
+    <ClInclude Include="..\foundation\core\weakptr.h" />
+    <ClInclude Include="..\foundation\core\debug\corepagehandler.h" />
+    <ClInclude Include="..\foundation\core\debug\stringatompagehandler.h" />
+    <ClInclude Include="..\foundation\core\win32\precompiled.h" />
+    <ClInclude Include="..\foundation\core\win32\win32singleton.h" />
+    <ClInclude Include="..\foundation\core\win32\win32sysfunc.h" />
+    <ClInclude Include="..\foundation\debug\debugcounter.h" />
+    <ClInclude Include="..\foundation\debug\debugfloat.h" />
+    <ClInclude Include="..\foundation\debug\debughandler.h" />
+    <ClInclude Include="..\foundation\debug\debuginterface.h" />
+    <ClInclude Include="..\foundation\debug\debugpagehandler.h" />
+    <ClInclude Include="..\foundation\debug\debugserver.h" />
+    <ClInclude Include="..\foundation\debug\debugtimer.h" />
+    <ClInclude Include="..\foundation\debug\minidump.h" />
+    <ClInclude Include="..\foundation\debug\win32\win32minidump.h" />
+    <ClInclude Include="..\foundation\framesync\framesynchandlerthread.h" />
+    <ClInclude Include="..\foundation\framesync\framesyncshareddata.h" />
+    <ClInclude Include="..\foundation\framesync\framesynctimer.h" />
+    <ClInclude Include="..\foundation\http\defaulthttprequesthandler.h" />
+    <ClInclude Include="..\foundation\http\httpclient.h" />
+    <ClInclude Include="..\foundation\http\httpclientregistry.h" />
+    <ClInclude Include="..\foundation\http\httpinterface.h" />
+    <ClInclude Include="..\foundation\http\httpmessagehandler.h" />
+    <ClInclude Include="..\foundation\http\httpmethod.h" />
+    <ClInclude Include="..\foundation\http\httpnzstream.h" />
+    <ClInclude Include="..\foundation\http\httpprotocol.h" />
+    <ClInclude Include="..\foundation\http\httprequest.h" />
+    <ClInclude Include="..\foundation\http\httprequesthandler.h" />
+    <ClInclude Include="..\foundation\http\httprequestreader.h" />
+    <ClInclude Include="..\foundation\http\httprequestwriter.h" />
+    <ClInclude Include="..\foundation\http\httpresponsereader.h" />
+    <ClInclude Include="..\foundation\http\httpresponsewriter.h" />
+    <ClInclude Include="..\foundation\http\httpserver.h" />
+    <ClInclude Include="..\foundation\http\httpserverproxy.h" />
+    <ClInclude Include="..\foundation\http\httpstatus.h" />
+    <ClInclude Include="..\foundation\http\httpstream.h" />
+    <ClInclude Include="..\foundation\http\debug\helloworldrequesthandler.h" />
+    <ClInclude Include="..\foundation\http\debug\svgtestpagehandler.h" />
+    <ClInclude Include="..\foundation\http\html\htmlelement.h" />
+    <ClInclude Include="..\foundation\http\html\htmlpagewriter.h" />
+    <ClInclude Include="..\foundation\http\svg\svglinechartwriter.h" />
+    <ClInclude Include="..\foundation\http\svg\svgpagewriter.h" />
+    <ClInclude Include="..\foundation\interface\interfacebase.h" />
+    <ClInclude Include="..\foundation\interface\interfacehandlerbase.h" />
+    <ClInclude Include="..\foundation\io\assign.h" />
+    <ClInclude Include="..\foundation\io\assignregistry.h" />
+    <ClInclude Include="..\foundation\io\binaryreader.h" />
+    <ClInclude Include="..\foundation\io\binarywriter.h" />
+    <ClInclude Include="..\foundation\io\bxmlreader.h" />
+    <ClInclude Include="..\foundation\io\console.h" />
+    <ClInclude Include="..\foundation\io\consolehandler.h" />
+    <ClInclude Include="..\foundation\io\excelxmlreader.h" />
+    <ClInclude Include="..\foundation\io\filestream.h" />
+    <ClInclude Include="..\foundation\io\filetime.h" />
+    <ClInclude Include="..\foundation\io\fswrapper.h" />
+    <ClInclude Include="..\foundation\io\gamecontentserver.h" />
+    <ClInclude Include="..\foundation\io\historyconsolehandler.h" />
+    <ClInclude Include="..\foundation\io\iointerface.h" />
+    <ClInclude Include="..\foundation\io\iointerfacehandler.h" />
+    <ClInclude Include="..\foundation\io\iointerfaceprotocol.h" />
+    <ClInclude Include="..\foundation\io\ioserver.h" />
+    <ClInclude Include="..\foundation\io\logfileconsolehandler.h" />
+    <ClInclude Include="..\foundation\io\mediatype.h" />
+    <ClInclude Include="..\foundation\io\memorystream.h" />
+    <ClInclude Include="..\foundation\io\schemeregistry.h" />
+    <ClInclude Include="..\foundation\io\stream.h" />
+    <ClInclude Include="..\foundation\io\streamreader.h" />
+    <ClInclude Include="..\foundation\io\streamwriter.h" />
+    <ClInclude Include="..\foundation\io\textreader.h" />
+    <ClInclude Include="..\foundation\io\textwriter.h" />
+    <ClInclude Include="..\foundation\io\uri.h" />
+    <ClInclude Include="..\foundation\io\xmlreader.h" />
+    <ClInclude Include="..\foundation\io\xmlwriter.h" />
+    <ClInclude Include="..\foundation\io\archfs\archive.h" />
+    <ClInclude Include="..\foundation\io\archfs\archivebase.h" />
+    <ClInclude Include="..\foundation\io\archfs\archivefilesystem.h" />
+    <ClInclude Include="..\foundation\io\archfs\archivefilesystembase.h" />
+    <ClInclude Include="..\foundation\io\base\gamecontentserverbase.h" />
+    <ClInclude Include="..\foundation\io\debug\consolepagehandler.h" />
+    <ClInclude Include="..\foundation\io\debug\iopagehandler.h" />
+    <ClInclude Include="..\foundation\io\util\bxmlfilestructs.h" />
+    <ClInclude Include="..\foundation\io\util\bxmlloaderutil.h" />
+    <ClInclude Include="..\foundation\io\win32\win32consolehandler.h" />
+    <ClInclude Include="..\foundation\io\win360\win360filetime.h" />
+    <ClInclude Include="..\foundation\io\win360\win360fswrapper.h" />
+    <ClInclude Include="..\foundation\io\zipfs\ziparchive.h" />
+    <ClInclude Include="..\foundation\io\zipfs\zipdirentry.h" />
+    <ClInclude Include="..\foundation\io\zipfs\zipfileentry.h" />
+    <ClInclude Include="..\foundation\io\zipfs\zipfilestream.h" />
+    <ClInclude Include="..\foundation\io\zipfs\zipfilesystem.h" />
+    <ClInclude Include="..\foundation\jobs\job.h" />
+    <ClInclude Include="..\foundation\jobs\jobdatadesc.h" />
+    <ClInclude Include="..\foundation\jobs\jobfunccontext.h" />
+    <ClInclude Include="..\foundation\jobs\jobfuncdesc.h" />
+    <ClInclude Include="..\foundation\jobs\jobport.h" />
+    <ClInclude Include="..\foundation\jobs\jobsystem.h" />
+    <ClInclude Include="..\foundation\jobs\jobuniformdesc.h" />
+    <ClInclude Include="..\foundation\jobs\stdjob.h" />
+    <ClInclude Include="..\foundation\jobs\base\jobbase.h" />
+    <ClInclude Include="..\foundation\jobs\base\jobfuncdescbase.h" />
+    <ClInclude Include="..\foundation\jobs\base\jobportbase.h" />
+    <ClInclude Include="..\foundation\jobs\base\jobsystembase.h" />
+    <ClInclude Include="..\foundation\jobs\tp\tpjob.h" />
+    <ClInclude Include="..\foundation\jobs\tp\tpjobcommand.h" />
+    <ClInclude Include="..\foundation\jobs\tp\tpjobfuncdesc.h" />
+    <ClInclude Include="..\foundation\jobs\tp\tpjobport.h" />
+    <ClInclude Include="..\foundation\jobs\tp\tpjobslice.h" />
+    <ClInclude Include="..\foundation\jobs\tp\tpjobsystem.h" />
+    <ClInclude Include="..\foundation\jobs\tp\tpjobthreadpool.h" />
+    <ClInclude Include="..\foundation\jobs\tp\tpworkerthread.h" />
+    <ClInclude Include="..\foundation\math\angularpfeedbackloop.h" />
+    <ClInclude Include="..\foundation\math\bbox.h" />
+    <ClInclude Include="..\foundation\math\clipstatus.h" />
+    <ClInclude Include="..\foundation\math\extrapolator.h" />
+    <ClInclude Include="..\foundation\math\float2.h" />
+    <ClInclude Include="..\foundation\math\float4.h" />
+    <ClInclude Include="..\foundation\math\frustum.h" />
+    <ClInclude Include="..\foundation\math\line.h" />
+    <ClInclude Include="..\foundation\math\matrix44.h" />
+    <ClInclude Include="..\foundation\math\noise.h" />
+    <ClInclude Include="..\foundation\math\pfeedbackloop.h" />
+    <ClInclude Include="..\foundation\math\pidfeedbackloop.h" />
+    <ClInclude Include="..\foundation\math\plane.h" />
+    <ClInclude Include="..\foundation\math\point.h" />
+    <ClInclude Include="..\foundation\math\polar.h" />
+    <ClInclude Include="..\foundation\math\quaternion.h" />
+    <ClInclude Include="..\foundation\math\rectangle.h" />
+    <ClInclude Include="..\foundation\math\scalar.h" />
+    <ClInclude Include="..\foundation\math\sphere_.h" />
+    <ClInclude Include="..\foundation\math\transform44.h" />
+    <ClInclude Include="..\foundation\math\vector.h" />
+    <ClInclude Include="..\foundation\math\xnamath\xna_float4.h" />
+    <ClInclude Include="..\foundation\math\xnamath\xna_matrix44.h" />
+    <ClInclude Include="..\foundation\math\xnamath\xna_plane.h" />
+    <ClInclude Include="..\foundation\math\xnamath\xna_point.h" />
+    <ClInclude Include="..\foundation\math\xnamath\xna_quaternion.h" />
+    <ClInclude Include="..\foundation\math\xnamath\xna_scalar.h" />
+    <ClInclude Include="..\foundation\math\xnamath\xna_vector.h" />
+    <ClInclude Include="..\foundation\memory\heap.h" />
+    <ClInclude Include="..\foundation\memory\memory.h" />
+    <ClInclude Include="..\foundation\memory\memorypool.h" />
+    <ClInclude Include="..\foundation\memory\poolarrayallocator.h" />
+    <ClInclude Include="..\foundation\memory\debug\memorypagehandler.h" />
+    <ClInclude Include="..\foundation\memory\win32\win32memory.h" />
+    <ClInclude Include="..\foundation\memory\win360\win360heap.h" />
+    <ClInclude Include="..\foundation\memory\win360\win360memory.h" />
+    <ClInclude Include="..\foundation\memory\win360\win360memoryconfig.h" />
+    <ClInclude Include="..\foundation\memory\win360\win360memorypool.h" />
+    <ClInclude Include="..\foundation\messaging\asyncport.h" />
+    <ClInclude Include="..\foundation\messaging\batchmessage.h" />
+    <ClInclude Include="..\foundation\messaging\blockinghandlerthread.h" />
+    <ClInclude Include="..\foundation\messaging\delegatetable.h" />
+    <ClInclude Include="..\foundation\messaging\dispatcher.h" />
+    <ClInclude Include="..\foundation\messaging\handler.h" />
+    <ClInclude Include="..\foundation\messaging\handlerthreadbase.h" />
+    <ClInclude Include="..\foundation\messaging\id.h" />
+    <ClInclude Include="..\foundation\messaging\message.h" />
+    <ClInclude Include="..\foundation\messaging\messagereader.h" />
+    <ClInclude Include="..\foundation\messaging\messagewriter.h" />
+    <ClInclude Include="..\foundation\messaging\port.h" />
+    <ClInclude Include="..\foundation\messaging\runthroughhandlerthread.h" />
+    <ClInclude Include="..\foundation\messaging\staticmessagehandler.h" />
+    <ClInclude Include="..\foundation\net\debugmessage.h" />
+    <ClInclude Include="..\foundation\net\debugpacket.h" />
+    <ClInclude Include="..\foundation\net\messageclient.h" />
+    <ClInclude Include="..\foundation\net\messageclientconnection.h" />
+    <ClInclude Include="..\foundation\net\tcpclient.h" />
+    <ClInclude Include="..\foundation\net\tcpclientconnection.h" />
+    <ClInclude Include="..\foundation\net\tcpmessagecodec.h" />
+    <ClInclude Include="..\foundation\net\tcpserver.h" />
+    <ClInclude Include="..\foundation\net\socket\ipaddress.h" />
+    <ClInclude Include="..\foundation\net\socket\socket.h" />
+    <ClInclude Include="..\foundation\net\tcp\stdtcpclient.h" />
+    <ClInclude Include="..\foundation\net\tcp\stdtcpclientconnection.h" />
+    <ClInclude Include="..\foundation\net\tcp\stdtcpserver.h" />
+    <ClInclude Include="..\foundation\net\win360\win360ipaddress.h" />
+    <ClInclude Include="..\foundation\net\win360\win360socket.h" />
+    <ClInclude Include="..\foundation\system\appentry.h" />
+    <ClInclude Include="..\foundation\system\byteorder.h" />
+    <ClInclude Include="..\foundation\system\cpu.h" />
+    <ClInclude Include="..\foundation\system\systeminfo.h" />
+    <ClInclude Include="..\foundation\system\base\systeminfobase.h" />
+    <ClInclude Include="..\foundation\system\win32\win32cpu.h" />
+    <ClInclude Include="..\foundation\system\win32\win32environment.h" />
+    <ClInclude Include="..\foundation\system\win32\win32registry.h" />
+    <ClInclude Include="..\foundation\system\win32\win32systeminfo.h" />
+    <ClInclude Include="..\foundation\threading\barrier.h" />
+    <ClInclude Include="..\foundation\threading\criticalsection.h" />
+    <ClInclude Include="..\foundation\threading\event.h" />
+    <ClInclude Include="..\foundation\threading\interlocked.h" />
+    <ClInclude Include="..\foundation\threading\objectref.h" />
+    <ClInclude Include="..\foundation\threading\safeflag.h" />
+    <ClInclude Include="..\foundation\threading\safepriorityqueue.h" />
+    <ClInclude Include="..\foundation\threading\safequeue.h" />
+    <ClInclude Include="..\foundation\threading\thread.h" />
+    <ClInclude Include="..\foundation\threading\threadbarrier.h" />
+    <ClInclude Include="..\foundation\threading\threadid.h" />
+    <ClInclude Include="..\foundation\threading\debug\threadpagehandler.h" />
+    <ClInclude Include="..\foundation\threading\win360\win360barrier.h" />
+    <ClInclude Include="..\foundation\threading\win360\win360criticalsection.h" />
+    <ClInclude Include="..\foundation\threading\win360\win360event.h" />
+    <ClInclude Include="..\foundation\threading\win360\win360interlocked.h" />
+    <ClInclude Include="..\foundation\threading\win360\win360thread.h" />
+    <ClInclude Include="..\foundation\threading\win360\win360threadbarrier.h" />
+    <ClInclude Include="..\foundation\threading\win360\win360threadid.h" />
+    <ClInclude Include="..\foundation\timing\calendartime.h" />
+    <ClInclude Include="..\foundation\timing\time.h" />
+    <ClInclude Include="..\foundation\timing\timer.h" />
+    <ClInclude Include="..\foundation\timing\base\calendartimebase.h" />
+    <ClInclude Include="..\foundation\timing\win360\win360calendartime.h" />
+    <ClInclude Include="..\foundation\timing\win360\win360timer.h" />
+    <ClInclude Include="..\foundation\util\array.h" />
+    <ClInclude Include="..\foundation\util\bitfield.h" />
+    <ClInclude Include="..\foundation\util\blob.h" />
+    <ClInclude Include="..\foundation\util\commandlineargs.h" />
+    <ClInclude Include="..\foundation\util\crc.h" />
+    <ClInclude Include="..\foundation\util\delegate.h" />
+    <ClInclude Include="..\foundation\util\dictionary.h" />
+    <ClInclude Include="..\foundation\util\fixedarray.h" />
+    <ClInclude Include="..\foundation\util\fixedtable.h" />
+    <ClInclude Include="..\foundation\util\fourcc.h" />
+    <ClInclude Include="..\foundation\util\globalstringatomtable.h" />
+    <ClInclude Include="..\foundation\util\guid.h" />
+    <ClInclude Include="..\foundation\util\hashtable.h" />
+    <ClInclude Include="..\foundation\util\keyvaluepair.h" />
+    <ClInclude Include="..\foundation\util\list.h" />
+    <ClInclude Include="..\foundation\util\localstringatomtable.h" />
+    <ClInclude Include="..\foundation\util\priorityarray.h" />
+    <ClInclude Include="..\foundation\util\quadtree.h" />
+    <ClInclude Include="..\foundation\util\queue.h" />
+    <ClInclude Include="..\foundation\util\randomnumbertable.h" />
+    <ClInclude Include="..\foundation\util\ringbuffer.h" />
+    <ClInclude Include="..\foundation\util\round.h" />
+    <ClInclude Include="..\foundation\util\runlengthcodec.h" />
+    <ClInclude Include="..\foundation\util\simpletree.h" />
+    <ClInclude Include="..\foundation\util\sparsetable.h" />
+    <ClInclude Include="..\foundation\util\stack.h" />
+    <ClInclude Include="..\foundation\util\string.h" />
+    <ClInclude Include="..\foundation\util\stringatom.h" />
+    <ClInclude Include="..\foundation\util\stringatomtablebase.h" />
+    <ClInclude Include="..\foundation\util\stringbuffer.h" />
+    <ClInclude Include="..\foundation\util\typepunning.h" />
+    <ClInclude Include="..\foundation\util\variant.h" />
+    <ClInclude Include="..\foundation\util\win32\win32guid.h" />
+    <ClInclude Include="..\foundation\util\win32\win32stringconverter.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="foundation_nidls_win32.vcxproj">
+      <Project>{fb193c0e-6ef7-40bc-9195-f33dde0b5f4d}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="..\nidl.targets" />
+  </ImportGroup>
+</Project>
