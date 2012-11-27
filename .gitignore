@@ -33,3 +33,4 @@
 bin/win32/logfiles/
 code/vs10.0/Win32/
 
+*.lastbuildstate

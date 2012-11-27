@@ -44,13 +44,13 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\bin\win32\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Platform)\$(Configuration)</IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">materialeditor.debug</TargetName>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\$(Platform)\$(Configuration)\$(ProjectName)</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectName).debug</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.exe</TargetExt>
     <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</IgnoreImportLibrary>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\bin\win32\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)</IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">materialeditor</TargetName>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\$(Platform)\$(Configuration)\$(ProjectName)</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectName)</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.exe</TargetExt>
     <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</IgnoreImportLibrary>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
@@ -295,6 +295,9 @@
   <ItemGroup>
     <ProjectReference Include="..\..\vs10.0\foundation_win32.vcxproj">
       <Project>{0cd03495-ae37-4084-a0c3-7479d6813db5}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\vs10.0\ogdf_win32.vcxproj">
+      <Project>{7801d1be-e2fe-476b-a4b4-5d27f387f479}</Project>
     </ProjectReference>
     <ProjectReference Include="..\..\vs10.0\tinyxml_win32.vcxproj">
       <Project>{29731b02-608d-4bdf-9a82-392f500ea2e8}</Project>
