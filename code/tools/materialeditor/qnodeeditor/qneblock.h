@@ -50,6 +50,9 @@ public:
 
 	int type() const { return Type; }
 
+	int getWidth() const { return this->width; }
+	int getHeight() const { return this->height; }
+
 protected:
 	QVariant itemChange(GraphicsItemChange change, const QVariant &value);
 

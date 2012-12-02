@@ -58,7 +58,6 @@ private slots:
 	void OnActionLoad();
 	void OnActionSave();
 	void OnActionCompile();
-	void addBlock();
 
 private:
 	Ui::MainWindow* ui;

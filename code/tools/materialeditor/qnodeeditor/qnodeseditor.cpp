@@ -33,8 +33,11 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. */
 #include "qneconnection.h"
 #include "qneblock.h"
 
+#include <ogdf/layered/SugiyamaLayout.h>
+#include <ogdf/layered/FastHierarchyLayout.h>
+
 QNodesEditor::QNodesEditor(QObject *parent) :
-    QObject(parent)
+	QObject(parent)
 {
 	conn = 0;
 }
@@ -47,11 +50,11 @@ void QNodesEditor::install(QGraphicsScene *s)
 
 QGraphicsItem* QNodesEditor::itemAt(const QPointF &pos)
 {
-	QList<QGraphicsItem*> items = scene->items(QRectF(pos - QPointF(1,1), QSize(3,3)));
+	QList<QGraphicsItem*> items = scene->items(QRectF(pos - QPointF(1, 1), QSize(3, 3)));
 
-	foreach(QGraphicsItem *item, items)
-		if (item->type() > QGraphicsItem::UserType)
-			return item;
+	foreach(QGraphicsItem * item, items)
+	if (item->type() > QGraphicsItem::UserType)
+		return item;
 
 	return 0;
 }
@@ -63,95 +66,96 @@ bool QNodesEditor::eventFilter(QObject *o, QEvent *e)
 	switch ((int) e->type())
 	{
 	case QEvent::GraphicsSceneMousePress:
-	{
-		switch ((int) me->button())
 		{
-		case Qt::LeftButton:
-		{
-			QGraphicsItem *item = itemAt(me->scenePos());
-			if (item && item->type() == QNEPort::Type)
+			switch ((int) me->button())
 			{
-				conn = new QNEConnection(0, scene);
-				conn->setPort1((QNEPort*) item);
-				conn->setPos1(item->scenePos());
-				conn->setPos2(me->scenePos());
-				conn->updatePath();
-
-				return true;
-			} else if (item && item->type() == QNEBlock::Type)
-			{
-				/* if (selBlock)
-					selBlock->setSelected(); */
-				// selBlock = (QNEBlock*) item;
-			}
-			break;
-		}
-		case Qt::RightButton:
-		{
-			QGraphicsItem *item = itemAt(me->scenePos());
-			if (item && (item->type() == QNEConnection::Type || item->type() == QNEBlock::Type))
-				delete item;
-			// if (selBlock == (QNEBlock*) item)
-				// selBlock = 0;
-			break;
-		}
-		}
-	}
-	case QEvent::GraphicsSceneMouseMove:
-	{
-		if (conn)
-		{
-			conn->setPos2(me->scenePos());
-			conn->updatePath();
-			return true;
-		}
-		break;
-	}
-	case QEvent::GraphicsSceneMouseRelease:
-	{
-		if (conn && me->button() == Qt::LeftButton)
-		{
-			QGraphicsItem *item = itemAt(me->scenePos());
-			if (item && item->type() == QNEPort::Type)
-			{
-				QNEPort *port1 = conn->port1();
-				QNEPort *port2 = (QNEPort*) item;
-
-				if (port1->block() != port2->block() && port1->isOutput() != port2->isOutput() && !port1->isConnected(port2))
+			case Qt::LeftButton:
 				{
-					conn->setPos2(port2->scenePos());
-					conn->setPort2(port2);
-					conn->updatePath();
-					conn = 0;
-					return true;
+					QGraphicsItem *item = itemAt(me->scenePos());
+					if (item && item->type() == QNEPort::Type)
+					{
+						conn = new QNEConnection(0, scene);
+						conn->setPort1((QNEPort*) item);
+						conn->setPos1(item->scenePos());
+						conn->setPos2(me->scenePos());
+						conn->updatePath();
+
+						return true;
+					}
+					else if (item && item->type() == QNEBlock::Type)
+					{
+						/* if (selBlock)
+							selBlock->setSelected(); */
+						// selBlock = (QNEBlock*) item;
+					}
+					break;
+				}
+			case Qt::RightButton:
+				{
+					QGraphicsItem *item = itemAt(me->scenePos());
+					if (item && (item->type() == QNEConnection::Type || item->type() == QNEBlock::Type))
+						delete item;
+					// if (selBlock == (QNEBlock*) item)
+					// selBlock = 0;
+					break;
 				}
 			}
-
-			delete conn;
-			conn = 0;
-			return true;
 		}
-		break;
-	}
+	case QEvent::GraphicsSceneMouseMove:
+		{
+			if (conn)
+			{
+				conn->setPos2(me->scenePos());
+				conn->updatePath();
+				return true;
+			}
+			break;
+		}
+	case QEvent::GraphicsSceneMouseRelease:
+		{
+			if (conn && me->button() == Qt::LeftButton)
+			{
+				QGraphicsItem *item = itemAt(me->scenePos());
+				if (item && item->type() == QNEPort::Type)
+				{
+					QNEPort *port1 = conn->port1();
+					QNEPort *port2 = (QNEPort*) item;
+
+					if (port1->block() != port2->block() && port1->isOutput() != port2->isOutput() && !port1->isConnected(port2))
+					{
+						conn->setPos2(port2->scenePos());
+						conn->setPort2(port2);
+						conn->updatePath();
+						conn = 0;
+						return true;
+					}
+				}
+
+				delete conn;
+				conn = 0;
+				return true;
+			}
+			break;
+		}
 	}
 	return QObject::eventFilter(o, e);
 }
 
 void QNodesEditor::save(QDataStream &ds)
 {
-	foreach(QGraphicsItem *item, scene->items())
-		if (item->type() == QNEBlock::Type)
-		{
-			ds << item->type();
-			((QNEBlock*) item)->save(ds);
-		}
+	foreach(QGraphicsItem * item, scene->items())
+	if (item->type() == QNEBlock::Type)
+	{
+		ds << item->type();
+		((QNEBlock*) item)->save(ds);
+	}
 
-	foreach(QGraphicsItem *item, scene->items())
-		if (item->type() == QNEConnection::Type)
-		{
-			ds << item->type();
-			((QNEConnection*) item)->save(ds);
-		}
+	foreach(QGraphicsItem * item, scene->items())
+	if (item->type() == QNEConnection::Type)
+	{
+		ds << item->type();
+		((QNEConnection*) item)->save(ds);
+	}
 }
 
 void QNodesEditor::load(QDataStream &ds)
@@ -168,10 +172,75 @@ void QNodesEditor::load(QDataStream &ds)
 		{
 			QNEBlock *block = new QNEBlock(0, scene);
 			block->load(ds, portMap);
-		} else if (type == QNEConnection::Type)
+		}
+		else if (type == QNEConnection::Type)
 		{
 			QNEConnection *conn = new QNEConnection(0, scene);
 			conn->load(ds, portMap);
 		}
+	}
+}
+
+//------------------------------------------------------------------------------
+void
+QNodesEditor::autoLayout()
+{
+	using namespace ogdf;
+	Graph graph;
+	// setup graph
+	QMap<NodeElement*, QNEBlock*> nodeMap;
+	foreach(QGraphicsItem * item, scene->items())
+	{
+		if (item->type() == QNEBlock::Type)
+		{
+			NodeElement* node = graph.newNode();
+			item->setData(QNEBlock::Type, qVariantFromValue((void*)node));
+			nodeMap[node] = (QNEBlock*)item;
+		}
+	}
+	foreach(QGraphicsItem * item, scene->items())
+	{
+		if (item->type() == QNEConnection::Type)
+		{
+			QNEConnection* connection = (QNEConnection*)item;
+			NodeElement* node1 = (NodeElement*)connection->port1()->block()->data(QNEBlock::Type).value<void*>();
+			NodeElement* node2 = (NodeElement*)connection->port2()->block()->data(QNEBlock::Type).value<void*>();
+			graph.newEdge(node1, node2);
+		}
+	}
+	// node size
+	GraphAttributes graphAttr(graph,
+	                          GraphAttributes::nodeGraphics | GraphAttributes::edgeGraphics |
+	                          GraphAttributes::nodeLabel | GraphAttributes::nodeColor |
+	                          GraphAttributes::edgeColor | GraphAttributes::edgeStyle |
+	                          GraphAttributes::nodeStyle | GraphAttributes::nodeTemplate);
+	NodeElement* node;
+	forall_nodes(node, graph)
+	{
+		QNEBlock* item = nodeMap[node];
+		graphAttr.width(node) = item->getHeight();
+		graphAttr.height(node) = item->getWidth();
+	}
+
+	// compute layout
+	SugiyamaLayout layout;
+	//layout.setRanking(new OptimalRanking);
+	//layout.setCrossMin(new GreedyInsertHeuristic );
+
+	FastHierarchyLayout* ohl = new FastHierarchyLayout;
+	ohl->layerDistance(30);
+	ohl->nodeDistance(25);
+	//ohl->weightBalancing(0.8);
+	layout.setLayout(ohl);
+
+	layout.call(graphAttr);
+
+	// update node position
+	forall_nodes(node, graph)
+	{
+		double x = graphAttr.x(node);
+		double y = graphAttr.y(node);
+		QNEBlock* item = nodeMap[node];
+		item->setPos(y, x);
 	}
 }

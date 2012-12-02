@@ -47,6 +47,9 @@ public:
 	void save(QDataStream &ds);
 	void load(QDataStream &ds);
 
+public slots:
+	void autoLayout();
+
 private:
 	QGraphicsItem *itemAt(const QPointF&);
 

@@ -74,23 +74,12 @@ MainWindow::MainWindow(QWidget *parent) :
 	connect(this->ui->action_Compile, SIGNAL(triggered()), this, SLOT(OnActionCompile()));
 	connect(this->ui->action_Exit, SIGNAL(triggered()),  qApp, SLOT(quit()));
 
-	this->ui->toolBar->addAction("Add block", this, SLOT(addBlock()));
+	this->ui->toolBar->addAction("Auto layout", nodesEditor, SLOT(autoLayout()));
 }
 
 MainWindow::~MainWindow()
 {
 	delete this->ui;
-}
-
-void MainWindow::addBlock()
-{
-	QNEBlock *b = new QNEBlock(0, this->ui->graphicsView->scene());
-	static const char* names[] = {"Vin", "Voutsadfasdf", "Imin", "Imax", "mul", "add", "sub", "div", "Conv", "FFT"};
-	for (int i = 0; i < 4 + rand() % 3; i++)
-	{
-		b->addPort(names[rand() % 10], rand() % 2, 0, 0);
-		b->setPos(this->ui->graphicsView->sceneRect().center().toPoint());
-	}
 }
 
 //------------------------------------------------------------------------------
